@@ -18,9 +18,9 @@ body {
 
 /* Header styles */
 header {
-    background-color: #69a8ff; /* Lighter blue background color for the navigation bar */
+    background-color: #4a90e2; /* Slightly darker blue for better contrast */
     border-bottom: 1px solid #e0e0e0;
-    padding: 8px 15px; /* Further reduced padding for a thinner top bar */
+    padding: 4px 15px; /* Further reduced padding for a thinner top bar */
 }
 
 nav {
@@ -35,7 +35,7 @@ nav {
 .logo {
     font-size: 1.2rem; /* Reduced font size for a more subtle appearance */
     font-weight: 300;
-    color: #ffffff; /* Change logo text to white for contrast */
+    color: #ffffff;
     flex: 1;
 }
 
@@ -59,7 +59,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #cce4ff; /* Lighter blue hover effect */
+    color: #b3d4fc; /* Adjusted hover color for contrast */
 }
 
 /* Hero section */
