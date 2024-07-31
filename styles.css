@@ -1,4 +1,91 @@
 body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f7;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5e5e7;
+    background-image: url('path-to-your-image.jpg'); /* Optional: Add a background image */
+    background-size: cover;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 80px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #1d1d1f;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #6e6e73;
+}
+
+.content-section {
+    padding: 80px 40px;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.content-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #1d1d1f;
+    color: #f5f5f7;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
