@@ -65,8 +65,8 @@ nav {
 /* Hero section */
 .hero {
     text-align: center;
-    padding: 80px 20px; /* Adjusted padding for better spacing */
-    background: linear-gradient(to bottom, #007aff, #00d084);
+    padding: 100px 20px;
+    background: url('background.jpg') no-repeat center center/cover; /* Updated to use background image */
     color: #ffffff;
     flex-grow: 1;
     display: flex;
