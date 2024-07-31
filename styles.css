@@ -11,13 +11,16 @@ body {
     color: #333;
     background-color: #f4f4f4;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header styles */
 header {
     background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
-    padding: 20px 0;
+    padding: 10px 20px; /* Reduced padding for a sleeker look */
 }
 
 nav {
@@ -26,27 +29,32 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
+    flex-wrap: wrap;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.5rem; /* Slightly smaller font size */
+    font-weight: 300;  /* Ensure light font weight */
     color: #333;
+    flex: 1;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
+    flex: 2;
+    justify-content: flex-end;
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 15px; /* Reduced margin for a more compact layout */
 }
 
 .nav-links a {
     text-decoration: none;
     color: #007aff;
-    font-size: 1rem;
+    font-size: 1.1rem; /* Adjusted font size for balance */
+    font-weight: 300; /* Ensure light font weight */
     transition: color 0.3s ease;
 }
 
@@ -57,25 +65,30 @@ nav {
 /* Hero section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px; /* Adjusted padding for better spacing */
     background: linear-gradient(to bottom, #007aff, #00d084);
     color: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Slightly smaller heading size */
     margin-bottom: 10px;
+    font-weight: 300; /* Ensure light font weight */
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.4rem; /* Adjusted text size for consistency */
 }
 
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 20px 0;
+    padding: 15px 20px; /* Adjusted padding */
     background-color: #ffffff;
     border-top: 1px solid #e0e0e0;
-    margin-top: 20px;
+    flex-shrink: 0;
 }
