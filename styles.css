@@ -19,13 +19,13 @@ body {
 /* Header styles */
 header {
     background-color: #4a90e2; /* Slightly darker blue for better contrast */
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: none; /* Removed bottom border to eliminate the white line */
     padding: 4px 15px; /* Further reduced padding for a thinner top bar */
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the logo and navigation links */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -37,13 +37,14 @@ nav {
     font-weight: 300;
     color: #ffffff;
     flex: 1;
+    text-align: center; /* Center the logo text */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    flex: 2;
-    justify-content: flex-end;
+    justify-content: center; /* Center the navigation links */
+    flex: 1;
 }
 
 .nav-links li {
@@ -88,8 +89,9 @@ nav {
 /* Footer styles */
 footer {
     text-align: center;
-    padding: 15px 20px; /* Adjusted padding */
+    padding: 10px 20px; /* Adjusted padding for a smaller footer */
     background-color: #ffffff;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #4a90e2; /* Thin blue line behind the footer */
+    font-size: 0.8rem; /* Smaller font size for the copyright text */
     flex-shrink: 0;
 }
