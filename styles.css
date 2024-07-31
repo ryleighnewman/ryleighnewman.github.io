@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* body and typography */
+/* Body and typography */
 body {
     font-family: 'Segoe UI Light', sans-serif;
     color: #333;
@@ -18,9 +18,9 @@ body {
 
 /* Header styles */
 header {
-    background-color: #ffffff;
+    background-color: #69a8ff; /* Lighter blue background color for the navigation bar */
     border-bottom: 1px solid #e0e0e0;
-    padding: 10px 20px; /* Reduced padding for a sleeker look */
+    padding: 8px 15px; /* Further reduced padding for a thinner top bar */
 }
 
 nav {
@@ -33,9 +33,9 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem; /* Slightly smaller font size */
-    font-weight: 300;  /* Ensure light font weight */
-    color: #333;
+    font-size: 1.2rem; /* Reduced font size for a more subtle appearance */
+    font-weight: 300;
+    color: #ffffff; /* Change logo text to white for contrast */
     flex: 1;
 }
 
@@ -47,26 +47,27 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 15px; /* Reduced margin for a more compact layout */
+    margin-left: 25px; /* Increased margin for more spacing between items */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #007aff;
-    font-size: 1.1rem; /* Adjusted font size for balance */
-    font-weight: 300; /* Ensure light font weight */
+    color: #ffffff; /* White color for navigation links to contrast against the blue background */
+    font-size: 1rem; /* Reduced font size for sleeker look */
+    font-weight: 300;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #005bb5;
+    color: #cce4ff; /* Lighter blue hover effect */
 }
 
 /* Hero section */
 .hero {
     text-align: center;
     padding: 100px 20px;
-    background: url('background.JPG') no-repeat center center/cover;    color: #ffffff;
+    background: url('background.JPG') no-repeat center center/cover;
+    color: #ffffff;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
