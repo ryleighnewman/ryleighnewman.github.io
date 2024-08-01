@@ -300,7 +300,6 @@ footer {
     flex-shrink: 0;
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
     .hero-headshot {
         width: 50vw;
@@ -338,10 +337,25 @@ footer {
     }
 }
 
+/* Font and Spacing Fixes */
+.motto {
+    color: #4A90E2;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2vw;
+    color: #dddddd;
+}
+
 /* Animation Definitions */
-@keyframes slideInFromTop {
+@keyframes slideIn {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(20px);
         opacity: 0;
     }
     100% {
@@ -359,108 +373,56 @@ footer {
     }
 }
 
+/* Apply Animations */
 .animate-slide {
-    animation: slideInFromTop 0.8s ease-out forwards;
+    animation: slideIn 0.6s ease-out;
 }
 
 .animate-fade {
-    animation: fadeIn 1s ease-out forwards;
+    animation: fadeIn 0.6s ease-out;
 }
 
 /* Hide gray background above the blue bar */
 body::before {
-    content: "";
-    display: block;
-    height: 60px; /* Adjust to match the height of the header */
-    background-color: rgb(18, 22, 24);
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1;
+    height: 60px;
+    background-color: rgb(18, 22, 24);
+    z-index: -1;
 }
 
-/* Ensure that the header and main content are above the gray background */
-header {
-    position: relative;
-    z-index: 2;
-}
-
-main {
-    position: relative;
-    z-index: 2;
-}
-
-/* Fixing spacing issues in the index page */
+/* Additional Styles for Specific Sections */
 .hero {
-    padding: 20px 20px;
-    background: url('background.JPG') no-repeat center center/cover;
-    color: #ffffff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.hero-academic-info p {
-    font-size: 2vw; /* Adjust font size as needed */
-    margin: 10px auto;
-}
-
-.degree-info {
-    font-size: 2vw; /* Adjust font size as needed */
-}
-
-.about-section {
-    padding: 20px 20px;
-}
-
-.about-section p {
-    font-size: 1.2rem; /* Reverted to previous spacing */
-    margin: 0 auto 15px auto;
-}
-
-.about-section h2 {
-    font-size: 1.8rem; /* Adjust font size if needed */
-    margin: 30px auto;
-}
-
-/* General Styling */
-hr {
+.about-section hr, .contact-section hr {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 30px auto;
+    max-width: 800px;
 }
 
-/* Adjustments for responsiveness */
+.contact-buttons a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 10px 0;
+}
+
 @media (max-width: 768px) {
-    .hero-headshot {
-        width: 50vw;
-    }
-    
-    .hero-academic-info p {
-        font-size: 3vw;
-    }
-    
-    .degree-info {
-        font-size: 3vw;
-    }
-    
-    .contact-buttons {
-        max-width: 100%;
-        gap: 15px;
+    .contact-buttons a {
+        max-width: 150px;
     }
 }
 
 @media (max-width: 480px) {
-    .hero-headshot {
-        width: 70vw;
-    }
-
-    .hero-academic-info p {
-        font-size: 4vw;
-    }
-
-    .degree-info {
-        font-size: 4vw;
-    }
-
-    .contact-buttons {
-        gap: 10px;
+    .contact-buttons a {
+        max-width: 120px;
     }
 }
