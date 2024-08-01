@@ -94,7 +94,7 @@ main {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     box-sizing: border-box;
     z-index: 1; /* Content layer */
-    min-height: 100vh; /* Ensure the hero section covers the viewport */
+    min-height: auto; /* Allow dynamic height based on content */
 }
 
 /* Background image with proper scaling and fixed position */
@@ -109,15 +109,7 @@ main {
     background-size: cover; /* Ensure the image covers the entire section */
     background-attachment: fixed; /* Fix the image to stay static on scroll */
     z-index: -1; /* Behind the content */
-    height: calc(100vh - 60px); /* Adjust height to fit the content */
-}
-
-/* Dynamic height adjustment for hero section */
-.hero-content {
-    max-width: 800px;
-    text-align: center;
-    padding: 20px 0;
-    margin-bottom: 10px; /* Adjust this value to control where the image ends */
+    height: 100vh; /* Full height of the viewport */
 }
 
 .hero-headshot {
