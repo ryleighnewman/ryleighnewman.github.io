@@ -84,7 +84,7 @@ main {
 /* Hero Section */
 .hero {
     position: relative;
-    padding: 20px 20px 40px; /* Adjusted padding for better spacing */
+    padding: 20px 20px; /* Adjusted padding */
     background-color: rgba(18, 22, 24, 0.9); /* Semi-transparent gray background */
     color: #ffffff;
     display: flex;
@@ -92,25 +92,13 @@ main {
     align-items: center;
     justify-content: flex-start; /* Align content closer to the top */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    min-height: 80vh;
     box-sizing: border-box;
     z-index: 1; /* Content layer */
-}
-
-/* Blue background layer behind the hero section */
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(30, 80, 150); /* Blue color */
-    z-index: -2; /* Behind the background image */
+    min-height: 100vh; /* Ensure the hero section covers the viewport */
 }
 
 /* Background image with proper scaling and fixed position */
-.hero::after {
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
@@ -120,15 +108,16 @@ main {
     background: url('background.JPG') no-repeat center bottom;
     background-size: cover; /* Ensure the image covers the entire section */
     background-attachment: fixed; /* Fix the image to stay static on scroll */
-    z-index: -1; /* In front of the blue layer, behind the content */
+    z-index: -1; /* Behind the content */
+    height: calc(100vh - 60px); /* Adjust height to fit the content */
 }
 
-/* Responsive adjustments for background image */
-@media (max-width: 768px) {
-    .hero::after {
-        background-size: cover; /* Cover the entire section on smaller screens */
-        background-position: center bottom; /* Position the image with the bottom aligned */
-    }
+/* Dynamic height adjustment for hero section */
+.hero-content {
+    max-width: 800px;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 10px; /* Adjust this value to control where the image ends */
 }
 
 .hero-headshot {
