@@ -16,13 +16,24 @@ document.addEventListener('DOMContentLoaded', function () {
         elements.forEach(function (element) {
             if (isInViewport(element)) {
                 element.classList.add('animated');
-                // Remove class after animation if needed
+                // Optional: Remove class after animation
                 // element.classList.remove('animate-slide', 'animate-fade');
             }
         });
     }
 
+    // Throttled scroll event handler
+    let timeout;
+    function throttledAnimateOnScroll() {
+        if (!timeout) {
+            timeout = setTimeout(function () {
+                animateOnScroll();
+                timeout = null;
+            }, 100); // Adjust delay as needed
+        }
+    }
+
     // Run animation on scroll and on page load
-    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('scroll', throttledAnimateOnScroll);
     animateOnScroll(); // Run once to check elements already in view on page load
 });
