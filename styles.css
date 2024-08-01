@@ -82,54 +82,65 @@ main {
 
 /* Hero Section */
 .hero {
-    padding: 60px 20px; /* Adjust padding for better spacing */
-    background: url('background.JPG') no-repeat center center/cover;
+    padding: 40px 20px; /* Adjust padding */
+    background: url('background.JPG') no-repeat center center;
+    background-size: cover; /* Ensure the background covers the area without repeating */
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Enhance text shadow for better readability */
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); 
     min-height: 80vh; /* Reduce height to 80% of the viewport */
     box-sizing: border-box;
 }
 
 .hero-headshot {
-    width: 25vw; /* Adjust width to be proportional */
-    max-width: 300px; /* Ensure it’s not too large */
-    min-width: 180px; /* Ensure a minimum size */
+    width: 20vw; /* Scale image down further */
+    max-width: 200px; /* Reduce max width */
+    min-width: 150px; 
     border-radius: 15px;
-    margin-bottom: 20px; /* Increase margin for spacing */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow to the image for better separation */
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
 }
 
 .hero p {
-    font-weight: 400; /* Slightly bolder to stand out */
-    font-size: 2.5rem; /* Increase size for emphasis */
+    font-weight: 400;
+    font-size: 2.5rem; /* Increase font size further */
     margin-bottom: 10px;
 }
 
 .hero-academic-info {
-    text-align: center; /* Center align the text */
+    text-align: center;
     max-width: 800px;
-    margin: 0 auto; /* Center align the container */
+    margin: 0 auto;
     padding: 0 20px;
 }
 
 .hero-academic-info p {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 1.6rem; /* Adjust font size for better readability */
-    line-height: 1.6; /* Increase line height for spacing */
+    font-size: 1.6rem; /* Further increase font size */
+    line-height: 1.6; 
     color: #ffffff;
-    margin: 10px 0; /* Ensure consistent spacing */
+    margin: 10px 0; 
 }
 
 .hero-academic-info p span,
 .hero-academic-info p strong {
     display: block;
-    margin-bottom: 10px; /* Space out text elements */
-    font-weight: 400; /* Slightly bolder for emphasis */
+    margin-bottom: 10px; 
+    font-weight: 400; 
+}
+
+/* Additional Styles for Better Layout Control */
+body {
+    overflow-x: hidden; /* Prevent horizontal scrolling if content overflows */
+}
+
+html, body {
+    height: 100%; /* Ensure the body takes full height */
+    width: 100%;  /* Ensure the body takes full width */
 }
 
 /* About Section */
