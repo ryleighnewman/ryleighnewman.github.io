@@ -8,3 +8,17 @@ function toggleHeaderTransparency() {
         header.classList.remove("transparent");
     }
 }
+
+<script>
+document.addEventListener('scroll', function() {
+    const header = document.querySelector('header');
+    const solidColorSection = document.querySelector('.solid-color-section');
+    const solidColorSectionHeight = solidColorSection ? solidColorSection.offsetHeight : 0;
+
+    if (window.scrollY > solidColorSectionHeight) {
+        header.classList.add('transparent');
+    } else {
+        header.classList.remove('transparent');
+    }
+});
+</script>
