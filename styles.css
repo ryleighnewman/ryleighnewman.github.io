@@ -74,22 +74,27 @@ nav {
     color: rgb(169, 204, 227); /* Light blue for hover effect */
 }
 
-/* About Section styles */
-.about-section {
-    padding: 50px 20px; /* Padding around the about content */
-    text-align: center; /* Center align the text */
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('background.JPG') no-repeat center center/cover;
+    color: #ffffff;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
-.about-section h1 {
-    font-size: 2rem; /* Title size */
-    margin-bottom: 20px;
-    color: #ffffff; /* White text color for the heading */
+.hero h1 {
+    font-size: 2.5rem; /* Slightly smaller heading size */
+    margin-bottom: 10px;
+    font-weight: 300; /* Ensure light font weight */
 }
 
-.about-section p {
-    font-size: 1.2rem; /* Text size for the content */
-    color: #dddddd; /* Slightly lighter text color for contrast */
+.hero p {
+    font-size: 1.4rem;
 }
 
 /* Footer styles */
