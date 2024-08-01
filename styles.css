@@ -44,8 +44,8 @@ header {
 
 /* Frosted glass effect with gradient background */
 header {
-    background: linear-gradient(to top, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
-                rgba(30, 80, 150, 0.6); /* Semi-transparent blue background for frosted glass effect */
+    background: linear-gradient(to bottom, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
+                rgba(30, 80, 150, 0.6); /* Gradient fading from blue at the top to transparent at the bottom */
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
     padding: 0 15px;
@@ -78,8 +78,8 @@ nav {
 
 /* Transparent Header Class */
 .transparent {
-    background: linear-gradient(to top, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
-                rgba(30, 80, 150, 0.6); /* Apply gradient and frosted effect */
+    background: linear-gradient(to bottom, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
+                rgba(30, 80, 150, 0.6); /* Gradient fading from blue at the top to transparent at the bottom */
     backdrop-filter: blur(10px); /* Apply the frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
