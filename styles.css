@@ -1,32 +1,15 @@
-Let's address the issues more directly.
-
-### Objective:
-1. **Reduce the size of the background image** to take up less vertical space.
-2. **Adjust the text sizing and spacing** to achieve the desired look.
-
-### Updated Plan:
-
-1. **Further Reduce the Padding in the Hero Section**: This will directly reduce the height of the background image.
-2. **Adjust the Font Sizes**: Specifically tweak the font sizes to ensure the text hierarchy looks as expected.
-3. **Fine-Tune the Spacing**: Adjust the margins and padding to ensure the content aligns more closely.
-
-### Updated CSS:
-
-```css
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure font consistency */
+    font-family: 'Segoe UI Light', sans-serif;
 }
 
-/* Body and typography */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure font consistency */
+    font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
     color: #ffffff;
     background-color: rgb(18, 22, 24);
@@ -36,7 +19,6 @@ html, body {
     min-height: 100vh;
 }
 
-/* Header styles */
 header {
     background-color: rgb(30, 80, 150);
     border-bottom: none;
@@ -88,10 +70,9 @@ nav {
     color: rgb(169, 204, 227);
 }
 
-/* Hero section */
 .hero {
     text-align: center;
-    padding: 30px 20px; /* Further reduced padding to minimize background image height */
+    padding: 20px 20px;
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
     flex-grow: 1;
@@ -102,11 +83,11 @@ nav {
 }
 
 .hero-headshot {
-    width: 25vw; /* Reduced width for a more balanced look */
-    max-width: 300px;
-    min-width: 180px;
+    width: 32vw;
+    max-width: 360px;
+    min-width: 200px;
     border-radius: 15px;
-    margin-bottom: 15px; /* Reduced margin to tighten layout */
+    margin-bottom: 15px;
     position: relative;
     z-index: 10;
     display: block;
@@ -116,23 +97,22 @@ nav {
 
 .hero p {
     font-weight: 300;
-    font-size: 1.8rem; /* Slightly reduced font size */
-    margin-top: 5px; /* Reduced margin to tighten layout */
+    font-size: 1.6rem;
+    margin-top: 5px;
 }
 
 .hero-academic-info p {
     font-weight: 300;
-    font-size: 1.2rem; /* Further reduced font size for the academic info */
+    font-size: 1.1rem;
     color: #dddddd;
-    margin-bottom: 5px; /* Reduced margin to tighten layout */
+    margin-bottom: 5px;
     max-width: 800px;
-    margin: 0 auto 10px auto; /* Reduced bottom margin */
+    margin: 0 auto 10px auto;
 }
 
-/* Academic Information Section */
 .academic-info {
     text-align: center;
-    padding: 30px 20px; /* Reduced padding for a more compact layout */
+    padding: 30px 20px;
 }
 
 .academic-info img.headshot-image {
@@ -149,20 +129,19 @@ nav {
     color: #dddddd;
     margin-bottom: 10px;
     max-width: 800px;
-    margin: 0 auto 15px auto; /* Adjusted margins for better spacing */
+    margin: 0 auto 15px auto;
 }
 
-/* About Section styles */
 .about-section {
-    padding: 30px 20px; /* Reduced padding for consistency */
+    padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
 }
 
 .about-section h1 {
     font-weight: 300;
-    font-size: 1.8rem; /* Slightly reduced heading size */
-    margin-bottom: 15px; /* Reduced margin */
+    font-size: 1.8rem;
+    margin-bottom: 15px;
     color: #ffffff;
 }
 
@@ -176,16 +155,16 @@ nav {
 }
 
 .about-section img.headshot-image {
-    max-width: 180px; /* Reduced size for consistency */
+    max-width: 180px;
     border-radius: 10px;
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 15px;
 }
 
 .about-section h2 {
     font-weight: 300;
     color: #4A90E2;
-    margin-top: 30px; /* Reduced margin */
-    margin-bottom: 15px; /* Reduced margin */
+    margin-top: 30px;
+    margin-bottom: 15px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -196,7 +175,7 @@ nav {
     color: #dddddd;
     text-align: left;
     max-width: 800px;
-    margin: 0 auto 40px auto; /* Reduced margin */
+    margin: 0 auto 40px auto;
     padding-left: 20px;
 }
 
@@ -206,24 +185,22 @@ nav {
     color: #4A90E2;
 }
 
-/* Section Divider */
 .about-section hr {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 30px auto; /* Reduced margin */
+    margin: 30px auto;
     max-width: 800px;
 }
 
-/* Contact Section styles */
 .contact-section {
-    padding: 30px 20px; /* Reduced padding for consistency */
+    padding: 30px 20px;
     text-align: center;
     flex-grow: 1;
 }
 
 .contact-section h1 {
     font-weight: 300;
-    font-size: 1.8rem; /* Slightly reduced heading size */
+    font-size: 1.8rem;
     color: #ffffff;
 }
 
@@ -231,7 +208,7 @@ nav {
     font-weight: 300;
     font-size: 1.2rem;
     color: #dddddd;
-    margin-bottom: 20px; /* Reduced margin */
+    margin-bottom: 20px;
 }
 
 .contact-section ul {
@@ -240,27 +217,26 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Reduced gap */
+    gap: 15px;
 }
 
-/* Social Buttons Styles */
 .social-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Reduced gap */
+    gap: 15px;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px; /* Reduced padding for a sleeker look */
+    padding: 10px 20px;
     font-size: 1.2rem;
     color: #ffffff;
     background-color: rgba(30, 80, 150, 0.8);
     border-radius: 15px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 280px; /* Slightly reduced width */
+    width: 280px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -318,7 +294,6 @@ nav {
     background-color: rgba(51, 51, 51, 0.9);
 }
 
-/* Footer styles */
 footer {
     text-align: center;
     padding: 10px 20px;
