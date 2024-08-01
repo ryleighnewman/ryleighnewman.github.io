@@ -132,7 +132,7 @@ nav {
 
 .hero-academic-info .subtext {
     font-size: 1.2rem; /* Adjust the font size of the academic info */
-    line-height: 1.4;
+    line-height: 1.1;
     text-align: center; /* Center the academic information */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for academic info */
 }
