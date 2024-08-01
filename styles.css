@@ -42,10 +42,9 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
 }
 
-/* Frosted glass effect with gradient background */
+/* Initial Header Style */
 header {
-    background: linear-gradient(to bottom, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
-                rgba(30, 80, 150, 0.6); /* Gradient fading from blue at the top to transparent at the bottom */
+    background: rgba(30, 80, 150, 0.6); /* Solid blue background initially */
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
     padding: 0 15px;
@@ -56,8 +55,15 @@ header {
     left: 0; /* Stick to the left edge */
     width: 100%; /* Full width of the viewport */
     z-index: 1000; /* Ensure it is above other content */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+    transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
+
+/* Transparent Header Class for Scrolling */
+.transparent {
+    background: linear-gradient(to bottom, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%); /* Gradient fading from blue at the top to transparent at the bottom */
+    backdrop-filter: blur(10px); /* Apply the frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
@@ -74,14 +80,6 @@ nav {
     margin: 0 auto;
     height: 100%; /* Make sure the navigation takes the full height of the header */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for navigation text */
-}
-
-/* Transparent Header Class */
-.transparent {
-    background: linear-gradient(to bottom, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
-                rgba(30, 80, 150, 0.6); /* Gradient fading from blue at the top to transparent at the bottom */
-    backdrop-filter: blur(10px); /* Apply the frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
 .logo {

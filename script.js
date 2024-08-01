@@ -1,23 +1,14 @@
-window.onscroll = function() {toggleHeaderTransparency()};
-
+// Define a function to toggle the header transparency based on scroll position
 function toggleHeaderTransparency() {
     var header = document.querySelector('header');
-    if (window.pageYOffset > 50) { // Adjust this threshold as needed
-        header.classList.add("transparent");
+    var scrollThreshold = 50; // Adjust this value to control when the effect starts
+
+    if (window.scrollY > scrollThreshold) {
+        header.classList.add('transparent'); // Apply the gradient and frosted effect
     } else {
-        header.classList.remove("transparent");
+        header.classList.remove('transparent'); // Remove the gradient and frosted effect
     }
 }
 
-<script>
-document.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
-    const scrollThreshold = 50; // Adjust this value to control when the effect starts
-
-    if (window.scrollY > scrollThreshold) {
-        header.classList.add('frosted');
-    } else {
-        header.classList.remove('frosted');
-    }
-});
-</script>
+// Attach the scroll event to the toggleHeaderTransparency function
+window.addEventListener('scroll', toggleHeaderTransparency);
