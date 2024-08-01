@@ -106,6 +106,7 @@ nav {
 }
 
 .hero-academic-info p {
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is applied */
     font-weight: 300;
     font-size: 2.5vw; /* Responsive font size */
     color: #dddddd;
@@ -207,8 +208,8 @@ nav {
     align-items: center;
     gap: 20px; /* Space between buttons */
     margin: 0 auto;
-    padding: 0 20px; /* Padding to ensure buttons don't stretch to edges */
-    max-width: 800px; /* Limit maximum width for button container */
+    padding: 20px; /* Padding around the buttons */
+    max-width: 800px; /* Set maximum width for button container */
 }
 
 .contact-buttons a {
@@ -327,4 +328,11 @@ footer {
     .contact-buttons {
         gap: 10px; /* Adjust spacing for very small screens */
     }
+}
+
+/* Additional styles for personal motto */
+.motto {
+    color: #4A90E2; /* Blue color for the motto */
+    font-weight: 600; /* Make it stand out more */
+    font-size: 1.4rem; /* Adjust font size if needed */
 }
