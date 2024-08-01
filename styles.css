@@ -201,17 +201,17 @@ nav {
     margin-bottom: 20px;
 }
 
-.social-buttons {
+.contact-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px; /* Space between buttons */
     margin: 0 auto;
-    padding: 0;
-    max-width: 360px; /* Set maximum width for button container */
+    padding: 0 20px; /* Padding to ensure buttons don't stretch to edges */
+    max-width: 800px; /* Limit maximum width for button container */
 }
 
-.social-buttons a {
+.contact-buttons a {
     display: block;
     width: 100%; /* Full width of the container */
     text-align: center; /* Center text */
@@ -305,7 +305,7 @@ footer {
         font-size: 4vw;
     }
 
-    .social-buttons {
+    .contact-buttons {
         max-width: 100%;
         gap: 15px; /* Adjust spacing for smaller screens */
     }
@@ -324,7 +324,7 @@ footer {
         font-size: 5vw;
     }
 
-    .social-buttons {
+    .contact-buttons {
         gap: 10px; /* Adjust spacing for very small screens */
     }
 }
