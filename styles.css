@@ -44,7 +44,12 @@ header {
 
 /* Transparent Header Class for Scrolling */
 .transparent {
-    background: linear-gradient(to bottom, rgba(30, 80, 150, 1) 0%, rgba(30, 80, 150, 0.6) 80%, rgba(30, 80, 150, 0) 100%); /* Gradient with a solid blue start */
+    background: linear-gradient(to bottom, 
+        rgba(30, 80, 150, 1) 0%,        /* Solid blue at the top */
+        rgba(30, 80, 150, 0.8) 20%,     /* Gradual transition to semi-transparent */
+        rgba(30, 80, 150, 0.4) 60%,     /* Further transition to more transparency */
+        rgba(30, 80, 150, 0) 100%       /* Fully transparent at the bottom */
+    );
     backdrop-filter: blur(10px); /* Apply the frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
     transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
