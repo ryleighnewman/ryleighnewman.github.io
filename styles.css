@@ -23,7 +23,7 @@ html, body {
 
 .hero {
     position: relative;
-    z-index: 0;
+    z-index: 1; /* Change this from 0 to 1 */
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
     display: flex;
