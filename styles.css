@@ -26,17 +26,18 @@ body {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for body text */
 }
 
-/* Header styles */
 header {
-    background-color: rgb(30, 80, 150); /* Initial background color */
+    background-color: rgba(30, 80, 150, 0.6); /* Adjusted for transparency */
+    backdrop-filter: blur(10px); /* Apply frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
     padding: 0 15px;
-    height: 60px; /* Ensures the header height is consistent */
+    height: 60px; /* Consistent height for the header */
     flex-shrink: 0;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for header text */
+    font-family: 'Segoe UI Light', sans-serif;
     position: sticky; /* Make the header sticky */
     top: 0; /* Stick to the top of the viewport */
     z-index: 1000; /* Ensure the header is above other content */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition for background color and filter */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
 }
 
 nav {
