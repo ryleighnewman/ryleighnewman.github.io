@@ -246,6 +246,11 @@ nav {
 }
 
 /* Contact Section styles */
+
+.contact-section .btn {
+    font-family: 'Segoe UI Light', sans-serif !important;
+}
+
 .contact-section {
     padding: 50px 20px; /* Padding around the contact content */
     text-align: center; /* Center align the text */
