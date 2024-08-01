@@ -18,6 +18,20 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative; /* Ensure proper positioning context */
+}
+
+/* Hide gray background above the blue bar */
+body::before {
+    content: "";
+    display: block;
+    height: 60px; /* Height of the header */
+    background-color: rgb(18, 22, 24);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Place behind the content */
 }
 
 /* Header */
@@ -27,7 +41,7 @@ header {
     padding: 0 15px;
     height: 60px;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Ensure header is above the gray background */
 }
 
 /* Navigation */
@@ -117,9 +131,9 @@ main {
 .hero-academic-info p {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 1.2rem; /* Revert font size */
+    font-size: 2vw;
     color: #dddddd;
-    margin: 0 auto 10px auto; /* Revert margin */
+    margin: 0 auto 10px auto;
     max-width: 800px;
     line-height: 1.2;
 }
@@ -130,9 +144,9 @@ main {
 }
 
 .degree-info {
-    font-family: 'Segoe UI Light', sans-serif; /* Revert font */
+    font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 1.2rem; /* Revert font size */
+    font-size: 2vw;
     color: #dddddd;
 }
 
@@ -298,8 +312,10 @@ footer {
     font-size: 0.8rem;
     color: #ffffff;
     flex-shrink: 0;
+    position: relative; /* Ensure proper positioning context */
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .hero-headshot {
         width: 50vw;
@@ -337,13 +353,7 @@ footer {
     }
 }
 
-.motto {
-    color: #4A90E2;
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem; /* Revert to original font size */
-}
-
+/* Animation Definitions */
 @keyframes slideIn {
     0% {
         transform: translateY(20px);
@@ -372,6 +382,7 @@ footer {
     animation: fadeIn 1s ease-out forwards;
 }
 
+/* Apply animations to elements */
 .header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
     opacity: 0;
 }
@@ -380,15 +391,31 @@ footer {
     opacity: 1;
 }
 
-/* Hide gray background above the blue bar */
-body::before {
-    content: "";
-    display: block;
-    height: 60px; /* Adjust to match the height of the header */
-    background-color: rgb(18, 22, 24);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
+/* Specific selectors for applying animations */
+.header {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+main {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+footer {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-headshot {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.hero-academic-info {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.about-section {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.contact-buttons {
+    animation: fadeIn 1s ease-out forwards;
 }
