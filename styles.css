@@ -180,6 +180,32 @@ nav {
     font-size: 1.2rem; /* Adjust font size as needed */
 }
 
+/* Section title with blue color for consistency */
+.section-title-blue {
+    color: rgb(30, 80, 150); /* Blue color for section titles */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Section title with light blue color for consistency */
+.section-title-light-blue {
+    color: rgba(30, 80, 150, 0.8); /* Light blue color for section titles */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Divider styling */
+.divider-top, .divider-bottom {
+    border: 0;
+    height: 2px;
+    background: rgba(30, 80, 150, 0.5); /* Blue divider */
+    margin: 20px 0;
+}
+
+/* Section padding */
+.about-section {
+    padding: 20px;
+}
 .about-section h2.section-title-blue {
     font-weight: 300; /* Ensure light font weight */
     color: #4A90E2; /* Light blue color for section titles */
