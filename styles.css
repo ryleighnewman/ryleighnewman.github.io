@@ -210,6 +210,7 @@ main {
     margin-bottom: 20px;
 }
 
+/* Contact Buttons */
 .contact-buttons {
     display: flex;
     flex-direction: column;
@@ -223,6 +224,7 @@ main {
 .contact-buttons a {
     display: block;
     width: 100%;
+    max-width: 250px; /* Ensure buttons are not too wide */
     text-align: center;
 }
 
@@ -243,6 +245,7 @@ main {
     transform: translateY(-2px);
 }
 
+/* Button Color Variants */
 .email-btn {
     background-color: rgba(212, 70, 56, 0.8);
 }
@@ -355,7 +358,7 @@ footer {
 /* Animation Definitions */
 @keyframes slideIn {
     0% {
-        transform: translateY(20px);
+        transform: translateY(-20px);
         opacity: 0;
     }
     100% {
@@ -380,6 +383,26 @@ footer {
 
 .animate-fade {
     animation: fadeIn 0.6s ease-out;
+}
+
+/* Hero Section */
+.hero-academic-info p {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2vw;
+    color: #dddddd;
+    margin: 0 auto 10px auto;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2vw;
+    color: #dddddd;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 /* Hide gray background above the blue bar */
