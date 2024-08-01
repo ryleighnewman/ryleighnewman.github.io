@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure font consistency */
 }
 
 /* Body and typography */
@@ -11,7 +11,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Segoe UI Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure font consistency */
     font-weight: 300;
     color: #ffffff;
     background-color: rgb(18, 22, 24);
@@ -76,7 +76,7 @@ nav {
 /* Hero section */
 .hero {
     text-align: center;
-    padding: 100px 20px;
+    padding: 50px 20px; /* Reduced padding to decrease the background image height */
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
     flex-grow: 1;
@@ -114,10 +114,10 @@ nav {
     margin: 0 auto 20px auto;
 }
 
-/* Academic Information Section (for the Home Page) */
+/* Academic Information Section */
 .academic-info {
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px; /* Reduced padding for a more compact layout */
 }
 
 .academic-info img.headshot-image {
@@ -139,7 +139,7 @@ nav {
 
 /* About Section styles */
 .about-section {
-    padding: 50px 20px;
+    padding: 40px 20px; /* Reduced padding for consistency */
     text-align: center;
     flex-grow: 1;
 }
@@ -195,13 +195,13 @@ nav {
 .about-section hr {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 50px auto;
+    margin: 40px auto; /* Reduced margin for better spacing */
     max-width: 800px;
 }
 
 /* Contact Section styles */
 .contact-section {
-    padding: 50px 20px;
+    padding: 40px 20px; /* Reduced padding for consistency */
     text-align: center;
     flex-grow: 1;
 }
