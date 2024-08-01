@@ -7,6 +7,21 @@
     <title>Ryleigh Newman</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Optional: Add a favicon -->
+    <style>
+        .hero-headshot {
+            max-width: 150px;
+            border-radius: 50%; /* Make it circular */
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 10; /* Ensure it's above the background image */
+        }
+
+        .hero h2 {
+            font-weight: 300; /* Match the existing style */
+            font-size: 1.8rem; /* Similar size to other headings */
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -24,12 +39,13 @@
 
     <main id="home">
         <section class="hero">
+            <img src="headshot.jpg" alt="Ryleigh Newman Headshot" class="headshot-image hero-headshot">
             <h1>Welcome to My Website</h1>
             <p>Website in development.</p>
+            <h2>Ryleigh Newman</h2>
         </section>
 
         <section class="academic-info">
-            <img src="headshot.jpg" alt="Ryleigh Newman Headshot" class="headshot-image">
             <h1>Ryleigh Newman</h1>
             <p><strong>Undergraduate Student - Harriet L. Wilkes Honors College, FAU</strong></p>
             <p><strong>B.S. in Biochemistry & Data Analytics</strong></p>
