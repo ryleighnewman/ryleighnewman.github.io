@@ -16,7 +16,7 @@ html, body {
 
 /* Body and typography */
 body {
-    color: #ffffff; /* White text color */
+    color: #dddddd; /* Consistent light gray text color across the entire website */
     background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
     flex-grow: 1; /* Allow body to grow and take available space */
@@ -28,13 +28,14 @@ body {
 /* Add space between paragraphs */
 p {
     margin-bottom: 20px; /* Space between paragraphs */
+    color: #dddddd; /* Ensure all paragraphs use the same light gray color */
 }
 
 /* Initial solid color header */
 header {
-    background-color: rgb(30, 80, 150); /* Reverted back to the original blue color */
+    background-color: rgb(30, 80, 150); /* Original blue color */
     padding: 0 15px;
-    height: 60px; /* Height of the header */
+    height: 50px; /* Slightly shorter height for the header */
     flex-shrink: 0;
     position: fixed; /* Fixed positioning to ensure it stays at the top */
     top: 0; /* Stick to the top of the viewport */
@@ -59,7 +60,7 @@ header {
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
 main {
-    margin-top: 60px; /* Margin equal to the height of the header */
+    margin-top: 50px; /* Adjusted to match the height of the header */
 }
 
 /* Navigation Styling */
@@ -177,7 +178,8 @@ nav {
 }
 
 /* Section Divider */
-.about-section hr.divider-top, .about-section hr.divider-bottom {
+.about-section hr.divider-top, .about-section hr.divider-bottom, 
+.contact-section hr.divider-bottom {
     border: none;
     border-top: 1px solid rgba(169, 169, 169, 0.3); /* Light grey line for consistent dividers */
     margin: 50px auto; /* Space around the dividers */
@@ -223,7 +225,7 @@ nav {
 .contact-section ul {
     font-weight: 300; /* Light font weight */
     font-size: 1.2rem; /* Increase the font size for paragraph text and list items */
-    color: #dddddd; /* Light grey text color */
+    color: #dddddd; /* Consistent light gray text color */
     margin-bottom: 20px; /* Space between paragraphs and lists */
     max-width: 800px; /* Set alignment width for readability */
     margin-left: auto; /* Center align paragraphs */
