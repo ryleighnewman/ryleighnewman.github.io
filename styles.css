@@ -154,10 +154,11 @@ nav {
     padding: 50px 20px; /* Padding around the about content */
     text-align: center; /* Center align the text */
     flex-grow: 1;
+    margin-bottom: 40px; /* Ensure consistent spacing at the bottom of each section */
 }
 
 .motto {
-    color: #4A90E2; /* Apply the same blue color as elsewhere on the page */
+    color: rgb(30, 80, 150); /* Match the blue color used in the top bar */
     font-weight: 300; /* Ensure light font weight, if needed */
     font-size: 1.1rem; /* Adjust font size as needed */
 }
@@ -199,13 +200,14 @@ nav {
     padding: 50px 20px; /* Padding around the contact content */
     text-align: center; /* Center align the text */
     flex-grow: 1;
+    margin-bottom: 40px; /* Ensure consistent spacing at the bottom of each section */
 }
 
 .contact-section h1 {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
     font-size: 1.8rem; /* Font size for the heading */
-    color: #4A90E2; /* Blue color for the heading */
+    color: rgb(30, 80, 150); /* Match the blue color used in the top bar */
     margin-bottom: 30px; /* Space below the heading */
 }
 
