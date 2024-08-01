@@ -217,11 +217,13 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section text */
 }
 
+/* Contact Section styles */
 .contact-section h1 {
     font-weight: 300; /* Ensure light font weight */
     font-size: 2rem;
-    color: #ffffff;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section headings */
+    color: #4A90E2; /* Blue color for the heading */
+    text-transform: uppercase; /* Make the text uppercase */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for headings */
 }
 
 .contact-section p, .contact-section ul {
