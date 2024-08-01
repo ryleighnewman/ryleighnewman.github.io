@@ -28,8 +28,9 @@ body {
 
 .hero {
     position: relative;
-    z-index: 0; /* Background should be behind content */
+    z-index: 1; /* Ensures hero section is above background */
     background: url('background.JPG') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0); /* Ensure background color does not interfere */
 }
 
 /* Header */
@@ -90,8 +91,7 @@ nav {
 /* Main Content */
 main {
     position: relative;
-    z-index: 1; /* Ensures main content is above background */
-    flex-grow: 1;
+    z-index: 2; /* Ensures main content is above background */
 }
 
 /* Hero Section */
@@ -349,24 +349,35 @@ main {
 }
 
 .animate-fade {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Apply animations to specific sections */
+.hero {
     animation: fadeIn 1s ease-out forwards;
 }
 
-.header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
-    opacity: 0;
-}
-
-.header.animated, main..header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
-    opacity: 1;
+.about-section, .contact-section {
     animation: slideIn 0.8s ease-out forwards;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgb(15, 17, 18);
-    font-size: 0.8rem;
-    color: #ffffff;
-    flex-shrink: 0;
+/* Additional Animations */
+.section-sequential {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.section-sequential:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.section-sequential:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.section-sequential:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.section-sequential:nth-child(4) {
+    animation-delay: 0.8s;
 }
