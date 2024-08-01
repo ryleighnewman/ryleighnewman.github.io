@@ -13,11 +13,12 @@ html, body {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
     color: #ffffff;
-    background-color: rgb(18, 22, 24);
+    background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    position: relative; /* Added for pseudo-element positioning */
 }
 
 /* Hide gray background above the blue bar */
@@ -25,7 +26,7 @@ body::before {
     content: "";
     display: block;
     height: 60px; /* Adjust to match the height of the header */
-    background-color: rgb(18, 22, 24); /* Match background color */
+    background-color: rgb(18, 22, 24); /* Background color */
     position: absolute;
     top: 0;
     left: 0;
@@ -149,7 +150,6 @@ main {
     color: #dddddd;
 }
 
-/* About Section */
 .about-section {
     padding: 20px 20px;
     text-align: center;
@@ -205,7 +205,6 @@ main {
     max-width: 800px;
 }
 
-/* Contact Section */
 .contact-section {
     padding: 30px 20px;
     text-align: center;
@@ -306,46 +305,15 @@ main {
     background-color: rgba(51, 51, 51, 0.9);
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 10px 20px;
-    background-color: rgb(15, 17, 18); /* Darker black color */
+    background-color: rgb(15, 17, 18); /* Corrected footer color */
     font-size: 0.8rem;
     color: #ffffff;
     flex-shrink: 0;
 }
 
-/* Animation Definitions */
-@keyframes slideIn {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.animate-slide {
-    animation: slideIn 0.8s ease-out forwards;
-}
-
-.animate-fade {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
     .hero-headshot {
         width: 50vw;
@@ -383,11 +351,78 @@ footer {
     }
 }
 
-/* Reapply the animated fade-in effect to all elements */
-.header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
-    opacity: 0;
+.motto {
+    color: #4A90E2;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem; /* Revert to original font size */
 }
 
-.header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
-    opacity: 1;
+/* Animation Definitions */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide {
+    animation: slideIn 0.6s ease-out;
+}
+
+/* Responsive Adjustments for Hero Section */
+.hero {
+    background-position: center;
+    background-size: cover;
+}
+
+/* Divider Styling */
+.divider-top, .divider-bottom {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+/* Override specific section styling as needed */
+.about-section {
+    margin-top: 20px; /* Ensure spacing is correct */
+}
+
+.footer {
+    background-color: rgb(15, 17, 18); /* Ensure footer color is applied correctly */
+    padding: 10px 20px;
+    font-size: 0.8rem;
+}
+
+/* Fix any additional issues with margins or paddings */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure that the site layout and animations are working correctly */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links {
+        font-size: 0.9rem;
+    }
+
+    .contact-buttons a {
+        font-size: 1rem;
+    }
 }
