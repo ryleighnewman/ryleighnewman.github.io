@@ -1,7 +1,5 @@
 /* Basic reset */
 * {
-/* Basic reset */
-* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,21 +13,6 @@ html, body {
     height: 100%;
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300; /* Ensure light font weight globally */
-    color: #ffffff; /* White text color */
-    background-color: rgb(18, 22, 24); /* Background color */
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Headings and paragraphs */
-h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
-    font-family: inherit; /* Ensure all headings, paragraphs, lists, links, and spans inherit the global font */
-}
-
-/* Body and typography */
-body {
     color: #ffffff; /* White text color */
     background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
@@ -103,15 +86,25 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
+.hero-headshot {
+    max-width: 200px; /* Larger size for the headshot */
+    border-radius: 15px; /* Rectangular shape with rounded corners */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10; /* Ensure it's above the background image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .hero h1 {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 2.5rem; /* Slightly smaller heading size */
-    margin-bottom: 10px;
+    display: none; /* Hide the "Welcome to My Website" text */
 }
 
 .hero p {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.4rem;
+    font-weight: 300; /* Match existing style */
+    font-size: 1.8rem; /* Adjust size */
+    margin-top: 10px;
 }
 
 /* Academic Information Section (for the Home Page) */
@@ -121,15 +114,11 @@ nav {
 }
 
 .academic-info img.headshot-image {
-    max-width: 150px; /* Smaller headshot size for the home page */
-    border-radius: 10px; /* Rounded square for the headshot */
-    margin-bottom: 15px;
+    display: none; /* Hide the redundant headshot */
 }
 
 .academic-info h1 {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    display: none; /* Hide the redundant name section */
 }
 
 .academic-info p {
@@ -137,6 +126,8 @@ nav {
     font-size: 1.2rem;
     color: #dddddd;
     margin-bottom: 10px;
+    max-width: 800px; /* Limit width for better alignment */
+    margin: 0 auto 20px auto; /* Center align */
 }
 
 /* About Section styles */
@@ -286,7 +277,7 @@ nav {
 }
 
 .linkedin-btn:hover {
-    background-color: rgba(0,    85, 130, 0.9); /* Darker shade on hover */
+    background-color: rgba(0, 85, 130, 0.9); /* Darker shade on hover */
 }
 
 .facebook-btn {
@@ -314,20 +305,4 @@ footer {
     font-size: 0.8rem; /* Smaller font size for the copyright text */
     color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
-}
-
-/* Specific adjustments for the home page */
-.academic-info img.headshot-image {
-    max-width: 200px; /* Headshot image size */
-    border-radius: 15px; /* Rounded square for the headshot */
-    margin-bottom: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.academic-info p {
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    text-align: center;
 }
