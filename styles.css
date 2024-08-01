@@ -6,174 +6,135 @@
 }
 
 html, body {
+    margin: 0;
+    padding: 0;
     height: 100%;
     font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    background: rgb(18, 22, 24);
-    color: #fff;
+    font-weight: 300; /* Ensure light font weight globally */
+}
+
+/* Body and typography */
+body {
+    color: #ffffff; /* White text color */
+    background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
 
+/* Header styles */
 header {
-    background: rgb(30, 80, 150);
+    background-color: rgb(30, 80, 150); /* Slightly lighter blue for the top bar */
     padding: 0 15px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: none;
+    height: 60px; /* Ensures the header height is consistent */
 }
 
 nav {
+    display: flex;
+    justify-content: center; /* Center the logo and navigation links */
+    align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex: 1;
 }
 
 .logo-image {
-    height: 40px;
+    height: 40px; /* Adjust the height as needed */
+    width: auto;
 }
 
 .nav-links {
-    display: flex;
     list-style: none;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    flex: 2;
 }
 
-.nav-links li + li {
-    margin-left: 25px;
+.nav-links li {
+    margin-left: 25px; /* Increased margin for more spacing between items */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff; /* White color for navigation links to contrast against the blue background */
     font-size: 1rem;
+    font-weight: 300; /* Ensure light font weight for nav links */
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: rgb(169, 204, 227);
+    color: rgb(169, 204, 227); /* Light blue for hover effect */
 }
 
+/* Hero section */
 .hero {
     text-align: center;
     padding: 100px 20px;
     background: url('background.JPG') no-repeat center center/cover;
+    color: #ffffff;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
-.hero h1, .academic-info h1, .about-home h1 {
+.hero h1 {
+    font-weight: 300;
     font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-.hero p, .academic-info p, .about-home p {
+.hero p {
+    font-weight: 300;
     font-size: 1.4rem;
 }
 
-.academic-info, .about-home {
-    padding: 50px 20px;
+/* Academic Info Section */
+.academic-info {
     text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
+    padding: 50px 20px;
 }
 
-.academic-info img, .about-home img {
-    max-width: 200px;
-    border-radius: 10px;
+.academic-info img.headshot-image {
+    max-width: 150px; /* Smaller size for headshot */
+    border-radius: 10px; /* Rounded square */
     margin-bottom: 20px;
 }
 
-.academic-info ul, .about-home ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    text-align: left;
-    margin: 0 auto 50px;
-    max-width: 800px;
+.academic-info h1 {
+    font-weight: 300;
+    font-size: 2rem;
+    margin-top: 20px;
 }
 
-.academic-info ul li, .about-home ul li {
-    margin-bottom: 10px;
-    color: #4A90E2;
+.academic-info p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #dddddd;
 }
 
-.academic-info hr, .about-home hr {
+/* Section Divider */
+.academic-info hr {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin: 50px auto;
+    max-width: 800px; /* Limit width for divider */
 }
 
-.contact-section, .academic-info, .about-home {
-    flex-grow: 1;
-}
-
-.contact-section h1 {
-    font-size: 2rem;
-}
-
-.contact-section p, .contact-section ul {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.social-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    color: #fff;
-    border-radius: 15px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background-color: rgba(30, 80, 150, 0.8);
-}
-
-.btn:hover {
-    background-color: rgba(21, 63, 132, 0.9);
-    transform: translateY(-2px);
-}
-
-.email-btn { background-color: rgba(212, 70, 56, 0.8); }
-.email-btn:hover { background-color: rgba(179, 58, 47, 0.9); }
-
-.instagram-btn { background-color: rgba(225, 48, 108, 0.8); }
-.instagram-btn:hover { background-color: rgba(193, 53, 132, 0.9); }
-
-.twitter-btn { background-color: rgba(29, 161, 242, 0.8); }
-.twitter-btn:hover { background-color: rgba(10, 133, 217, 0.9); }
-
-.linkedin-btn { background-color: rgba(0, 119, 181, 0.8); }
-.linkedin-btn:hover { background-color: rgba(0, 85, 130, 0.9); }
-
-.facebook-btn { background-color: rgba(66, 103, 178, 0.8); }
-.facebook-btn:hover { background-color: rgba(54, 88, 153, 0.9); }
-
-.tiktok-btn { background-color: rgba(0, 0, 0, 0.8); }
-.tiktok-btn:hover { background-color: rgba(51, 51, 51, 0.9); }
-
+/* Footer styles */
 footer {
     text-align: center;
     padding: 10px 20px;
-    background-color: rgb(15, 17, 18);
+    background-color: rgb(15, 17, 18); /* Footer background color */
     font-size: 0.8rem;
-    color: #fff;
-    flex-shrink: 0;
+    color: #ffffff; /* White text for the footer */
 }
