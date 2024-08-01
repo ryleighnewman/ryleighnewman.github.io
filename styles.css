@@ -19,7 +19,6 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    scroll-behavior: smooth; /* Add smooth scrolling */
 }
 
 /* Header */
@@ -30,11 +29,6 @@ header {
     height: 60px;
     position: relative;
     z-index: 1;
-}
-
-/* Ensure header and footer are not sticky */
-header, footer {
-    position: relative !important; /* Override any sticky behavior */
 }
 
 /* Navigation */
@@ -75,11 +69,6 @@ nav {
     color: #ffffff;
     font-size: 1rem;
     font-weight: 300;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: rgb(169, 204, 227);
 }
 
 /* Main Content */
@@ -192,20 +181,6 @@ main {
     margin-top: 20px;
 }
 
-/* Contact Section */
-.contact-section {
-    padding: 30px 20px;
-    text-align: center;
-    flex-grow: 1;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
-}
-
-.contact-section h1 {
-    font-weight: 300;
-    font-size: 1.8rem;
-    color: #ffffff;
-}
-
 .contact-section p {
     font-weight: 300;
     font-size: 1.2rem;
@@ -237,13 +212,11 @@ main {
     background-color: rgba(30, 80, 150, 0.8);
     border-radius: 15px;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
     background-color: rgba(21, 63, 132, 0.9);
-    transform: translateY(-2px);
 }
 
 .email-btn {
