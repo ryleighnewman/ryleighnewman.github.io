@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="rgb(30, 80, 150)"> <!-- Updated theme color for the browser bar on iOS -->
+    <meta name="theme-color" content="rgb(30, 80, 150)">
     <title>Ryleigh Newman</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Optional: Add a favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <style>
         .hero-headshot {
-            max-width: 200px; /* Larger size for the headshot */
-            border-radius: 15px; /* Rectangular shape with rounded corners */
+            width: 30vw;
+            max-width: 350px;
+            min-width: 200px;
+            border-radius: 15px;
             margin-bottom: 20px;
             position: relative;
-            z-index: 10; /* Ensure it's above the background image */
+            z-index: 10;
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
 
-        .hero h1 {
-            display: none; /* Hide the "Welcome to My Website" text */
-        }
-
         .hero p {
-            font-weight: 300; /* Match existing style */
-            font-size: 1.8rem; /* Adjust size */
+            font-weight: 300;
+            font-size: 2rem;
             margin-top: 10px;
         }
 
-        .academic-info h1 {
-            display: none; /* Hide the redundant name section */
+        .hero-academic-info p {
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: #dddddd;
+            margin-bottom: 10px;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
         }
     </style>
 </head>
@@ -51,7 +54,7 @@
     <main id="home">
         <section class="hero">
             <img src="headshot.jpg" alt="Ryleigh Newman Headshot" class="headshot-image hero-headshot">
-            <p>Ryleigh Newman</p> <!-- Your name -->
+            <p>Ryleigh Newman</p>
             <div class="academic-info hero-academic-info">
                 <p><strong>Undergraduate Student - Harriet L. Wilkes Honors College, FAU</strong></p>
                 <p><strong>B.S. in Biochemistry & Data Analytics</strong></p>
@@ -59,8 +62,11 @@
         </section>
 
         <section class="academic-info">
+            <h1>Ryleigh Newman</h1>
+            <p><strong>Undergraduate Student - Harriet L. Wilkes Honors College, FAU</strong></p>
+            <p><strong>B.S. in Biochemistry & Data Analytics</strong></p>
             
-            <hr> <!-- Horizontal line to divide sections -->
+            <hr>
             
             <h2>About Me and My Goals</h2>
             <p>I’m a sophomore at Harriet L. Wilkes Honors College, majoring in Biochemistry and Data Analytics. My life’s mission is to transform challenges into opportunities, drawing from my personal experiences with disabilities. I have mild/moderate hearing loss in one ear and severe/profound loss in the other, as well as a rare neuromuscular disease resembling Charcot-Marie-Tooth disease, which affects my limb strength.</p>
