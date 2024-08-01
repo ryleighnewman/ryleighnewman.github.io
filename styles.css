@@ -182,51 +182,15 @@ nav {
 }
 
 /* Contact section */
-.contact-section {
-    padding: 30px 20px;
-    text-align: center;
-    flex-grow: 1;
-}
-
-.contact-section h1 {
-    font-weight: 300;
-    font-size: 1.8rem;
-    color: #ffffff;
-}
-
-.contact-section p,
-.contact-section ul {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #dddddd;
-    margin-bottom: 20px;
-}
-
-.contact-section ul {
-    list-style: none; /* Remove bullet points from the list */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+.contact-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px; /* Space between buttons */
+    padding: 20px; /* Add padding around the section */
 }
 
-.social-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px; /* Space between buttons */
-    list-style: none; /* Remove bullet points from the list */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-}
-
-.social-buttons li {
-    margin: 0; /* Remove margin from list items */
-}
-
-.btn {
+.contact-buttons a {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -240,7 +204,7 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.btn:hover {
+.contact-buttons a:hover {
     background-color: rgba(21, 63, 132, 0.9);
     transform: translateY(-2px);
 }
