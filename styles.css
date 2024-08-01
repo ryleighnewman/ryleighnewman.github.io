@@ -46,10 +46,11 @@ header {
 .transparent {
     background: linear-gradient(to bottom, 
         rgba(30, 80, 150, 1) 0%,         /* Solid blue at the top */
-        rgba(30, 80, 150, 0.8) 15%,      /* Gradual transition to semi-transparent */
-        rgba(30, 80, 150, 0.6) 40%,      /* Further transition to more transparency */
-        rgba(30, 80, 150, 0.3) 60%,      /* More transparent as we go down */
-        rgba(30, 80, 150, 0) 100%        /* Fully transparent at the bottom */
+        rgba(30, 80, 150, 0.8) 20%,      /* Light blue with some transparency */
+        rgba(30, 80, 150, 0.5) 40%,      /* Further lightening blue */
+        rgba(30, 80, 150, 0.3) 60%,      /* Even lighter blue */
+        rgba(30, 80, 150, 0.1) 80%,      /* Very light blue */
+        rgba(30, 80, 150, 0) 100%        /* Fades to transparent at the bottom */
     );
     backdrop-filter: blur(10px); /* Apply the frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
