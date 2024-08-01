@@ -1,3 +1,18 @@
+Let's address the issues more directly.
+
+### Objective:
+1. **Reduce the size of the background image** to take up less vertical space.
+2. **Adjust the text sizing and spacing** to achieve the desired look.
+
+### Updated Plan:
+
+1. **Further Reduce the Padding in the Hero Section**: This will directly reduce the height of the background image.
+2. **Adjust the Font Sizes**: Specifically tweak the font sizes to ensure the text hierarchy looks as expected.
+3. **Fine-Tune the Spacing**: Adjust the margins and padding to ensure the content aligns more closely.
+
+### Updated CSS:
+
+```css
 /* Basic reset */
 * {
     margin: 0;
@@ -76,7 +91,7 @@ nav {
 /* Hero section */
 .hero {
     text-align: center;
-    padding: 50px 20px; /* Reduced padding to decrease the background image height */
+    padding: 30px 20px; /* Further reduced padding to minimize background image height */
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
     flex-grow: 1;
@@ -87,11 +102,11 @@ nav {
 }
 
 .hero-headshot {
-    width: 30vw;
-    max-width: 350px;
-    min-width: 200px;
+    width: 25vw; /* Reduced width for a more balanced look */
+    max-width: 300px;
+    min-width: 180px;
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin to tighten layout */
     position: relative;
     z-index: 10;
     display: block;
@@ -101,23 +116,23 @@ nav {
 
 .hero p {
     font-weight: 300;
-    font-size: 2rem;
-    margin-top: 10px;
+    font-size: 1.8rem; /* Slightly reduced font size */
+    margin-top: 5px; /* Reduced margin to tighten layout */
 }
 
 .hero-academic-info p {
     font-weight: 300;
-    font-size: 1.4rem;
+    font-size: 1.2rem; /* Further reduced font size for the academic info */
     color: #dddddd;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced margin to tighten layout */
     max-width: 800px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 10px auto; /* Reduced bottom margin */
 }
 
 /* Academic Information Section */
 .academic-info {
     text-align: center;
-    padding: 40px 20px; /* Reduced padding for a more compact layout */
+    padding: 30px 20px; /* Reduced padding for a more compact layout */
 }
 
 .academic-info img.headshot-image {
@@ -134,20 +149,20 @@ nav {
     color: #dddddd;
     margin-bottom: 10px;
     max-width: 800px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 15px auto; /* Adjusted margins for better spacing */
 }
 
 /* About Section styles */
 .about-section {
-    padding: 40px 20px; /* Reduced padding for consistency */
+    padding: 30px 20px; /* Reduced padding for consistency */
     text-align: center;
     flex-grow: 1;
 }
 
 .about-section h1 {
     font-weight: 300;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.8rem; /* Slightly reduced heading size */
+    margin-bottom: 15px; /* Reduced margin */
     color: #ffffff;
 }
 
@@ -161,16 +176,16 @@ nav {
 }
 
 .about-section img.headshot-image {
-    max-width: 200px;
+    max-width: 180px; /* Reduced size for consistency */
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin */
 }
 
 .about-section h2 {
     font-weight: 300;
     color: #4A90E2;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 30px; /* Reduced margin */
+    margin-bottom: 15px; /* Reduced margin */
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -181,7 +196,7 @@ nav {
     color: #dddddd;
     text-align: left;
     max-width: 800px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 40px auto; /* Reduced margin */
     padding-left: 20px;
 }
 
@@ -195,20 +210,20 @@ nav {
 .about-section hr {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 40px auto; /* Reduced margin for better spacing */
+    margin: 30px auto; /* Reduced margin */
     max-width: 800px;
 }
 
 /* Contact Section styles */
 .contact-section {
-    padding: 40px 20px; /* Reduced padding for consistency */
+    padding: 30px 20px; /* Reduced padding for consistency */
     text-align: center;
     flex-grow: 1;
 }
 
 .contact-section h1 {
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.8rem; /* Slightly reduced heading size */
     color: #ffffff;
 }
 
@@ -216,7 +231,7 @@ nav {
     font-weight: 300;
     font-size: 1.2rem;
     color: #dddddd;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Reduced margin */
 }
 
 .contact-section ul {
@@ -225,7 +240,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px; /* Reduced gap */
 }
 
 /* Social Buttons Styles */
@@ -233,19 +248,19 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px; /* Reduced gap */
 }
 
 .btn {
     display: inline-block;
-    padding: 15px 20px;
+    padding: 10px 20px; /* Reduced padding for a sleeker look */
     font-size: 1.2rem;
     color: #ffffff;
     background-color: rgba(30, 80, 150, 0.8);
     border-radius: 15px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 300px;
+    width: 280px; /* Slightly reduced width */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
