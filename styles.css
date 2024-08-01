@@ -186,13 +186,13 @@ nav {
 
 .section-title-blue {
     color: rgb(30, 80, 150); /* Blue color for section titles */
-    font-size: 2em; /* Font size for section titles */
+    font-size: 1.8rem; /* Adjusted font size for section titles */
     margin-bottom: 20px; /* Space below the title */
 }
 
 .section-title-light-blue {
     color: rgb(173, 216, 230); /* Light blue color for section titles */
-    font-size: 2em; /* Font size for section titles */
+    font-size: 1.8rem; /* Adjusted font size for section titles */
     margin-bottom: 20px; /* Space below the title */
 }
 
@@ -203,20 +203,11 @@ nav {
     margin: 20px 0; /* Space above and below the divider */
 }
 
-/* Ensure other general styles are consistent */
-
-/* Divider styling */
-.divider-top, .divider-bottom {
-    border: 0;
-    height: 2px;
-    background: rgba(30, 80, 150, 0.5); /* Blue divider */
-    margin: 20px 0;
-}
-
 /* Section padding */
 .about-section {
     padding: 20px;
 }
+
 .about-section h2.section-title-blue {
     font-weight: 300; /* Ensure light font weight */
     color: #4A90E2; /* Light blue color for section titles */
@@ -268,10 +259,8 @@ nav {
     font-size: 1.2rem;
     color: #dddddd;
     margin-bottom: 20px;
-    font-family: 'Segoe UI Light', sans-serif;
 }
 
-/* Social Buttons Styles */
 .contact-section ul.social-buttons {
     list-style: none;
     padding: 0;
@@ -279,10 +268,11 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    font-family: 'Segoe UI Light', sans-serif;
 }
 
 .contact-section ul.social-buttons li {
-    width: 100%; /* Ensure buttons are full width */
+    width: 100%;
 }
 
 .contact-section ul.social-buttons a.btn {
@@ -298,33 +288,9 @@ nav {
     max-width: 300px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI Light', sans-serif;
 }
 
 /* Social Buttons Styles */
-.social-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Space between buttons */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for social buttons */
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 20px; /* Increased padding for a more substantial look */
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: rgba(30, 80, 150, 0.8); /* Default button background color with slight transparency */
-    border-radius: 15px; /* Rounded corners */
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 300px; /* Set a consistent width for all buttons */
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for button text */
-}
-
 .btn:hover {
     background-color: rgba(21, 63, 132, 0.9); /* Darker shade on hover with slight transparency */
     transform: translateY(-2px); /* Lift effect on hover */
