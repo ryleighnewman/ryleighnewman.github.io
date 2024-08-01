@@ -194,7 +194,8 @@ nav {
     color: #ffffff;
 }
 
-.contact-section p, .contact-section ul {
+.contact-section p,
+.contact-section ul {
     font-weight: 300;
     font-size: 1.2rem;
     color: #dddddd;
@@ -208,14 +209,14 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Space between buttons */
 }
 
 .social-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 15px; /* Space between buttons */
     list-style: none; /* Remove bullet points from the list */
     padding: 0; /* Remove default padding */
     margin: 0; /* Remove default margin */
