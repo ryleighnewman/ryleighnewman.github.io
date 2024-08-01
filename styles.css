@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is applied globally */
 }
 
 html, body {
@@ -22,6 +23,7 @@ body {
     background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
     flex-grow: 1; /* Allow body to grow and take available space */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for body text */
 }
 
 /* Header styles */
@@ -30,6 +32,7 @@ header {
     padding: 0 15px;
     height: 60px; /* Ensures the header height is consistent */
     flex-shrink: 0;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for header text */
 }
 
 nav {
@@ -39,6 +42,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     height: 100%; /* Make sure the navigation takes the full height of the header */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for navigation text */
 }
 
 .logo {
@@ -46,6 +50,7 @@ nav {
     align-items: center;
     justify-content: center;
     flex: 1;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for logo text */
 }
 
 .logo-image {
@@ -58,10 +63,12 @@ nav {
     display: flex;
     justify-content: center; /* Center the navigation links */
     flex: 2;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for nav links */
 }
 
 .nav-links li {
     margin-left: 25px; /* Increased margin for more spacing between items */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for nav items */
 }
 
 .nav-links a {
@@ -70,10 +77,12 @@ nav {
     font-size: 1rem; /* Reduced font size for sleeker look */
     font-weight: 300; /* Ensure light font weight for nav links */
     transition: color 0.3s ease;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for nav links */
 }
 
 .nav-links a:hover {
     color: rgb(169, 204, 227); /* Light blue for hover effect */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for nav hover text */
 }
 
 /* Hero section */
@@ -91,6 +100,7 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 5% 20px; /* Padding for both top and bottom */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow around the hero section */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hero text */
 }
 
 .hero-headshot {
@@ -99,18 +109,21 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the image */
     margin-bottom: 20px; /* Space between the image and the name */
     object-fit: cover;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for headshot */
 }
 
 .hero-name {
     font-size: 2rem; /* Adjust font size */
     margin: 0 0 10px 0; /* Space below the name */
     font-weight: 300; /* Light font weight */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hero name */
 }
 
 .hero-academic-info .subtext {
     font-size: 1.2rem; /* Adjust the font size of the academic info */
     line-height: 1.4;
     text-align: center; /* Center the academic information */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for academic info */
 }
 
 /* About Section styles */
@@ -118,6 +131,7 @@ nav {
     padding: 50px 20px; /* Padding around the about content */
     text-align: center; /* Center align the text */
     flex-grow: 1;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for about section text */
 }
 
 .about-section h2.section-title-blue {
@@ -126,6 +140,7 @@ nav {
     text-transform: uppercase; /* Uppercase for titles */
     letter-spacing: 1px; /* Slightly more spacing between letters */
     margin-bottom: 30px; /* Space below the title */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for section titles */
 }
 
 .about-section p {
@@ -135,6 +150,7 @@ nav {
     max-width: 800px; /* Restrict the width of paragraphs for better readability */
     margin: 0 auto 20px auto; /* Center the paragraphs and add space below */
     text-align: left; /* Align text to the left */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for about section paragraphs */
 }
 
 /* Section Divider */
@@ -143,6 +159,7 @@ nav {
     border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
     margin: 50px auto; /* Space around the dividers */
     max-width: 800px; /* Limit width for divider */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for section dividers */
 }
 
 /* Contact Section styles */
@@ -150,12 +167,14 @@ nav {
     padding: 50px 20px; /* Padding around the contact content */
     text-align: center; /* Center align the text */
     flex-grow: 1;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section text */
 }
 
 .contact-section h1 {
     font-weight: 300; /* Ensure light font weight */
     font-size: 2rem;
     color: #ffffff;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section headings */
 }
 
 .contact-section p, .contact-section ul {
@@ -163,6 +182,7 @@ nav {
     font-size: 1.2rem;
     color: #dddddd;
     margin-bottom: 30px; /* Space below the contact statement */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section text */
 }
 
 .contact-section ul {
@@ -172,6 +192,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 20px; /* Increased space between buttons */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section lists */
 }
 
 /* Social Buttons Styles */
@@ -180,6 +201,7 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 20px; /* Space between buttons */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for social buttons */
 }
 
 .btn {
@@ -194,55 +216,73 @@ nav {
     width: 300px; /* Set a consistent width for all buttons */
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for button text */
 }
 
 .btn:hover {
     background-color: rgba(21, 63, 132, 0.9); /* Darker shade on hover with slight transparency */
     transform: translateY(-2px); /* Lift effect on hover */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
 .email-btn {
     background-color: rgba(212, 70, 56, 0.8); /* Red color for Email with transparency */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for email button */
 }
 
 .email-btn:hover {
     background-color: rgba(179, 58, 47, 0.9); /* Darker shade on hover */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
 .instagram-btn {
     background-color: rgba(225, 48, 108, 0.8); /* Instagram gradient color with transparency */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for Instagram button */
 }
 
 .instagram-btn:hover {
     background-color: rgba(193, 53, 132, 0.9); /* Darker shade on hover */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
 .twitter-btn {
     background-color: rgba(29, 161, 242, 0.8); /* Twitter blue with transparency */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for Twitter button */
 }
 
 .twitter-btn:hover {
     background-color: rgba(10, 133, 217, 0.9); /* Darker shade on hover */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
+}
+
+.linkedin-btn {
+    background-color: rgba(0, 119, 181, 0.8); /* LinkedIn blue with transparency */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for LinkedIn button */
 }
 
 .linkedin-btn:hover {
     background-color: rgba(0, 85, 130, 0.9); /* Darker shade on hover */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
 .facebook-btn {
     background-color: rgba(66, 103, 178, 0.8); /* Facebook blue with transparency */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for Facebook button */
 }
 
 .facebook-btn:hover {
     background-color: rgba(54, 88, 153, 0.9); /* Darker shade on hover */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
 .tiktok-btn {
     background-color: rgba(0, 0, 0, 0.8); /* TikTok black with transparency */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for TikTok button */
 }
 
 .tiktok-btn:hover {
     background-color: rgba(51, 51, 51, 0.9); /* Darker shade on hover */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
 /* Footer styles */
@@ -257,4 +297,5 @@ footer {
     width: 100%;
     margin-top: auto; /* Push the footer to the bottom if there's extra space */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow at the top of the footer */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for footer text */
 }
