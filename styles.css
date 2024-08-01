@@ -1,3 +1,42 @@
+/* Animation Definitions */
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-slide {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.animate-fade {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 * {
     margin: 0;
     padding: 0;
