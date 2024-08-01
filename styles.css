@@ -364,10 +364,12 @@ footer {
     .contact-buttons {
         gap: 10px;
     }
-}
 
-.motto {
-    color: #4A90E2;
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
+    .about-section p {
+        font-size: 1rem;
+    }
+
+    .about-section h1, .about-section h2 {
+        font-size: 1.5rem;
+    }
 }
