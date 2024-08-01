@@ -235,12 +235,20 @@ nav {
     margin-bottom: 40px; /* Ensure consistent spacing at the bottom of each section */
 }
 
+/* Fix spacing above the Contact Me heading */
 .contact-section h1 {
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
-    font-weight: 300; /* Light font weight */
-    font-size: 1.8rem; /* Font size for the heading */
-    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
-    margin-bottom: 30px; /* Space below the heading */
+    margin-top: 0;  /* Remove any top margin */
+    padding-top: 0; /* Remove any top padding */
+}
+
+/* Additional adjustment for the contact section if necessary */
+.contact-section {
+    padding-top: 20px; /* Adjust padding if needed to align with the top blue bar */
+}
+
+/* Ensure the main content starts directly below the fixed header */
+main {
+    margin-top: 50px; /* Adjust as necessary to match the height of the header */
 }
 
 .contact-section p, 
