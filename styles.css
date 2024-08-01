@@ -31,9 +31,9 @@ header {
     z-index: 1;
 }
 
-/* Remove sticky behavior for header and footer */
+/* Ensure header and footer are not sticky */
 header, footer {
-    position: static; /* Ensure the bars are not sticky */
+    position: relative !important; /* Override any sticky behavior */
 }
 
 /* Navigation */
@@ -112,18 +112,18 @@ main {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* New custom class for your name */
-.custom-name {
-    font-family: 'Segoe UI', sans-serif !important; /* Force the correct font */
-    font-weight: 400;
-    font-size: 3rem;
+/* Correct Font for Your Name */
+.correct-font {
+    font-family: 'Arial', sans-serif !important; /* Force a different font to ensure visibility */
+    font-weight: 700; /* Make it bold for distinction */
+    font-size: 3rem; /* Set the appropriate size */
     margin-bottom: 10px;
     text-align: center;
 }
 
 /* Responsive adjustment for hero name on smaller screens */
 @media (max-width: 768px) {
-    .custom-name {
+    .correct-font {
         font-size: 2.2rem; /* Reduce font size on smaller screens */
     }
 }
@@ -298,6 +298,7 @@ footer {
     padding: 15px 0; /* Reduced padding for a smaller footer bar */
     text-align: center;
     margin-top: auto; /* Ensure footer is at the bottom */
+    position: relative !important; /* Ensure the footer is not sticky */
 }
 
 footer p {
