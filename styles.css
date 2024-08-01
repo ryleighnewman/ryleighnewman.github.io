@@ -25,14 +25,10 @@ body {
 
 /* Header styles */
 header {
-    background-color: rgb(30, 80, 150); /* Consistent blue color for all pages */
+    background-color: rgb(30, 80, 150); /* Slightly lighter blue for the top bar */
     border-bottom: none; /* Removed bottom border to eliminate the white line */
     padding: 0 15px; /* Removed top padding to ensure the color reaches the top */
     height: 60px; /* Ensures the header height is consistent */
-    width: 100%;
-    z-index: 1000; /* Ensure it stays on top */
-    top: 0;
-    position: relative;
 }
 
 nav {
@@ -110,17 +106,51 @@ nav {
     flex-grow: 1;
 }
 
-.about-section h1 {
+.about-section h1, .about-section h2, .about-section h3 {
     font-weight: 300; /* Ensure light font weight */
-    font-size: 2rem; /* Title size */
-    margin-bottom: 20px;
-    color: #ffffff; /* White text color for the heading */
+    color: #ffffff; /* White text color for the headings */
+    margin-bottom: 15px;
 }
 
-.about-section p {
+.about-section h1 {
+    font-size: 2rem; /* Title size */
+}
+
+.about-section h2 {
+    font-size: 1.8rem; /* Section heading size */
+    margin-top: 30px;
+}
+
+.about-section h3 {
+    font-size: 1.4rem; /* Subheading size */
+    margin-top: 20px;
+}
+
+.about-section p, .about-section ul {
     font-weight: 300; /* Ensure light font weight */
     font-size: 1.2rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
+    margin-bottom: 20px;
+}
+
+.about-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #dddddd;
+}
+
+.about-section li {
+    margin-bottom: 10px;
+}
+
+/* Headshot Image Styles */
+.headshot-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%; /* Rounded corners */
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    object-fit: cover; /* Ensure the image covers the area without stretching */
 }
 
 /* Contact Section styles */
