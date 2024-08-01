@@ -196,51 +196,11 @@ nav {
     margin-bottom: 20px; /* Space below the title */
 }
 
-/* Divider styling */
-.divider-top, .divider-bottom {
-    border: none; /* Remove default border */
-    height: 2px; /* Thickness of the divider */
-    background: rgba(30, 80, 150, 0.5); /* Light blue color with some transparency */
-    margin: 20px 0; /* Space above and below the divider */
-}
-
-/* About Section styles */
-.about-section {
-    padding: 50px 20px; /* Padding around the about content */
-    text-align: center; /* Center align the text */
-    flex-grow: 1;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for about section text */
-}
-
-.motto {
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
-    color: #4A90E2; /* Apply the same blue color as elsewhere on the page */
-    font-weight: 300; /* Ensure light font weight, if needed */
-    font-size: 1.2rem; /* Adjust font size as needed */
-}
-
-/* About Page Specific Styles */
-.about-section {
-    padding: 20px; /* Consistent padding for sections */
-}
-
-.section-title-blue {
-    color: rgb(30, 80, 150); /* Blue color for section titles */
-    font-size: 2em; /* Font size for section titles */
-    margin-bottom: 20px; /* Space below the title */
-}
-
-.section-title-light-blue {
-    color: rgb(173, 216, 230); /* Light blue color for section titles */
-    font-size: 2em; /* Font size for section titles */
-    margin-bottom: 20px; /* Space below the title */
-}
-
 .divider-top, .divider-bottom {
     border: 0;
     height: 2px;
     background: rgba(30, 80, 150, 0.5); /* Blue divider */
-    margin: 20px 0;
+    margin: 20px 0; /* Space above and below the divider */
 }
 
 /* Ensure other general styles are consistent */
@@ -293,6 +253,7 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section text */
 }
 
+/* Contact Section styles */
 .contact-section h1 {
     font-weight: 300; /* Ensure light font weight */
     font-size: 2rem;
@@ -399,111 +360,27 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
-/* TikTok Button Styles */
 .tiktok-btn {
-    background-color: rgba(255, 65, 108, 0.8); /* TikTok gradient color with transparency */
+    background-color: rgba(0, 0, 0, 0.8); /* TikTok black with transparency */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for TikTok button */
 }
 
 .tiktok-btn:hover {
-    background-color: rgba(224, 39, 96, 0.9); /* Darker shade on hover */
+    background-color: rgba(51, 51, 51, 0.9); /* Darker shade on hover */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
 }
 
-/* General Section Styles */
-.section {
-    padding: 50px 20px; /* General padding for sections */
-    text-align: center; /* Center align text for sections */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for text in sections */
-}
-
-.section-title {
-    font-weight: 300; /* Light font weight */
-    color: #4A90E2; /* Blue color for section titles */
-    font-size: 2rem; /* Font size for section titles */
-    margin-bottom: 30px; /* Space below the title */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for section titles */
-}
-
-.section-content p {
-    font-weight: 300; /* Light font weight */
-    font-size: 1.2rem; /* Text size for content */
-    color: #dddddd; /* Light text color for readability */
-    max-width: 800px; /* Limit width for better readability */
-    margin: 0 auto 20px auto; /* Center paragraphs and add space below */
-    text-align: left; /* Align text to the left */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for section paragraphs */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .social-buttons {
-        flex-direction: column;
-        gap: 10px; /* Decrease gap between buttons on smaller screens */
-    }
-
-    .btn {
-        width: 100%; /* Make buttons full width on smaller screens */
-        padding: 12px 15px; /* Adjust padding for smaller screens */
-    }
-
-    .section-content p {
-        font-size: 1rem; /* Smaller text size on mobile devices */
-    }
-
-    .section-title {
-        font-size: 1.5rem; /* Smaller font size for section titles on mobile devices */
-    }
-}
-
-@media (max-width: 480px) {
-    .section-content p {
-        font-size: 0.9rem; /* Further decrease text size on very small screens */
-    }
-
-    .section-title {
-        font-size: 1.2rem; /* Adjust font size for section titles on very small screens */
-    }
-
-    .social-buttons {
-        gap: 5px; /* Even smaller gap between buttons on very small screens */
-    }
-}
-
-/* Footer Styles */
-.footer {
-    background-color: rgba(30, 80, 150, 0.8); /* Blue background with transparency */
-    color: #ffffff; /* White text color */
-    padding: 20px;
+/* Footer styles */
+footer {
     text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(15, 17, 18); /* Footer background color */
+    border-top: none; /* Removed the border at the top of the footer */
+    font-size: 0.8rem; /* Smaller font size for the copyright text */
+    color: #ffffff; /* White text for the footer */
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom if there's extra space */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow at the top of the footer */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for footer text */
-}
-
-.footer p {
-    margin: 0;
-    font-weight: 300; /* Light font weight */
-    font-size: 1rem;
-}
-
-/* Miscellaneous Styles */
-.hidden {
-    display: none; /* Class for hiding elements */
-}
-
-.show {
-    display: block; /* Class for showing elements */
-}
-
-/* Animation for smooth transitions */
-.fade-in {
-    animation: fadeIn 1s ease-out; /* Apply fade-in animation */
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
