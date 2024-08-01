@@ -9,17 +9,28 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Optional: Add a favicon -->
     <style>
         .hero-headshot {
-            max-width: 150px;
-            border-radius: 50%; /* Make it circular */
+            max-width: 200px; /* Larger size for the headshot */
+            border-radius: 15px; /* Rectangular shape with rounded corners */
             margin-bottom: 20px;
             position: relative;
             z-index: 10; /* Ensure it's above the background image */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        .hero h2 {
-            font-weight: 300; /* Match the existing style */
-            font-size: 1.8rem; /* Similar size to other headings */
+        .hero h1 {
+            display: none; /* Hide the "Welcome to My Website" text */
+        }
+
+        .hero p {
+            font-weight: 300; /* Match existing style */
+            font-size: 1.8rem; /* Adjust size */
             margin-top: 10px;
+        }
+
+        .academic-info h1 {
+            display: none; /* Hide the redundant name section */
         }
     </style>
 </head>
@@ -40,13 +51,10 @@
     <main id="home">
         <section class="hero">
             <img src="headshot.jpg" alt="Ryleigh Newman Headshot" class="headshot-image hero-headshot">
-            <h1>Welcome to My Website</h1>
-            <p>Website in development.</p>
-            <h2>Ryleigh Newman</h2>
+            <p>Ryleigh Newman</p> <!-- Your name replaces "Website in development" -->
         </section>
 
         <section class="academic-info">
-            <h1>Ryleigh Newman</h1>
             <p><strong>Undergraduate Student - Harriet L. Wilkes Honors College, FAU</strong></p>
             <p><strong>B.S. in Biochemistry & Data Analytics</strong></p>
             
