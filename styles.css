@@ -9,7 +9,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is applied globally */
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 300; /* Ensure light font weight globally */
 }
 
 /* Body and typography */
@@ -66,7 +67,7 @@ nav {
     text-decoration: none;
     color: #ffffff; /* White color for navigation links to contrast against the blue background */
     font-size: 1rem; /* Reduced font size for sleeker look */
-    font-weight: 300;
+    font-weight: 300; /* Ensure light font weight for nav links */
     transition: color 0.3s ease;
 }
 
@@ -88,12 +89,13 @@ nav {
 }
 
 .hero h1 {
+    font-weight: 300; /* Ensure light font weight */
     font-size: 2.5rem; /* Slightly smaller heading size */
     margin-bottom: 10px;
-    font-weight: 300; /* Ensure light font weight */
 }
 
 .hero p {
+    font-weight: 300; /* Ensure light font weight */
     font-size: 1.4rem;
 }
 
@@ -105,12 +107,14 @@ nav {
 }
 
 .about-section h1 {
+    font-weight: 300; /* Ensure light font weight */
     font-size: 2rem; /* Title size */
     margin-bottom: 20px;
     color: #ffffff; /* White text color for the heading */
 }
 
 .about-section p {
+    font-weight: 300; /* Ensure light font weight */
     font-size: 1.2rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
 }
@@ -123,14 +127,15 @@ nav {
 }
 
 .contact-section h1 {
-    font-size: 2rem; /* Ensure correct font size and weight */
-    margin-bottom: 20px;
-    color: #ffffff; /* White text color for the heading */
+    font-weight: 300; /* Ensure light font weight */
+    font-size: 2rem;
+    color: #ffffff;
 }
 
-.contact-section p {
-    font-size: 1.2rem; /* Text size for the content */
-    color: #dddddd; /* Slightly lighter text color for contrast */
+.contact-section p, .contact-section ul {
+    font-weight: 300; /* Ensure light font weight */
+    font-size: 1.2rem;
+    color: #dddddd;
     margin-bottom: 30px; /* Space below the contact statement */
 }
 
