@@ -1,3 +1,4 @@
+/* Universal reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -70,6 +71,7 @@ nav {
     color: rgb(169, 204, 227);
 }
 
+/* Hero section */
 .hero {
     text-align: center;
     padding: 20px 20px;
@@ -87,51 +89,44 @@ nav {
     max-width: 360px;
     min-width: 200px;
     border-radius: 15px;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto; /* Center and adjust bottom margin */
     position: relative;
     z-index: 10;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .hero p {
     font-weight: 300;
     font-size: 1.6rem;
-    margin-top: 5px;
+    margin: 5px auto; /* Adjust margin for consistency */
+}
+
+.hero-academic-info {
+    padding: 0 15px; /* Add padding */
+    text-align: center; /* Center the text */
 }
 
 .hero-academic-info p {
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 2.5vw; /* Responsive font size */
     color: #dddddd;
-    margin-bottom: 5px;
+    margin: 0 auto 10px auto; /* Consistent margin */
     max-width: 800px;
-    margin: 0 auto 10px auto;
+    line-height: 1.2;
 }
 
-.academic-info {
-    text-align: center;
-    padding: 30px 20px;
+.hero-academic-info p span {
+    display: block; /* Force each part to its own line */
+    margin-bottom: 5px; /* Add margin between lines */
 }
 
-.academic-info img.headshot-image {
-    display: none;
-}
-
-.academic-info h1 {
-    display: none;
-}
-
-.academic-info p {
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 2.5vw;
     color: #dddddd;
-    margin-bottom: 10px;
-    max-width: 800px;
-    margin: 0 auto 15px auto;
 }
 
+/* About section */
 .about-section {
     padding: 20px 20px;
     text-align: center;
@@ -152,12 +147,6 @@ nav {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
-}
-
-.about-section img.headshot-image {
-    max-width: 180px;
-    border-radius: 10px;
-    margin-bottom: 15px;
 }
 
 .about-section h2 {
@@ -192,6 +181,7 @@ nav {
     max-width: 800px;
 }
 
+/* Contact section */
 .contact-section {
     padding: 30px 20px;
     text-align: center;
@@ -292,18 +282,6 @@ nav {
 
 .tiktok-btn:hover {
     background-color: rgba(51, 51, 51, 0.9);
-}
-
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-main {
-    flex: 1;
 }
 
 footer {
