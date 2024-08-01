@@ -78,15 +78,17 @@ nav {
 .hero {
     position: relative;
     width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio (9/16 = 0.5625, which is 56.25%) */
-    background: url('background.JPG') no-repeat center center/cover;
+    height: auto; /* Let the height adjust naturally based on content */
+    background: url('background.JPG') no-repeat center center;
+    background-size: cover; /* Maintain aspect ratio of the background image */
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding-top: 5%; /* Add some padding to create space at the top */
+    padding-bottom: 5%; /* Add padding to create space at the bottom */
 }
 
 .headshot-image {
