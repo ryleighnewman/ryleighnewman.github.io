@@ -20,11 +20,19 @@ body {
     background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
     flex-grow: 1; /* Allow body to grow and take available space */
+    font-size: 1.2rem; /* Increase font size of paragraphs */
+    max-width: 800px; /* Set alignment widths for better readability */
+    margin: 0 auto; /* Center the content */
+}
+
+/* Add space between paragraphs */
+p {
+    margin-bottom: 20px; /* Space between paragraphs */
 }
 
 /* Initial solid color header */
 header {
-    background-color: rgb(30, 80, 150); /* Solid blue background (same as blue sections) */
+    background-color: rgb(100, 150, 200); /* Lighter blue background matching top bar */
     padding: 0 15px;
     height: 60px; /* Height of the header */
     flex-shrink: 0;
@@ -40,10 +48,10 @@ header {
 /* Transparent Header Class for Scrolling */
 .transparent {
     background: linear-gradient(to bottom, 
-        rgba(30, 80, 150, 1) 0%,        /* Fully opaque blue at the top */
-        rgba(30, 80, 150, 0.8) 40%,     /* Blue with reduced opacity transitioning to semi-transparent */
-        rgba(30, 80, 150, 0.6) 80%,     /* Further reduction in opacity while keeping blue color */
-        rgba(30, 80, 150, 0.4) 100%     /* Even more transparent blue at the bottom */
+        rgba(100, 150, 200, 1) 0%,        /* Fully opaque lighter blue at the top */
+        rgba(100, 150, 200, 0.8) 40%,     /* Lighter blue with reduced opacity transitioning to semi-transparent */
+        rgba(100, 150, 200, 0.6) 80%,     /* Further reduction in opacity while keeping lighter blue color */
+        rgba(100, 150, 200, 0.4) 100%     /* Even more transparent lighter blue at the bottom */
     );
     backdrop-filter: blur(10px); /* Apply the frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
@@ -89,7 +97,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* White color for navigation links to contrast against the blue background */
+    color: #ffffff; /* White color for navigation links to contrast against the lighter blue background */
     font-size: 0.9rem; /* Decreased font size slightly */
     font-weight: 300; /* Ensure light font weight for nav links */
     transition: color 0.3s ease;
@@ -158,7 +166,7 @@ nav {
 }
 
 .motto {
-    color: rgb(30, 80, 150); /* Match the blue color used in the top bar */
+    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
     font-weight: 300; /* Ensure light font weight, if needed */
     font-size: 1.1rem; /* Adjust font size as needed */
 }
@@ -180,7 +188,7 @@ nav {
 .section-title-blue {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
-    color: rgb(30, 80, 150); /* Consistent blue color for section titles */
+    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
     text-transform: uppercase; /* Transform text to uppercase */
     font-size: 1.8rem; /* Adjusted font size */
     margin-bottom: 20px; /* Space below the title */
@@ -189,7 +197,7 @@ nav {
 .section-title-light-blue {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
-    color: rgb(30, 80, 150); /* Adjusted to match the blue used in the navigation header */
+    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
     text-transform: uppercase; /* Transform text to uppercase */
     font-size: 1.8rem; /* Adjusted font size */
     margin-bottom: 20px; /* Space below the title */
@@ -207,16 +215,20 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
     font-size: 1.8rem; /* Font size for the heading */
-    color: rgb(30, 80, 150); /* Match the blue color used in the top bar */
+    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
     margin-bottom: 30px; /* Space below the heading */
 }
 
 .contact-section p, 
 .contact-section ul {
     font-weight: 300; /* Light font weight */
-    font-size: 1.1rem; /* Font size for paragraph text and list items */
+    font-size: 1.2rem; /* Increase the font size for paragraph text and list items */
     color: #dddddd; /* Light grey text color */
-    margin-bottom: 30px; /* Space below paragraphs and lists */
+    margin-bottom: 20px; /* Space between paragraphs and lists */
+    max-width: 800px; /* Set alignment width for readability */
+    margin-left: auto; /* Center align paragraphs */
+    margin-right: auto; /* Center align paragraphs */
+    text-align: left; /* Align text to the left */
 }
 
 .contact-section ul {
@@ -239,9 +251,9 @@ nav {
 .btn {
     display: inline-block;
     padding: 15px 20px; /* Padding for buttons */
-    font-size: 1.1rem; /* Font size for button text */
+    font-size: 1.2rem; /* Font size for button text */
     color: #ffffff; /* White text color */
-    background-color: rgba(30, 80, 150, 0.8); /* Semi-transparent blue background */
+    background-color: rgba(100, 150, 200, 0.8); /* Lighter blue matching top bar */
     border-radius: 15px; /* Rounded corners for buttons */
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
@@ -251,7 +263,7 @@ nav {
 }
 
 .btn:hover {
-    background-color: rgba(21, 63, 132, 0.9); /* Darker shade on hover with slight transparency */
+    background-color: rgba(70, 120, 170, 0.9); /* Slightly darker shade on hover with slight transparency */
     transform: translateY(-2px); /* Lift effect on hover */
 }
 
@@ -310,7 +322,7 @@ footer {
     padding: 10px 20px;
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     border-top: none; /* No border at the top of the footer */
-    font-size: 0.7rem; /* Slightly smaller font size for the footer text */
+    font-size: 0.8rem; /* Slightly larger font size for the footer text */
     color: #ffffff; /* White text color for the footer */
     flex-shrink: 0;
     width: 100%;
