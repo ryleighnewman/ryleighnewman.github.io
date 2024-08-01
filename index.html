@@ -30,13 +30,17 @@
 
         .hero-academic-info p {
             font-weight: 300;
-            font-size: 3vw; /* Font size scales with viewport width */
+            font-size: 2.5vw; /* Adjust font size to be responsive */
             color: #dddddd;
             margin-bottom: 5px;
             max-width: 800px;
             margin: 0 auto 10px auto;
-            white-space: nowrap; /* Prevents text from wrapping */
-            font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
+            font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font */
+            line-height: 1.2; /* Adjust line height for better spacing */
+        }
+
+        .hero-academic-info p span {
+            display: block; /* Force each part to its own line */
         }
     </style>
 </head>
@@ -59,7 +63,10 @@
             <img src="headshot.jpg" alt="Ryleigh Newman Headshot" class="headshot-image hero-headshot">
             <p>Ryleigh Newman</p>
             <div class="academic-info hero-academic-info">
-                <p><strong>Undergraduate Student - Harriet L. Wilkes Honors College, FAU</strong></p>
+                <p>
+                    <span>Undergraduate Student</span>
+                    <span>Harriet L. Wilkes Honors College, FAU</span>
+                </p>
                 <p><strong>B.S. in Biochemistry & Data Analytics</strong></p>
             </div>
         </section>
