@@ -112,12 +112,13 @@ main {
 .hero-academic-info {
     padding: 0 15px;
     text-align: center;
+    margin-top: 20px; /* Adjusted spacing */
 }
 
 .hero-academic-info p {
-    font-family: 'Segoe UI Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensuring the correct font */
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.5rem; /* Adjusted font size for better readability */
     color: #dddddd;
     margin: 0 auto 10px auto;
     max-width: 800px;
@@ -130,10 +131,11 @@ main {
 }
 
 .degree-info {
-    font-family: 'Segoe UI Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensuring the correct font */
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.8rem; /* Adjusted font size */
     color: #dddddd;
+    margin: 10px 0; /* Added margin for spacing */
 }
 
 .about-section {
