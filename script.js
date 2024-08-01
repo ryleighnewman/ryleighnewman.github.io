@@ -12,13 +12,12 @@ function toggleHeaderTransparency() {
 <script>
 document.addEventListener('scroll', function() {
     const header = document.querySelector('header');
-    const solidColorSection = document.querySelector('.solid-color-section');
-    const solidColorSectionHeight = solidColorSection ? solidColorSection.offsetHeight : 0;
+    const scrollThreshold = 50; // Adjust this value to control when the effect starts
 
-    if (window.scrollY > solidColorSectionHeight) {
-        header.classList.add('transparent');
+    if (window.scrollY > scrollThreshold) {
+        header.classList.add('frosted');
     } else {
-        header.classList.remove('transparent');
+        header.classList.remove('frosted');
     }
 });
 </script>
