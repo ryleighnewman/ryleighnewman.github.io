@@ -247,37 +247,58 @@ nav {
 
 /* Contact Section styles */
 .contact-section {
-    padding: 50px 20px; /* Padding around the contact content */
-    text-align: center; /* Center align the text */
-    flex-grow: 1;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section text */
+    padding: 20px;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Segoe UI Light', sans-serif;
 }
 
-/* Contact Section styles */
-.contact-section h1 {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 2rem;
-    color: #4A90E2; /* Blue color for the heading */
-    text-transform: uppercase; /* Make the text uppercase */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for headings */
+.contact-section h2.section-title-blue {
+    font-weight: 300;
+    font-size: 1.8rem; /* Reduced font size for section titles */
+    color: #4A90E2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
 }
 
-.contact-section p, .contact-section ul {
-    font-weight: 300; /* Ensure light font weight */
+.contact-section p {
+    font-weight: 300;
     font-size: 1.2rem;
     color: #dddddd;
-    margin-bottom: 30px; /* Space below the contact statement */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section text */
+    margin-bottom: 20px;
+    font-family: 'Segoe UI Light', sans-serif;
 }
 
-.contact-section ul {
-    list-style: none; /* Remove bullets */
+/* Social Buttons Styles */
+.contact-section ul.social-buttons {
+    list-style: none;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Increased space between buttons */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for contact section lists */
+    gap: 20px;
+}
+
+.contact-section ul.social-buttons li {
+    width: 100%; /* Ensure buttons are full width */
+}
+
+.contact-section ul.social-buttons a.btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: rgba(30, 80, 150, 0.8);
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI Light', sans-serif;
 }
 
 /* Social Buttons Styles */
