@@ -25,7 +25,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: rgb(30, 80, 150); /* Slightly lighter blue for the top bar */
+    background-color: rgb(30, 80, 150); /* Consistent blue color for all pages */
     border-bottom: none; /* Removed bottom border to eliminate the white line */
     padding: 0 15px; /* Removed top padding to ensure the color reaches the top */
     height: 60px; /* Ensures the header height is consistent */
