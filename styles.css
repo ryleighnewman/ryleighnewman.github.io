@@ -79,6 +79,8 @@ nav {
 /* Main Content */
 main {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero Section */
@@ -105,17 +107,18 @@ main {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.hero-name {
+/* New custom class for your name */
+.custom-name {
+    font-family: 'Segoe UI', sans-serif; /* Use the correct font */
     font-weight: 400;
-    font-size: 3rem; /* Increase font size for name */
+    font-size: 3rem;
     margin-bottom: 10px;
-    font-family: 'Segoe UI', sans-serif !important; /* Force the correct font */
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
 /* Responsive adjustment for hero name on smaller screens */
 @media (max-width: 768px) {
-    .hero-name {
+    .custom-name {
         font-size: 2.2rem; /* Reduce font size on smaller screens */
     }
 }
@@ -289,6 +292,7 @@ footer {
     background-color: rgb(30, 80, 150); /* Match the header color */
     padding: 15px 0; /* Reduced padding for a smaller footer bar */
     text-align: center;
+    margin-top: auto; /* Ensure footer is at the bottom */
 }
 
 footer p {
