@@ -36,7 +36,7 @@ header {
     position: sticky; /* Make the header sticky */
     top: 0; /* Stick to the top of the viewport */
     z-index: 1000; /* Ensure the header is above other content */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition for background color and filter */
 }
 
 nav {
@@ -49,9 +49,11 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for navigation text */
 }
 
-/* Add this class for the transparent effect */
+/* Add this class for the frosted glass effect */
 .transparent {
-    background-color: rgba(30, 80, 150, 0.5); /* Make the header semi-transparent */
+    background-color: rgba(30, 80, 150, 0.6); /* Make the header semi-transparent */
+    backdrop-filter: blur(10px); /* Apply the frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
 
 .logo {
