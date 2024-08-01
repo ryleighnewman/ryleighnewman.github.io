@@ -13,25 +13,11 @@ html, body {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
     color: #ffffff;
-    background-color: rgb(18, 22, 24); /* Background color */
+    background-color: rgb(18, 22, 24);
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative; /* Added for pseudo-element positioning */
-}
-
-/* Hide gray background above the blue bar */
-body::before {
-    content: "";
-    display: block;
-    height: 60px; /* Adjust to match the height of the header */
-    background-color: rgb(18, 22, 24); /* Background color */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: -1;
 }
 
 /* Header */
@@ -131,9 +117,9 @@ main {
 .hero-academic-info p {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.2rem; /* Revert font size */
     color: #dddddd;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 10px auto; /* Revert margin */
     max-width: 800px;
     line-height: 1.2;
 }
@@ -144,9 +130,9 @@ main {
 }
 
 .degree-info {
-    font-family: 'Segoe UI Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif; /* Revert font */
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.2rem; /* Revert font size */
     color: #dddddd;
 }
 
@@ -308,7 +294,7 @@ main {
 footer {
     text-align: center;
     padding: 10px 20px;
-    background-color: rgb(15, 17, 18); /* Corrected footer color */
+    background-color: rgb(15, 17, 18);
     font-size: 0.8rem;
     color: #ffffff;
     flex-shrink: 0;
@@ -358,71 +344,51 @@ footer {
     font-size: 1.2rem; /* Revert to original font size */
 }
 
-/* Animation Definitions */
 @keyframes slideIn {
-    from {
-        transform: translateY(-50px);
+    0% {
+        transform: translateY(20px);
         opacity: 0;
     }
-    to {
+    100% {
         transform: translateY(0);
         opacity: 1;
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .animate-slide {
-    animation: slideIn 0.6s ease-out;
+    animation: slideIn 0.8s ease-out forwards;
 }
 
-/* Responsive Adjustments for Hero Section */
-.hero {
-    background-position: center;
-    background-size: cover;
+.animate-fade {
+    animation: fadeIn 1s ease-out forwards;
 }
 
-/* Divider Styling */
-.divider-top, .divider-bottom {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    margin: 30px auto;
-    max-width: 800px;
+.header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
+    opacity: 0;
 }
 
-/* Override specific section styling as needed */
-.about-section {
-    margin-top: 20px; /* Ensure spacing is correct */
+.header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
+    opacity: 1;
 }
 
-.footer {
-    background-color: rgb(15, 17, 18); /* Ensure footer color is applied correctly */
-    padding: 10px 20px;
-    font-size: 0.8rem;
-}
-
-/* Fix any additional issues with margins or paddings */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-/* Ensure that the site layout and animations are working correctly */
-@media (max-width: 768px) {
-    .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-links li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav-links {
-        font-size: 0.9rem;
-    }
-
-    .contact-buttons a {
-        font-size: 1rem;
-    }
+/* Hide gray background above the blue bar */
+body::before {
+    content: "";
+    display: block;
+    height: 60px; /* Adjust to match the height of the header */
+    background-color: rgb(18, 22, 24);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
 }
