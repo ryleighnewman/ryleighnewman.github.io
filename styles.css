@@ -85,8 +85,7 @@ main {
 .hero {
     padding: 20px 20px 40px; /* Adjusted padding for better spacing */
     background: url('background.JPG') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed; /* Ensures the background image doesn't scroll with content */
+    background-size: cover; /* Keep the image covering the entire hero section */
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -110,7 +109,7 @@ main {
     font-weight: 400;
     font-size: 3rem; /* Increase font size for name */
     margin-bottom: 10px;
-    font-family: 'Segoe UI', sans-serif !important; /* Manually enforce correct font */
+    font-family: 'Segoe UI', sans-serif !important; /* Force the correct font */
     text-align: center; /* Center text */
 }
 
