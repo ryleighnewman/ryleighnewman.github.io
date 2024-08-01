@@ -103,6 +103,12 @@ main {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow to the image for better separation */
 }
 
+.hero p {
+    font-weight: 400; /* Slightly bolder to stand out */
+    font-size: 2rem; /* Adjust size of name for emphasis */
+    margin-bottom: 10px;
+}
+
 .hero-academic-info {
     text-align: center; /* Center align the text */
     max-width: 800px;
@@ -126,46 +132,11 @@ main {
     font-weight: 400; /* Slightly bolder for emphasis */
 }
 
-.hero p {
-    font-size: 2rem; /* Adjust size of name for emphasis */
-    margin-bottom: 10px;
-    font-weight: 400; /* Slightly bolder to stand out */
-}
-
-/* Optional: Adjust overall text color contrast */
-.hero-academic-info p,
-.hero p {
-    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for softer contrast */
-}
-
-.degree-info {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 2rem; /* Adjust size if necessary */
-    color: #dddddd; /* Ensure this color contrasts with the background */
-}
-
+/* About Section */
 .about-section {
     padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
-}
-
-.about-section h1 {
-    font-weight: 300;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #ffffff;
-}
-
-.about-section p {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #dddddd;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-    padding-bottom: 15px;
 }
 
 .about-section h2 {
@@ -178,19 +149,14 @@ main {
     letter-spacing: 1px;
 }
 
-.about-section ul {
+.about-section p {
     font-weight: 300;
+    font-size: 1.2rem;
     color: #dddddd;
-    text-align: left;
     max-width: 800px;
-    margin: 0 auto 40px auto;
-    padding-left: 20px;
-}
-
-.about-section ul li {
-    margin-bottom: 10px;
-    list-style-type: disc;
-    color: #4A90E2;
+    margin: 0 auto;
+    text-align: left;
+    padding-bottom: 15px;
 }
 
 .about-section hr {
@@ -200,6 +166,7 @@ main {
     max-width: 800px;
 }
 
+/* Contact Section */
 .contact-section {
     padding: 30px 20px;
     text-align: center;
@@ -318,7 +285,6 @@ main {
 }
 
 /* Animation Definitions */
-/* Updated Animation Definitions */
 @keyframes slideIn {
     0% {
         transform: translateY(-20px); /* Start position from top */
@@ -328,10 +294,6 @@ main {
         transform: translateY(0); /* End position */
         opacity: 1;
     }
-}
-
-.animate-slide {
-    animation: slideIn 0.8s ease-out forwards;
 }
 
 @keyframes fadeIn {
