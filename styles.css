@@ -98,6 +98,7 @@ nav {
     font-weight: 300;
     font-size: 1.6rem;
     margin: 5px auto; /* Adjust margin for consistency */
+    padding: 10px 0; /* Add padding between paragraphs */
 }
 
 .hero-academic-info {
@@ -148,6 +149,7 @@ nav {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
+    padding-bottom: 15px; /* Add padding between paragraphs */
 }
 
 .about-section h2 {
@@ -333,6 +335,7 @@ footer {
 /* Additional styles for personal motto */
 .motto {
     color: #4A90E2; /* Blue color for the motto */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is applied */
     font-weight: 600; /* Make it stand out more */
     font-size: 1.4rem; /* Adjust font size if needed */
 }
