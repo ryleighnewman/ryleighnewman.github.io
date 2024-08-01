@@ -28,6 +28,13 @@ body {
     position: relative;
     z-index: 0;
     background: url('background.JPG') no-repeat center center/cover;
+    text-align: center;
+    padding: 20px 20px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 header {
@@ -89,17 +96,6 @@ main {
     flex-grow: 1;
 }
 
-.hero {
-    text-align: center;
-    padding: 20px 20px;
-    background: url('background.JPG') no-repeat center center/cover;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
 .hero-headshot {
     width: 32vw;
     max-width: 360px;
@@ -132,17 +128,20 @@ main {
     line-height: 1.2;
 }
 
-.hero-academic-info p span {
-    display: block;
-    margin-bottom: 5px;
-}
-
 .degree-info {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
     font-size: 2rem;
-    color: #dddddd;
+    color: #ffffff;
     margin: 10px 0;
+}
+
+.motto {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #4A90E2;
+    margin-top: 20px;
 }
 
 .about-section {
@@ -300,22 +299,6 @@ main {
     background-color: rgba(51, 51, 51, 0.9);
 }
 
-.degree-info {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
-    color: #dddddd;
-    margin: 10px 0;
-}
-
-.motto {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #4A90E2;
-    margin-top: 20px;
-}
-
 @keyframes slideIn {
     0% {
         transform: translateY(-20px);
@@ -352,6 +335,7 @@ main {
     opacity: 1;
     animation: slideIn 0.8s ease-out forwards;
 }
+
 footer {
     text-align: center;
     padding: 10px 20px;
@@ -369,40 +353,22 @@ footer {
 
 .footer-links {
     list-style: none;
-    display: flex;
-    justify-content: center;
     padding: 0;
-    margin: 10px 0;
+    margin: 10px 0 0;
 }
 
 .footer-links li {
+    display: inline;
     margin: 0 10px;
 }
 
 .footer-links a {
-    text-decoration: none;
     color: #ffffff;
-    font-size: 0.9rem;
+    text-decoration: none;
+    font-size: 0.8rem;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: rgb(169, 204, 227);
-}
-
-.footer-social {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.footer-social a {
-    margin: 0 5px;
-    font-size: 1.5rem;
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
     color: rgb(169, 204, 227);
 }
