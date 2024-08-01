@@ -168,6 +168,13 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for about section text */
 }
 
+.motto {
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
+    color: #4A90E2; /* Apply the same blue color as elsewhere on the page */
+    font-weight: 300; /* Ensure light font weight, if needed */
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
 .about-section h2.section-title-blue {
     font-weight: 300; /* Ensure light font weight */
     color: #4A90E2; /* Light blue color for section titles */
