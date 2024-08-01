@@ -14,8 +14,8 @@ html, body {
 /* Body and typography */
 body {
     font-family: 'Segoe UI Light', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #2C3E50; /* Dark blue for text */
+    background-color: #F7CA18; /* Muted yellow for background */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #4a90e2; /* Slightly darker blue for better contrast */
+    background-color: #2C3E50; /* Dark blue from the sky in the image */
     border-bottom: none; /* Removed bottom border to eliminate the white line */
     padding: 4px 15px; /* Further reduced padding for a thinner top bar */
 }
@@ -63,14 +63,14 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* White color for navigation links to contrast against the blue background */
+    color: #3498DB; /* Light blue for navigation links */
     font-size: 1rem; /* Reduced font size for sleeker look */
     font-weight: 300;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #b3d4fc; /* Adjusted hover color for contrast */
+    color: #F39C12; /* Sunset orange for hover effect */
 }
 
 /* Hero section */
@@ -100,8 +100,9 @@ nav {
 footer {
     text-align: center;
     padding: 10px 20px; /* Adjusted padding for a smaller footer */
-    background-color: #ffffff;
-    border-top: 1px solid #4a90e2; /* Thin blue line behind the footer */
+    background-color: #2C3E50; /* Dark blue matching the header */
+    border-top: 1px solid #3498DB; /* Light blue line behind the footer */
     font-size: 0.8rem; /* Smaller font size for the copyright text */
+    color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
 }
