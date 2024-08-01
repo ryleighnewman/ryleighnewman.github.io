@@ -28,11 +28,15 @@ body {
 
 /* Header styles */
 header {
-    background-color: rgb(30, 80, 150); /* Slightly lighter blue for the top bar */
+    background-color: rgb(30, 80, 150); /* Initial background color */
     padding: 0 15px;
     height: 60px; /* Ensures the header height is consistent */
     flex-shrink: 0;
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for header text */
+    position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure the header is above other content */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
 nav {
@@ -43,6 +47,11 @@ nav {
     margin: 0 auto;
     height: 100%; /* Make sure the navigation takes the full height of the header */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for navigation text */
+}
+
+/* Add this class for the transparent effect */
+.transparent {
+    background-color: rgba(30, 80, 150, 0.5); /* Make the header semi-transparent */
 }
 
 .logo {
