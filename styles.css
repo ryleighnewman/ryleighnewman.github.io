@@ -24,9 +24,10 @@ body {
 
 /* Header styles */
 header {
-    background-color: rgb(21, 63, 132); /* Top bar color */
+    background-color: rgb(30, 80, 150); /* Slightly lighter blue for the top bar */
     border-bottom: none; /* Removed bottom border to eliminate the white line */
-    padding: 4px 15px; /* Further reduced padding for a thinner top bar */
+    padding: 0 15px; /* Removed top padding to ensure the color reaches the top */
+    height: 60px; /* Ensures the header height is consistent */
 }
 
 nav {
@@ -35,7 +36,7 @@ nav {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap;
+    height: 100%; /* Make sure the navigation takes the full height of the header */
 }
 
 .logo {
@@ -73,27 +74,22 @@ nav {
     color: rgb(169, 204, 227); /* Light blue for hover effect */
 }
 
-/* Hero section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: url('background.JPG') no-repeat center center/cover;
-    color: #ffffff;
+/* About Section styles */
+.about-section {
+    padding: 50px 20px; /* Padding around the about content */
+    text-align: center; /* Center align the text */
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
 }
 
-.hero h1 {
-    font-size: 2.5rem; /* Slightly smaller heading size */
-    margin-bottom: 10px;
-    font-weight: 300; /* Ensure light font weight */
+.about-section h1 {
+    font-size: 2rem; /* Title size */
+    margin-bottom: 20px;
+    color: #ffffff; /* White text color for the heading */
 }
 
-.hero p {
-    font-size: 1.4rem; /* Adjusted text size for consistency */
+.about-section p {
+    font-size: 1.2rem; /* Text size for the content */
+    color: #dddddd; /* Slightly lighter text color for contrast */
 }
 
 /* Footer styles */
@@ -101,7 +97,7 @@ footer {
     text-align: center;
     padding: 10px 20px; /* Adjusted padding for a smaller footer */
     background-color: rgb(15, 17, 18); /* Footer background color */
-    border-top: 1px solid rgb(21, 63, 132); /* Thin blue line behind the footer */
+    border-top: none; /* Removed the border at the top of the footer */
     font-size: 0.8rem; /* Smaller font size for the copyright text */
     color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
