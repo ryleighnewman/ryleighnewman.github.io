@@ -29,6 +29,10 @@ header {
     border-bottom: none; /* Removed bottom border to eliminate the white line */
     padding: 0 15px; /* Removed top padding to ensure the color reaches the top */
     height: 60px; /* Ensures the header height is consistent */
+    position: fixed; /* Ensure the header stays at the top */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays on top */
 }
 
 nav {
@@ -86,6 +90,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+    margin-top: 60px; /* Push down to avoid being hidden behind fixed header */
 }
 
 .hero h1 {
