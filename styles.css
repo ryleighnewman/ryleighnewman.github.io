@@ -107,7 +107,7 @@ nav {
 
 .hero-academic-info p {
     font-weight: 300;
-    font-size: 2.5vw; /* Responsive font size */
+    font-size: 2.5vw;
     color: #dddddd;
     margin: 0 auto 10px auto;
     max-width: 800px;
@@ -194,21 +194,11 @@ nav {
     color: #ffffff;
 }
 
-.contact-section p, .contact-section ul {
+.contact-section p {
     font-weight: 300;
     font-size: 1.2rem;
     color: #dddddd;
     margin-bottom: 20px;
-}
-
-.contact-section ul {
-    list-style: none; /* Remove bullet points from the list */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
 }
 
 .social-buttons {
@@ -216,25 +206,25 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    list-style: none; /* Remove bullet points from the list */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    padding: 0;
+    margin: 0;
 }
 
-.social-buttons li {
-    margin: 0; /* Remove margin from list items */
+.social-buttons a {
+    display: block;
+    width: 100%;
+    max-width: 280px; /* Ensure button width */
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 20px; /* Adjusted padding for better size */
     font-size: 1.2rem;
     color: #ffffff;
     background-color: rgba(30, 80, 150, 0.8);
     border-radius: 15px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 280px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -308,7 +298,7 @@ footer {
     }
 
     .hero-academic-info p {
-        font-size: 4vw; /* Adjust font size for mobile */
+        font-size: 4vw;
     }
 
     .degree-info {
@@ -322,7 +312,7 @@ footer {
     }
 
     .hero-academic-info p {
-        font-size: 5vw; /* Further adjust font size for smaller screens */
+        font-size: 5vw;
     }
 
     .degree-info {
