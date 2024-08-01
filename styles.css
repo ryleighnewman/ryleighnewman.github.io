@@ -1,6 +1,3 @@
-I understand now. I'll include the CSS for the buttons and all the previous updates. Here's the complete CSS code with all the necessary styles:
-
-```css
 /* Basic reset */
 * {
     margin: 0;
@@ -12,7 +9,7 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300; /* Ensure light font weight globally */
 }
 
@@ -109,21 +106,10 @@ nav {
     flex-grow: 1;
 }
 
-.about-section section {
-    margin-bottom: 40px; /* Spacing between sections */
-}
-
-.about-section img.headshot-image {
-    border-radius: 15px; /* Rounded corners for the headshot image */
-    width: 150px; /* Set a fixed width for the image */
-    height: auto;
-    margin-bottom: 20px;
-}
-
 .about-section h1 {
     font-weight: 300; /* Ensure light font weight */
     font-size: 2rem; /* Title size */
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #ffffff; /* White text color for the heading */
 }
 
@@ -131,35 +117,48 @@ nav {
     font-weight: 300; /* Ensure light font weight */
     font-size: 1.2rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
-    max-width: 800px; /* Limit the width of the paragraph text */
-    margin: 0 auto 20px auto; /* Center the paragraph text and add spacing */
+    max-width: 800px; /* Restrict the width of paragraphs for better readability */
+    margin: 0 auto; /* Center the paragraphs */
+    text-align: left; /* Align text to the left */
+}
+
+.about-section img.headshot-image {
+    max-width: 200px; /* Limit the size of the headshot image */
+    border-radius: 10px; /* Rounded square for the headshot */
+    margin-bottom: 20px;
 }
 
 .about-section h2 {
     font-weight: 300; /* Ensure light font weight */
-    font-size: 1.8rem; /* Subheading size */
-    margin-bottom: 15px;
-    color: rgb(80, 150, 230); /* Lighter blue for section headings */
-    border-bottom: 1px solid #888; /* Light gray line under the section heading */
-    padding-bottom: 10px; /* Padding for the heading */
-    max-width: 800px; /* Limit the width of the section heading */
-    margin: 0 auto 20px auto; /* Center the heading and add spacing */
-}
-
-.about-section h3 {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.4rem; /* Sub-subheading size */
-    margin-bottom: 10px;
-    color: #ffffff; /* White text color for the subheading */
+    color: #4A90E2; /* Light blue color for section titles */
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center; /* Ensure the title is centered */
+    text-transform: uppercase; /* Uppercase for titles */
+    letter-spacing: 1px; /* Slightly more spacing between letters */
 }
 
 .about-section ul {
-    list-style: disc;
-    list-style-position: inside;
-    padding-left: 20px;
+    font-weight: 300; /* Ensure light font weight */
     color: #dddddd;
-    max-width: 800px;
-    margin: 0 auto 20px auto; /* Center the list and add spacing */
+    text-align: left;
+    max-width: 800px; /* Restrict the width of lists */
+    margin: 0 auto 50px auto; /* Center the list and add space below */
+    padding-left: 20px; /* Add padding for bullets */
+}
+
+.about-section ul li {
+    margin-bottom: 10px; /* Space between list items */
+    list-style-type: disc;
+    color: #4A90E2; /* Color the bullet points blue */
+}
+
+/* Section Divider */
+.about-section hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
+    margin: 50px auto; /* Space around the dividers */
+    max-width: 800px; /* Limit width for divider */
 }
 
 /* Contact Section styles */
