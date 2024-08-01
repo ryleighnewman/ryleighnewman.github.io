@@ -30,7 +30,7 @@ body {
 header {
     background-color: rgb(30, 80, 150); /* Solid blue background initially */
     padding: 0 15px;
-    height: 60px; /* Height of the header */
+    height: 50px; /* Reduced height of the header */
     flex-shrink: 0;
     font-family: 'Segoe UI Light', sans-serif;
     position: fixed; /* Fixed positioning to ensure it stays at the top */
@@ -57,7 +57,7 @@ header {
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
 main {
-    margin-top: 60px; /* Margin equal to the height of the header */
+    margin-top: 50px; /* Margin equal to the height of the header */
 }
 
 /* Navigation Styling */
@@ -165,23 +165,13 @@ nav {
     margin-bottom: 0; /* Ensure no extra space below this line */
 }
 
-/* About Section styles */
-.about-section {
-    padding: 50px 20px; /* Padding around the about content */
-    text-align: center; /* Center align the text */
-    flex-grow: 1;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for about section text */
+/* About Page Specific Styles */
+.about-page {
+    padding: 20px; /* Consistent padding for the about page */
 }
 
-.motto {
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
-    color: #4A90E2; /* Apply the same blue color as elsewhere on the page */
-    font-weight: 300; /* Ensure light font weight, if needed */
-    font-size: 1.2rem; /* Adjust font size as needed */
-}
-/* About Page Specific Styles */
-.about-section {
-    padding: 20px; /* Consistent padding for sections */
+.section-title {
+    font-family: 'Segoe UI Light', sans-serif; /* Universal font for section titles */
 }
 
 .section-title-blue {
@@ -196,211 +186,47 @@ nav {
     margin-bottom: 20px; /* Space below the title */
 }
 
-.divider-top, .divider-bottom {
-    border: 0;
-    height: 2px;
-    background: rgba(30, 80, 150, 0.5); /* Blue divider */
-    margin: 20px 0; /* Space above and below the divider */
+/* Divider Lines Between Sections */
+.section-divider {
+    border-top: 1px solid #d3d3d3; /* Light gray color for divider lines */
+    margin: 20px 0; /* Space above and below the divider line */
+    width: 100%; /* Full width of the container */
 }
 
-/* Ensure other general styles are consistent */
-
-/* Divider styling */
-.divider-top, .divider-bottom {
-    border: 0;
-    height: 2px;
-    background: rgba(30, 80, 150, 0.5); /* Blue divider */
-    margin: 20px 0;
-}
-
-/* Section padding */
-.about-section {
-    padding: 20px;
-}
-.about-section h2.section-title-blue {
-    font-weight: 300; /* Ensure light font weight */
-    color: #4A90E2; /* Light blue color for section titles */
-    text-transform: uppercase; /* Uppercase for titles */
-    letter-spacing: 1px; /* Slightly more spacing between letters */
-    margin-bottom: 30px; /* Space below the title */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for section titles */
-}
-
-.about-section p {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.2rem; /* Text size for the content */
-    color: #dddddd; /* Slightly lighter text color for contrast */
-    max-width: 800px; /* Restrict the width of paragraphs for better readability */
-    margin: 0 auto 20px auto; /* Center the paragraphs and add space below */
-    text-align: left; /* Align text to the left */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for about section paragraphs */
-}
-
-/* Section Divider */
-.about-section hr.divider-top, .about-section hr.divider-bottom {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
-    margin: 50px auto; /* Space around the dividers */
-    max-width: 800px; /* Limit width for divider */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for section dividers */
-}
-
-/* Contact Section styles */
-.contact-section {
-    padding: 20px;
-    text-align: left;
-    max-width: 800px;
-    margin: 0 auto;
-    font-family: 'Segoe UI Light', sans-serif;
-}
-
-.contact-section h2.section-title-blue {
-    font-weight: 300;
-    font-size: 1.8rem; /* Reduced font size for section titles */
-    color: #4A90E2;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
-}
-
-.contact-section p {
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #dddddd;
-    margin-bottom: 20px;
-    font-family: 'Segoe UI Light', sans-serif;
-}
-
-/* Social Buttons Styles */
-.contact-section ul.social-buttons {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.contact-section ul.social-buttons li {
-    width: 100%; /* Ensure buttons are full width */
-}
-
-.contact-section ul.social-buttons a.btn {
-    display: inline-block;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: rgba(30, 80, 150, 0.8);
-    border-radius: 15px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: 'Segoe UI Light', sans-serif;
-}
-/* Social Buttons Styles */
-.social-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Space between buttons */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for social buttons */
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 20px; /* Increased padding for a more substantial look */
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: rgba(30, 80, 150, 0.8); /* Default button background color with slight transparency */
-    border-radius: 15px; /* Rounded corners */
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 300px; /* Set a consistent width for all buttons */
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for button text */
-}
-
-.btn:hover {
-    background-color: rgba(21, 63, 132, 0.9); /* Darker shade on hover with slight transparency */
-    transform: translateY(-2px); /* Lift effect on hover */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
-}
-
-.email-btn {
-    background-color: rgba(212, 70, 56, 0.8); /* Red color for Email with transparency */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for email button */
-}
-
-.email-btn:hover {
-    background-color: rgba(179, 58, 47, 0.9); /* Darker shade on hover */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
-}
-
-.instagram-btn {
-    background-color: rgba(225, 48, 108, 0.8); /* Instagram gradient color with transparency */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for Instagram button */
-}
-
-.instagram-btn:hover {
-    background-color: rgba(193, 53, 132, 0.9); /* Darker shade on hover */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
-}
-
-.twitter-btn {
-    background-color: rgba(29, 161, 242, 0.8); /* Twitter blue with transparency */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for Twitter button */
-}
-
-.twitter-btn:hover {
-    background-color: rgba(10, 133, 217, 0.9); /* Darker shade on hover */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
-}
-
-.linkedin-btn {
-    background-color: rgba(0, 119, 181, 0.8); /* LinkedIn blue with transparency */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for LinkedIn button */
-}
-
-.linkedin-btn:hover {
-    background-color: rgba(0, 85, 130, 0.9); /* Darker shade on hover */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
-}
-
-.facebook-btn {
-    background-color: rgba(66, 103, 178, 0.8); /* Facebook blue with transparency */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for Facebook button */
-}
-
-.facebook-btn:hover {
-    background-color: rgba(54, 88, 153, 0.9); /* Darker shade on hover */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
-}
-
-.tiktok-btn {
-    background-color: rgba(0, 0, 0, 0.8); /* TikTok black with transparency */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for TikTok button */
-}
-
-.tiktok-btn:hover {
-    background-color: rgba(51, 51, 51, 0.9); /* Darker shade on hover */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for hover text */
-}
-
-/* Footer styles */
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgb(15, 17, 18); /* Footer background color */
-    border-top: none; /* Removed the border at the top of the footer */
-    font-size: 0.8rem; /* Smaller font size for the copyright text */
-    color: #ffffff; /* White text for the footer */
-    flex-shrink: 0;
-    width: 100%;
-    margin-top: auto; /* Push the footer to the bottom if there's extra space */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow at the top of the footer */
+    background-color: rgb(30, 30, 30); /* Dark background for footer */
+    color: #ffffff; /* White text color */
+    padding: 20px; /* Padding inside the footer */
+    text-align: center; /* Center align the text */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for footer text */
+    font-weight: 300; /* Light font weight for footer text */
+}
+
+/* Footer Links */
+footer a {
+    color: rgb(169, 204, 227); /* Light blue color for footer links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+footer a:hover {
+    color: #ffffff; /* White color on hover for better visibility */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column; /* Stack navigation links vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start of the container */
+    }
+
+    .nav-links li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Space below each navigation item */
+    }
+
+    .hero-headshot {
+        max-width: 80%; /* Adjust the width of the headshot image on smaller screens */
+    }
 }
