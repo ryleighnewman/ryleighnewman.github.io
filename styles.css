@@ -205,30 +205,29 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Space between each button */
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    gap: 20px; /* Space between buttons */
+    max-width: 100%;
 }
 
 .social-buttons a {
     display: block;
-    width: 100%; /* Ensure full-width buttons */
-    max-width: 280px; /* Set maximum width for buttons */
+    width: 100%; /* Full width */
+    max-width: 300px; /* Consistent width for buttons */
+    text-align: center; /* Center text */
 }
 
 .btn {
     display: block;
-    padding: 15px 20px; /* Ensure consistent padding */
+    padding: 15px 20px; /* Consistent padding */
     font-size: 1.2rem;
     color: #ffffff;
     background-color: rgba(30, 80, 150, 0.8);
     border-radius: 15px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Full width */
-    max-width: 280px; /* Consistent width */
 }
 
 .btn:hover {
@@ -306,6 +305,10 @@ footer {
     .degree-info {
         font-size: 4vw;
     }
+
+    .social-buttons {
+        gap: 15px; /* Adjust spacing for smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -319,5 +322,9 @@ footer {
 
     .degree-info {
         font-size: 5vw;
+    }
+
+    .social-buttons {
+        gap: 10px; /* Adjust spacing for very small screens */
     }
 }
