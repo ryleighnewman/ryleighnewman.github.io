@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif; /* Global font application */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is applied globally */
+    text-transform: uppercase; /* Transform all text to uppercase */
+    font-size: 0.9rem; /* Decrease the font size slightly */
 }
 
 html, body {
@@ -90,7 +92,7 @@ nav {
 .nav-links a {
     text-decoration: none;
     color: #ffffff; /* White color for navigation links to contrast against the blue background */
-    font-size: 1rem; /* Reduced font size for sleeker look */
+    font-size: 0.9rem; /* Decreased font size slightly */
     font-weight: 300; /* Ensure light font weight for nav links */
     transition: color 0.3s ease;
 }
@@ -125,26 +127,26 @@ nav {
 }
 
 .hero-name {
-    font-size: 2rem; /* Adjust font size */
+    font-size: 1.8rem; /* Decrease font size slightly */
     margin: 0 0 10px 0; /* Space below the name */
     font-weight: 300; /* Light font weight */
 }
 
 .hero-academic-info .subtext {
-    font-size: 1.2rem; /* Adjust the font size of the academic info */
+    font-size: 1.1rem; /* Decrease the font size of the academic info */
     line-height: 1.1;
     text-align: center; /* Center the academic information */
 }
 
 .subtext .line {
     display: block; /* Ensure each line is on a new line */
-    font-size: 1.2rem; /* Default font size for the lines */
+    font-size: 1.1rem; /* Decrease the font size slightly */
     margin-bottom: 3px; /* Reduce the space between lines further */
     line-height: 1.1; /* Tighten line height to bring lines closer together */
 }
 
 .subtext .smaller-text {
-    font-size: 1rem; /* Make the <strong> text slightly smaller */
+    font-size: 0.9rem; /* Make the text slightly smaller */
     font-weight: 300; /* Keep the font weight light */
     margin-bottom: 0; /* Ensure no extra space below this line */
 }
@@ -159,7 +161,7 @@ nav {
 .motto {
     color: #4A90E2; /* Apply the same blue color as elsewhere on the page */
     font-weight: 300; /* Ensure light font weight, if needed */
-    font-size: 1.2rem; /* Adjust font size as needed */
+    font-size: 1.1rem; /* Adjust font size as needed */
 }
 
 /* About Page Specific Styles */
@@ -169,13 +171,13 @@ nav {
 
 .section-title-blue {
     color: rgb(30, 80, 150); /* Blue color for section titles */
-    font-size: 2em; /* Font size for section titles */
+    font-size: 1.8em; /* Font size for section titles */
     margin-bottom: 20px; /* Space below the title */
 }
 
 .section-title-light-blue {
     color: rgb(173, 216, 230); /* Light blue color for section titles */
-    font-size: 2em; /* Font size for section titles */
+    font-size: 1.8em; /* Font size for section titles */
     margin-bottom: 20px; /* Space below the title */
 }
 
@@ -189,7 +191,7 @@ nav {
 /* Ensure other general styles are consistent */
 .about-section p {
     font-weight: 300; /* Ensure light font weight */
-    font-size: 1.2rem; /* Text size for the content */
+    font-size: 1.1rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
     max-width: 800px; /* Restrict the width of paragraphs for better readability */
     margin: 0 auto 20px auto; /* Center the paragraphs and add space below */
@@ -212,17 +214,16 @@ nav {
 }
 
 .contact-section h1 {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 2rem; /* Font size for the heading */
+    font-weight: 300; /* Light font weight */
+    font-size: 1.8rem; /* Font size for the heading */
     color: #4A90E2; /* Blue color for the heading */
-    text-transform: uppercase; /* Make the text uppercase */
     margin-bottom: 30px; /* Space below the heading */
 }
 
 .contact-section p, 
 .contact-section ul {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.2rem; /* Font size for paragraph text and list items */
+    font-weight: 300; /* Light font weight */
+    font-size: 1.1rem; /* Font size for paragraph text and list items */
     color: #dddddd; /* Light grey text color */
     margin-bottom: 30px; /* Space below paragraphs and lists */
 }
@@ -247,7 +248,7 @@ nav {
 .btn {
     display: inline-block;
     padding: 15px 20px; /* Padding for buttons */
-    font-size: 1.2rem; /* Font size for button text */
+    font-size: 1.1rem; /* Font size for button text */
     color: #ffffff; /* White text color */
     background-color: rgba(30, 80, 150, 0.8); /* Semi-transparent blue background */
     border-radius: 15px; /* Rounded corners for buttons */
@@ -317,7 +318,7 @@ footer {
     padding: 10px 20px;
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     border-top: none; /* No border at the top of the footer */
-    font-size: 0.8rem; /* Smaller font size for the footer text */
+    font-size: 0.7rem; /* Slightly smaller font size for the footer text */
     color: #ffffff; /* White text color for the footer */
     flex-shrink: 0;
     width: 100%;
