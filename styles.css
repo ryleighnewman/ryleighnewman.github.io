@@ -130,14 +130,14 @@ nav {
     display: block; /* Ensure each line is on a new line */
     font-size: 1.2rem; /* Default font size for the lines */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is applied */
-    margin-bottom: 5px; /* Reduce the space between lines */
-    line-height: 1.2; /* Reduce line height for closer spacing */
+    margin-bottom: 3px; /* Reduce the space between lines further */
+    line-height: 1.1; /* Tighten line height to bring lines closer together */
 }
 
 .subtext .smaller-text {
     font-size: 1rem; /* Make the <strong> text slightly smaller */
     font-weight: 300; /* Keep the font weight light */
-    margin-bottom: 0; /* Remove extra margin below the <strong> element */
+    margin-bottom: 0; /* Ensure no extra space below this line */
 }
 
 /* About Section styles */
