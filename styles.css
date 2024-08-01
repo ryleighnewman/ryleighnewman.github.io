@@ -181,6 +181,20 @@ main {
     margin-top: 20px;
 }
 
+/* Contact Section */
+.contact-section {
+    padding: 30px 20px;
+    text-align: center;
+    flex-grow: 1;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
+}
+
+.contact-section h1 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
 .contact-section p {
     font-weight: 300;
     font-size: 1.2rem;
