@@ -27,7 +27,7 @@ header {
     padding: 0 15px;
     height: 60px;
     position: relative;
-    z-index: 1;
+    z-index: 2;
 }
 
 /* Navigation */
@@ -78,6 +78,8 @@ nav {
 /* Main Content */
 main {
     flex-grow: 1;
+    position: relative;
+    z-index: 1;
 }
 
 /* Hero Section */
@@ -90,6 +92,8 @@ main {
     flex-direction: column;
     justify-content: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 0;
 }
 
 .hero-headshot {
@@ -132,8 +136,9 @@ main {
 .degree-info {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 2vw;
-    color: #dddddd;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 10px 0;
 }
 
 .about-section {
@@ -290,30 +295,29 @@ main {
 .tiktok-btn:hover {
     background-color: rgba(51, 51, 51, 0.9);
 }
+
 /* Ensure background is behind content */
 body {
     position: relative;
-    z-index: 1; /* Ensures body content is above background */
+    z-index: 1;
 }
 
 /* Background Image Section */
 .hero {
     position: relative;
-    z-index: 0; /* Background should be behind content */
-    background: url('background.JPG') no-repeat center center/cover;
+    z-index: 0;
 }
 
 /* Main Content */
 main {
     position: relative;
-    z-index: 1; /* Ensures main content is above background */
-    flex-grow: 1;
+    z-index: 1;
 }
 
 /* Header and Navigation */
 header {
     position: relative;
-    z-index: 2; /* Ensure header is above background */
+    z-index: 2;
 }
 
 /* Ensure no elements are overlapping the background */
@@ -323,7 +327,7 @@ header {
 .contact-buttons,
 .footer {
     position: relative;
-    z-index: 2; /* Ensures these sections are above background */
+    z-index: 2;
 }
 footer {
     text-align: center;
@@ -403,6 +407,7 @@ footer {
 .header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
     opacity: 0;
 }
+
 .header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
     opacity: 1;
     animation: slideIn 0.8s ease-out forwards;
