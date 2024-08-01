@@ -202,8 +202,9 @@ nav {
 }
 
 .contact-section ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -215,6 +216,13 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.social-buttons li {
+    margin: 0; /* Remove margin from list items */
 }
 
 .btn {
