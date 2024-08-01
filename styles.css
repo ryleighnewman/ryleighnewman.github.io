@@ -60,7 +60,7 @@ header {
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
 main {
-    margin-top: 50px; /* Adjusted to match the height of the header */
+    margin-top: 60px; /* Margin equal to the height of the header */
 }
 
 /* Navigation Styling */
@@ -175,6 +175,7 @@ nav {
 /* About Page Specific Styles */
 .about-section {
     padding: 20px; /* Consistent padding for sections */
+    margin-top: 60px; /* Consistent margin from the top bar */
 }
 
 /* Section Divider */
@@ -194,6 +195,7 @@ nav {
     text-transform: uppercase; /* Transform text to uppercase */
     font-size: 1.8rem; /* Adjusted font size */
     margin-bottom: 20px; /* Space below the title */
+    margin-top: 40px; /* Consistent margin from top sections */
 }
 
 .section-title-light-blue {
@@ -203,6 +205,7 @@ nav {
     text-transform: uppercase; /* Transform text to uppercase */
     font-size: 1.8rem; /* Adjusted font size */
     margin-bottom: 20px; /* Space below the title */
+    margin-top: 40px; /* Consistent margin from top sections */
 }
 
 /* Contact Section Styles */
@@ -211,6 +214,7 @@ nav {
     text-align: center; /* Center align the text */
     flex-grow: 1;
     margin-bottom: 40px; /* Ensure consistent spacing at the bottom of each section */
+    margin-top: 60px; /* Consistent margin from the top bar */
 }
 
 .contact-section h1 {
@@ -219,6 +223,7 @@ nav {
     font-size: 1.8rem; /* Font size for the heading */
     color: rgb(100, 150, 200); /* Lighter blue matching top bar */
     margin-bottom: 30px; /* Space below the heading */
+    margin-top: 40px; /* Consistent margin from top sections */
 }
 
 .contact-section p, 
