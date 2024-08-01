@@ -19,6 +19,7 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    scroll-behavior: smooth; /* Add smooth scrolling */
 }
 
 /* Header */
@@ -112,19 +113,20 @@ main {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Correct Font for Your Name */
-.correct-font {
-    font-family: 'Arial', sans-serif !important; /* Force a different font to ensure visibility */
-    font-weight: 700; /* Make it bold for distinction */
-    font-size: 3rem; /* Set the appropriate size */
-    margin-bottom: 10px;
+/* New name styling */
+.name-style {
+    font-family: 'Helvetica Neue', Arial, sans-serif !important; /* Use a different font */
+    font-weight: bold;
+    font-size: 3.5rem; /* Adjust size to be prominent */
+    margin-bottom: 15px;
     text-align: center;
+    color: #ffffff;
 }
 
 /* Responsive adjustment for hero name on smaller screens */
 @media (max-width: 768px) {
-    .correct-font {
-        font-size: 2.2rem; /* Reduce font size on smaller screens */
+    .name-style {
+        font-size: 2.5rem; /* Reduce font size on smaller screens */
     }
 }
 
@@ -295,15 +297,16 @@ main {
 /* Footer */
 footer {
     background-color: rgb(30, 80, 150); /* Match the header color */
-    padding: 15px 0; /* Reduced padding for a smaller footer bar */
+    padding: 10px 0; /* Reduced padding for a smaller footer bar */
     text-align: center;
+    font-size: 0.9rem; /* Smaller font size */
     margin-top: auto; /* Ensure footer is at the bottom */
     position: relative !important; /* Ensure the footer is not sticky */
 }
 
 footer p {
     font-family: 'Segoe UI Light', sans-serif;
-    font-size: 1.2rem; /* Ensure the text is slightly bigger */
+    font-size: 0.9rem; /* Smaller font size */
     font-weight: 300;
     color: #ffffff;
 }
