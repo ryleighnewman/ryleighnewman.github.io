@@ -109,7 +109,15 @@ main {
     font-weight: 400;
     font-size: 3rem; /* Increase font size for name */
     margin-bottom: 10px;
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
+    font-family: 'Segoe UI', sans-serif; /* Ensure correct font */
+    text-align: center; /* Center text */
+}
+
+/* Responsive adjustment for hero name on smaller screens */
+@media (max-width: 768px) {
+    .hero-name {
+        font-size: 2.2rem; /* Reduce font size on smaller screens */
+    }
 }
 
 .hero-academic-info .subtext {
@@ -134,6 +142,7 @@ main {
     padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
 }
 
 .about-section h2 {
@@ -144,6 +153,7 @@ main {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
 }
 
 .about-section p {
@@ -154,6 +164,7 @@ main {
     margin: 0 auto;
     text-align: left;
     padding-bottom: 15px;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
 }
 
 .about-section hr {
@@ -168,6 +179,7 @@ main {
     padding: 30px 20px;
     text-align: center;
     flex-grow: 1;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure correct font */
 }
 
 .contact-section h1 {
@@ -267,13 +279,13 @@ main {
 /* Footer */
 footer {
     background-color: rgb(30, 80, 150); /* Match the header color */
-    padding: 20px 0; /* Increase padding for better spacing */
+    padding: 15px 0; /* Reduced padding for a smaller footer bar */
     text-align: center;
 }
 
 footer p {
     font-family: 'Segoe UI Light', sans-serif;
-    font-size: 1.2rem; /* Make the text slightly bigger */
+    font-size: 1.2rem; /* Ensure the text is slightly bigger */
     font-weight: 300;
     color: #ffffff;
 }
