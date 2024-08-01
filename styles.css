@@ -24,7 +24,7 @@ body {
 
 /* Initial solid color header */
 header {
-    background-color: rgb(30, 80, 150); /* Solid blue background initially */
+    background-color: rgb(30, 80, 150); /* Solid blue background (same as blue sections) */
     padding: 0 15px;
     height: 60px; /* Height of the header */
     flex-shrink: 0;
@@ -167,43 +167,10 @@ nav {
     padding: 20px; /* Consistent padding for sections */
 }
 
-.section-title-blue {
-    color: rgb(30, 80, 150); /* Blue color for section titles */
-    font-size: 1.8em; /* Font size for section titles */
-    margin-bottom: 20px; /* Space below the title */
-    text-transform: uppercase; /* Transform to uppercase */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used */
-}
-
-.section-title-light-blue {
-    color: rgb(173, 216, 230); /* Light blue color for section titles */
-    font-size: 1.8em; /* Font size for section titles */
-    margin-bottom: 20px; /* Space below the title */
-    text-transform: uppercase; /* Transform to uppercase */
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used */
-}
-
-.divider-top, .divider-bottom {
-    border: 0;
-    height: 2px;
-    background: rgba(30, 80, 150, 0.5); /* Blue divider */
-    margin: 20px 0; /* Space above and below the divider */
-}
-
-/* Ensure other general styles are consistent */
-.about-section p {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.1rem; /* Text size for the content */
-    color: #dddddd; /* Slightly lighter text color for contrast */
-    max-width: 800px; /* Restrict the width of paragraphs for better readability */
-    margin: 0 auto 20px auto; /* Center the paragraphs and add space below */
-    text-align: left; /* Align text to the left */
-}
-
 /* Section Divider */
 .about-section hr.divider-top, .about-section hr.divider-bottom {
     border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
+    border-top: 1px solid rgba(169, 169, 169, 0.3); /* Light grey line for consistent dividers */
     margin: 50px auto; /* Space around the dividers */
     max-width: 800px; /* Limit width for divider */
 }
@@ -212,7 +179,7 @@ nav {
 .section-title-blue {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
-    color: rgb(30, 80, 150); /* Blue color for section titles */
+    color: rgb(30, 80, 150); /* Consistent blue color for section titles */
     text-transform: uppercase; /* Transform text to uppercase */
     font-size: 1.8rem; /* Adjusted font size */
     margin-bottom: 20px; /* Space below the title */
@@ -221,7 +188,7 @@ nav {
 .section-title-light-blue {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
-    color: rgb(173, 216, 230); /* Light blue color for section titles */
+    color: rgb(30, 80, 150); /* Adjusted to match the blue used in the navigation header */
     text-transform: uppercase; /* Transform text to uppercase */
     font-size: 1.8rem; /* Adjusted font size */
     margin-bottom: 20px; /* Space below the title */
