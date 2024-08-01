@@ -99,6 +99,31 @@ nav {
     font-size: 1.4rem;
 }
 
+/* Academic Information Section (for the Home Page) */
+.academic-info {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.academic-info img.headshot-image {
+    max-width: 150px; /* Smaller headshot size for the home page */
+    border-radius: 10px; /* Rounded square for the headshot */
+    margin-bottom: 15px;
+}
+
+.academic-info h1 {
+    font-weight: 300; /* Ensure light font weight */
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.academic-info p {
+    font-weight: 300; /* Ensure light font weight */
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+
 /* About Section styles */
 .about-section {
     padding: 50px 20px; /* Padding around the about content */
@@ -246,7 +271,7 @@ nav {
 }
 
 .linkedin-btn:hover {
-    background-color: rgba(0, 85, 130, 0.9); /* Darker shade on hover */
+    background-color: rgba(0,    85, 130, 0.9); /* Darker shade on hover */
 }
 
 .facebook-btn {
@@ -274,4 +299,20 @@ footer {
     font-size: 0.8rem; /* Smaller font size for the copyright text */
     color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
+}
+
+/* Specific adjustments for the home page */
+.academic-info img.headshot-image {
+    max-width: 200px; /* Headshot image size */
+    border-radius: 15px; /* Rounded square for the headshot */
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.academic-info p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
 }
