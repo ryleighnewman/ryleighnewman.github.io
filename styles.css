@@ -1,3 +1,4 @@
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +14,8 @@ html, body {
 /* Body and typography */
 body {
     font-family: 'Segoe UI Light', sans-serif;
-    color: #333;
-    background-color: #f4f4f4;
+    color: #ffffff; /* White text color */
+    background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -23,7 +24,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #4a90e2; /* Slightly darker blue for better contrast */
+    background-color: rgb(21, 63, 132); /* Top bar color */
     border-bottom: none; /* Removed bottom border to eliminate the white line */
     padding: 4px 15px; /* Further reduced padding for a thinner top bar */
 }
@@ -69,7 +70,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #b3d4fc; /* Adjusted hover color for contrast */
+    color: rgb(169, 204, 227); /* Light blue for hover effect */
 }
 
 /* Hero section */
@@ -99,8 +100,9 @@ nav {
 footer {
     text-align: center;
     padding: 10px 20px; /* Adjusted padding for a smaller footer */
-    background-color: #ffffff;
-    border-top: 1px solid #4a90e2; /* Thin blue line behind the footer */
+    background-color: rgb(15, 17, 18); /* Footer background color */
+    border-top: 1px solid rgb(21, 63, 132); /* Thin blue line behind the footer */
     font-size: 0.8rem; /* Smaller font size for the copyright text */
+    color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
 }
