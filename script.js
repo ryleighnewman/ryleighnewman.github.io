@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
         elements.forEach(function (element) {
             if (isInViewport(element)) {
                 element.classList.add('animated');
-                // Optional: Remove class after animation
-                // element.classList.remove('animate-slide', 'animate-fade');
             }
         });
     }
