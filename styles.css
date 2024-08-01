@@ -89,7 +89,7 @@ nav {
     max-width: 360px;
     min-width: 200px;
     border-radius: 15px;
-    margin: 0 auto 15px auto; /* Center and adjust bottom margin */
+    margin: 0 auto 15px auto;
     position: relative;
     z-index: 10;
 }
@@ -97,26 +97,26 @@ nav {
 .hero p {
     font-weight: 300;
     font-size: 1.6rem;
-    margin: 5px auto; /* Adjust margin for consistency */
+    margin: 5px auto;
 }
 
 .hero-academic-info {
-    padding: 0 15px; /* Add padding */
-    text-align: center; /* Center the text */
+    padding: 0 15px;
+    text-align: center;
 }
 
 .hero-academic-info p {
     font-weight: 300;
     font-size: 2.5vw; /* Responsive font size */
     color: #dddddd;
-    margin: 0 auto 10px auto; /* Consistent margin */
+    margin: 0 auto 10px auto;
     max-width: 800px;
     line-height: 1.2;
 }
 
 .hero-academic-info p span {
-    display: block; /* Force each part to its own line */
-    margin-bottom: 5px; /* Add margin between lines */
+    display: block;
+    margin-bottom: 5px;
 }
 
 .degree-info {
@@ -182,15 +182,50 @@ nav {
 }
 
 /* Contact section */
-.contact-buttons {
+.contact-section {
+    padding: 30px 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.contact-section h1 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.contact-section p, .contact-section ul {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin-bottom: 20px;
+}
+
+.contact-section ul {
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px; /* Space between buttons */
-    padding: 20px; /* Add padding around the section */
+    gap: 15px;
 }
 
-.contact-buttons a {
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    list-style: none; /* Remove bullet points from the list */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.social-buttons li {
+    margin: 0; /* Remove margin from list items */
+}
+
+.btn {
     display: inline-block;
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -204,7 +239,7 @@ nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.contact-buttons a:hover {
+.btn:hover {
     background-color: rgba(21, 63, 132, 0.9);
     transform: translateY(-2px);
 }
@@ -264,4 +299,33 @@ footer {
     font-size: 0.8rem;
     color: #ffffff;
     flex-shrink: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-headshot {
+        width: 50vw;
+    }
+
+    .hero-academic-info p {
+        font-size: 4vw; /* Adjust font size for mobile */
+    }
+
+    .degree-info {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-headshot {
+        width: 70vw;
+    }
+
+    .hero-academic-info p {
+        font-size: 5vw; /* Further adjust font size for smaller screens */
+    }
+
+    .degree-info {
+        font-size: 5vw;
+    }
 }
