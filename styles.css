@@ -87,7 +87,9 @@ nav {
 }
 
 .hero-headshot {
-    max-width: 200px; /* Larger size for the headshot */
+    width: 20vw; /* Make the headshot responsive - 20% of the viewport width */
+    max-width: 300px; /* Set a maximum width */
+    min-width: 150px; /* Set a minimum width */
     border-radius: 15px; /* Rectangular shape with rounded corners */
     margin-bottom: 20px;
     position: relative;
@@ -97,14 +99,29 @@ nav {
     margin-right: auto;
 }
 
-.hero h1 {
-    display: none; /* Hide the "Welcome to My Website" text */
-}
-
 .hero p {
     font-weight: 300; /* Match existing style */
-    font-size: 1.8rem; /* Adjust size */
+    font-size: 2rem; /* Adjust size */
     margin-top: 10px;
+}
+
+.hero-academic-info {
+    margin-top: 20px;
+}
+
+.hero-academic-info p {
+    font-weight: 300; /* Ensure light font weight */
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+
+/* Fixing alignment for horizontal lines */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
+    margin: 50px auto; /* Center align the divider */
+    max-width: 800px; /* Limit width for divider */
 }
 
 /* Academic Information Section (for the Home Page) */
