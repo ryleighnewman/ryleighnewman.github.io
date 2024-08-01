@@ -366,7 +366,7 @@ footer {
     padding: 10px 20px;
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     border-top: none; /* No border at the top of the footer */
-    font-size: 0.8rem; /* Slightly larger font size for the footer text */
+    font-size: 0.7rem; /* Reduced font size for the footer text */
     color: #ffffff; /* White text color for the footer */
     flex-shrink: 0;
     width: 100%;
