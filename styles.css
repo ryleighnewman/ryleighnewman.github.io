@@ -208,6 +208,18 @@ nav {
     max-width: 800px; /* Limit width for divider */
 }
 
+/* Adjusted Section Divider for Gap Issue */
+.about-section hr.divider-bottom, 
+.contact-section hr.divider-bottom {
+    margin-bottom: 20px; /* Decrease the bottom margin of the divider */
+}
+
+.about-section, 
+.contact-section {
+    margin-bottom: 0; /* Remove any bottom margin */
+    padding-bottom: 20px; /* Adjust padding if needed */
+}
+
 /* Blue Header Section Styles */
 .section-title-blue {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
@@ -358,6 +370,8 @@ footer {
     color: #ffffff; /* White text color for the footer */
     flex-shrink: 0;
     width: 100%;
-    margin-top: auto; /* Push footer to the bottom if there's extra space */
+    margin-top: 20px; /* Decrease the space above the footer */
+    padding-top: 10px; /* Adjust the top padding of the footer */
+    padding-bottom: 10px; /* Optional: Decrease bottom padding if needed */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
 }
