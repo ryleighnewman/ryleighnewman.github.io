@@ -1,3 +1,54 @@
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('background.JPG') no-repeat center center/cover; /* Keep the original background image */
+    color: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
+}
+
+.hero-headshot {
+    width: 25vw; /* Adjusted to make the headshot larger and responsive */
+    max-width: 350px; /* Set a maximum width */
+    min-width: 180px; /* Set a minimum width */
+    border-radius: 15px; /* Rectangular shape with rounded corners */
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10; /* Ensure it's above the background image */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero p {
+    font-weight: 300; /* Match existing style */
+    font-size: 2rem; /* Adjust size for your name */
+    margin-top: 10px;
+}
+
+.hero-academic-info {
+    margin-top: 20px;
+}
+
+.hero-academic-info p {
+    font-weight: 300; /* Ensure light font weight */
+    font-size: 1.2rem; /* Reduce font size to fit better */
+    color: #dddddd;
+    margin-bottom: 10px;
+}
+
+/* Fixing alignment for horizontal lines */
+hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
+    margin: 50px auto; /* Center align the divider */
+    max-width: 800px; /* Limit width for divider */
+}
+
 /* Basic reset */
 * {
     margin: 0;
@@ -71,57 +122,6 @@ nav {
 
 .nav-links a:hover {
     color: rgb(169, 204, 227); /* Light blue for hover effect */
-}
-
-/* Hero section */
-.hero {
-    text-align: center;
-    padding: 100px 20px;
-    background: url('background.JPG') no-repeat center center/cover;
-    color: #ffffff;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better readability */
-}
-
-.hero-headshot {
-    width: 20vw; /* Make the headshot responsive - 20% of the viewport width */
-    max-width: 300px; /* Set a maximum width */
-    min-width: 150px; /* Set a minimum width */
-    border-radius: 15px; /* Rectangular shape with rounded corners */
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 10; /* Ensure it's above the background image */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hero p {
-    font-weight: 300; /* Match existing style */
-    font-size: 2rem; /* Adjust size */
-    margin-top: 10px;
-}
-
-.hero-academic-info {
-    margin-top: 20px;
-}
-
-.hero-academic-info p {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.2rem;
-    color: #dddddd;
-    margin-bottom: 10px;
-}
-
-/* Fixing alignment for horizontal lines */
-hr {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
-    margin: 50px auto; /* Center align the divider */
-    max-width: 800px; /* Limit width for divider */
 }
 
 /* Academic Information Section (for the Home Page) */
@@ -199,14 +199,6 @@ hr {
     margin-bottom: 10px; /* Space between list items */
     list-style-type: disc;
     color: #4A90E2; /* Color the bullet points blue */
-}
-
-/* Section Divider */
-.about-section hr {
-    border: none;
-    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
-    margin: 50px auto; /* Space around the dividers */
-    max-width: 800px; /* Limit width for divider */
 }
 
 /* Contact Section styles */
