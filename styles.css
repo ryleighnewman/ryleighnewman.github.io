@@ -19,16 +19,14 @@ html, body {
     min-height: 100vh;
 }
 
-/* Ensure background is behind content */
 body {
     position: relative;
     z-index: 1;
 }
 
-/* Hero Section */
 .hero {
     position: relative;
-    z-index: 0; /* Ensure background is behind content */
+    z-index: 0;
     background: url('background.JPG') no-repeat center center/cover;
     padding: 20px 20px;
     color: #ffffff;
@@ -36,17 +34,13 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-/* Main Content */
-main {
+header {
+    background-color: rgb(30, 80, 150);
+    border-bottom: none;
+    padding: 0 15px;
+    height: 60px;
     position: relative;
-    z-index: 1; /* Ensure main content is above background */
-    flex-grow: 1;
-}
-
-/* Header, Footer, and Other Content Sections */
-header, .about-section, .contact-section {
-    position: relative;
-    z-index: 2; /* Ensure these sections are above the hero section */
+    z-index: 2;
 }
 
 nav {
@@ -99,6 +93,11 @@ main {
     flex-grow: 1;
 }
 
+.about-section, .contact-section {
+    position: relative;
+    z-index: 2;
+}
+
 .hero-headshot {
     width: 32vw;
     max-width: 360px;
@@ -131,20 +130,16 @@ main {
     line-height: 1.2;
 }
 
+.hero-academic-info p span {
+    display: block;
+    margin-bottom: 5px;
+}
+
 .degree-info {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
     font-size: 2rem;
     color: #ffffff;
-    margin: 10px 0;
-}
-
-.motto {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #4A90E2;
-    margin-top: 20px;
 }
 
 .about-section {
@@ -302,6 +297,22 @@ main {
     background-color: rgba(51, 51, 51, 0.9);
 }
 
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.motto {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #4A90E2;
+    margin-top: 20px;
+}
+
 @keyframes slideIn {
     0% {
         transform: translateY(-20px);
@@ -352,26 +363,14 @@ footer {
 
 .footer-text {
     margin: 0;
-}
-
-.footer-links {
-    list-style: none;
     padding: 0;
-    margin: 10px 0 0;
 }
 
-.footer-links li {
-    display: inline;
-    margin: 0 10px;
-}
-
-.footer-links a {
+.footer-text a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 0.8rem;
-    transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-    color: rgb(169, 204, 227);
+.footer-text a:hover {
+    text-decoration: underline;
 }
