@@ -126,6 +126,17 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for academic info */
 }
 
+.subtext .line {
+    display: block; /* Ensure each line is on a new line */
+    font-size: 1.2rem; /* Default font size for the lines */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is applied */
+}
+
+.subtext .smaller-text {
+    font-size: 1rem; /* Make the <strong> text slightly smaller */
+    font-weight: 300; /* Keep the font weight light */
+}
+
 /* About Section styles */
 .about-section {
     padding: 50px 20px; /* Padding around the about content */
