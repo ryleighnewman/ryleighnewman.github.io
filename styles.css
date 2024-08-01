@@ -4,8 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is applied globally */
-    text-transform: uppercase; /* Transform all text to uppercase */
-    font-size: 0.9rem; /* Decrease the font size slightly */
 }
 
 html, body {
@@ -173,12 +171,16 @@ nav {
     color: rgb(30, 80, 150); /* Blue color for section titles */
     font-size: 1.8em; /* Font size for section titles */
     margin-bottom: 20px; /* Space below the title */
+    text-transform: uppercase; /* Transform to uppercase */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used */
 }
 
 .section-title-light-blue {
     color: rgb(173, 216, 230); /* Light blue color for section titles */
     font-size: 1.8em; /* Font size for section titles */
     margin-bottom: 20px; /* Space below the title */
+    text-transform: uppercase; /* Transform to uppercase */
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used */
 }
 
 .divider-top, .divider-bottom {
@@ -206,7 +208,26 @@ nav {
     max-width: 800px; /* Limit width for divider */
 }
 
-/* Contact Section styles */
+/* Blue Header Section Styles */
+.section-title-blue {
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
+    font-weight: 300; /* Light font weight */
+    color: rgb(30, 80, 150); /* Blue color for section titles */
+    text-transform: uppercase; /* Transform text to uppercase */
+    font-size: 1.8rem; /* Adjusted font size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.section-title-light-blue {
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
+    font-weight: 300; /* Light font weight */
+    color: rgb(173, 216, 230); /* Light blue color for section titles */
+    text-transform: uppercase; /* Transform text to uppercase */
+    font-size: 1.8rem; /* Adjusted font size */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Contact Section Styles */
 .contact-section {
     padding: 50px 20px; /* Padding around the contact content */
     text-align: center; /* Center align the text */
@@ -214,6 +235,7 @@ nav {
 }
 
 .contact-section h1 {
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
     font-size: 1.8rem; /* Font size for the heading */
     color: #4A90E2; /* Blue color for the heading */
@@ -264,6 +286,7 @@ nav {
     transform: translateY(-2px); /* Lift effect on hover */
 }
 
+/* Specific Button Colors */
 .email-btn {
     background-color: rgba(212, 70, 56, 0.8); /* Red color for Email button */
 }
