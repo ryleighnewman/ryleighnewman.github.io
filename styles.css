@@ -117,11 +117,16 @@ main {
 .hero-academic-info p {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 2vw;
+    font-size: 1.5rem; /* Adjust as needed */
     color: #dddddd;
     margin: 0 auto 10px auto;
     max-width: 800px;
     line-height: 1.2;
+}
+
+.hero-academic-info p strong {
+    font-weight: 300; /* Ensures consistency with the rest of the text */
+    color: #ffffff;  /* or adjust as necessary */
 }
 
 .hero-academic-info p span {
