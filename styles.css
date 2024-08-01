@@ -13,7 +13,7 @@ html, body {
 
 /* Body and typography */
 body {
-    font-family: 'Segoe UI Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font */
     color: #ffffff; /* White text color */
     background-color: rgb(18, 22, 24); /* Background color */
     line-height: 1.6;
@@ -97,16 +97,24 @@ nav {
     font-size: 1.4rem;
 }
 
-/* Footer styles */
-footer {
-    text-align: center;
-    padding: 10px 20px; /* Adjusted padding for a smaller footer */
-    background-color: rgb(15, 17, 18); /* Footer background color */
-    border-top: none; /* Removed the border at the top of the footer */
-    font-size: 0.8rem; /* Smaller font size for the copyright text */
-    color: #ffffff; /* White text for the footer */
-    flex-shrink: 0;
+/* About Section styles */
+.about-section {
+    padding: 50px 20px; /* Padding around the about content */
+    text-align: center; /* Center align the text */
+    flex-grow: 1;
 }
+
+.about-section h1 {
+    font-size: 2rem; /* Title size */
+    margin-bottom: 20px;
+    color: #ffffff; /* White text color for the heading */
+}
+
+.about-section p {
+    font-size: 1.2rem; /* Text size for the content */
+    color: #dddddd; /* Slightly lighter text color for contrast */
+}
+
 /* Contact Section styles */
 .contact-section {
     padding: 50px 20px; /* Padding around the contact content */
@@ -130,16 +138,85 @@ footer {
     padding: 0;
 }
 
-.contact-section li {
-    margin: 10px 0; /* Add some space between list items */
+/* Social Buttons Styles */
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
 }
 
-.contact-section a {
-    color: rgb(169, 204, 227); /* Light blue for links */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: rgb(30, 80, 150); /* Default button background color */
+    border-radius: 25px; /* Rounded corners */
     text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-section a:hover {
-    color: #ffffff; /* White text color on hover */
-    text-decoration: underline; /* Underline on hover */
+.btn:hover {
+    background-color: rgb(21, 63, 132); /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.email-btn {
+    background-color: #D44638; /* Red color for Email */
+}
+
+.email-btn:hover {
+    background-color: #B33A2F; /* Darker shade on hover */
+}
+
+.instagram-btn {
+    background-color: #E1306C; /* Instagram gradient color */
+}
+
+.instagram-btn:hover {
+    background-color: #C13584; /* Darker shade on hover */
+}
+
+.twitter-btn {
+    background-color: #1DA1F2; /* Twitter blue */
+}
+
+.twitter-btn:hover {
+    background-color: #0A85D9; /* Darker shade on hover */
+}
+
+.linkedin-btn {
+    background-color: #0077B5; /* LinkedIn blue */
+}
+
+.linkedin-btn:hover {
+    background-color: #005582; /* Darker shade on hover */
+}
+
+.facebook-btn {
+    background-color: #4267B2; /* Facebook blue */
+}
+
+.facebook-btn:hover {
+    background-color: #365899; /* Darker shade on hover */
+}
+
+.tiktok-btn {
+    background-color: #000000; /* TikTok black */
+}
+
+.tiktok-btn:hover {
+    background-color: #333333; /* Darker shade on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(15, 17, 18); /* Footer background color */
+    border-top: none; /* Removed the border at the top of the footer */
+    font-size: 0.8rem; /* Smaller font size for the copyright text */
+    color: #ffffff; /* White text for the footer */
+    flex-shrink: 0;
 }
