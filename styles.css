@@ -27,17 +27,20 @@ body {
 }
 
 header {
-    background-color: rgba(30, 80, 150, 0.6); /* Adjusted for transparency */
-    backdrop-filter: blur(10px); /* Apply frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background-color: rgba(30, 80, 150, 0.6); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
     padding: 0 15px;
-    height: 60px; /* Consistent height for the header */
+    height: 60px; /* Height of the header */
     flex-shrink: 0;
     font-family: 'Segoe UI Light', sans-serif;
-    position: sticky; /* Make the header sticky */
+    position: fixed; /* Fixed positioning to ensure it stays at the top */
     top: 0; /* Stick to the top of the viewport */
-    z-index: 1000; /* Ensure the header is above other content */
+    left: 0; /* Stick to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it is above other content */
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
 }
 
 nav {
