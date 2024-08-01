@@ -1,43 +1,4 @@
-/* Animation Definitions */
-@keyframes slideIn {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.animate-slide {
-    animation: slideIn 0.8s ease-out forwards;
-}
-
-.animate-fade {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Global Styles */
+/* CSS Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -59,15 +20,16 @@ html, body {
     min-height: 100vh;
 }
 
-/* Hide gray background */
+/* Hide gray background above the blue bar */
 body::before {
-    content: '';
+    content: "";
+    display: block;
+    height: 60px; /* Adjust to match the height of the header */
+    background-color: rgb(18, 22, 24); /* Match background color */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgb(18, 22, 24);
     z-index: -1;
 }
 
@@ -81,6 +43,7 @@ header {
     z-index: 1;
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -125,13 +88,17 @@ nav {
     color: rgb(169, 204, 227);
 }
 
+/* Main Content */
+main {
+    flex-grow: 1;
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 20px 20px;
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
-    flex-grow: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -342,38 +309,59 @@ nav {
 /* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: rgb(30, 80, 150);
+    padding: 10px 20px;
+    background-color: rgb(15, 17, 18); /* Darker black color */
+    font-size: 0.8rem;
     color: #ffffff;
-    font-size: 0.9rem;
-    font-weight: 300;
-    border-top: 1px solid rgba(255, 255, 255, 0.3);
-    position: relative;
-    z-index: 10;
+    flex-shrink: 0;
 }
 
-footer p {
-    margin: 0;
+/* Animation Definitions */
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-slide {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.animate-fade {
+    animation: fadeIn 1s ease-out forwards;
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
-    .hero-headshot {
-        width: 40vw;
-    }
-    
-    .hero-academic-info p {
-        font-size: 3vw;
-    }
-}
-
 @media (max-width: 768px) {
     .hero-headshot {
         width: 50vw;
     }
-    
+
     .hero-academic-info p {
-        font-size: 3.5vw;
+        font-size: 3vw;
+    }
+
+    .degree-info {
+        font-size: 3vw;
+    }
+
+    .contact-buttons {
+        max-width: 100%;
+        gap: 15px;
     }
 }
 
@@ -385,24 +373,21 @@ footer p {
     .hero-academic-info p {
         font-size: 4vw;
     }
-    
-    .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-    
-    .nav-links li {
-        margin-left: 0;
-        margin-bottom: 10px;
+
+    .degree-info {
+        font-size: 4vw;
     }
 
     .contact-buttons {
-        flex-direction: column;
-        gap: 15px;
+        gap: 10px;
     }
-    
-    .btn {
-        padding: 12px 16px;
-        font-size: 1rem;
-    }
+}
+
+/* Reapply the animated fade-in effect to all elements */
+.header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
+    opacity: 0;
+}
+
+.header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
+    opacity: 1;
 }
