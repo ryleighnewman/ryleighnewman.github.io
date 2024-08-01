@@ -28,7 +28,7 @@ body {
 
 /* Initial solid color header */
 header {
-    background-color: rgb(30, 80, 150); /* Solid blue background */
+    background-color: rgb(30, 80, 150); /* Solid blue background initially */
     padding: 0 15px;
     height: 60px; /* Height of the header */
     flex-shrink: 0;
@@ -39,23 +39,6 @@ header {
     width: 100%; /* Full width of the viewport */
     z-index: 1000; /* Ensure it is above other content */
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
-}
-
-/* Initial Header Style */
-header {
-    background: rgba(30, 80, 150, 0.6); /* Solid blue background initially */
-    backdrop-filter: blur(10px); /* Frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    padding: 0 15px;
-    height: 60px; /* Height of the header */
-    font-family: 'Segoe UI Light', sans-serif;
-    position: fixed; /* Fixed positioning to ensure it stays at the top */
-    top: 0; /* Stick to the top of the viewport */
-    left: 0; /* Stick to the left edge */
-    width: 100%; /* Full width of the viewport */
-    z-index: 1000; /* Ensure it is above other content */
-    transition: background 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
 }
 
@@ -81,7 +64,6 @@ nav {
     height: 100%; /* Make sure the navigation takes the full height of the header */
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for navigation text */
 }
-
 .logo {
     display: flex;
     align-items: center;
