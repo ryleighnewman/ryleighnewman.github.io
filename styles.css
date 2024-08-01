@@ -19,13 +19,15 @@ html, body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    overscroll-behavior-y: contain; /* Contain bounce effect in Safari */
+    touch-action: none; /* Disable default touch actions */
 }
 
 /* Header */
 header {
     background-color: rgb(30, 80, 150);
     border-bottom: none;
-    padding: 0 15px;
+    padding: 10px 0;
     height: 60px;
     position: relative;
     z-index: 1;
@@ -76,6 +78,9 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
+    overscroll-behavior-y: contain; /* Contain overscroll within the main content */
+    touch-action: pan-y; /* Allow vertical panning only within the main content */
 }
 
 /* Hero Section */
