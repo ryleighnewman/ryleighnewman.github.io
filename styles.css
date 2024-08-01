@@ -361,17 +361,19 @@ main {
 }
 
 /* Footer styles */
+/* Footer styles */
 footer {
     text-align: center;
-    padding: 10px 20px;
+    padding: 5px 20px; /* Reduce padding to make the footer bar smaller */
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     border-top: none; /* No border at the top of the footer */
     font-size: 0.7rem; /* Reduced font size for the footer text */
+    line-height: 1; /* Set line height to match the font size */
     color: #ffffff; /* White text color for the footer */
     flex-shrink: 0;
     width: 100%;
     margin-top: 20px; /* Decrease the space above the footer */
-    padding-top: 10px; /* Adjust the top padding of the footer */
-    padding-bottom: 10px; /* Optional: Decrease bottom padding if needed */
+    padding-top: 5px; /* Further reduce the top padding */
+    padding-bottom: 5px; /* Further reduce the bottom padding */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
 }
