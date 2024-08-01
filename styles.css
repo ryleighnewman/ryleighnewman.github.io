@@ -27,23 +27,7 @@
     animation: fadeIn 1s ease-out forwards;
 }
 
-header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.animated {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif;
-}
-
+/* General Styles */
 html, body {
     margin: 0;
     padding: 0;
@@ -58,57 +42,7 @@ html, body {
     min-height: 100vh;
 }
 
-header {
-    background-color: rgb(30, 80, 150);
-    border-bottom: none;
-    padding: 0 15px;
-    height: 60px;
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100%;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-}
-
-.logo-image {
-    height: 40px;
-    width: auto;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex: 2;
-}
-
-.nav-links li {
-    margin-left: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 300;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: rgb(169, 204, 227);
-}
-
+/* Ensure hero section is properly layered */
 .hero {
     text-align: center;
     padding: 20px 20px;
@@ -119,6 +53,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 1;
 }
 
 .hero-headshot {
@@ -165,10 +100,65 @@ nav {
     color: #dddddd;
 }
 
+/* General Layout */
+header {
+    background-color: rgb(30, 80, 150);
+    border-bottom: none;
+    padding: 0 15px;
+    height: 60px;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(169, 204, 227);
+}
+
+/* About Section */
 .about-section {
     padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
+    z-index: 2;
 }
 
 .about-section h1 {
@@ -220,6 +210,7 @@ nav {
     max-width: 800px;
 }
 
+/* Contact Section */
 .contact-section {
     padding: 30px 20px;
     text-align: center;
@@ -239,6 +230,7 @@ nav {
     margin-bottom: 20px;
 }
 
+/* Contact Buttons */
 .contact-buttons {
     display: flex;
     flex-direction: column;
@@ -247,6 +239,7 @@ nav {
     margin: 0 auto;
     padding: 20px;
     max-width: 800px;
+    z-index: 2;
 }
 
 .contact-buttons a {
@@ -327,8 +320,10 @@ footer {
     font-size: 0.8rem;
     color: #ffffff;
     flex-shrink: 0;
+    z-index: 2;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .hero-headshot {
         width: 50vw;
@@ -364,12 +359,11 @@ footer {
     .contact-buttons {
         gap: 10px;
     }
+}
 
-    .about-section p {
-        font-size: 1rem;
-    }
-
-    .about-section h1, .about-section h2 {
-        font-size: 1.5rem;
-    }
+/* Personal Motto */
+.motto {
+    color: #4A90E2;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
 }
