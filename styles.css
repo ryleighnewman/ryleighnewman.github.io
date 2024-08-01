@@ -205,16 +205,15 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
-    margin: 0 auto;
     gap: 20px; /* Space between buttons */
-    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 360px; /* Set maximum width for button container */
 }
 
 .social-buttons a {
     display: block;
-    width: 100%; /* Full width */
-    max-width: 300px; /* Consistent width for buttons */
+    width: 100%; /* Full width of the container */
     text-align: center; /* Center text */
 }
 
@@ -307,6 +306,7 @@ footer {
     }
 
     .social-buttons {
+        max-width: 100%;
         gap: 15px; /* Adjust spacing for smaller screens */
     }
 }
