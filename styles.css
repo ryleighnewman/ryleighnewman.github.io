@@ -31,6 +31,11 @@ header {
     z-index: 1;
 }
 
+/* Remove sticky behavior for header and footer */
+header, footer {
+    position: static; /* Ensure the bars are not sticky */
+}
+
 /* Navigation */
 nav {
     display: flex;
@@ -109,7 +114,7 @@ main {
 
 /* New custom class for your name */
 .custom-name {
-    font-family: 'Segoe UI', sans-serif; /* Use the correct font */
+    font-family: 'Segoe UI', sans-serif !important; /* Force the correct font */
     font-weight: 400;
     font-size: 3rem;
     margin-bottom: 10px;
