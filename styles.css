@@ -285,4 +285,7 @@ footer {
     font-size: 0.8rem; /* Smaller font size for the copyright text */
     color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
