@@ -17,13 +17,9 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative;
-    z-index: 1;
 }
 
 .hero {
-    position: relative;
-    z-index: 1; /* Change this from 0 to 1 */
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
     display: flex;
@@ -31,6 +27,7 @@ html, body {
     justify-content: center;
     text-align: center;
     padding: 20px;
+    z-index: 1;
 }
 
 .hero-headshot {
@@ -39,8 +36,6 @@ html, body {
     min-width: 200px;
     border-radius: 15px;
     margin: 0 auto 15px auto;
-    position: relative;
-    z-index: 1;
 }
 
 .hero p {
@@ -53,7 +48,7 @@ html, body {
 .hero-academic-info {
     padding: 0 15px;
     text-align: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hero-academic-info p {
@@ -87,7 +82,6 @@ header {
     border-bottom: none;
     padding: 0 15px;
     height: 60px;
-    position: relative;
     z-index: 2;
 }
 
@@ -136,9 +130,8 @@ nav {
 }
 
 main {
-    position: relative;
-    z-index: 1;
     flex-grow: 1;
+    z-index: 1;
 }
 
 .about-section {
@@ -340,6 +333,5 @@ footer {
     font-size: 0.8rem;
     color: #ffffff;
     flex-shrink: 0;
-    position: relative;
-    z-index: 1;
+    z-index: 2;
 }
