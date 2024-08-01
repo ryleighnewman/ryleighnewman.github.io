@@ -82,56 +82,60 @@ main {
 
 /* Hero Section */
 .hero {
-    text-align: center;
-    padding: 20px 20px;
+    padding: 60px 20px; /* Increase padding for better spacing */
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Enhance text shadow for better readability */
+    min-height: 100vh; /* Ensure hero takes full viewport height */
+    box-sizing: border-box;
 }
 
 .hero-headshot {
-    width: 32vw;
-    max-width: 360px;
-    min-width: 200px;
+    width: 20vw; /* Adjust width to be proportional */
+    max-width: 250px; /* Ensure it’s not too large */
+    min-width: 180px; /* Ensure a minimum size */
     border-radius: 15px;
-    margin: 0 auto 15px auto;
-    position: relative;
-    z-index: 10;
-}
-
-.hero p {
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin: 5px auto;
-    padding: 10px 0;
+    margin-bottom: 20px; /* Increase margin for spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow to the image for better separation */
 }
 
 .hero-academic-info {
-    padding: 0 15px;
-    text-align: center;
+    text-align: center; /* Center align the text */
+    max-width: 800px;
+    margin: 0 auto; /* Center align the container */
+    padding: 0 20px;
 }
 
 .hero-academic-info p {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 1.5rem; /* Adjust as needed */
-    color: #dddddd;
-    margin: 0 auto 10px auto;
-    max-width: 800px;
-    line-height: 1.2;
+    font-size: 1.5rem; /* Adjust font size for better readability */
+    line-height: 1.6; /* Increase line height for spacing */
+    color: #ffffff;
+    margin: 10px 0; /* Ensure consistent spacing */
 }
 
+.hero-academic-info p span,
 .hero-academic-info p strong {
-    font-weight: 300; /* Ensures consistency with the rest of the text */
-    color: #ffffff;  /* or adjust as necessary */
+    display: block;
+    margin-bottom: 10px; /* Space out text elements */
+    font-weight: 400; /* Slightly bolder for emphasis */
 }
 
-.hero-academic-info p span {
-    display: block;
-    margin-bottom: 5px;
+.hero p {
+    font-size: 2rem; /* Adjust size of name for emphasis */
+    margin-bottom: 10px;
+    font-weight: 400; /* Slightly bolder to stand out */
+}
+
+/* Optional: Adjust overall text color contrast */
+.hero-academic-info p,
+.hero p {
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for softer contrast */
 }
 
 .degree-info {
