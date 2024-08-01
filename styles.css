@@ -1,3 +1,4 @@
+/* CSS Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -19,72 +20,17 @@ html, body {
     min-height: 100vh;
 }
 
-.hero {
-    background: url('background.JPG') no-repeat center center/cover;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding: 20px;
-    z-index: 1;
-}
-
-.hero-headshot {
-    width: 32vw;
-    max-width: 360px;
-    min-width: 200px;
-    border-radius: 15px;
-    margin: 0 auto 15px auto;
-}
-
-.hero p {
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin: 5px auto;
-    padding: 10px 0;
-}
-
-.hero-academic-info {
-    padding: 0 15px;
-    text-align: center;
-    z-index: 2;
-}
-
-.hero-academic-info p {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 2vw;
-    color: #dddddd;
-    margin: 0 auto 10px auto;
-    max-width: 800px;
-    line-height: 1.2;
-}
-
-.degree-info {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 2rem;
-    color: #ffffff;
-    margin: 10px 0;
-}
-
-.motto {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #4A90E2;
-    margin-top: 20px;
-}
-
+/* Header */
 header {
     background-color: rgb(30, 80, 150);
     border-bottom: none;
     padding: 0 15px;
     height: 60px;
-    z-index: 2;
+    position: relative;
+    z-index: 1;
 }
 
+/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -129,13 +75,69 @@ nav {
     color: rgb(169, 204, 227);
 }
 
+/* Main Content */
 main {
     flex-grow: 1;
-    z-index: 1;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 20px 20px;
+    background: url('background.JPG') no-repeat center center/cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-headshot {
+    width: 32vw;
+    max-width: 360px;
+    min-width: 200px;
+    border-radius: 15px;
+    margin: 0 auto 15px auto;
+    position: relative;
+    z-index: 10;
+}
+
+.hero p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin: 5px auto;
+    padding: 10px 0;
+}
+
+.hero-academic-info {
+    padding: 0 15px;
+    text-align: center;
+}
+
+.hero-academic-info p {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2vw;
+    color: #dddddd;
+    margin: 0 auto 10px auto;
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.hero-academic-info p span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2vw;
+    color: #dddddd;
 }
 
 .about-section {
-    padding: 20px;
+    padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
 }
@@ -190,7 +192,7 @@ main {
 }
 
 .contact-section {
-    padding: 30px;
+    padding: 30px 20px;
     text-align: center;
     flex-grow: 1;
 }
@@ -289,9 +291,27 @@ main {
     background-color: rgba(51, 51, 51, 0.9);
 }
 
+/* Ensure proper spacing and font for elements */
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2rem; /* Adjust as needed */
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.motto {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #4A90E2; /* Previously used blue color */
+    margin-top: 20px;
+}
+
+/* Animation Definitions */
 @keyframes slideIn {
     0% {
-        transform: translateY(-20px);
+        transform: translateY(20px);
         opacity: 0;
     }
     100% {
@@ -317,21 +337,12 @@ main {
     animation: fadeIn 1s ease-out forwards;
 }
 
-.header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
-    opacity: 0;
-}
-
-.header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
-    opacity: 1;
-    animation: slideIn 0.8s ease-out forwards;
-}
-
+/* Ensure no elements are overlapping the background */
+.hero-headshot,
+.hero-academic-info,
+.about-section,
+.contact-buttons,
 footer {
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgb(15, 17, 18);
-    font-size: 0.8rem;
-    color: #ffffff;
-    flex-shrink: 0;
-    z-index: 2;
+    position: relative;
+    z-index: 2; /* Ensures these sections are above background */
 }
