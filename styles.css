@@ -42,11 +42,22 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
 }
 
-/* Frosted glass effect */
-header.frosted {
-    background-color: rgba(30, 80, 150, 0.6); /* Semi-transparent blue background */
+/* Frosted glass effect with gradient background */
+header {
+    background: linear-gradient(to top, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
+                rgba(30, 80, 150, 0.6); /* Semi-transparent blue background for frosted glass effect */
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
+    padding: 0 15px;
+    height: 60px; /* Height of the header */
+    font-family: 'Segoe UI Light', sans-serif;
+    position: fixed; /* Fixed positioning to ensure it stays at the top */
+    top: 0; /* Stick to the top of the viewport */
+    left: 0; /* Stick to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it is above other content */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
 }
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
@@ -54,6 +65,7 @@ main {
     margin-top: 60px; /* Margin equal to the height of the header */
 }
 
+/* Navigation Styling */
 nav {
     display: flex;
     justify-content: center; /* Center the logo and navigation links */
@@ -64,9 +76,10 @@ nav {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is used for navigation text */
 }
 
-/* Add this class for the frosted glass effect */
+/* Transparent Header Class */
 .transparent {
-    background-color: rgba(30, 80, 150, 0.6); /* Make the header semi-transparent */
+    background: linear-gradient(to top, rgba(30, 80, 150, 0.6), rgba(30, 80, 150, 0) 100%),
+                rgba(30, 80, 150, 0.6); /* Apply gradient and frosted effect */
     backdrop-filter: blur(10px); /* Apply the frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* For Safari */
 }
