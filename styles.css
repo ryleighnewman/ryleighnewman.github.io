@@ -102,169 +102,71 @@ nav {
 /* About Section styles */
 .about-section {
     padding: 50px 20px; /* Padding around the about content */
-    text-align: left; /* Left align the text */
+    text-align: left; /* Align the text to the left for a more traditional format */
     flex-grow: 1;
-    max-width: 800px; /* Set a fixed width for the paragraphs */
-    margin: 0 auto; /* Center the content */
+    max-width: 800px; /* Set a max-width for better readability */
+    margin: 0 auto;
 }
 
-.about-intro {
+.about-section .about-header {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    gap: 20px; /* Space between image and text */
 }
 
 .headshot-image {
-    width: 150px;
+    width: 200px;
     height: auto;
-    border-radius: 10px; /* Rounded square corners */
-    margin-right: 20px;
+    border-radius: 15px; /* Rounded corners for the image */
 }
 
-.intro-text {
-    text-align: left;
+.about-section h1, .about-section p {
+    font-weight: 300; /* Ensure light font weight */
+    color: #ffffff; /* White text color */
+}
+
+.about-section h1 {
+    font-size: 2rem; /* Title size */
+    margin-bottom: 10px;
 }
 
 .about-section h2 {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 2rem; /* Title size */
-    margin-bottom: 20px;
-    color: #4a90e2; /* Different color for section titles */
+    font-weight: 300;
+    font-size: 1.8rem;
+    color: #4a90e2; /* Light blue for section headings */
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-top: 1px solid #888; /* Light gray line for section separation */
+    padding-top: 20px;
 }
 
 .about-section p {
     font-weight: 300; /* Ensure light font weight */
     font-size: 1.2rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
-    margin-bottom: 20px;
+    line-height: 1.8;
 }
 
 .about-section ul {
-    list-style: none; /* Remove bullets */
-    padding: 0;
-    margin-left: 20px; /* Indent list items */
+    list-style: none;
+    padding-left: 20px;
+    color: #dddddd;
 }
 
 .about-section ul li {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.2rem; /* Text size for the content */
-    color: #dddddd; /* Slightly lighter text color for contrast */
-    margin-bottom: 10px; /* Space below each list item */
-}
-
-/* Section dividers */
-.about-section section {
-    margin-bottom: 30px; /* Space between sections */
-    border-bottom: 1px solid #4a4a4a; /* Light grey line between sections */
-    padding-bottom: 30px;
-}
-
-.about-section section:last-child {
-    border-bottom: none; /* Remove the bottom border for the last section */
-}
-
-/* Contact Section styles */
-.contact-section {
-    padding: 50px 20px; /* Padding around the contact content */
-    text-align: center; /* Center align the text */
-    flex-grow: 1;
-}
-
-.contact-section h1 {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 2rem;
-    color: #ffffff;
-}
-
-.contact-section p, .contact-section ul {
+    margin-bottom: 10px;
     font-weight: 300; /* Ensure light font weight */
     font-size: 1.2rem;
-    color: #dddddd;
-    margin-bottom: 30px; /* Space below the contact statement */
+    line-height: 1.8;
+    padding-left: 15px;
+    position: relative;
 }
 
-.contact-section ul {
-    list-style: none; /* Remove bullets */
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Increased space between buttons */
-}
-
-/* Social Buttons Styles */
-.social-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Space between buttons */
-}
-
-.btn {
-    display: inline-block;
-    padding: 15px 20px; /* Increased padding for a more substantial look */
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: rgba(30, 80, 150, 0.8); /* Default button background color with slight transparency */
-    border-radius: 15px; /* Rounded corners */
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 300px; /* Set a consistent width for all buttons */
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-}
-
-.btn:hover {
-    background-color: rgba(21, 63, 132, 0.9); /* Darker shade on hover with slight transparency */
-    transform: translateY(-2px); /* Lift effect on hover */
-}
-
-.email-btn {
-    background-color: rgba(212, 70, 56, 0.8); /* Red color for Email with transparency */
-}
-
-.email-btn:hover {
-    background-color: rgba(179, 58, 47, 0.9); /* Darker shade on hover */
-}
-
-.instagram-btn {
-    background-color: rgba(225, 48, 108, 0.8); /* Instagram gradient color with transparency */
-}
-
-.instagram-btn:hover {
-    background-color: rgba(193, 53, 132, 0.9); /* Darker shade on hover */
-}
-
-.twitter-btn {
-    background-color: rgba(29, 161, 242, 0.8); /* Twitter blue with transparency */
-}
-
-.twitter-btn:hover {
-    background-color: rgba(10, 133, 217, 0.9); /* Darker shade on hover */
-}
-
-.linkedin-btn {
-    background-color: rgba(0, 119, 181, 0.8); /* LinkedIn blue with transparency */
-}
-
-.linkedin-btn:hover {
-    background-color: rgba(0, 85, 130, 0.9); /* Darker shade on hover */
-}
-
-.facebook-btn {
-    background-color: rgba(66, 103, 178, 0.8); /* Facebook blue with transparency */
-}
-
-.facebook-btn:hover {
-    background-color: rgba(54, 88, 153, 0.9); /* Darker shade on hover */
-}
-
-.tiktok-btn {
-    background-color: rgba(0, 0, 0, 0.8); /* TikTok black with transparency */
-}
-
-.tiktok-btn:hover {
-    background-color: rgba(51, 51, 51, 0.9); /* Darker shade on hover */
+.about-section ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #4a90e2; /* Light blue for bullets */
 }
 
 /* Footer styles */
@@ -276,4 +178,16 @@ footer {
     font-size: 0.8rem; /* Smaller font size for the copyright text */
     color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
+}
+
+/* General Section Divider Styles */
+.about-section hr {
+    border: 0;
+    height: 1px;
+    background-color: #888; /* Light gray line between sections */
+    margin: 40px 0; /* Spacing above and below the line */
+}
+
+.about-section .about-header, .about-section h2 {
+    margin-top: 0;
 }
