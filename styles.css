@@ -107,3 +107,39 @@ footer {
     color: #ffffff; /* White text for the footer */
     flex-shrink: 0;
 }
+/* Contact Section styles */
+.contact-section {
+    padding: 50px 20px; /* Padding around the contact content */
+    text-align: center; /* Center align the text */
+    flex-grow: 1;
+}
+
+.contact-section h1 {
+    font-size: 2rem; /* Title size */
+    margin-bottom: 20px;
+    color: #ffffff; /* White text color for the heading */
+}
+
+.contact-section p, .contact-section ul {
+    font-size: 1.2rem; /* Text size for the content */
+    color: #dddddd; /* Slightly lighter text color for contrast */
+}
+
+.contact-section ul {
+    list-style: none; /* Remove bullets */
+    padding: 0;
+}
+
+.contact-section li {
+    margin: 10px 0; /* Add some space between list items */
+}
+
+.contact-section a {
+    color: rgb(169, 204, 227); /* Light blue for links */
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    color: #ffffff; /* White text color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
