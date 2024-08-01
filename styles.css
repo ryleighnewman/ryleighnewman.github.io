@@ -20,6 +20,18 @@ html, body {
     min-height: 100vh;
 }
 
+/* Ensure background is behind content */
+body {
+    position: relative;
+    z-index: 1; /* Ensures body content is above background */
+}
+
+.hero {
+    position: relative;
+    z-index: 0; /* Background should be behind content */
+    background: url('background.JPG') no-repeat center center/cover;
+}
+
 /* Header */
 header {
     background-color: rgb(30, 80, 150);
@@ -27,7 +39,7 @@ header {
     padding: 0 15px;
     height: 60px;
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensure header is above background */
 }
 
 /* Navigation */
@@ -77,9 +89,9 @@ nav {
 
 /* Main Content */
 main {
-    flex-grow: 1;
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Ensures main content is above background */
+    flex-grow: 1;
 }
 
 /* Hero Section */
@@ -92,8 +104,6 @@ main {
     flex-direction: column;
     justify-content: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    position: relative;
-    z-index: 0;
 }
 
 .hero-headshot {
@@ -136,9 +146,8 @@ main {
 .degree-info {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 2rem;
-    color: #ffffff;
-    margin: 10px 0;
+    font-size: 2vw;
+    color: #dddddd;
 }
 
 .about-section {
@@ -248,223 +257,6 @@ main {
     transform: translateY(-2px);
 }
 
-.email-btn {
-    background-color: rgba(212, 70, 56, 0.8);
-}
-
-.email-btn:hover {
-    background-color: rgba(179, 58, 47, 0.9);
-}
-
-.instagram-btn {
-    background-color: rgba(225, 48, 108, 0.8);
-}
-
-.instagram-btn:hover {
-    background-color: rgba(193, 53, 132, 0.9);
-}
-
-.twitter-btn {
-    background-color: rgba(29, 161, 242, 0.8);
-}
-
-.twitter-btn:hover {
-    background-color: rgba(10, 133, 217, 0.9);
-}
-
-.linkedin-btn {
-    background-color: rgba(0, 119, 181, 0.8);
-}
-
-.linkedin-btn:hover {
-    background-color: rgba(0, 85, 130, 0.9);
-}
-
-.facebook-btn {
-    background-color: rgba(66, 103, 178, 0.8);
-}
-
-.facebook-btn:hover {
-    background-color: rgba(54, 88, 153, 0.9);
-}
-
-.tiktok-btn {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.tiktok-btn:hover {
-    background-color: rgba(51, 51, 51, 0.9);
-}
-
-/* Ensure background is behind content */
-body {
-    position: relative;
-    z-index: 1;
-}
-
-/* Background Image Section */
-.hero {
-    position: relative;
-    z-index: 0;
-}
-
-/* Main Content */
-main {
-    position: relative;
-    z-index: 1;
-}
-
-/* Header and Navigation */
-header {
-    position: relative;
-    z-index: 2;
-}
-
-/* Ensure no elements are overlapping the background */
-.hero-headshot,
-.hero-academic-info,
-.about-section,
-.contact-buttons,
-.footer {
-    position: relative;
-    z-index: 2;
-}
-footer {
-    text-align: center;
-    padding: 10px 20px;
-    background-color: rgb(15, 17, 18);
-    font-size: 0.8rem;
-    color: #ffffff;
-    flex-shrink: 0;
-}
-
-@media (max-width: 768px) {
-    .hero-headshot {
-        width: 50vw;
-    }
-
-    .hero-academic-info p {
-        font-size: 3vw;
-    }
-
-    .degree-info {
-        font-size: 3vw;
-    }
-
-    .contact-buttons {
-        max-width: 100%;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-headshot {
-        width: 70vw;
-    }
-
-    .hero-academic-info p {
-        font-size: 4vw;
-    }
-
-    .degree-info {
-        font-size: 4vw;
-    }
-
-    .contact-buttons {
-        gap: 10px;
-    }
-}
-
-/* Animation Definitions */
-@keyframes slideIn {
-    0% {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.animate-slide {
-    animation: slideIn 0.8s ease-out forwards;
-}
-
-.animate-fade {
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
-    opacity: 0;
-}
-
-.header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
-    opacity: 1;
-    animation: slideIn 0.8s ease-out forwards;
-}
-
-/* Ensure proper spacing and font for elements */
-.degree-info {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 2rem; /* Adjust as needed */
-    color: #ffffff;
-    margin: 10px 0;
-}
-
-.motto {
-    font-family: 'Segoe UI Light', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    color: #4A90E2; /* Previously used blue color */
-    margin-top: 20px;
-}
-
-/* Fix for contact page buttons */
-.contact-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin: 0 auto;
-    padding: 20px;
-    max-width: 800px;
-}
-
-.contact-buttons a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    text-decoration: none;
-}
-
-.btn {
-    display: block;
-    padding: 15px 20px;
-    font-size: 1.2rem;
-    color: #ffffff;
-    background-color: rgba(30, 80, 150, 0.8);
-    border-radius: 15px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-    background-color: rgba(21, 63, 132, 0.9);
-    transform: translateY(-2px);
-}
-
 /* Specific button styles */
 .email-btn {
     background-color: rgba(212, 70, 56, 0.8);
@@ -512,4 +304,69 @@ footer {
 
 .tiktok-btn:hover {
     background-color: rgba(51, 51, 51, 0.9);
+}
+
+/* Ensure proper spacing and font for elements */
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2rem; /* Adjust as needed */
+    color: #ffffff;
+    margin: 10px 0;
+}
+
+.motto {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #4A90E2; /* Previously used blue color */
+    margin-top: 20px;
+}
+
+/* Animation Definitions */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-slide {
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.animate-fade {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.header, main, footer, .hero-headshot, .hero-academic-info, .about-section, .contact-buttons {
+    opacity: 0;
+}
+
+.header.animated, main..header.animated, main.animated, footer.animated, .hero-headshot.animated, .hero-academic-info.animated, .about-section.animated, .contact-buttons.animated {
+    opacity: 1;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: rgb(15, 17, 18);
+    font-size: 0.8rem;
+    color: #ffffff;
+    flex-shrink: 0;
 }
