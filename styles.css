@@ -1,3 +1,186 @@
+/* Universal reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI Light', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    background-color: rgb(18, 22, 24);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgb(30, 80, 150);
+    border-bottom: none;
+    padding: 0 15px;
+    height: 60px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(169, 204, 227);
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 20px 20px;
+    background: url('background.JPG') no-repeat center center/cover;
+    color: #ffffff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-headshot {
+    width: 32vw;
+    max-width: 360px;
+    min-width: 200px;
+    border-radius: 15px;
+    margin: 0 auto 15px auto; /* Center and adjust bottom margin */
+    position: relative;
+    z-index: 10;
+}
+
+.hero p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    margin: 5px auto; /* Adjust margin for consistency */
+}
+
+.hero-academic-info {
+    padding: 0 15px; /* Add padding */
+    text-align: center; /* Center the text */
+}
+
+.hero-academic-info p {
+    font-weight: 300;
+    font-size: 2.5vw; /* Responsive font size */
+    color: #dddddd;
+    margin: 0 auto 10px auto; /* Consistent margin */
+    max-width: 800px;
+    line-height: 1.2;
+}
+
+.hero-academic-info p span {
+    display: block; /* Force each part to its own line */
+    margin-bottom: 5px; /* Add margin between lines */
+}
+
+.degree-info {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    font-size: 2.5vw;
+    color: #dddddd;
+}
+
+/* About section */
+.about-section {
+    padding: 20px 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.about-section h1 {
+    font-weight: 300;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.about-section p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #dddddd;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.about-section h2 {
+    font-weight: 300;
+    color: #4A90E2;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-section ul {
+    font-weight: 300;
+    color: #dddddd;
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding-left: 20px;
+}
+
+.about-section ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    color: #4A90E2;
+}
+
+.about-section hr {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 30px auto;
+    max-width: 800px;
+}
+
 /* Contact section */
 .contact-section {
     padding: 30px 20px;
