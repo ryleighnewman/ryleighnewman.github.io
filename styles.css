@@ -13,24 +13,23 @@ html, body {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
     color: #ffffff;
-    background-color: rgb(18, 22, 24);
+    background-color: rgb(18, 22, 24); /* Gray background */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    overscroll-behavior-y: contain; /* Contain bounce effect in Safari */
-    touch-action: none; /* Disable default touch actions */
 }
 
-/* Header */
+/* Header - Sticky to keep it at the top */
 header {
     background-color: rgb(30, 80, 150);
-    border-bottom: none;
     padding: 10px 0;
     height: 60px;
-    position: relative;
-    z-index: 1;
+    width: 100%;
+    position: sticky; /* Make the header sticky */
+    top: 0;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 /* Navigation */
@@ -78,16 +77,15 @@ main {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    overscroll-behavior-y: contain; /* Contain overscroll within the main content */
-    touch-action: pan-y; /* Allow vertical panning only within the main content */
+    overflow-y: auto; /* Allow vertical scrolling */
+    touch-action: pan-y; /* Allow vertical scrolling */
 }
 
 /* Hero Section */
 .hero {
+    position: relative;
     padding: 20px 20px 40px; /* Adjusted padding for better spacing */
-    background: url('background.JPG') no-repeat center center;
-    background-size: cover; /* Keep the image covering the entire hero section */
+    background-color: rgba(18, 22, 24, 0.9); /* Semi-transparent gray background */
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -96,6 +94,33 @@ main {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     min-height: 80vh;
     box-sizing: border-box;
+    z-index: 1;
+}
+
+/* Blue background layer behind the hero section */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(30, 80, 150); /* Blue color */
+    z-index: -1; /* Behind the hero content */
+}
+
+/* Background image with proper scaling */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.JPG') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-attachment: fixed; /* Fix the image to avoid it moving with scroll */
+    z-index: -2; /* Behind the blue layer */
 }
 
 .hero-headshot {
