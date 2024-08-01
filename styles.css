@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    background-color: rgba(30, 80, 150, 0.6); /* Semi-transparent background */
+    background-color: rgba(30, 80, 150, 0.6); /* Semi-transparent blue background */
     backdrop-filter: blur(10px); /* Frosted glass effect */
     -webkit-backdrop-filter: blur(10px); /* Safari support */
     padding: 0 15px;
@@ -41,6 +41,11 @@ header {
     z-index: 1000; /* Ensure it is above other content */
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
+
+/* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
+main {
+    margin-top: 60px; /* Margin equal to the height of the header */
 }
 
 nav {
