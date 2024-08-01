@@ -1,3 +1,6 @@
+Here is the complete, updated CSS file incorporating all the changes:
+
+```css
 /* Basic reset */
 * {
     margin: 0;
@@ -99,72 +102,62 @@ nav {
     font-size: 1.4rem;
 }
 
+/* About Page Headshot */
+.headshot {
+    width: 200px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for the rectangle */
+    margin: 0 auto; /* Center the image */
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+}
+
+/* Section Divider */
+.section-divider {
+    border-top: 1px solid #4a4a4a; /* Light gray line for dividers */
+    margin: 40px 0; /* Space around the divider */
+}
+
 /* About Section styles */
 .about-section {
     padding: 50px 20px; /* Padding around the about content */
     text-align: center; /* Center align the text */
     flex-grow: 1;
-    max-width: 800px; /* Fixed width for paragraphs */
+    max-width: 800px; /* Set a max width for better readability */
     margin: 0 auto; /* Center the content */
 }
 
-.about-section h1, .about-section h2, .about-section h3 {
-    font-weight: 300; /* Ensure light font weight */
-    color: #ffffff; /* Default white text color for the headings */
-    margin-bottom: 15px;
-}
-
 .about-section h1 {
+    font-weight: 300; /* Ensure light font weight */
     font-size: 2rem; /* Title size */
-    color: #4a90e2; /* Light blue color for the title */
+    margin-bottom: 20px;
+    color: rgb(169, 204, 227); /* Light blue color for heading */
 }
 
 .about-section h2 {
-    font-size: 1.8rem; /* Section heading size */
+    font-weight: 300; /* Ensure light font weight */
+    font-size: 1.8rem; /* Subheading size */
+    color: rgb(150, 180, 210); /* Slightly lighter blue color for subheadings */
     margin-top: 30px;
-    color: #5da9ff; /* Lighter blue color for section headings */
+    margin-bottom: 15px;
 }
 
-.about-section h3 {
-    font-size: 1.4rem; /* Subheading size */
-    margin-top: 20px;
-    color: #70c0ff; /* Even lighter blue for subheadings */
-}
-
-.about-section p, .about-section ul {
+.about-section p {
     font-weight: 300; /* Ensure light font weight */
     font-size: 1.2rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
-    margin-bottom: 20px;
-    text-align: left; /* Align text to the left */
+    margin-bottom: 20px; /* Space below paragraphs */
 }
 
 .about-section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #dddddd;
+    list-style: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Align text left */
 }
 
-.about-section li {
-    margin-bottom: 10px;
-}
-
-/* Divider Lines */
-.divider {
-    width: 95%;
-    height: 1px;
-    background-color: #4a4a4a; /* Light grey color */
-    margin: 30px auto; /* Space around the divider */
-}
-
-/* Headshot Image Styles */
-.headshot-image {
-    display: block;
-    margin: 20px auto;
-    border-radius: 15px; /* Rounded square corners */
-    width: 150px; /* Adjust size as needed */
-    height: 150px;
-    object-fit: cover; /* Ensure the image covers the area without stretching */
+.about-section ul li {
+    margin-bottom: 10px; /* Space between list items */
 }
 
 /* Contact Section styles */
@@ -172,14 +165,12 @@ nav {
     padding: 50px 20px; /* Padding around the contact content */
     text-align: center; /* Center align the text */
     flex-grow: 1;
-    max-width: 800px; /* Fixed width for content */
-    margin: 0 auto; /* Center the content */
 }
 
 .contact-section h1 {
     font-weight: 300; /* Ensure light font weight */
     font-size: 2rem;
-    color: #4a90e2; /* Light blue color for the contact heading */
+    color: #ffffff;
 }
 
 .contact-section p, .contact-section ul {
