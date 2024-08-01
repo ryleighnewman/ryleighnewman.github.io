@@ -82,7 +82,7 @@ main {
 
 /* Hero Section */
 .hero {
-    padding: 60px 20px; /* Increase padding for better spacing */
+    padding: 60px 20px; /* Adjust padding for better spacing */
     background: url('background.JPG') no-repeat center center/cover;
     color: #ffffff;
     display: flex;
@@ -90,13 +90,13 @@ main {
     align-items: center; /* Center content horizontally */
     justify-content: center; /* Center content vertically */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Enhance text shadow for better readability */
-    min-height: 100vh; /* Ensure hero takes full viewport height */
+    min-height: 80vh; /* Reduce height to 80% of the viewport */
     box-sizing: border-box;
 }
 
 .hero-headshot {
-    width: 20vw; /* Adjust width to be proportional */
-    max-width: 250px; /* Ensure it’s not too large */
+    width: 25vw; /* Adjust width to be proportional */
+    max-width: 300px; /* Ensure it’s not too large */
     min-width: 180px; /* Ensure a minimum size */
     border-radius: 15px;
     margin-bottom: 20px; /* Increase margin for spacing */
@@ -105,7 +105,7 @@ main {
 
 .hero p {
     font-weight: 400; /* Slightly bolder to stand out */
-    font-size: 2rem; /* Adjust size of name for emphasis */
+    font-size: 2.5rem; /* Increase size for emphasis */
     margin-bottom: 10px;
 }
 
@@ -119,7 +119,7 @@ main {
 .hero-academic-info p {
     font-family: 'Segoe UI Light', sans-serif;
     font-weight: 300;
-    font-size: 1.5rem; /* Adjust font size for better readability */
+    font-size: 1.6rem; /* Adjust font size for better readability */
     line-height: 1.6; /* Increase line height for spacing */
     color: #ffffff;
     margin: 10px 0; /* Ensure consistent spacing */
