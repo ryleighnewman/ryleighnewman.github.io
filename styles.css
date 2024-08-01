@@ -102,7 +102,7 @@ nav {
 /* About Section styles */
 .about-section {
     padding: 50px 20px; /* Padding around the about content */
-    text-align: center; /* Center align the text */
+    text-align: left; /* Left align the text */
     flex-grow: 1;
     max-width: 800px; /* Set a fixed width for the paragraphs */
     margin: 0 auto; /* Center the content */
@@ -110,7 +110,6 @@ nav {
 
 .about-intro {
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
 }
@@ -119,11 +118,11 @@ nav {
     width: 150px;
     height: auto;
     border-radius: 10px; /* Rounded square corners */
-    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .intro-text {
-    text-align: center;
+    text-align: left;
 }
 
 .about-section h2 {
@@ -137,6 +136,7 @@ nav {
     font-weight: 300; /* Ensure light font weight */
     font-size: 1.2rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
+    margin-bottom: 20px;
 }
 
 .about-section ul {
