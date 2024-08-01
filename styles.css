@@ -27,8 +27,7 @@ body {
 /* Header styles */
 header {
     background-color: rgb(30, 80, 150); /* Slightly lighter blue for the top bar */
-    border-bottom: none; /* Removed bottom border to eliminate the white line */
-    padding: 0 15px; /* Removed top padding to ensure the color reaches the top */
+    padding: 0 15px;
     height: 60px; /* Ensures the header height is consistent */
     flex-shrink: 0;
 }
@@ -79,9 +78,9 @@ nav {
 
 /* Hero section */
 .hero {
-    position: relative;
     width: 100%;
-    height: auto; /* Let the height adjust naturally based on content */
+    max-width: 1200px; /* Limit the width of the hero section */
+    margin: 0 auto; /* Center the hero section */
     background: url('background.JPG') no-repeat center center;
     background-size: cover; /* Maintain aspect ratio of the background image */
     color: #ffffff;
@@ -90,28 +89,28 @@ nav {
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding-top: 5%; /* Add some padding to create space at the top */
-    padding-bottom: 5%; /* Add padding to create space at the bottom */
-    flex-grow: 1; /* Allow hero section to take up available space */
+    padding: 5% 20px; /* Padding for both top and bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow around the hero section */
 }
 
-.headshot-image {
-    max-width: 50%; /* Limit the width to 50% of the container */
+.hero-headshot {
+    max-width: 300px; /* Limit the width of the headshot image */
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
-    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the image */
     margin-bottom: 20px; /* Space between the image and the name */
+    object-fit: cover;
 }
 
-.hero h1 {
+.hero-name {
+    font-size: 2rem; /* Adjust font size */
+    margin: 0 0 10px 0; /* Space below the name */
     font-weight: 300; /* Light font weight */
-    font-size: 2.5rem; /* Size of the name */
-    margin: 0; /* No additional margin */
 }
 
-.hero p {
-    font-weight: 300; /* Ensure light font weight */
-    font-size: 1.4rem;
+.hero-academic-info .subtext {
+    font-size: 1.2rem; /* Adjust the font size of the academic info */
+    line-height: 1.4;
+    text-align: center; /* Center the academic information */
 }
 
 /* About Section styles */
@@ -121,11 +120,12 @@ nav {
     flex-grow: 1;
 }
 
-.about-section h1 {
+.about-section h2.section-title-blue {
     font-weight: 300; /* Ensure light font weight */
-    font-size: 2rem; /* Title size */
-    margin-bottom: 20px;
-    color: #ffffff; /* White text color for the heading */
+    color: #4A90E2; /* Light blue color for section titles */
+    text-transform: uppercase; /* Uppercase for titles */
+    letter-spacing: 1px; /* Slightly more spacing between letters */
+    margin-bottom: 30px; /* Space below the title */
 }
 
 .about-section p {
@@ -133,43 +133,12 @@ nav {
     font-size: 1.2rem; /* Text size for the content */
     color: #dddddd; /* Slightly lighter text color for contrast */
     max-width: 800px; /* Restrict the width of paragraphs for better readability */
-    margin: 0 auto; /* Center the paragraphs */
+    margin: 0 auto 20px auto; /* Center the paragraphs and add space below */
     text-align: left; /* Align text to the left */
 }
 
-.about-section img.headshot-image {
-    max-width: 200px; /* Limit the size of the headshot image */
-    border-radius: 10px; /* Rounded square for the headshot */
-    margin-bottom: 20px;
-}
-
-.about-section h2 {
-    font-weight: 300; /* Ensure light font weight */
-    color: #4A90E2; /* Light blue color for section titles */
-    margin-top: 50px;
-    margin-bottom: 20px;
-    text-align: center; /* Ensure the title is centered */
-    text-transform: uppercase; /* Uppercase for titles */
-    letter-spacing: 1px; /* Slightly more spacing between letters */
-}
-
-.about-section ul {
-    font-weight: 300; /* Ensure light font weight */
-    color: #dddddd;
-    text-align: left;
-    max-width: 800px; /* Restrict the width of lists */
-    margin: 0 auto 50px auto; /* Center the list and add space below */
-    padding-left: 20px; /* Add padding for bullets */
-}
-
-.about-section ul li {
-    margin-bottom: 10px; /* Space between list items */
-    list-style-type: disc;
-    color: #4A90E2; /* Color the bullet points blue */
-}
-
 /* Section Divider */
-.about-section hr {
+.about-section hr.divider-top, .about-section hr.divider-bottom {
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.3); /* Light grey line */
     margin: 50px auto; /* Space around the dividers */
@@ -287,4 +256,5 @@ footer {
     flex-shrink: 0;
     width: 100%;
     margin-top: auto; /* Push the footer to the bottom if there's extra space */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow at the top of the footer */
 }
