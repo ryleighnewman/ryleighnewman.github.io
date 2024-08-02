@@ -346,28 +346,21 @@ main {
     background-color: rgba(51, 51, 51, 0.9); /* Darker black shade on hover */
 }
 
-/* Footer styles */
 footer {
     display: flex;
     justify-content: center;
     align-items: center; /* Center text vertically */
-    height: 25px; /* Set the height of the footer */
+    width: 100%; /* Full width of the viewport */
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     font-size: 0.7rem; /* Small font size for the footer text */
     color: #ffffff; /* White text color for the footer */
-    width: 100%; /* Ensure it spans the entire width of the viewport */
-    margin-top: 20px; /* Decrease the space above the footer */
-    padding: 0; /* Remove padding */
+    padding: 10px 0; /* Add padding to give space around the text */
+    position: relative; /* Ensure relative positioning to prevent overlap issues */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
-    position: relative; /* Ensure it stays at the bottom if needed */
-    bottom: 0; /* Stick to the bottom of the viewport if needed */
+    margin-top: 20px; /* Space above the footer */
 }
 
-/* Ensure the footer text is centered within its container */
 footer p {
     margin: 0; /* Remove any default margin from the paragraph */
     line-height: 1; /* Set line height to 1 to avoid extra space around the text */
-    text-align: center; /* Center align the text within the footer */
-    width: 100%; /* Ensure the paragraph spans the entire width */
-    max-width: 1200px; /* Optional: Limit the maximum width for readability */
 }
