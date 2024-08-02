@@ -59,21 +59,21 @@ header {
 /* Transparent Header Class for Scrolling */
 .transparent {
     background: linear-gradient(to bottom, 
-        rgba(30, 80, 150, 0.1) 0%,        
-        rgba(30, 80, 150, 0.2) 5%,        
-        rgba(30, 80, 150, 0.3) 10%,       
-        rgba(30, 80, 150, 0.4) 20%,       
-        rgba(30, 80, 150, 0.5) 30%,       
-        rgba(30, 80, 150, 0.6) 40%,       
-        rgba(30, 80, 150, 0.7) 50%,       
-        rgba(30, 80, 150, 0.8) 60%,       
-        rgba(30, 80, 150, 0.9) 70%,       
-        rgba(30, 80, 150, 0.95) 80%,     
-        rgba(30, 80, 150, 1) 100%
+        rgba(30, 80, 150, 0.1) 0%,        /* Fully transparent at the top */
+        rgba(30, 80, 150, 0.2) 10%,        /* Gradual increase in opacity */
+        rgba(30, 80, 150, 0.3) 20%,       
+        rgba(30, 80, 150, 0.4) 30%,       
+        rgba(30, 80, 150, 0.5) 40%,       
+        rgba(30, 80, 150, 0.6) 50%,       
+        rgba(30, 80, 150, 0.7) 60%,       
+        rgba(30, 80, 150, 0.8) 70%,       
+        rgba(30, 80, 150, 0.9) 80%,       
+        rgba(30, 80, 150, 0.95) 90%,     
+        rgba(30, 80, 150, 1) 100%        /* Fully opaque blue at the bottom */
     );
     backdrop-filter: blur(10px);
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-    box-shadow: 0 2px 10px rgba(180, 25, 25, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
     position: fixed;
     width: 100%;
@@ -84,8 +84,8 @@ header {
 .header.scrolled {
     background: rgba(30, 80, 150, 1); /* Solid blue color */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
-
 /* Smooth Text Transition */
 .transparent .nav-links a, 
 .header.scrolled .nav-links a {

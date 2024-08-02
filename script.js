@@ -9,10 +9,6 @@ function toggleHeaderTransparency() {
         header.classList.remove('transparent'); // Remove the gradient and frosted effect
     }
 }
-
-// Attach the scroll event to the toggleHeaderTransparency function
-window.addEventListener('scroll', toggleHeaderTransparency);
-
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.transparent');
     
@@ -22,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create an observer to detect intersection with a certain color
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            // Check if the entry intersects with the dark gray background
             if (entry.isIntersecting) {
                 const entryColor = window.getComputedStyle(entry.target).backgroundColor;
                 if (entryColor === darkGray) {
