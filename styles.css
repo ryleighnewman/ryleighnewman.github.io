@@ -14,6 +14,16 @@ html, body {
     min-height: 100%; /* Ensure full height of the page */
 }
 
+/* Wrapper to simulate phone borders */
+.wrapper {
+    max-width: 414px; /* Common mobile width */
+    margin: 0 auto; /* Center the content */
+    border-left: 2px solid #dddddd; /* Add left border */
+    border-right: 2px solid #dddddd; /* Add right border */
+    background-color: rgb(18, 22, 24); /* Background color inside the wrapper */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for depth */
+}
+
 /* Body and typography */
 body {
     color: #dddddd; /* Consistent light gray text color across the entire website */
@@ -21,8 +31,6 @@ body {
     line-height: 1.6;
     flex-grow: 1; /* Allow body to grow and take available space */
     font-size: 1.2rem; /* Increase font size of paragraphs */
-    max-width: 800px; /* Set alignment widths for better readability */
-    margin: 0 auto; /* Center the content */
 }
 
 /* Add space between paragraphs */
