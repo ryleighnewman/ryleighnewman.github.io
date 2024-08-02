@@ -346,18 +346,19 @@ main {
     background-color: rgba(51, 51, 51, 0.9); /* Darker black shade on hover */
 }
 
+/* Ensure footer spans full width */
 footer {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center text horizontally */
     align-items: center; /* Center text vertically */
     width: 100%; /* Full width of the viewport */
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     font-size: 0.7rem; /* Small font size for the footer text */
     color: #ffffff; /* White text color for the footer */
-    padding: 10px 0; /* Add padding to give space around the text */
-    position: relative; /* Ensure relative positioning to prevent overlap issues */
+    padding: 10px 0; /* Add padding for space around the text */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
     margin-top: 20px; /* Space above the footer */
+    position: relative; /* Ensure relative positioning to prevent overlap issues */
 }
 
 footer p {
