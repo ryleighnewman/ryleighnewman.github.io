@@ -13,13 +13,31 @@ function toggleHeaderTransparency() {
 // Attach the scroll event to the toggleHeaderTransparency function
 window.addEventListener('scroll', toggleHeaderTransparency);
 
-document.addEventListener('scroll', function() {
+document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.transparent');
-    const triggerHeight = window.innerHeight / 2; // Adjust this value as needed
+    
+    // Define the dark gray color for detection
+    const darkGray = 'rgb(50, 50, 50)'; // Adjust as needed
 
-    if (window.scrollY > triggerHeight) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
+    // Create an observer to detect intersection with a certain color
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Check if the entry intersects with the dark gray background
+            if (entry.isIntersecting) {
+                const entryColor = window.getComputedStyle(entry.target).backgroundColor;
+                if (entryColor === darkGray) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
+    }, {
+        root: null, // Use viewport as root
+        threshold: 0.1 // Adjust as needed
+    });
+    
+    // Observe the target element or background area
+    const target = document.querySelector('.color-trigger'); // Replace with your target element
+    observer.observe(target);
 });
