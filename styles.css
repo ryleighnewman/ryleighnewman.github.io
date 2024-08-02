@@ -90,18 +90,6 @@ header {
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Additional Background Layer to Prevent Flashing */
-.header-background {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px; /* Adjust based on header height */
-    background-color: rgba(18, 22, 24, 1); /* Match this to the page background color */
-    z-index: 999; /* Below the header */
-}
-
 /* Remove any border that might create a line */
 .transparent, .header.scrolled {
     background-color: transparent;
@@ -113,24 +101,6 @@ header {
 .transparent .nav-links a, 
 .header.scrolled .nav-links a {
     transition: color 0.3s ease-in-out;
-}
-
-/* Ensure smooth header text transition */
-.transparent .nav-links a, 
-.header.scrolled .nav-links a {
-    transition: color 0.4s ease-in-out;
-}}
-
-/* Ensure smooth header text transition */
-.transparent .nav-links a, 
-.header.scrolled .nav-links a {
-    transition: color 0.4s ease-in-out;
-}
-
-/* Ensure smooth header text transition */
-.transparent .nav-links a, 
-.header.scrolled .nav-links a {
-    transition: color 0.4s ease-in-out;
 }
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
@@ -254,7 +224,8 @@ nav {
 }
 
 /* Section Divider */
-.about-section hr.divider-top, .about-section hr.divider-bottom, 
+.about-section hr.divider-top, 
+.about-section hr.divider-bottom, 
 .contact-section hr.divider-bottom {
     border: none;
     border-top: 1px solid rgba(169, 169, 169, 0.3); /* Light grey line for consistent dividers */
