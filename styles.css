@@ -355,6 +355,13 @@ main {
     background-color: rgba(51, 51, 51, 0.9); /* Darker black shade on hover */
 }
 
+/* Ensure correct font and weight for strong tags */
+.contact-section p strong,
+.about-section p strong {
+    font-family: 'Segoe UI Light', sans-serif; /* Apply the correct font */
+    font-weight: 300; /* Ensure light font weight */
+}
+
 /* Ensure footer spans full width */
 footer {
     display: flex;
