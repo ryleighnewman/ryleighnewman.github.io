@@ -9,6 +9,9 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Optional: Add a favicon -->
 </head>
 <body>
+    <!-- Background Container -->
+    <div class="header-container"></div>
+
     <header>
         <nav>
             <a href="index.html" class="logo">
@@ -52,9 +55,10 @@
     <footer>
         <p>&copy; 2024 Ryleigh Newman</p>
     </footer>
+
     <script>
-        window.onscroll = function() {toggleHeaderTransparency()};
-        
+        window.onscroll = function() { toggleHeaderTransparency(); };
+
         function toggleHeaderTransparency() {
             var header = document.querySelector('header');
             if (window.pageYOffset > 50) { // Adjust this threshold as needed
@@ -63,6 +67,6 @@
                 header.classList.remove("transparent");
             }
         }
-        </script>
+    </script>
 </body>
 </html>
