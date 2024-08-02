@@ -23,7 +23,7 @@ html, body {
     border-right: 2px solid #dddddd; /* Add right border */
     background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for depth */
-    min-height: 100%; /* Ensure the wrapper covers the entire height of the page */
+    min-height: 100vh; /* Ensure the wrapper covers the entire height of the page */
     display: flex;
     flex-direction: column;
 }
@@ -149,7 +149,7 @@ nav {
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the image */
     margin-bottom: 20px; /* Space between the image and the name */
-    object-fit: cover;
+    object-fit: cover; /* Ensure the image maintains its aspect ratio */
 }
 
 .hero-name {
@@ -217,6 +217,7 @@ nav {
     margin-bottom: 0; /* Remove any bottom margin */
     padding-bottom: 20px; /* Adjust padding if needed */
 }
+
 /* Blue Header Section Styles */
 .section-title-blue,
 .section-title-light-blue {
