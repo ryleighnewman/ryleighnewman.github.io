@@ -355,15 +355,19 @@ footer {
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     font-size: 0.7rem; /* Small font size for the footer text */
     color: #ffffff; /* White text color for the footer */
-    flex-shrink: 0;
-    width: 100%;
+    width: 100%; /* Ensure it spans the entire width of the viewport */
     margin-top: 20px; /* Decrease the space above the footer */
     padding: 0; /* Remove padding */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
-    line-height: normal; /* Ensure the line height doesn't interfere with centering */
+    position: relative; /* Ensure it stays at the bottom if needed */
+    bottom: 0; /* Stick to the bottom of the viewport if needed */
 }
 
+/* Ensure the footer text is centered within its container */
 footer p {
     margin: 0; /* Remove any default margin from the paragraph */
     line-height: 1; /* Set line height to 1 to avoid extra space around the text */
+    text-align: center; /* Center align the text within the footer */
+    width: 100%; /* Ensure the paragraph spans the entire width */
+    max-width: 1200px; /* Optional: Limit the maximum width for readability */
 }
