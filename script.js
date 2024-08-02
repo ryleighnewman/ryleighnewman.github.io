@@ -12,3 +12,14 @@ function toggleHeaderTransparency() {
 
 // Attach the scroll event to the toggleHeaderTransparency function
 window.addEventListener('scroll', toggleHeaderTransparency);
+
+document.addEventListener('scroll', function() {
+    const header = document.querySelector('.transparent');
+    const triggerHeight = window.innerHeight / 2; // Adjust this value as needed
+
+    if (window.scrollY > triggerHeight) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
