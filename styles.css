@@ -267,7 +267,7 @@ main {
     max-width: 800px; /* Set alignment width for readability */
     margin-left: auto; /* Center align paragraphs */
     margin-right: auto; /* Center align paragraphs */
-    text-align: left; /* Align text to the left */
+    text-align: center; /* Center align text in the contact section */
 }
 
 .contact-section ul {
