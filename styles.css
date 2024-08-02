@@ -365,12 +365,13 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center; /* Center text vertically */
-    height: 30px; /* Set a fixed height to ensure the footer is not too tall */
+    height: 25px; /* Reduce the height further */
     background-color: rgb(15, 17, 18); /* Dark background for the footer */
     font-size: 0.7rem; /* Reduced font size for the footer text */
     color: #ffffff; /* White text color for the footer */
     flex-shrink: 0;
     width: 100%;
     margin-top: 20px; /* Decrease the space above the footer */
+    padding: 0; /* Remove padding */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
 }
