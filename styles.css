@@ -61,18 +61,14 @@ header {
 main {
     position: relative;
     z-index: 2; /* Ensure it is above the top background */
+    margin-top: 50px; /* Adjusted to match the height of the header */
+    flex-grow: 1; /* Allow main content to take up remaining space */
 }
 
 /* Smooth Text Transition */
 .transparent .nav-links a, 
 .header.scrolled .nav-links a {
     transition: color 0.3s ease-in-out;
-}
-
-/* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
-main {
-    margin-top: 50px; /* Adjusted to match the height of the header */
-    flex-grow: 1; /* Allow main content to take up remaining space */
 }
 
 /* Navigation Styling */
@@ -252,6 +248,7 @@ main {
     flex-grow: 1; /* Allow main content to take up remaining space */
 }
 
+/* Contact Section Content Styles */
 .contact-section p, 
 .contact-section ul {
     font-weight: 300; /* Light font weight */
