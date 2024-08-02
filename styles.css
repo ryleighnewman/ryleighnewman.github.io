@@ -220,12 +220,13 @@ nav {
 }
 
 /* Blue Header Section Styles */
-.section-title-blue {
+.section-title-blue,
+.section-title-light-blue {
     font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
     font-weight: 300; /* Light font weight */
     color: rgb(100, 150, 200); /* Lighter blue matching top bar */
     text-transform: uppercase; /* Transform text to uppercase */
-    font-size: 1.8rem; /* Adjusted font size */
+    font-size: 1.8rem; /* Unified font size for all blue headings */
     margin-bottom: 20px; /* Space below the title */
 }
 
