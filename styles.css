@@ -67,6 +67,9 @@ header {
     transition: background 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth transition on scroll */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 10px 20px; /* Slight padding for a cleaner look */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
 /* Adjusted Class when Scrolled */
@@ -76,10 +79,23 @@ header {
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition when scrolling back up */
 }
 
-/* Ensure smooth transition without the backdrop flash */
+/* Prevent background flash on scroll up */
 .transparent, .header.scrolled {
+    background-color: transparent;
     border: none;
     will-change: background, box-shadow; /* Hint to the browser for better handling of the transitions */
+}
+
+/* Fix text movement glitch */
+.transparent .nav-links, 
+.header.scrolled .nav-links {
+    transition: color 0.3s ease-in-out; /* Ensure text transition is smooth */
+}
+
+/* Ensure smooth header text transition */
+.transparent .nav-links a, 
+.header.scrolled .nav-links a {
+    transition: color 0.3s ease-in-out;
 }
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
