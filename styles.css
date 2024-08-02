@@ -369,17 +369,4 @@ footer {
     color: #ffffff; /* White text color for the footer */
     padding: 10px 0; /* Add padding for space around the text */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
-    margin-top: 20px; /* Space above the footer */
-    position: relative; /* Ensure relative positioning to prevent overlap issues */
-}
-
-/* Ensure the footer does not shrink and stays at the bottom */
-footer {
-    flex-shrink: 0; /* Prevent the footer from shrinking */
-}
-
-/* Remove any default margin from footer text */
-footer p {
-    margin: 0; /* Remove any default margin from the paragraph */
-    line-height: 1; /* Set line height to 1 to avoid extra space around the text */
-}
+    margin-top: 20
