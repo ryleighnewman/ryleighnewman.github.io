@@ -20,7 +20,7 @@ html, body {
     margin: 0 auto; /* Center the content */
     border-left: 2px solid #dddddd; /* Add left border */
     border-right: 2px solid #dddddd; /* Add right border */
-    background-color: rgb(18, 22, 24); /* Background color inside the wrapper */
+    background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for depth */
 }
 
