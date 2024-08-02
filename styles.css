@@ -86,22 +86,33 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
+/* Container for background and header */
+.header-wrapper {
+    position: relative; /* Ensure stacking context */
+    z-index: 1; /* Place above the top background */
+}
 
 /* Top Background */
 .top-background {
     background-color: rgba(30, 80, 150, 1); /* Solid blue color matching the header */
-    position: fixed; /* Keep it fixed behind the header */
+    position: fixed; /* Fixed behind the header */
     top: 0;
     left: 0;
     width: 100%;
     height: 80px; /* Height of the top portion (adjust as needed) */
-    z-index: -2; /* Ensure it's behind the header and background image */
+    z-index: -1; /* Behind header and content but in front of the gray background */
 }
 
 /* Ensure Background Image is Above */
 .hero {
     position: relative; /* Ensure it stacks above the top-background */
     z-index: 0; /* Ensure it's above the top-background */
+}
+
+/* Adjusting main content to avoid gray background */
+main {
+    position: relative;
+    z-index: 2; /* Ensure it is above the top background */
 }
 
 /* Smooth Text Transition */
