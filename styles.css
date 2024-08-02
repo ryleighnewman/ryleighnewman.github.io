@@ -94,8 +94,14 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px; /* Height of the top portion (adjust as needed) */
-    z-index: -1; /* Ensure it's behind the header */
+    height: 80px; /* Height of the top portion (adjust as needed) */
+    z-index: -2; /* Ensure it's behind the header and background image */
+}
+
+/* Ensure Background Image is Above */
+.hero {
+    position: relative; /* Ensure it stacks above the top-background */
+    z-index: 0; /* Ensure it's above the top-background */
 }
 
 /* Smooth Text Transition */
