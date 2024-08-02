@@ -58,24 +58,25 @@ header {
 }
 
 /* Transparent Header Class for Scrolling */
+/* Transparent Header Class for Scrolling */
 .transparent {
-    background: rgba(30, 80, 150, 1); /* Fallback solid color */
     background: linear-gradient(to top, 
-        rgba(30, 80, 150, 1) 0%,        /* Fully opaque original blue at the bottom */
-        rgba(30, 80, 150, 0.95) 10%,    /* Slightly reduced opacity */
-        rgba(30, 80, 150, 0.9) 20%,     /* Gradual decrease in opacity */
-        rgba(30, 80, 150, 0.85) 30%,    /* Gradual decrease in opacity */
-        rgba(30, 80, 150, 0.8) 40%,     /* Original stop at 40% */
-        rgba(30, 80, 150, 0.7) 50%,     /* New stop to smooth transition */
-        rgba(30, 80, 150, 0.6) 60%,     /* Further reduction in opacity */
-        rgba(30, 80, 150, 0.5) 70%,     /* Gradual decrease in opacity */
-        rgba(30, 80, 150, 0.4) 80%,     /* Even more transparent blue at 80% */
-        rgba(30, 80, 150, 0.3) 90%,     /* Nearly fully transparent */
-        rgba(30, 80, 150, 0.2) 95%,     /* Almost invisible */
-        rgba(30, 80, 150, 0.1) 100%     /* Fully transparent at the top */
+        rgba(30, 80, 150, 0.1) 0%,        /* Fully transparent at the top */
+        rgba(30, 80, 150, 0.2) 5%,        /* Gradual increase in opacity */
+        rgba(30, 80, 150, 0.3) 10%,       
+        rgba(30, 80, 150, 0.4) 20%,       
+        rgba(30, 80, 150, 0.5) 30%,       
+        rgba(30, 80, 150, 0.6) 40%,       
+        rgba(30, 80, 150, 0.7) 50%,       
+        rgba(30, 80, 150, 0.8) 60%,       
+        rgba(30, 80, 150, 0.9) 70%,       
+        rgba(30, 80, 150, 0.95) 80%,     
+        rgba(30, 80, 150, 1) 100%        /* Fully opaque blue at the bottom */
     );
     backdrop-filter: blur(10px);
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background-position 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    background-size: 100% 100%;
+    background-position: top;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 10px 20px;
     position: fixed;
@@ -85,9 +86,10 @@ header {
 
 /* Adjusted Class when Scrolled */
 .header.scrolled {
-    background: rgba(30, 80, 150, 0.85);
+    background-position: bottom;
+    background-size: 100% 200%; /* Makes the transition start from the bottom and move to the top */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: background-position 0.5s ease-in-out, background-size 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
 /* Remove any border that might create a line */
