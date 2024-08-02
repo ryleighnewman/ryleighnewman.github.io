@@ -33,10 +33,13 @@ body {
     font-size: 1.2rem; /* Increase font size of paragraphs */
 }
 
-/* Add space between paragraphs */
+/* Add space between paragraphs and set a max-width */
 p {
     margin-bottom: 20px; /* Space between paragraphs */
     color: #dddddd; /* Ensure all paragraphs use the same light gray color */
+    max-width: 600px; /* Set a maximum width for paragraphs */
+    margin-left: auto; /* Center align paragraphs */
+    margin-right: auto; /* Center align paragraphs */
 }
 
 /* Initial solid color header */
