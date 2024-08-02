@@ -57,19 +57,20 @@ header {
     z-index: 999; /* Ensure it's below the header but above the content */
 }
 /* Transparent Header Class for Scrolling */
+
 .transparent {
     background: linear-gradient(to bottom, 
-        rgba(30, 80, 150, 0.1) 0%,        /* Fully transparent at the top */
-        rgba(30, 80, 150, 0.2) 10%,        /* Gradual increase in opacity */
-        rgba(30, 80, 150, 0.3) 20%,       
-        rgba(30, 80, 150, 0.4) 30%,       
-        rgba(30, 80, 150, 0.5) 40%,       
-        rgba(30, 80, 150, 0.6) 50%,       
-        rgba(30, 80, 150, 0.7) 60%,       
-        rgba(30, 80, 150, 0.8) 70%,       
-        rgba(30, 80, 150, 0.9) 80%,       
-        rgba(30, 80, 150, 0.95) 90%,     
-        rgba(30, 80, 150, 1) 100%        /* Fully opaque blue at the bottom */
+        rgba(30, 80, 150, 1) 0%,        /* Fully opaque blue at the top */
+        rgba(30, 80, 150, 0.9) 10%,       
+        rgba(30, 80, 150, 0.8) 20%,       
+        rgba(30, 80, 150, 0.7) 30%,       
+        rgba(30, 80, 150, 0.6) 40%,       
+        rgba(30, 80, 150, 0.5) 50%,       
+        rgba(30, 80, 150, 0.4) 60%,       
+        rgba(30, 80, 150, 0.3) 70%,       
+        rgba(30, 80, 150, 0.2) 80%,       
+        rgba(30, 80, 150, 0.1) 90%,     
+        rgba(30, 80, 150, 0) 100%        /* Fully transparent at the bottom */
     );
     backdrop-filter: blur(10px);
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
