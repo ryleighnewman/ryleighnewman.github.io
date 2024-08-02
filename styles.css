@@ -87,6 +87,14 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
+
+/* Background Color for the Space Behind the Header */
+.header-container {
+    background-color: rgba(30, 80, 150, 0.2); /* Semi-transparent background to cover gray */
+    position: relative;
+    z-index: -1; /* Ensure it's behind the header */
+    height: 100vh; /* Adjust based on content */
+}
 /* Smooth Text Transition */
 .transparent .nav-links a, 
 .header.scrolled .nav-links a {
