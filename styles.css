@@ -252,6 +252,27 @@ nav {
     margin-top: 0;  /* Remove any top margin */
     padding-top: 0; /* Remove any top padding */
 }
+/* Center the "Contact Me" heading */
+.contact-section h1 {
+    margin-top: 0; /* Remove any top margin */
+    padding-top: 0; /* Remove any top padding */
+    text-align: center; /* Center the text horizontally */
+}
+
+/* Ensure the entire contact section is centered */
+.contact-section {
+    padding-top: 20px; /* Adjust padding if needed to align with the top blue bar */
+    text-align: center; /* Center all text within the contact section */
+}
+
+/* Center the contact form or other elements within the contact section */
+.contact-section form,
+.contact-section ul,
+.contact-section p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Center text within individual elements */
+}
 
 /* Additional adjustment for the contact section if necessary */
 .contact-section {
