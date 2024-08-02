@@ -57,7 +57,6 @@ header {
     z-index: 999; /* Ensure it's below the header but above the content */
 }
 /* Transparent Header Class for Scrolling */
-
 .transparent {
     background: linear-gradient(to bottom, 
         rgba(30, 80, 150, 1) 0%,        /* Fully opaque blue at the top */
@@ -95,6 +94,7 @@ header {
     z-index: -1; /* Ensure it's behind the header */
     height: 100vh; /* Adjust based on content */
 }
+
 /* Smooth Text Transition */
 .transparent .nav-links a, 
 .header.scrolled .nav-links a {
