@@ -83,6 +83,7 @@ header {
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
 main {
     margin-top: 50px; /* Adjusted to match the height of the header */
+    flex-grow: 1; /* Allow main content to take up remaining space */
 }
 
 /* Navigation Styling */
@@ -198,6 +199,7 @@ nav {
 .about-section {
     padding: 20px; /* Consistent padding for sections */
 }
+
 /* Section Divider */
 .about-section hr.divider-top, .about-section hr.divider-bottom, 
 .contact-section hr.divider-bottom {
@@ -230,15 +232,6 @@ nav {
     margin-bottom: 20px; /* Space below the title */
 }
 
-.section-title-light-blue {
-    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
-    font-weight: 300; /* Light font weight */
-    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
-    text-transform: uppercase; /* Transform text to uppercase */
-    font-size: 1.8rem; /* Adjusted font size */
-    margin-bottom: 20px; /* Space below the title */
-}
-
 /* Contact Section Styles */
 .contact-section {
     padding: 50px 20px; /* Padding around the contact content */
@@ -266,6 +259,7 @@ nav {
 /* Ensure the main content starts directly below the fixed header */
 main {
     margin-top: 50px; /* Adjust as necessary to match the height of the header */
+    flex-grow: 1; /* Allow main content to take up remaining space */
 }
 
 .contact-section p, 
