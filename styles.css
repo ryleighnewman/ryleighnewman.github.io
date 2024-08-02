@@ -87,12 +87,15 @@ header {
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-/* Background Color for the Space Behind the Header */
-.header-container {
-    background-color: rgba(30, 80, 150, 0.2); /* Semi-transparent background to cover gray */
-    position: relative;
+/* Top Background */
+.top-background {
+    background-color: rgba(30, 80, 150, 1); /* Solid blue color matching the header */
+    position: fixed; /* Keep it fixed behind the header */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Height of the top portion (adjust as needed) */
     z-index: -1; /* Ensure it's behind the header */
-    height: 100vh; /* Adjust based on content */
 }
 
 /* Smooth Text Transition */
