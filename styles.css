@@ -127,12 +127,13 @@ nav {
     color: rgb(169, 204, 227); /* Light blue for hover effect */
 }
 
-/* Full-screen background image */
+/* Hero section with full-screen background coverage */
 .hero {
-    width: 100vw; /* Ensure the width covers 100% of the viewport width */
-    height: 100vh; /* Ensure the height covers 100% of the viewport height */
-    background: url('background.JPG') no-repeat center center fixed; /* Center the background image and fix it in place */
-    background-size: cover; /* Ensure the background image covers the entire viewport */
+    width: 100%; /* Ensure the width covers the entire container */
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 100vh; /* Ensure the section is at least as tall as the viewport */
+    background: url('background.JPG') no-repeat center center; /* Center the background image */
+    background-size: cover; /* Ensure the background image covers the entire area */
     color: #ffffff;
     display: flex;
     flex-direction: column;
