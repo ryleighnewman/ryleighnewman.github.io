@@ -74,33 +74,26 @@ header {
         rgba(30, 80, 150, 0.1) 100%     /* Fully transparent at the bottom */
     );
     backdrop-filter: blur(10px); /* Apply the frosted glass effect */
-    -webkit-backdrop-filter: blur(10px); /* For Safari */
-    transition: background 0.4s ease-in-out, backdrop-filter 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition on scroll */
+    transition: none; /* Remove any transition effects */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 10px 20px; /* Slight padding for a cleaner look */
     position: fixed;
     width: 100%;
-    z-index: 1000; /* Above the background layer */
+    z-index: 1000;
 }
 
 /* Adjusted Class when Scrolled */
 .header.scrolled {
     background: rgba(30, 80, 150, 0.85); /* Slightly opaque background when scrolled */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
-    transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition back to solid color */
+    transition: none; /* Remove any transition effects */
 }
 
-/* Prevent background flash on scroll up */
+/* Remove any border that might create a line */
 .transparent, .header.scrolled {
     background-color: transparent;
     border: none;
     will-change: background, box-shadow; /* Hint to the browser for better handling of the transitions */
-}
-
-/* Fix text movement glitch */
-.transparent .nav-links, 
-.header.scrolled .nav-links {
-    transition: color 0.4s ease-in-out; /* Ensure text transition is smooth */
 }
 
 /* Ensure smooth header text transition */
