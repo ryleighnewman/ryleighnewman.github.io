@@ -76,10 +76,10 @@ header {
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition when scrolling back up */
 }
 
-/* Ensure that background is always at the correct opacity */
+/* Ensure smooth transition without the backdrop flash */
 .transparent, .header.scrolled {
-    background-color: rgba(30, 80, 150, 1); /* Ensure solid color to prevent gray backdrop */
     border: none;
+    will-change: background, box-shadow; /* Hint to the browser for better handling of the transitions */
 }
 
 /* Ensure the main content has appropriate top margin to avoid being hidden behind the fixed header */
