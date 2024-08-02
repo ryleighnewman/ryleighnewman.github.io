@@ -227,6 +227,7 @@ nav {
 }
 
 /* Fix spacing above the Contact Me heading */
+/* Fix spacing above the Contact Me heading */
 .contact-section h1 {
     margin-top: 0;  /* Remove any top margin */
     padding-top: 0; /* Remove any top padding */
@@ -235,6 +236,7 @@ nav {
 /* Additional adjustment for the contact section if necessary */
 .contact-section {
     padding-top: 20px; /* Adjust padding if needed to align with the top blue bar */
+    padding-bottom: 20px; /* Ensure consistent padding at the bottom */
 }
 
 /* Remove the gap below the divider */
