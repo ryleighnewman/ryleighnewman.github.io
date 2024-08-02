@@ -74,7 +74,7 @@ header {
         rgba(30, 80, 150, 0.1) 100%     /* Fully transparent at the bottom */
     );
     backdrop-filter: blur(10px); /* Apply the frosted glass effect */
-    transition: none; /* Remove any transition effects */
+    transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
     padding: 10px 20px; /* Slight padding for a cleaner look */
     position: fixed;
@@ -86,15 +86,21 @@ header {
 .header.scrolled {
     background: rgba(30, 80, 150, 0.85); /* Slightly opaque background when scrolled */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
-    transition: none; /* Remove any transition effects */
+    transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition back to solid color */
 }
 
-/* Remove any border that might create a line */
+/* Synchronized Background Transition to Avoid Flash */
 .transparent, .header.scrolled {
     background-color: transparent;
     border: none;
     will-change: background, box-shadow; /* Hint to the browser for better handling of the transitions */
 }
+
+/* Ensure smooth header text transition */
+.transparent .nav-links a, 
+.header.scrolled .nav-links a {
+    transition: color 0.4s ease-in-out;
+}}
 
 /* Ensure smooth header text transition */
 .transparent .nav-links a, 
