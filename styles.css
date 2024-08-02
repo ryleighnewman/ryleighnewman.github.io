@@ -222,7 +222,7 @@ nav {
 .contact-section {
     padding: 50px 20px; /* Padding around the contact content */
     text-align: center; /* Center align the text */
-    flex-grow: 1;
+    flex-grow: 1; /* Ensure the contact section grows to fill available space */
     margin-bottom: 40px; /* Ensure consistent spacing at the bottom of each section */
 }
 
@@ -362,6 +362,12 @@ footer {
     position: relative; /* Ensure relative positioning to prevent overlap issues */
 }
 
+/* Ensure the footer does not shrink and stays at the bottom */
+footer {
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+/* Remove any default margin from footer text */
 footer p {
     margin: 0; /* Remove any default margin from the paragraph */
     line-height: 1; /* Set line height to 1 to avoid extra space around the text */
