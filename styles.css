@@ -127,13 +127,12 @@ nav {
     color: rgb(169, 204, 227); /* Light blue for hover effect */
 }
 
-/* Hero section */
+/* Full-screen background image */
 .hero {
-    width: 100%;
-    max-width: 1200px; /* Limit the width of the hero section */
-    margin: 0 auto; /* Center the hero section */
-    background: url('background.JPG') no-repeat center center;
-    background-size: cover; /* Maintain aspect ratio of the background image */
+    width: 100vw; /* Ensure the width covers 100% of the viewport width */
+    height: 100vh; /* Ensure the height covers 100% of the viewport height */
+    background: url('background.JPG') no-repeat center center fixed; /* Center the background image and fix it in place */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
     color: #ffffff;
     display: flex;
     flex-direction: column;
