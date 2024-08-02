@@ -59,24 +59,25 @@ header {
 
 /* Transparent Header Class for Scrolling */
 .transparent {
+    background: rgba(30, 80, 150, 1); /* Fallback solid color */
     background: linear-gradient(to bottom, 
-        rgba(30, 80, 150, 1) 0%,        /* Fully opaque original blue at the top */
-        rgba(30, 80, 150, 0.95) 10%,    /* Slightly reduced opacity */
-        rgba(30, 80, 150, 0.9) 20%,     /* Gradual decrease in opacity */
-        rgba(30, 80, 150, 0.85) 30%,    /* Gradual decrease in opacity */
-        rgba(30, 80, 150, 0.8) 40%,     /* Original stop at 40% */
-        rgba(30, 80, 150, 0.7) 50%,     /* New stop to smooth transition */
-        rgba(30, 80, 150, 0.6) 60%,     /* Further reduction in opacity */
-        rgba(30, 80, 150, 0.5) 70%,     /* Gradual decrease in opacity */
-        rgba(30, 80, 150, 0.4) 80%,     /* Even more transparent blue at 80% */
-        rgba(30, 80, 150, 0.3) 90%,     /* Nearly fully transparent */
-        rgba(30, 80, 150, 0.2) 95%,     /* Almost invisible */
-        rgba(30, 80, 150, 0.1) 100%     /* Fully transparent at the bottom */
+        rgba(30, 80, 150, 1) 0%,        
+        rgba(30, 80, 150, 0.95) 10%,    
+        rgba(30, 80, 150, 0.9) 20%,     
+        rgba(30, 80, 150, 0.85) 30%,    
+        rgba(30, 80, 150, 0.8) 40%,     
+        rgba(30, 80, 150, 0.7) 50%,     
+        rgba(30, 80, 150, 0.6) 60%,     
+        rgba(30, 80, 150, 0.5) 70%,     
+        rgba(30, 80, 150, 0.4) 80%,     
+        rgba(30, 80, 150, 0.3) 90%,     
+        rgba(30, 80, 150, 0.2) 95%,     
+        rgba(30, 80, 150, 0.1) 100%     
     );
-    backdrop-filter: blur(10px); /* Apply the frosted glass effect */
-    transition: background-color 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    padding: 10px 20px; /* Slight padding for a cleaner look */
+    backdrop-filter: blur(10px);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -84,16 +85,34 @@ header {
 
 /* Adjusted Class when Scrolled */
 .header.scrolled {
-    background: rgba(30, 80, 150, 0.85); /* Slightly opaque background when scrolled */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
-    transition: background 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Smooth transition back to solid color */
+    background: rgba(30, 80, 150, 0.85);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Synchronized Background Transition to Avoid Flash */
+/* Additional Background Layer to Prevent Flashing */
+.header-background {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Adjust based on header height */
+    background-color: rgba(18, 22, 24, 1); /* Match this to the page background color */
+    z-index: 999; /* Below the header */
+}
+
+/* Remove any border that might create a line */
 .transparent, .header.scrolled {
     background-color: transparent;
     border: none;
-    will-change: background, box-shadow; /* Hint to the browser for better handling of the transitions */
+    will-change: background, box-shadow;
+}
+
+/* Smooth Text Transition */
+.transparent .nav-links a, 
+.header.scrolled .nav-links a {
+    transition: color 0.3s ease-in-out;
 }
 
 /* Ensure smooth header text transition */
