@@ -131,7 +131,7 @@ nav {
 .hero {
     width: 100%; /* full width */
     height: 60vh; /* 60% of the viewport height */
-    background: url('assets/images/background.png') no-repeat center center; /* center the background image */
+    background: url('https://ryleighnewman.com/assets/images/background.png') no-repeat center center; /* center the background image */
     background-size: cover; /* cover the entire area */
     color: #ffffff;
     display: flex;
