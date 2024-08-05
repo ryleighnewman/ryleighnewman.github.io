@@ -144,16 +144,11 @@ nav {
 }
 
 /* safari-specific fix */
-@media not all and (min-resolution:.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-        .hero {
-            background-attachment: scroll;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 60vh;
-            position: relative;
-        }
+@media screen and (min-device-width: 320px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+        background-size: contain; /* Use contain instead of cover for better scaling in Safari */
+        height: 100vh; /* Expand the height to make sure the image covers the full screen */
+        padding: 10% 20px; /* Adjust padding for better centering */
     }
 }
 
