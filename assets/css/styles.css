@@ -389,4 +389,10 @@ footer p {
     margin: 0; /* remove any default margin from the paragraph */
     line-height: 1; /* set line height to 1 to avoid extra space around the text */
 }
-   
+
+/* target only chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .hero {
+        background-size: 100% auto; /* Adjust to maintain aspect ratio without zooming */
+    }
+}
