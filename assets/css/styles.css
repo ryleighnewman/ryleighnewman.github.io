@@ -131,7 +131,7 @@ nav {
 .hero {
     width: 100%; /* Ensure the width covers the entire container */
     height: 60vh; /* Adjust the height to 60% of the viewport height */
-    background: url('background.JPG') no-repeat center center; /* Center the background image */
+    background: url('background.png') no-repeat center center; /* Center the background image */
     background-size: cover; /* Ensure the background image covers the entire area */
     color: #ffffff;
     display: flex;
