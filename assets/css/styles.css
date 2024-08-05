@@ -127,12 +127,13 @@ nav {
     color: rgb(169, 204, 227); /* light blue for hover effect */
 }
 
-/* global styles (default for all browsers) */
+/* global styles for all browsers */
 .hero {
     background: url('/assets/images/background.png') no-repeat center center;
     background-size: cover; /* maintain aspect ratio without zooming */
     width: 100%;
     height: 60vh; /* adjust the height to 60% of the viewport height */
+    max-height: 100vh; /* ensure the height does not exceed the viewport height */
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -143,12 +144,13 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* safari-specific fix */
-@media screen and (min-device-width: 320px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+/* additional fix for smaller screens (mobile devices) */
+@media screen and (max-width: 768px) {
     .hero {
-        background-size: contain; /* Use contain instead of cover for better scaling in Safari */
-        height: 100vh; /* Expand the height to make sure the image covers the full screen */
-        padding: 10% 20px; /* Adjust padding for better centering */
+        background-size: cover; /* maintain aspect ratio */
+        height: auto; /* let the content define the height */
+        min-height: 60vh; /* ensure a minimum height */
+        padding: 10% 20px; /* adjust padding to center content */
     }
 }
 
