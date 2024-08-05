@@ -140,8 +140,10 @@ nav {
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 5% 20px;
+    padding: 0 20px; /* remove vertical padding to avoid content shifting */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* ensure content is positioned within the hero */
+    overflow: hidden; /* prevent content overflow */
 }
 
 /* additional fix for smaller screens (mobile devices) */
@@ -155,6 +157,8 @@ nav {
 }
 
 .hero-headshot {
+    position: relative;
+    top: 50px; /* adjust the headshot position to ensure it's below the blue bar */
     max-width: 300px; /* limit the width of the headshot image */
     border-radius: 15px; /* rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
@@ -163,22 +167,22 @@ nav {
 }
 
 .hero-name {
-    font-size: 1.8rem; /* decrease font size slightly */
+    font-size: 1.8rem; /* adjust font size */
     margin: 0 0 10px 0; /* space below the name */
     font-weight: 300; /* light font weight */
 }
 
 .hero-academic-info .subtext {
-    font-size: 1.1rem; /* decrease the font size of the academic info */
+    font-size: 1.1rem; /* adjust the font size of the academic info */
     line-height: 1.1;
     text-align: center; /* center the academic information */
 }
 
 .subtext .line {
     display: block; /* ensure each line is on a new line */
-    font-size: 1.1rem; /* decrease the font size slightly */
-    margin-bottom: 3px; /* reduce the space between lines further */
-    line-height: 1.1; /* tighten line height to bring lines closer together */
+    font-size: 1.1rem; /* adjust the font size */
+    margin-bottom: 3px; /* reduce the space between lines */
+    line-height: 1.1; /* tighten line height */
 }
 
 .subtext .smaller-text {
