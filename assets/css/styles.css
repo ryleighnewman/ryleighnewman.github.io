@@ -127,68 +127,90 @@ nav {
     color: rgb(169, 204, 227); /* light blue for hover effect */
 }
 
-/* global styles for all browsers */
+/* fix for the dynamic viewport height in chrome mobile */
+:root {
+    --vh: 100vh; /* fallback for browsers that don't support dynamic viewport units */
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --vh: 100dvh; /* use dynamic viewport height for modern browsers */
+    }
+
+    .hero {
+        height: calc(var(--vh) - 50px); /* full viewport height minus header */
+        max-height: calc(var(--vh) - 50px); /* ensure the height does not exceed viewport minus header */
+        padding: 0 20px;
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 50px;
+        z-index: 1000;
+        background-color: rgb(30, 80, 150); /* same blue as before */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* hero section global styles */
 .hero {
-    background: url('/assets/images/background.png') no-repeat center center fixed; /* fixed prevents background from moving */
+    background: url('/assets/images/background.png') no-repeat center center;
     background-size: cover; /* maintain aspect ratio without zooming */
     width: 100%;
     height: calc(100vh - 50px); /* full viewport height minus header height */
-    max-height: calc(100vh - 50px); /* ensure the height does not exceed the viewport height minus header */
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 0 20px; /* remove vertical padding to avoid content shifting */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
     position: relative; /* ensure content is positioned within the hero */
     overflow: hidden; /* prevent content overflow */
 }
 
-/* additional fix for smaller screens (mobile devices) */
+/* fix for smaller screens */
 @media screen and (max-width: 768px) {
     .hero {
-        background-size: cover; /* maintain aspect ratio */
-        height: auto; /* let the content define the height */
-        min-height: calc(100vh - 50px); /* ensure a minimum height minus header */
-        padding: 10% 20px; /* adjust padding to center content */
+        height: calc(var(--vh) - 50px); /* height adjustment for dynamic viewport on mobile */
     }
 }
 
 .hero-headshot {
     position: relative;
     top: 20px; /* keep the headshot closer to the center */
-    max-width: 300px; /* limit the width of the headshot image */
-    border-radius: 15px; /* rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
-    margin-bottom: 20px; /* space between the image and the name */
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
     object-fit: cover;
 }
 
 .hero-name {
-    font-size: 1.8rem; /* adjust font size */
-    margin: 0 0 10px 0; /* space below the name */
-    font-weight: 300; /* light font weight */
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    font-weight: 300;
 }
 
 .hero-academic-info .subtext {
-    font-size: 1.1rem; /* adjust the font size of the academic info */
+    font-size: 1.1rem;
     line-height: 1.1;
-    text-align: center; /* center the academic information */
+    text-align: center;
 }
 
 .subtext .line {
-    display: block; /* ensure each line is on a new line */
-    font-size: 1.1rem; /* adjust the font size */
-    margin-bottom: 3px; /* reduce the space between lines */
-    line-height: 1.1; /* tighten line height */
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+    line-height: 1.1;
 }
 
 .subtext .smaller-text {
-    font-size: 0.9rem; /* make the text slightly smaller */
-    font-weight: 300; /* keep the font weight light */
-    margin-bottom: 0; /* ensure no extra space below this line */
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 0;
 }
 
 /* about section styles */
