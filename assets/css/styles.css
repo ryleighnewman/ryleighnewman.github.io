@@ -132,8 +132,8 @@ nav {
     background: url('/assets/images/background.png') no-repeat center center;
     background-size: cover; /* maintain aspect ratio without zooming */
     width: 100%;
-    height: 60vh; /* adjust the height to 60% of the viewport height */
-    max-height: 100vh; /* ensure the height does not exceed the viewport height */
+    height: calc(100vh - 50px); /* full viewport height minus header height */
+    max-height: calc(100vh - 50px); /* ensure the height does not exceed the viewport height minus header */
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -151,14 +151,14 @@ nav {
     .hero {
         background-size: cover; /* maintain aspect ratio */
         height: auto; /* let the content define the height */
-        min-height: 60vh; /* ensure a minimum height */
+        min-height: calc(100vh - 50px); /* ensure a minimum height minus header */
         padding: 10% 20px; /* adjust padding to center content */
     }
 }
 
 .hero-headshot {
     position: relative;
-    top: 50px; /* adjust the headshot position to ensure it's below the blue bar */
+    top: 20px; /* reduce the top value to bring it closer to center without overlapping */
     max-width: 300px; /* limit the width of the headshot image */
     border-radius: 15px; /* rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
