@@ -156,11 +156,10 @@ nav {
 
 /* global styles for all browsers */
 .hero {
-    background: url('/assets/images/background.png') no-repeat center center;
-    background-attachment: fixed; /* ensure the background stays fixed relative to the viewport */
-    background-size: cover; /* maintain aspect ratio without zooming */
+    background: url('/assets/images/background.png') no-repeat center center fixed;
+    background-size: cover;
     width: 100%;
-    height: 100vh; /* use full viewport height */
+    height: calc(100vh - 50px);
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -168,8 +167,8 @@ nav {
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 0 20px;
-    position: relative; /* ensure content is positioned within the hero */
-    overflow: hidden; /* prevent content overflow */
+    position: relative;
+    overflow: hidden;
 }
 
 /* fixed header styles */
@@ -185,22 +184,11 @@ header {
 
 /* additional fix for smaller screens (mobile devices) */
 @media screen and (max-width: 768px) {
-    :root {
-        --vh: 100vh; /* fallback for browsers that don't support dynamic viewport units */
-    }
-    
     .hero {
-        background-attachment: scroll; /* allow background to scroll in mobile to adapt better */
-        height: calc(var(--vh) - 50px); /* account for the header height */
-        max-height: calc(var(--vh) - 50px); /* ensure the height does not exceed viewport minus header */
+        background-size: cover;
+        height: calc(100vh - 50px);
+        max-height: calc(100vh - 50px);
         padding: 0 20px;
-    }
-
-    .hero-headshot {
-        position: relative;
-        top: 0; /* reset any top offset */
-        max-width: 250px; /* limit the width of the headshot image for smaller screens */
-        margin-bottom: 20px;
     }
 }
 
