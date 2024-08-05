@@ -390,9 +390,37 @@ footer p {
     line-height: 1; /* set line height to 1 to avoid extra space around the text */
 }
 
+/* global styles (default for all browsers) */
+.hero {
+    background-size: cover; /* maintain aspect ratio without zooming */
+}
+
 /* target only chrome */
-@media screen and (-webkit-min-device-pixel-ratio:0) {
+@media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+    @supports (-webkit-appearance:none) {
+        .hero {
+            background-size: 100% auto; /* adjust to maintain aspect ratio without zooming in chrome */
+        }
+    }
+}
+
+/* target only safari */
+@supports (-webkit-overflow-scrolling: touch) {
     .hero {
-        background-size: 100% auto; /* Adjust to maintain aspect ratio without zooming */
+        background-size: cover !important; /* ensure safari uses cover */
+    }
+}
+
+/* target only firefox */
+@-moz-document url-prefix() {
+    .hero {
+        background-size: cover; /* ensure firefox uses cover */
+    }
+}
+
+/* target only edge */
+@supports (-ms-accelerator:true) {
+    .hero {
+        background-size: cover; /* ensure edge uses cover */
     }
 }
