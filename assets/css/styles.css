@@ -143,10 +143,17 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* ensure the hero image maintains its aspect ratio in safari */
-@supports (-webkit-overflow-scrolling: touch) {
-    .hero {
-        height: calc(60vh + 1px); /* prevent safari from rounding errors that can cause scaling issues */
+/* safari-specific fix */
+@media not all and (min-resolution:.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        .hero {
+            background-attachment: scroll;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 60vh;
+            position: relative;
+        }
     }
 }
 
