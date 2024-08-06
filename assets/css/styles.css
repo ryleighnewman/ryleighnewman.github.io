@@ -187,7 +187,7 @@ nav {
 
 /* about section styles */
 .about-section {
-    padding: 50px 20px; /* padding around the about content */
+    padding: 20px 20px; /* padding around the about content */
     text-align: center; /* center align the text */
     flex-grow: 1;
     margin-bottom: 40px; /* ensure consistent spacing at the bottom of each section */
