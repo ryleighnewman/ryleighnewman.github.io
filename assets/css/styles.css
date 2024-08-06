@@ -34,13 +34,12 @@ body {
 }
 
 /* add space between paragraphs and set a max-width */
-p, li {
-    margin-bottom: 20px; /* space between paragraphs and list items */
-    color: #dddddd; /* ensure all paragraphs and list items use the same light gray color */
-    max-width: 800px; /* set a maximum width for paragraphs and list items */
-    margin-left: auto; /* center align content */
-    margin-right: auto; /* center align content */
-    text-align: center; /* center align text */
+p {
+    margin-bottom: 20px; /* space between paragraphs */
+    color: #dddddd; /* ensure all paragraphs use the same light gray color */
+    max-width: 600px; /* set a maximum width for paragraphs */
+    margin-left: auto; /* center align paragraphs */
+    margin-right: auto; /* center align paragraphs */
 }
 
 /* initial solid color header */
@@ -178,23 +177,11 @@ nav {
 }
 
 /* about section styles */
-.about-section p {
-    margin-bottom: 20px;
-    color: #dddddd;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: rgba(100, 150, 200, 0.1); /* Subtle background color */
-    padding: 15px 20px; /* Similar padding to buttons */
-    border-radius: 15px; /* Rounded corners like buttons */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.about-section .fun-facts {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Ensure consistent spacing between items */
+.about-section {
+    padding: 50px 20px; /* padding around the about content */
+    text-align: center; /* center align the text */
+    flex-grow: 1;
+    margin-bottom: 40px; /* ensure consistent spacing at the bottom of each section */
 }
 
 .motto {
