@@ -201,7 +201,7 @@ nav {
 
 /* section divider */
 .about-section hr.divider-top, 
-.contact-section hr.divider-bottom {
+.contact-section hr.divider-top {
     border: none;
     border-top: 1px solid rgba(169, 169, 169, 0.3); /* light grey line for consistent dividers */
     margin: 50px auto; /* space around the dividers */
