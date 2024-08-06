@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply globally */
 }
 
 html, body {
@@ -16,6 +16,7 @@ html, body {
     background-color: rgb(18, 22, 24);
     line-height: 1.6;
     font-size: 1.2rem;
+    font-family: 'Segoe UI Light', sans-serif; /* Reinforce in case of overrides */
 }
 
 /* Wrapper to simulate phone borders */
@@ -34,6 +35,7 @@ p {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure consistent font for paragraphs */
 }
 
 /* Header styling */
@@ -49,6 +51,7 @@ header {
     z-index: 1000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to header */
 }
 
 /* Main content styling */
@@ -57,6 +60,7 @@ main {
     z-index: 2;
     margin-top: 50px;
     flex-grow: 1;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to main content */
 }
 
 /* Navigation styling */
@@ -67,6 +71,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to nav */
 }
 
 .logo {
@@ -94,6 +99,7 @@ nav {
     color: #ffffff;
     font-size: 0.9rem;
     transition: color 0.3s ease;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure consistent font for nav links */
 }
 
 .nav-links a:hover {
@@ -114,6 +120,7 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 5% 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to hero section */
 }
 
 .hero-headshot {
@@ -127,6 +134,7 @@ nav {
 .hero-name {
     font-size: 1.8rem;
     margin: 0 0 10px 0;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to hero name */
 }
 
 /* Subtext styling */
@@ -135,6 +143,7 @@ nav {
     font-size: 0.9rem;
     margin-bottom: 3px;
     line-height: 1.1;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to subtext */
 }
 
 /* Section styling */
@@ -143,6 +152,7 @@ nav {
     padding: 50px 20px;
     text-align: center;
     margin-bottom: 40px;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to sections */
 }
 
 .about-section hr.divider-top,
@@ -160,6 +170,7 @@ nav {
     text-transform: uppercase;
     font-size: 1.8rem;
     margin-bottom: 20px;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to section titles */
 }
 
 /* Contact section content styling */
@@ -172,6 +183,7 @@ nav {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure consistent font for paragraphs and lists */
 }
 
 .contact-section ul,
@@ -203,6 +215,7 @@ nav {
     width: 300px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to buttons */
 }
 
 .btn:hover {
@@ -250,6 +263,7 @@ footer {
     padding: 10px 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
+    font-family: 'Segoe UI Light', sans-serif; /* Apply font to footer */
 }
 
 footer p {
