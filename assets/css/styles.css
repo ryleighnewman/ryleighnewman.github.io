@@ -150,6 +150,15 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
     margin-bottom: 20px; /* space between the image and the name */
     object-fit: cover;
+    margin-top: 20px; /* lower the headshot image by adding top margin */
+}
+
+.hero-headshot {
+    max-width: 300px; /* limit the width of the headshot image */
+    border-radius: 15px; /* rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
+    margin-bottom: 20px; /* space between the image and the name */
+    object-fit: cover;
 }
 
 .hero-name {
