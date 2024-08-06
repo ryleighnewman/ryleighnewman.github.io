@@ -12,6 +12,8 @@ html, body {
     display: flex;
     flex-direction: column;
     min-height: 100%; /* ensure full height of the page */
+    width: 100%; /* ensure the width covers the full viewport */
+    overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
 /* wrapper to simulate phone borders */
@@ -22,15 +24,17 @@ html, body {
     border-right: 2px solid #dddddd; /* add right border */
     background-color: rgb(15, 17, 18); /* match the bottom black color of the footer */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* optional: add shadow for depth */
+    height: 100%; /* make sure the wrapper takes up the full height of the viewport */
 }
 
-/* body and typography */
+/* Ensure the body doesn't exceed the mobile width */
 body {
     color: #dddddd; /* consistent light gray text color across the entire website */
     background-color: rgb(18, 22, 24); /* background color */
     line-height: 1.6;
     flex-grow: 1; /* allow body to grow and take available space */
     font-size: 1.2rem; /* increase font size of paragraphs */
+    overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
 /* add space between paragraphs and set a max-width */
@@ -75,6 +79,8 @@ main {
     z-index: 2; /* ensure it is above the top background */
     margin-top: 50px; /* adjusted to match the height of the header */
     flex-grow: 1; /* allow main content to take up remaining space */
+    width: 100%; /* ensure main content matches the width of the wrapper */
+    margin: 0 auto; /* center the content */
 }
 
 /* smooth text transition */
