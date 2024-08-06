@@ -190,7 +190,7 @@ nav {
     padding: 20px 20px; /* padding around the about content */
     text-align: center; /* center align the text */
     flex-grow: 1;
-    margin-bottom: 40px; /* ensure consistent spacing at the bottom of each section */
+    margin-bottom: 20px; /* ensure consistent spacing at the bottom of each section */
 }
 
 .motto {
