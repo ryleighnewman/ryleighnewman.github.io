@@ -55,6 +55,7 @@ header {
     z-index: 1000; /* ensure it is above other content */
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* smooth transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional: add shadow for better visibility */
+    overflow: hidden; /* hide overflow content */
 }
 
 /* background layer behind the header */
@@ -141,14 +142,30 @@ nav {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 5% 20px; /* padding for both top and bottom */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: add subtle shadow around the hero section */
+    position: relative; /* relative positioning to prevent overflow issues */
+    z-index: 1;
 }
 
+/* Ensure headshot does not overflow into the header */
 .hero-headshot {
     max-width: 300px; /* limit the width of the headshot image */
     border-radius: 15px; /* rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
     margin-bottom: 20px; /* space between the image and the name */
     object-fit: cover;
+    z-index: 2; /* higher z-index to ensure the headshot stays above the hero section */
+    position: relative; /* relative positioning to maintain layout structure */
+}
+
+/* Reduce the size of the headshot when zoomed */
+@media screen and (max-width: 768px) {
+    .hero-headshot {
+        max-width: 200px; /* reduce size on smaller screens */
+    }
+
+    .hero {
+        height: 50vh; /* reduce the hero section height on smaller screens */
+    }
 }
 
 .hero-name {
