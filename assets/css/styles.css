@@ -184,12 +184,6 @@ nav {
     margin-bottom: 40px; /* ensure consistent spacing at the bottom of each section */
 }
 
-.motto {
-    color: rgb(100, 150, 200); /* lighter blue matching top bar */
-    font-weight: 300; /* ensure light font weight, if needed */
-    font-size: 1.2rem; /* adjust font size to match the text next to it */
-}
-
 /* section divider */
 .about-section hr.divider-top, 
 .about-section hr.divider-bottom, 
@@ -256,7 +250,9 @@ main {
 
 /* contact section content styles */
 .contact-section p, 
-.contact-section ul {
+.contact-section ul,
+.about-section p, 
+.about-section ul {
     font-weight: 300; /* light font weight */
     font-size: 1.2rem; /* increase the font size for paragraph text and list items */
     color: #dddddd; /* consistent light gray text color */
@@ -264,10 +260,11 @@ main {
     max-width: 800px; /* set alignment width for readability */
     margin-left: auto; /* center align paragraphs */
     margin-right: auto; /* center align paragraphs */
-    text-align: center; /* center align text in the contact section */
+    text-align: center; /* center align text in the contact and about sections */
 }
 
-.contact-section ul {
+.contact-section ul,
+.about-section ul {
     list-style: none; /* remove bullets from list */
     padding: 0; /* remove default padding */
     display: flex;
