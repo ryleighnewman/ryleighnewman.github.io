@@ -128,28 +128,28 @@ nav {
     color: rgb(169, 204, 227); /* light blue for hover effect */
 }
 
-/* Ensure headshot does not overflow into the header */
+/* hero section with adjusted height and full-screen background coverage */
+.hero {
+    width: 100%; /* ensure the width covers the entire container */
+    height: 60vh; /* adjust the height to 60% of the viewport height */
+    background: url('/assets/images/background.png') no-repeat center center; /* center the background image */
+    background-size: cover; /* ensure the background image covers the entire area */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 5% 20px; /* padding for both top and bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: add subtle shadow around the hero section */
+}
+
 .hero-headshot {
     max-width: 300px; /* limit the width of the headshot image */
     border-radius: 15px; /* rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
     margin-bottom: 20px; /* space between the image and the name */
-    margin-top: 20px; /* ADJUST THIS VALUE to move the headshot lower on the screen */
     object-fit: cover;
-    z-index: 2; /* higher z-index to ensure the headshot stays above the hero section */
-    position: relative; /* relative positioning to maintain layout structure */
-}
-
-/* Reduce the size of the headshot when zoomed */
-@media screen and (max-width: 768px) {
-    .hero-headshot {
-        max-width: 200px; /* reduce size on smaller screens */
-        margin-top: 10px; /* ADJUST THIS VALUE for smaller screens */
-    }
-
-    .hero {
-        height: 50vh; /* reduce the hero section height on smaller screens */
-    }
 }
 
 .hero-name {
