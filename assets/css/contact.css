@@ -1,0 +1,190 @@
+/* header and navigation styling */
+header {
+    background-color: rgb(30, 80, 150);
+    padding: 0 15px;
+    height: 50px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(169, 204, 227);
+}
+
+/* contact section */
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 40px;
+}
+
+.contact-section h2.section-title-blue {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    color: rgb(100, 150, 200);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* social buttons */
+.social-buttons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* space between buttons */
+}
+
+.social-buttons .btn {
+    display: inline-block;
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-buttons .btn:hover {
+    transform: translateY(-2px); /* lift effect on hover */
+}
+
+/* button specific colors */
+.email-btn {
+    background-color: rgba(212, 70, 56, 0.8);
+}
+
+.email-btn:hover {
+    background-color: rgba(179, 58, 47, 0.9);
+}
+
+.instagram-btn {
+    background-color: rgba(225, 48, 108, 0.8);
+}
+
+.instagram-btn:hover {
+    background-color: rgba(193, 53, 132, 0.9);
+}
+
+.twitter-btn {
+    background-color: rgba(29, 161, 242, 0.8);
+}
+
+.twitter-btn:hover {
+    background-color: rgba(10, 133, 217, 0.9);
+}
+
+.linkedin-btn {
+    background-color: rgba(0, 119, 181, 0.8);
+}
+
+.linkedin-btn:hover {
+    background-color: rgba(0, 85, 130, 0.9);
+}
+
+.facebook-btn {
+    background-color: rgba(66, 103, 178, 0.8);
+}
+
+.facebook-btn:hover {
+    background-color: rgba(54, 88, 153, 0.9);
+}
+
+.tiktok-btn {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.tiktok-btn:hover {
+    background-color: rgba(51, 51, 51, 0.9);
+}
+
+.youtube-btn {
+    background-color: #ff0000;
+}
+
+.youtube-btn:hover {
+    background-color: #cc0000;
+}
+
+/* section divider */
+.contact-section hr.divider-bottom {
+    border: none;
+    border-top: 1px solid rgba(169, 169, 169, 0.3);
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(15, 17, 18);
+    font-size: 0.7rem;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1;
+}
