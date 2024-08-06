@@ -34,12 +34,13 @@ body {
 }
 
 /* add space between paragraphs and set a max-width */
-p {
-    margin-bottom: 20px; /* space between paragraphs */
-    color: #dddddd; /* ensure all paragraphs use the same light gray color */
-    max-width: 600px; /* set a maximum width for paragraphs */
-    margin-left: auto; /* center align paragraphs */
-    margin-right: auto; /* center align paragraphs */
+p, li {
+    margin-bottom: 20px; /* space between paragraphs and list items */
+    color: #dddddd; /* ensure all paragraphs and list items use the same light gray color */
+    max-width: 800px; /* set a maximum width for paragraphs and list items */
+    margin-left: auto; /* center align content */
+    margin-right: auto; /* center align content */
+    text-align: center; /* center align text */
 }
 
 /* initial solid color header */
