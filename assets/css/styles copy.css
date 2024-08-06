@@ -1,0 +1,407 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure Segoe UI Light is applied globally */
+}
+
+html, body {
+    height: 100%;
+    font-weight: 300; /* Light font weight globally */
+    display: flex;
+    flex-direction: column;
+    min-height: 100%; /* Ensure full height of the page */
+}
+
+/* Wrapper to simulate phone borders */
+.wrapper {
+    max-width: 414px; /* Common mobile width */
+    margin: 0 auto; /* Center the content */
+    border-left: 2px solid #dddddd; /* Add left border */
+    border-right: 2px solid #dddddd; /* Add right border */
+    background-color: rgb(15, 17, 18); /* Match the bottom black color of the footer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for depth */
+}
+
+/* Body and typography */
+body {
+    color: #dddddd; /* Consistent light gray text color across the entire website */
+    background-color: rgb(18, 22, 24); /* Background color */
+    line-height: 1.6;
+    flex-grow: 1; /* Allow body to grow and take available space */
+    font-size: 1.2rem; /* Increase font size of paragraphs */
+}
+
+/* Add space between paragraphs and set a max-width */
+p {
+    margin-bottom: 20px; /* Space between paragraphs */
+    color: #dddddd; /* Ensure all paragraphs use the same light gray color */
+    max-width: 600px; /* Set a maximum width for paragraphs */
+    margin-left: auto; /* Center align paragraphs */
+    margin-right: auto; /* Center align paragraphs */
+}
+
+/* Initial solid color header */
+header {
+    background-color: rgb(30, 80, 150); /* Original blue color */
+    padding: 0 15px;
+    height: 50px; /* Slightly shorter height for the header */
+    flex-shrink: 0;
+    position: fixed; /* Fixed positioning to ensure it stays at the top */
+    top: 0; /* Stick to the top of the viewport */
+    left: 0; /* Stick to the left edge */
+    width: 100%; /* Full width of the viewport */
+    z-index: 1000; /* Ensure it is above other content */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for better visibility */
+}
+
+/* Background layer behind the header */
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Height should be sufficient to cover the area behind the header */
+    background-color: rgb(18, 22, 24); /* Match this color to your page's background */
+    z-index: 999; /* Ensure it's below the header but above the content */
+}
+
+/* Adjusting main content to avoid gray background */
+main {
+    position: relative;
+    z-index: 2; /* Ensure it is above the top background */
+    margin-top: 50px; /* Adjusted to match the height of the header */
+    flex-grow: 1; /* Allow main content to take up remaining space */
+}
+
+/* Smooth Text Transition */
+.transparent .nav-links a, 
+.header.scrolled .nav-links a {
+    transition: color 0.3s ease-in-out;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center; /* Center the logo and navigation links */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%; /* Make sure the navigation takes the full height of the header */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-image {
+    height: 40px; /* Adjust the height as needed */
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    flex: 2;
+}
+
+.nav-links li {
+    margin-left: 25px; /* Increased margin for more spacing between items */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff; /* White color for navigation links to contrast against the blue background */
+    font-size: 0.9rem; /* Decreased font size slightly */
+    font-weight: 300; /* Ensure light font weight for nav links */
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(169, 204, 227); /* Light blue for hover effect */
+}
+
+/* Hero section with adjusted height and full-screen background coverage */
+.hero {
+    width: 100%; /* Ensure the width covers the entire container */
+    height: 60vh; /* Adjust the height to 60% of the viewport height */
+    background: url('background.JPG') no-repeat center center; /* Center the background image */
+    background-size: cover; /* Ensure the background image covers the entire area */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 5% 20px; /* Padding for both top and bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add subtle shadow around the hero section */
+}
+
+.hero-headshot {
+    max-width: 300px; /* Limit the width of the headshot image */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for the image */
+    margin-bottom: 20px; /* Space between the image and the name */
+    object-fit: cover;
+}
+
+.hero-name {
+    font-size: 1.8rem; /* Decrease font size slightly */
+    margin: 0 0 10px 0; /* Space below the name */
+    font-weight: 300; /* Light font weight */
+}
+
+.hero-academic-info .subtext {
+    font-size: 1.1rem; /* Decrease the font size of the academic info */
+    line-height: 1.1;
+    text-align: center; /* Center the academic information */
+}
+
+.subtext .line {
+    display: block; /* Ensure each line is on a new line */
+    font-size: 1.1rem; /* Decrease the font size slightly */
+    margin-bottom: 3px; /* Reduce the space between lines further */
+    line-height: 1.1; /* Tighten line height to bring lines closer together */
+}
+
+.subtext .smaller-text {
+    font-size: 0.9rem; /* Make the text slightly smaller */
+    font-weight: 300; /* Keep the font weight light */
+    margin-bottom: 0; /* Ensure no extra space below this line */
+}
+
+/* About Section styles */
+.about-section {
+    padding: 50px 20px; /* Padding around the about content */
+    text-align: center; /* Center align the text */
+    flex-grow: 1;
+    margin-bottom: 40px; /* Ensure consistent spacing at the bottom of each section */
+}
+
+.motto {
+    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
+    font-weight: 300; /* Ensure light font weight, if needed */
+    font-size: 1.2rem; /* Adjust font size to match the text next to it */
+}
+
+/* About Page Specific Styles */
+.about-section {
+    padding: 20px; /* Consistent padding for sections */
+}
+
+/* Section Divider */
+.about-section hr.divider-top, 
+.about-section hr.divider-bottom, 
+.contact-section hr.divider-bottom {
+    border: none;
+    border-top: 1px solid rgba(169, 169, 169, 0.3); /* Light grey line for consistent dividers */
+    margin: 50px auto; /* Space around the dividers */
+    max-width: 800px; /* Limit width for divider */
+}
+
+/* Adjusted Section Divider for Gap Issue */
+.about-section hr.divider-bottom, 
+.contact-section hr.divider-bottom {
+    margin-bottom: 20px; /* Decrease the bottom margin of the divider */
+}
+
+.about-section, 
+.contact-section {
+    margin-bottom: 0; /* Remove any bottom margin */
+    padding-bottom: 20px; /* Adjust padding if needed */
+}
+
+/* Blue Header Section Styles */
+.section-title-blue,
+.section-title-light-blue {
+    font-family: 'Segoe UI Light', sans-serif; /* Ensure the correct font is used */
+    font-weight: 300; /* Light font weight */
+    color: rgb(100, 150, 200); /* Lighter blue matching top bar */
+    text-transform: uppercase; /* Transform text to uppercase */
+    font-size: 1.8rem; /* Unified font size for all blue headings */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 50px 20px; /* Padding around the contact content */
+    text-align: center; /* Center align the text */
+    flex-grow: 1; /* Ensure the contact section grows to fill available space */
+    margin-bottom: 40px; /* Ensure consistent spacing at the bottom of each section */
+}
+
+/* Fix spacing above the Contact Me heading */
+.contact-section h1 {
+    margin-top: 0;  /* Remove any top margin */
+    padding-top: 0; /* Remove any top padding */
+}
+
+/* Additional adjustment for the contact section if necessary */
+.contact-section {
+    padding-top: 20px; /* Adjust padding if needed to align with the top blue bar */
+    padding-bottom: 20px; /* Ensure consistent padding at the bottom */
+}
+
+/* Remove the gap below the divider */
+.contact-section hr.divider-bottom {
+    margin-bottom: 10px; /* Reduce the bottom margin of the divider to minimize the gap */
+}
+
+/* Ensure the main content starts directly below the fixed header */
+main {
+    margin-top: 50px; /* Adjust as necessary to match the height of the header */
+    flex-grow: 1; /* Allow main content to take up remaining space */
+}
+
+/* Contact Section Content Styles */
+.contact-section p, 
+.contact-section ul {
+    font-weight: 300; /* Light font weight */
+    font-size: 1.2rem; /* Increase the font size for paragraph text and list items */
+    color: #dddddd; /* Consistent light gray text color */
+    margin-bottom: 20px; /* Space between paragraphs and lists */
+    max-width: 800px; /* Set alignment width for readability */
+    margin-left: auto; /* Center align paragraphs */
+    margin-right: auto; /* Center align paragraphs */
+    text-align: center; /* Center align text in the contact section */
+}
+
+.contact-section ul {
+    list-style: none; /* Remove bullets from list */
+    padding: 0; /* Remove default padding */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between list items */
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between buttons */
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 15px 20px; /* Padding for buttons */
+    font-size: 1.2rem; /* Font size for button text */
+    color: #ffffff; /* White text color */
+    background-color: rgba(100, 150, 200, 0.8); /* Lighter blue matching top bar */
+    border-radius: 15px; /* Rounded corners for buttons */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition on hover */
+    width: 300px; /* Consistent width for all buttons */
+    text-align: center; /* Center align the text in buttons */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.btn:hover {
+    background-color: rgba(70, 120, 170, 0.9); /* Slightly darker shade on hover with slight transparency */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Specific Button Colors */
+.email-btn {
+    background-color: rgba(212, 70, 56, 0.8); /* Red color for Email button */
+}
+
+.email-btn:hover {
+    background-color: rgba(179, 58, 47, 0.9); /* Darker red shade on hover */
+}
+
+.instagram-btn {
+    background-color: rgba(225, 48, 108, 0.8); /* Instagram pink color */
+}
+
+.instagram-btn:hover {
+    background-color: rgba(193, 53, 132, 0.9); /* Darker pink shade on hover */
+}
+
+.twitter-btn {
+    background-color: rgba(29, 161, 242, 0.8); /* Twitter blue color */
+}
+
+.twitter-btn:hover {
+    background-color: rgba(10, 133, 217, 0.9); /* Darker blue shade on hover */
+}
+
+.linkedin-btn {
+    background-color: rgba(0, 119, 181, 0.8); /* LinkedIn blue color */
+}
+
+.linkedin-btn:hover {
+    background-color: rgba(0, 85, 130, 0.9); /* Darker blue shade on hover */
+}
+
+.facebook-btn {
+    background-color: rgba(66, 103, 178, 0.8); /* Facebook blue color */
+}
+
+.facebook-btn:hover {
+    background-color: rgba(54, 88, 153, 0.9); /* Darker blue shade on hover */
+}
+
+.tiktok-btn {
+    background-color: rgba(0, 0, 0, 0.8); /* TikTok black color */
+}
+
+.tiktok-btn:hover {
+    background-color: rgba(51, 51, 51, 0.9); /* Darker black shade on hover */
+}
+
+/* YouTube Button Specific Styles */
+.youtube-btn {
+    background-color: #FF0000; /* Bright red YouTube button color */
+}
+
+.youtube-btn:hover {
+    background-color: #CC0000; /* Slightly darker red on hover */
+}
+
+/* Ensure correct font and weight for strong tags */
+.contact-section p strong,
+.about-section p strong {
+    font-family: 'Segoe UI Light', sans-serif; /* Apply the correct font */
+    font-weight: 300; /* Ensure light font weight */
+}
+
+/* Ensure correct font and weight for strong tags */
+.contact-section p strong,
+.about-section p strong {
+    font-family: 'Segoe UI Light', sans-serif; /* Apply the correct font */
+    font-weight: 300; /* Ensure light font weight */
+}
+
+/* Ensure footer spans full width */
+footer {
+    display: flex;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    width: 100%; /* Full width of the viewport */
+    background-color: rgb(15, 17, 18); /* Dark background for the footer */
+    font-size: 0.7rem; /* Small font size for the footer text */
+    color: #ffffff; /* White text color for the footer */
+    padding: 10px 0; /* Add padding for space around the text */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top of the footer */
+    margin-top: 20px; /* Space above the footer */
+    position: relative; /* Ensure relative positioning to prevent overlap issues */
+}
+
+/* Ensure the footer does not shrink and stays at the bottom */
+footer {
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+}
+
+/* Remove any default margin from footer text */
+footer p {
+    margin: 0; /* Remove any default margin from the paragraph */
+    line-height: 1; /* Set line height to 1 to avoid extra space around the text */
+}
