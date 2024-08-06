@@ -252,7 +252,7 @@ nav {
 }
 
 /* remove the gap below the divider */
-.contact-section hr.divider-bottom {
+.contact-section hr.divider-top {
     margin-bottom: 10px; /* reduce the bottom margin of the divider to minimize the gap */
 }
 
