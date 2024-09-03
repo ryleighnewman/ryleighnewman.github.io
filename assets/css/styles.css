@@ -369,6 +369,12 @@ main {
     background-color: #cc0000; /* slightly darker red on hover */
 }
 
+.contact-section p {
+    max-width: 600px; /* limit the width for better readability */
+    margin-left: auto; /* center align the paragraph */
+    margin-right: auto; /* center align the paragraph */
+}
+
 /* ensure correct font and weight for strong tags */
 .contact-section p strong,
 .about-section p strong {
