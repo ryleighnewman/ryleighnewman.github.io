@@ -1,102 +1,89 @@
-/* basic reset */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif; /* ensure segoe ui light is applied globally */
+    font-family: 'Segoe UI Light', sans-serif;
 }
 
 html, body {
     height: 100%;
-    font-weight: 300; /* light font weight globally */
+    font-weight: 300;
     display: flex;
     flex-direction: column;
-    min-height: 100%; /* ensure full height of the page */
-    width: 100%; /* ensure the width covers the full viewport */
-    overflow-x: hidden; /* prevent horizontal scrolling */
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-/* wrapper to simulate phone borders */
 .wrapper {
-    max-width: 414px; /* common mobile width */
-    margin: 0 auto; /* center the content */
-    border-left: 2px solid #dddddd; /* add left border */
-    border-right: 2px solid #dddddd; /* add right border */
-    background-color: rgb(15, 17, 18); /* match the bottom black color of the footer */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* optional: add shadow for depth */
-    height: 100%; /* make sure the wrapper takes up the full height of the viewport */
+    max-width: 414px;
+    margin: 0 auto;
+    border-left: 2px solid #dddddd;
+    border-right: 2px solid #dddddd;
+    background-color: rgb(15, 17, 18);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 100%;
 }
 
-/* Ensure the body doesn't exceed the mobile width */
 body {
-    color: #dddddd; /* consistent light gray text color across the entire website */
-    background-color: rgb(18, 22, 24); /* background color */
+    color: #dddddd;
+    background-color: rgb(18, 22, 24);
     line-height: 1.6;
-    flex-grow: 1; /* allow body to grow and take available space */
-    font-size: 1.2rem; /* increase font size of paragraphs */
-    overflow-x: hidden; /* prevent horizontal scrolling */
+    flex-grow: 1;
+    font-size: 1.2rem;
+    overflow-x: hidden;
 }
 
-/* add space between paragraphs and set a max-width */
 p {
-    margin-bottom: 20px; /* space between paragraphs */
-    color: #dddddd; /* ensure all paragraphs use the same light gray color */
-    max-width: 600px; /* set a maximum width for paragraphs */
-    margin-left: auto; /* center align paragraphs */
-    margin-right: auto; /* center align paragraphs */
+    margin-bottom: 20px;
+    color: #dddddd;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* initial solid color header */
 header {
-    background-color: rgb(30, 80, 150); /* original blue color */
+    background-color: rgb(30, 80, 150);
     padding: 0 15px;
-    height: 50px; /* slightly shorter height for the header */
+    height: 50px;
     flex-shrink: 0;
-    position: fixed; /* fixed positioning to ensure it stays at the top */
-    top: 0; /* stick to the top of the viewport */
-    left: 0; /* stick to the left edge */
-    width: 100%; /* full width of the viewport */
-    z-index: 1000; /* ensure it is above other content */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* smooth transition */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional: add shadow for better visibility */
-    overflow: hidden; /* hide overflow content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-/* background layer behind the header */
 .header-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* height should be sufficient to cover the area behind the header */
-    background-color: rgb(18, 22, 24); /* match this color to your page's background */
-    z-index: 999; /* ensure it's below the header but above the content */
+    height: 100px;
+    background-color: rgb(18, 22, 24);
+    z-index: 999;
 }
 
-/* adjusting main content to avoid gray background */
 main {
     position: relative;
-    z-index: 2; /* ensure it is above the top background */
-    margin-top: 50px; /* adjusted to match the height of the header */
-    flex-grow: 1; /* allow main content to take up remaining space */
-    width: 100%; /* ensure main content matches the width of the wrapper */
-    margin: 0 auto; /* center the content */
+    z-index: 2;
+    margin-top: 50px;
+    flex-grow: 1;
+    width: 100%;
+    margin: 0 auto;
 }
 
-/* smooth text transition */
-.transparent .nav-links a, 
-.header.scrolled .nav-links a {
-    transition: color 0.3s ease-in-out;
-}
-
-/* navigation styling */
 nav {
     display: flex;
-    justify-content: center; /* center the logo and navigation links */
+    justify-content: center;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%; /* make sure the navigation takes the full height of the header */
+    height: 100%;
 }
 
 .logo {
@@ -107,293 +94,251 @@ nav {
 }
 
 .logo-image {
-    height: 40px; /* adjust the height as needed */
+    height: 40px;
     width: auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* center the navigation links */
+    justify-content: center;
     flex: 2;
 }
 
 .nav-links li {
-    margin-left: 25px; /* increased margin for more spacing between items */
+    margin-left: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* white color for navigation links to contrast against the blue background */
-    font-size: 0.9rem; /* decreased font size slightly */
-    font-weight: 300; /* ensure light font weight for nav links */
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 300;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: rgb(169, 204, 227); /* light blue for hover effect */
+    color: rgb(169, 204, 227);
 }
 
-/* hero section with adjusted height and full-screen background coverage */
 .hero {
-    width: 100%; /* ensure the width covers the entire container */
-    height: 60vh; /* adjust the height to 60% of the viewport height */
-    background: url('/assets/images/background.png') no-repeat center center; /* center the background image */
-    background-size: cover; /* ensure the background image covers the entire area */
+    width: 100%;
+    height: 60vh;
+    background: url('/assets/images/background.png') no-repeat center center;
+    background-size: cover;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 5% 20px; /* padding for both top and bottom */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: add subtle shadow around the hero section */
-    position: relative; /* ensure that child elements can be positioned absolutely */
+    padding: 5% 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .hero-headshot {
-    max-width: 300px; /* limit the width of the headshot image */
-    border-radius: 15px; /* rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
-    margin-bottom: 20px; /* space between the image and the name */
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
     object-fit: cover;
-    transform: translateY(20px); /* lower the headshot image without affecting the layout */
+    transform: translateY(20px);
 }
 
 .hero-name {
-    font-size: 1.8rem; /* decrease font size slightly */
-    margin: 0 0 10px 0; /* space below the name */
-    font-weight: 300; /* light font weight */
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    font-weight: 300;
 }
 
 .hero-academic-info .subtext {
-    font-size: 1.1rem; /* decrease the font size of the academic info */
+    font-size: 1.1rem;
     line-height: 1.1;
-    text-align: center; /* center the academic information */
+    text-align: center;
 }
 
 .subtext .line {
-    display: block; /* ensure each line is on a new line */
-    font-size: 1.1rem; /* decrease the font size slightly */
-    margin-bottom: 3px; /* reduce the space between lines further */
-    line-height: 1.1; /* tighten line height to bring lines closer together */
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+    line-height: 1.1;
 }
 
 .subtext .smaller-text {
-    font-size: 0.9rem; /* make the text slightly smaller */
-    font-weight: 300; /* keep the font weight light */
-    margin-bottom: 0; /* ensure no extra space below this line */
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 0;
 }
 
-/* about section styles */
 .about-section {
-    padding: 20px 20px; /* padding around the about content */
-    text-align: center; /* center align the text */
+    padding: 20px 20px;
+    text-align: center;
     flex-grow: 1;
-    margin-bottom: 20px; /* ensure consistent spacing at the bottom of each section */
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .motto {
-    color: rgb(100, 150, 200); /* lighter blue matching top bar */
-    font-weight: 300; /* ensure light font weight, if needed */
-    font-size: 1.2rem; /* adjust font size to match the text next to it */
+    color: rgb(100, 150, 200);
+    font-weight: 300;
+    font-size: 1.2rem;
 }
 
-/* section divider */
 .about-section hr.divider-top, 
 .contact-section hr.divider-top {
     border: none;
-    border-top: 1px solid rgba(169, 169, 169, 0.3); /* light grey line for consistent dividers */
-    margin: 50px auto; /* space around the dividers */
-    max-width: 800px; /* limit width for divider */
+    border-top: 1px solid rgba(169, 169, 169, 0.3);
+    margin: 50px auto;
+    max-width: 800px;
 }
 
-/* adjusted section divider for gap issue */
 .about-section hr.divider-bottom, 
 .contact-section hr.divider-bottom {
-    margin-bottom: 20px; /* decrease the bottom margin of the divider */
+    margin-bottom: 20px;
 }
 
-.about-section, 
-.contact-section {
-    margin-bottom: 0; /* remove any bottom margin */
-    padding-bottom: 20px; /* adjust padding if needed */
-}
-
-/* blue header section styles */
 .section-title-blue,
 .section-title-light-blue {
-    font-family: 'Segoe UI Light', sans-serif; /* ensure the correct font is used */
-    font-weight: 300; /* light font weight */
-    color: rgb(100, 150, 200); /* lighter blue matching top bar */
-    text-transform: uppercase; /* transform text to uppercase */
-    font-size: 1.8rem; /* unified font size for all blue headings */
-    margin-bottom: 20px; /* space below the title */
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    color: rgb(100, 150, 200);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
-/* contact section styles */
 .contact-section {
-    padding: 50px 20px; /* padding around the contact content */
-    text-align: center; /* center align the text */
-    flex-grow: 1; /* ensure the contact section grows to fill available space */
-    margin-bottom: 40px; /* ensure consistent spacing at the bottom of each section */
+    padding: 50px 20px;
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* fix spacing above the contact me heading */
-.contact-section h1 {
-    margin-top: 0; /* remove any top margin */
-    padding-top: 0; /* remove any top padding */
-}
-
-/* additional adjustment for the contact section if necessary */
-.contact-section {
-    padding-top: 20px; /* adjust padding if needed to align with the top blue bar */
-    padding-bottom: 20px; /* ensure consistent padding at the bottom */
-}
-
-/* remove the gap below the divider */
-.contact-section hr.divider-top {
-    margin-bottom: 10px; /* reduce the bottom margin of the divider to minimize the gap */
-}
-
-/* ensure the main content starts directly below the fixed header */
-main {
-    margin-top: 50px; /* adjust as necessary to match the height of the header */
-    flex-grow: 1; /* allow main content to take up remaining space */
-}
-
-/* contact section content styles */
 .contact-section p, 
 .contact-section ul {
-    font-weight: 300; /* light font weight */
-    font-size: 1.2rem; /* increase the font size for paragraph text and list items */
-    color: #dddddd; /* consistent light gray text color */
-    margin-bottom: 20px; /* space between paragraphs and lists */
-    max-width: 800px; /* set alignment width for readability */
-    margin-left: auto; /* center align paragraphs */
-    margin-right: auto; /* center align paragraphs */
-    text-align: center; /* center align text in the contact section */
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 
 .contact-section ul {
-    list-style: none; /* remove bullets from list */
-    padding: 0; /* remove default padding */
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* space between list items */
+    gap: 20px;
 }
 
 .social-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* space between buttons */
+    gap: 20px;
 }
 
-/* button styles */
 .btn {
     display: inline-block;
-    padding: 15px 20px; /* padding for buttons */
-    font-size: 1.2rem; /* font size for button text */
-    color: #ffffff; /* white text color */
-    background-color: rgba(100, 150, 200, 0.8); /* lighter blue matching top bar */
-    border-radius: 15px; /* rounded corners for buttons */
+    padding: 15px 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: rgba(100, 150, 200, 0.8);
+    border-radius: 15px;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* smooth transition on hover */
-    width: 300px; /* consistent width for all buttons */
-    text-align: center; /* center align the text in buttons */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-    background-color: rgba(70, 120, 170, 0.9); /* slightly darker shade on hover with slight transparency */
-    transform: translateY(-2px); /* lift effect on hover */
+    background-color: rgba(70, 120, 170, 0.9);
+    transform: translateY(-2px);
 }
 
-/* specific button colors */
 .email-btn {
-    background-color: rgba(212, 70, 56, 0.8); /* red color for email button */
+    background-color: rgba(212, 70, 56, 0.8);
 }
 
 .email-btn:hover {
-    background-color: rgba(179, 58, 47, 0.9); /* darker red shade on hover */
+    background-color: rgba(179, 58, 47, 0.9);
 }
 
 .instagram-btn {
-    background-color: rgba(225, 48, 108, 0.8); /* instagram pink color */
+    background-color: rgba(225, 48, 108, 0.8);
 }
 
 .instagram-btn:hover {
-    background-color: rgba(193, 53, 132, 0.9); /* darker pink shade on hover */
+    background-color: rgba(193, 53, 132, 0.9);
 }
 
 .twitter-btn {
-    background-color: rgba(29, 161, 242, 0.8); /* twitter blue color */
+    background-color: rgba(29, 161, 242, 0.8);
 }
 
 .twitter-btn:hover {
-    background-color: rgba(10, 133, 217, 0.9); /* darker blue shade on hover */
+    background-color: rgba(10, 133, 217, 0.9);
 }
 
 .linkedin-btn {
-    background-color: rgba(0, 119, 181, 0.8); /* linkedin blue color */
+    background-color: rgba(0, 119, 181, 0.8);
 }
 
 .linkedin-btn:hover {
-    background-color: rgba(0, 85, 130, 0.9); /* darker blue shade on hover */
+    background-color: rgba(0, 85, 130, 0.9);
 }
 
 .facebook-btn {
-    background-color: rgba(66, 103, 178, 0.8); /* facebook blue color */
+    background-color: rgba(66, 103, 178, 0.8);
 }
 
 .facebook-btn:hover {
-    background-color: rgba(54, 88, 153, 0.9); /* darker blue shade on hover */
+    background-color: rgba(54, 88, 153, 0.9);
 }
 
 .tiktok-btn {
-    background-color: rgba(0, 0, 0, 0.8); /* tiktok black color */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .tiktok-btn:hover {
-    background-color: rgba(51, 51, 51, 0.9); /* darker black shade on hover */
+    background-color: rgba(51, 51, 51, 0.9);
 }
 
-/* youtube button specific styles */
 .youtube-btn {
-    background-color: #ff0000; /* bright red youtube button color */
+    background-color: #ff0000;
 }
 
 .youtube-btn:hover {
-    background-color: #cc0000; /* slightly darker red on hover */
+    background-color: #cc0000;
 }
 
-/* ensure correct font and weight for strong tags */
-.contact-section p strong,
-.about-section p strong {
-    font-family: 'Segoe UI Light', sans-serif; /* apply the correct font */
-    font-weight: 300; /* ensure light font weight */
-}
-
-/* ensure footer spans full width */
 footer {
     display: flex;
-    justify-content: center; /* center text horizontally */
-    align-items: center; /* center text vertically */
-    width: 100%; /* full width of the viewport */
-    background-color: rgb(15, 17, 18); /* dark background for the footer */
-    font-size: 0.7rem; /* small font size for the footer text */
-    color: #ffffff; /* white text color for the footer */
-    padding: 10px 0; /* add padding for space around the text */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow at the top of the footer */
-    margin-top: 20px; /* space above the footer */
-    position: relative; /* ensure relative positioning to prevent overlap issues */
-    flex-shrink: 0; /* prevent the footer from shrinking */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(15, 17, 18);
+    font-size: 0.7rem;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    flex-shrink: 0;
 }
 
-/* remove any default margin from footer text */
 footer p {
-    margin: 0; /* remove any default margin from the paragraph */
-    line-height: 1; /* set line height to 1 to avoid extra space around the text */
+    margin: 0;
+    line-height: 1;
 }
