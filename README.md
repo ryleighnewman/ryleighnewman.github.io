@@ -1,12 +1,17 @@
 # Ryleigh Newman's Personal Website
 
-Welcome to the personal website of **Ryleigh Newman**. This site serves as my online résumé and a central hub for my social media links. It provides an in-depth look into my life, my background, and other information that might interest you.
+Welcome to the GitHub repository for **Ryleigh Newman's** personal website.
 
-## About the Website
+## About This Project
 
-- **Purpose**: The website is designed to showcase my résumé, highlight my achievements, and share my story. It also serves as a place to connect with me on various social platforms.
-- **Content**: You'll find sections dedicated to my professional experience, education, and personal interests. Additionally, there are links to my social media profiles and other relevant resources.
-- **Design and Development**: The website was coded by Ryleigh Newman, with guidance and debugging from ChatGPT and other online resources.
+- **Website Purpose**: The website serves as my online résumé, providing detailed information about my background, experience, and interests. It also includes links to my social media profiles for easy connectivity.
+- **Design & Development**: This website was crafted by Ryleigh Newman, with coding assistance for learning and debugging from ChatGPT as well as various online resources.
+
+## Visit the Website
+
+You can visit by clicking the link below:
+
+🔗 [Ryleigh Newman's Website](https://ryleighnewman.github.io/)
 
 ## Technologies Used
 
@@ -14,11 +19,13 @@ Welcome to the personal website of **Ryleigh Newman**. This site serves as my on
 - **CSS3**
 - **JavaScript**
 
-Feel free to explore the site and learn more about me!
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contact
 
-If you'd like to get in touch, you can reach me through any of the social media links provided on the site.
+If you have any questions or would like to get in touch, feel free to reach out through the social links provided on my website.
 
 ---
 
