@@ -328,6 +328,14 @@ main {
     background-color: rgba(193, 53, 132, 0.9); /* darker pink shade on hover */
 }
 
+.github-btn {
+    background-color: rgba(36, 41, 46, 0.8); /* GitHub black color */
+}
+
+.github-btn:hover {
+    background-color: rgba(26, 29, 33, 0.9); /* darker black shade on hover */
+}
+
 .twitter-btn {
     background-color: rgba(29, 161, 242, 0.8); /* twitter blue color */
 }
