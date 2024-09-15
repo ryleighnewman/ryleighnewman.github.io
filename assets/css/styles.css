@@ -51,6 +51,23 @@ header {
     overflow: hidden; /* hide overflow content */
 }
 
+/* top background layer */
+.top-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* adjust as necessary */
+    background-color: rgb(18, 22, 24); /* match background */
+    z-index: 999; /* below header but above content */
+}
+
+/* header container */
+.header-container {
+    position: relative;
+    z-index: 1000;
+}
+
 /* adjusting main content */
 main {
     position: relative;
