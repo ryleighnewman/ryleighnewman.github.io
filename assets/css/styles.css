@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif; /* segoe ui light applied globally */
+    font-family: 'Segoe UI Light', sans-serif; /* applied globally */
 }
 
 html, body {
@@ -16,23 +16,12 @@ html, body {
     overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
-/* wrapper to simulate phone borders */
-.wrapper {
-    max-width: 414px; /* common mobile width */
-    margin: 0 auto; /* center content */
-    border-left: 2px solid #dddddd; /* add left border */
-    border-right: 2px solid #dddddd; /* add right border */
-    background-color: rgb(15, 17, 18); /* match bottom black color of footer */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* shadow for depth */
-    height: 100%; /* make sure wrapper takes up full height of viewport */
-}
-
-/* ensure body doesn't exceed mobile width... error on chrome iphone 10 */
+/* ensure body doesn't exceed mobile width */
 body {
-    color: #dddddd; /* consistent light gray text color across entire website */
+    color: #dddddd; /* consistent light gray text color */
     background-color: rgb(18, 22, 24); /* background color */
     line-height: 1.6;
-    flex-grow: 1; /* allow body growth - take available space */
+    flex-grow: 1; /* allow body to take available space */
     font-size: 1.2rem;
     overflow-x: hidden; /* prevent horizontal scrolling */
 }
@@ -40,7 +29,7 @@ body {
 /* add space between paragraphs, set max-width */
 p {
     margin-bottom: 20px; /* space */
-    color: #dddddd; /* ensure all use same color */
+    color: #dddddd; /* consistent text color */
     max-width: 600px; /* set max width */
     margin-left: auto; /* center align */
     margin-right: auto; /* center align */
@@ -50,53 +39,36 @@ p {
 header {
     background-color: rgb(30, 80, 150); /* original blue color */
     padding: 0 15px;
-    height: 50px; /* slightly shorter height for header */
+    height: 50px; /* header height */
     flex-shrink: 0;
-    position: fixed; /* ensure it stays at top */
-    top: 0; /* stick to top of viewport */
-    left: 0; /* stick to left edge */
-    width: 100%; /* full width of viewport */
-    z-index: 1000; /* ensure above other content */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* smooth transition ANIMATION TBD */
+    position: fixed; /* stay at top */
+    top: 0;
+    left: 0;
+    width: 100%; /* full width */
+    z-index: 1000; /* above other content */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* smooth transition */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden; /* hide overflow content */
 }
 
-/* background layer behind header */
-.header-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px; /* height should be sufficient to cover area behind header ... for dynamic header implementation */
-    background-color: rgb(18, 22, 24); /* match background */
-    z-index: 999; /* ensure it's below header but above content */
-}
-
-/* adjusting main content to avoid gray background overlap error */
+/* adjusting main content */
 main {
     position: relative;
-    z-index: 2; /* ensure it is above top background */
+    z-index: 2; /* above background */
     margin-top: 50px;
-    flex-grow: 1; /* allow main content to take up remaining space */
-    width: 100%; /* ensure main content matches width wrapper */
+    flex-grow: 1; /* take remaining space */
+    width: 100%; /* match width */
     margin: 0 auto; /* center */
-}
-
-/* smooth text transition */
-.transparent .nav-links a, 
-.header.scrolled .nav-links a {
-    transition: color 0.3s ease-in-out;
 }
 
 /* navigation styling */
 nav {
     display: flex;
-    justify-content: center; /* center logo and navigation links */
+    justify-content: center; /* center logo and links */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%; /* make sure navigation takes full height of header */
+    height: 100%; /* full height of header */
 }
 
 .logo {
@@ -114,300 +86,264 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* centered links */
+    justify-content: center; /* center links */
     flex: 2;
 }
 
 .nav-links li {
-    margin-left: 25px; /* increased margin for more spacing between items */
+    margin-left: 25px; /* spacing between items */
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* white color for navigation links to contrast against blue background */
-    font-size: 0.9rem; /* decreased font size slightly */
-    font-weight: 300; /* ensure light font weight for nav links - error k */
+    color: #ffffff; /* white links */
+    font-size: 0.9rem;
+    font-weight: 300; /* light font weight */
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: rgb(169, 204, 227); /* light blue for hover effect */
+    color: rgb(169, 204, 227); /* light blue hover */
 }
 
-/* hero section - adjusted height / full-screen background coverage */
+/* hero section */
 .hero {
-    width: 100%; /* ensure width covers entire container */
-    height: 60vh; /* adjust height to 60% viewport height */
-    background: url('/assets/images/background.png') no-repeat center center; /* center background image */
-    background-size: cover; /* ensure background image covers entire area */
+    width: 100%; /* full width */
+    height: 60vh; /* 60% viewport height */
+    background: url('/assets/images/background.png') no-repeat center center; /* background image */
+    background-size: cover; /* cover area */
     color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 5% 20px; /* padding for both top and bottom */
+    padding: 5% 20px; /* padding */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative; /* ensure that child elements can be positioned absolutely - error m */
+    position: relative; /* for positioning */
 }
 
 .hero-headshot {
-    max-width: 300px; /* limit width of headshot image */
+    max-width: 300px; /* image width */
     border-radius: 15px; /* rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for image */
-    margin-bottom: 20px; /* space between image and name */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow */
+    margin-bottom: 20px; /* spacing */
     object-fit: cover;
-    transform: translateY(20px); /* lower headshot image without affecting layout */
+    transform: translateY(20px); /* position */
 }
 
 .hero-name {
-    font-size: 1.8rem; /* decrease font size slightly */
-    margin: 0 0 10px 0; /* space below name */
-    font-weight: 300; /* light font weight */
+    font-size: 1.8rem;
+    margin: 0 0 10px 0; /* spacing */
+    font-weight: 300; /* light font */
 }
 
 .hero-academic-info .subtext {
-    font-size: 1.1rem; /* decrease font size of academic info */
+    font-size: 1.1rem; /* font size */
     line-height: 1.1;
-    text-align: center; /* center academic information */
+    text-align: center; /* center text */
 }
 
 .subtext .line {
-    display: block; /* ensure each line is on a new line */
-    font-size: 1.1rem; /* decrease font size slightly */
-    margin-bottom: 3px; /* reduce space between lines further */
-    line-height: 1.1; /* tighten line height to bring lines closer together */
+    display: block; /* new line */
+    font-size: 1.1rem; /* font size */
+    margin-bottom: 3px; /* spacing */
+    line-height: 1.1; /* line height */
 }
 
 .subtext .smaller-text {
-    font-size: 0.9rem; /* make text slightly smaller */
-    font-weight: 300; /* keep font weight light */
-    margin-bottom: 0; /* ensure no extra space below line */
+    font-size: 0.9rem; /* smaller text */
+    font-weight: 300; /* light font */
+    margin-bottom: 0; /* no extra space */
 }
 
 /* about section styles */
 .about-section {
-    padding: 20px 20px; /* padding around about content */
-    text-align: center; /* center align text */
+    padding: 20px 20px; /* padding */
+    text-align: center; /* center text */
     flex-grow: 1;
-    margin-bottom: 20px; /* ensure consistent spacing at bottom of each section */
+    margin-bottom: 20px; /* spacing */
 }
 
 .motto {
-    color: rgb(100, 150, 200); /* lighter blue matching top bar */
-    font-weight: 300; /* ensure light font weight, if needed */
-    font-size: 1.2rem; /* adjust font size to match text next to it */
+    color: rgb(100, 150, 200); /* lighter blue */
+    font-weight: 300; /* light font */
+    font-size: 1.2rem; /* font size */
 }
 
 /* section divider */
 .about-section hr.divider-top, 
 .contact-section hr.divider-top {
     border: none;
-    border-top: 1px solid rgba(169, 169, 169, 0.3); /* light grey line for consistent dividers */
-    margin: 50px auto; /* space around dividers */
-    max-width: 800px; /* limit width for divider */
+    border-top: 1px solid rgba(169, 169, 169, 0.3); /* light grey line */
+    margin: 50px auto; /* spacing */
+    max-width: 800px; /* width */
 }
 
-/* adjusted section divider for gap issue */
-.about-section hr.divider-bottom, 
-.contact-section hr.divider-bottom {
-    margin-bottom: 20px; /* decrease bottom margin of divider */
-}
-
-.about-section, 
-.contact-section {
-    margin-bottom: 0; /* remove any bottom margin */
-    padding-bottom: 20px;
-}
-
-/* blue header section styles */
-.section-title-blue,
-.section-title-light-blue {
-    font-family: 'Segoe UI Light', sans-serif; /* ensure correct font is used */
-    font-weight: 300; /* light font weight */
-    color: rgb(100, 150, 200); /* lighter blue matching top bar */
-    text-transform: uppercase; /* transform text to uppercase */
-    font-size: 1.8rem; /* unified font size for all blue headings */
-    margin-bottom: 20px; /* space below title */
+/* section titles */
+.section-title-blue {
+    font-family: 'Segoe UI Light', sans-serif; /* font */
+    font-weight: 300; /* light font */
+    color: rgb(100, 150, 200); /* lighter blue */
+    text-transform: uppercase; /* uppercase */
+    font-size: 1.8rem; /* font size */
+    margin-bottom: 20px; /* spacing */
 }
 
 /* contact section styles */
 .contact-section {
-    padding: 50px 20px; /* padding around contact content */
-    text-align: center; /* center align text */
-    flex-grow: 1; /* ensure contact section grows to fill available space */
-    margin-bottom: 40px; /* ensure consistent spacing at bottom of each section */
+    padding: 50px 20px; /* padding */
+    text-align: center; /* center text */
+    flex-grow: 1; /* take remaining space */
+    margin-bottom: 40px; /* spacing */
 }
 
-/* fix spacing above contact me heading */
-.contact-section h1 {
-    margin-top: 0; /* remove any top margin */
-    padding-top: 0; /* remove any top padding */
-}
-
-/* additional adjustment for contact section if necessary */
-.contact-section {
-    padding-top: 20px; /* adjust padding if needed to align with top blue bar */
-    padding-bottom: 20px; /* ensure consistent padding at bottom */
-}
-
-/* remove gap below divider */
-.contact-section hr.divider-top {
-    margin-bottom: 10px; /* reduce bottom margin of divider to minimize gap */
-}
-
-/* ensure main content starts directly below fixed header */
-main {
-    margin-top: 50px; /* adjust as necessary to match height of header */
-    flex-grow: 1; /* allow main content to take up remaining space */
-}
-
-/* contact section content styles */
+/* contact section content */
 .contact-section p, 
 .contact-section ul {
-    font-weight: 300; /* light font weight */
-    font-size: 1.2rem; /* increase font size for paragraph text and list items */
-    color: #dddddd; /* consistent light gray text color */
-    margin-bottom: 20px; /* space between paragraphs and lists */
-    max-width: 800px; /* set alignment width for readability */
-    margin-left: auto; /* center align paragraphs */
-    margin-right: auto; /* center align paragraphs */
-    text-align: center; /* center align text in contact section */
+    font-weight: 300; /* light font */
+    font-size: 1.2rem; /* font size */
+    color: #dddddd; /* text color */
+    margin-bottom: 20px; /* spacing */
+    max-width: 800px; /* width */
+    margin-left: auto; /* center */
+    margin-right: auto; /* center */
+    text-align: center; /* center text */
 }
 
 .contact-section ul {
-    list-style: none; /* remove bullets from list */
-    padding: 0; /* remove default padding */
+    list-style: none; /* no bullets */
+    padding: 0; /* no padding */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* space between list items */
+    gap: 20px; /* spacing */
 }
 
 .social-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* space between buttons */
+    gap: 20px; /* spacing */
 }
 
 /* button styles */
 .btn {
     display: inline-block;
-    padding: 15px 20px; /* padding for buttons */
-    font-size: 1.2rem; /* font size for button text */
-    color: #ffffff; /* white text color */
-    background-color: rgba(100, 150, 200, 0.8); /* lighter blue matching top bar */
-    border-radius: 15px; /* rounded corners for buttons */
+    padding: 15px 20px; /* padding */
+    font-size: 1.2rem; /* font size */
+    color: #ffffff; /* white text */
+    background-color: rgba(100, 150, 200, 0.8); /* lighter blue */
+    border-radius: 15px; /* rounded corners */
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* smooth transition on hover */
-    width: 300px; /* consistent width for all buttons */
-    text-align: center; /* center align text in buttons */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* hover effect */
+    width: 300px; /* width */
+    text-align: center; /* center text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow */
 }
 
 .btn:hover {
-    background-color: rgba(70, 120, 170, 0.9); /* slightly darker shade on hover with slight transparency */
-    transform: translateY(-2px); /* lift effect on hover */
+    background-color: rgba(70, 120, 170, 0.9); /* darker hover */
+    transform: translateY(-2px); /* lift effect */
 }
 
 /* specific button colors */
 .email-btn {
-    background-color: rgba(212, 70, 56, 0.8); /* red color for email button */
+    background-color: rgba(212, 70, 56, 0.8); /* red */
 }
 
 .email-btn:hover {
-    background-color: rgba(179, 58, 47, 0.9); /* darker red shade on hover */
+    background-color: rgba(179, 58, 47, 0.9); /* darker red */
 }
 
 .instagram-btn {
-    background-color: rgba(225, 48, 108, 0.8); /* instagram pink color */
+    background-color: rgba(225, 48, 108, 0.8); /* pink */
 }
 
 .instagram-btn:hover {
-    background-color: rgba(193, 53, 132, 0.9); /* darker pink shade on hover */
+    background-color: rgba(193, 53, 132, 0.9); /* darker pink */
 }
 
 .github-btn {
-    background-color: rgba(36, 41, 46, 0.8); /* GitHub black color */
+    background-color: rgba(36, 41, 46, 0.8); /* black */
 }
 
 .github-btn:hover {
-    background-color: rgba(26, 29, 33, 0.9); /* darker black shade on hover */
+    background-color: rgba(26, 29, 33, 0.9); /* darker black */
 }
 
 .twitter-btn {
-    background-color: rgba(29, 161, 242, 0.8); /* twitter blue color */
+    background-color: rgba(29, 161, 242, 0.8); /* blue */
 }
 
 .twitter-btn:hover {
-    background-color: rgba(10, 133, 217, 0.9); /* darker blue shade on hover */
+    background-color: rgba(10, 133, 217, 0.9); /* darker blue */
 }
 
 .linkedin-btn {
-    background-color: rgba(0, 119, 181, 0.8); /* linkedin blue color */
+    background-color: rgba(0, 119, 181, 0.8); /* blue */
 }
 
 .linkedin-btn:hover {
-    background-color: rgba(0, 85, 130, 0.9); /* darker blue shade on hover */
+    background-color: rgba(0, 85, 130, 0.9); /* darker blue */
 }
 
 .facebook-btn {
-    background-color: rgba(66, 103, 178, 0.8); /* facebook blue color */
+    background-color: rgba(66, 103, 178, 0.8); /* blue */
 }
 
 .facebook-btn:hover {
-    background-color: rgba(54, 88, 153, 0.9); /* darker blue shade on hover */
+    background-color: rgba(54, 88, 153, 0.9); /* darker blue */
 }
 
 .tiktok-btn {
-    background-color: rgba(0, 0, 0, 0.8); /* tiktok black color */
+    background-color: rgba(0, 0, 0, 0.8); /* black */
 }
 
 .tiktok-btn:hover {
-    background-color: rgba(51, 51, 51, 0.9); /* darker black shade on hover */
+    background-color: rgba(51, 51, 51, 0.9); /* darker black */
 }
 
-/* youtube button specific styles */
+/* YouTube button styles */
 .youtube-btn {
-    background-color: #ff0000; /* bright red youtube button color */
+    background-color: #ff0000; /* red */
 }
 
 .youtube-btn:hover {
-    background-color: #cc0000; /* slightly darker red on hover */
+    background-color: #cc0000; /* darker red */
 }
 
 .contact-section p {
-    max-width: 600px; /* limit width for better readability */
-    margin-left: auto; /* center align paragraph */
-    margin-right: auto; /* center align paragraph */
+    max-width: 600px; /* width */
+    margin-left: auto; /* center */
+    margin-right: auto; /* center */
 }
 
-/* ensure correct font and weight for strong tags */
+/* strong tags */
 .contact-section p strong,
 .about-section p strong {
-    font-family: 'Segoe UI Light', sans-serif; /* apply correct font */
-    font-weight: 300; /* ensure light font weight */
+    font-family: 'Segoe UI Light', sans-serif; /* font */
+    font-weight: 300; /* light font */
 }
 
-/* ensure footer spans full width */
+/* footer styles */
 footer {
     display: flex;
-    justify-content: center; /* center text horizontally */
-    align-items: center; /* center text vertically */
-    width: 100%; /* full width of viewport */
-    background-color: rgb(15, 17, 18); /* dark background for footer */
-    font-size: 0.7rem; /* small font size for footer text */
-    color: #ffffff; /* white text color for footer */
-    padding: 10px 0; /* add padding for space around text */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow at top of footer */
-    margin-top: 20px; /* space above footer */
-    position: relative; /* ensure relative positioning to prevent overlap issues */
-    flex-shrink: 0; /* prevent footer from shrinking */
+    justify-content: center; /* center text */
+    align-items: center; /* center vertically */
+    width: 100%; /* full width */
+    background-color: rgb(15, 17, 18); /* dark background */
+    font-size: 0.7rem; /* small text */
+    color: #ffffff; /* white text */
+    padding: 10px 0; /* padding */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* shadow */
+    margin-top: 20px; /* spacing */
+    position: relative; /* positioning */
+    flex-shrink: 0; /* prevent shrinking */
 }
 
-/* remove any default margin from footer text */
+/* footer text */
 footer p {
-    margin: 0; /* remove any default margin from paragraph */
-    line-height: 1; /* set line height to 1 to avoid extra space around text */
+    margin: 0; /* remove margin */
+    line-height: 1; /* line height */
 }
