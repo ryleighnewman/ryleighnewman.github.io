@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI Light', sans-serif; /* ensure segoe ui light is applied globally */
+    font-family: 'Segoe UI Light', sans-serif; /* segoe ui light applied globally */
 }
 
 html, body {
@@ -11,76 +11,76 @@ html, body {
     font-weight: 300; /* light font weight globally */
     display: flex;
     flex-direction: column;
-    min-height: 100%; /* ensure full height of the page */
-    width: 100%; /* ensure the width covers the full viewport */
+    min-height: 100%; /* ensure full height of page */
+    width: 100%; /* ensure width covers full viewport */
     overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
 /* wrapper to simulate phone borders */
 .wrapper {
     max-width: 414px; /* common mobile width */
-    margin: 0 auto; /* center the content */
+    margin: 0 auto; /* center content */
     border-left: 2px solid #dddddd; /* add left border */
     border-right: 2px solid #dddddd; /* add right border */
-    background-color: rgb(15, 17, 18); /* match the bottom black color of the footer */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* optional: add shadow for depth */
-    height: 100%; /* make sure the wrapper takes up the full height of the viewport */
+    background-color: rgb(15, 17, 18); /* match bottom black color of footer */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* shadow for depth */
+    height: 100%; /* make sure wrapper takes up full height of viewport */
 }
 
-/* Ensure the body doesn't exceed the mobile width */
+/* ensure body doesn't exceed mobile width... error on chrome iphone 10 */
 body {
-    color: #dddddd; /* consistent light gray text color across the entire website */
+    color: #dddddd; /* consistent light gray text color across entire website */
     background-color: rgb(18, 22, 24); /* background color */
     line-height: 1.6;
-    flex-grow: 1; /* allow body to grow and take available space */
-    font-size: 1.2rem; /* increase font size of paragraphs */
+    flex-grow: 1; /* allow body growth - take available space */
+    font-size: 1.2rem;
     overflow-x: hidden; /* prevent horizontal scrolling */
 }
 
-/* add space between paragraphs and set a max-width */
+/* add space between paragraphs, set max-width */
 p {
-    margin-bottom: 20px; /* space between paragraphs */
-    color: #dddddd; /* ensure all paragraphs use the same light gray color */
-    max-width: 600px; /* set a maximum width for paragraphs */
-    margin-left: auto; /* center align paragraphs */
-    margin-right: auto; /* center align paragraphs */
+    margin-bottom: 20px; /* space */
+    color: #dddddd; /* ensure all use same color */
+    max-width: 600px; /* set max width */
+    margin-left: auto; /* center align */
+    margin-right: auto; /* center align */
 }
 
 /* initial solid color header */
 header {
     background-color: rgb(30, 80, 150); /* original blue color */
     padding: 0 15px;
-    height: 50px; /* slightly shorter height for the header */
+    height: 50px; /* slightly shorter height for header */
     flex-shrink: 0;
-    position: fixed; /* fixed positioning to ensure it stays at the top */
-    top: 0; /* stick to the top of the viewport */
-    left: 0; /* stick to the left edge */
-    width: 100%; /* full width of the viewport */
-    z-index: 1000; /* ensure it is above other content */
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* smooth transition */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* optional: add shadow for better visibility */
+    position: fixed; /* ensure it stays at top */
+    top: 0; /* stick to top of viewport */
+    left: 0; /* stick to left edge */
+    width: 100%; /* full width of viewport */
+    z-index: 1000; /* ensure above other content */
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* smooth transition ANIMATION TBD */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden; /* hide overflow content */
 }
 
-/* background layer behind the header */
+/* background layer behind header */
 .header-background {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px; /* height should be sufficient to cover the area behind the header */
-    background-color: rgb(18, 22, 24); /* match this color to your page's background */
-    z-index: 999; /* ensure it's below the header but above the content */
+    height: 100px; /* height should be sufficient to cover area behind header ... for dynamic header implementation */
+    background-color: rgb(18, 22, 24); /* match background */
+    z-index: 999; /* ensure it's below header but above content */
 }
 
-/* adjusting main content to avoid gray background */
+/* adjusting main content to avoid gray background overlap error */
 main {
     position: relative;
-    z-index: 2; /* ensure it is above the top background */
-    margin-top: 50px; /* adjusted to match the height of the header */
+    z-index: 2; /* ensure it is above top background */
+    margin-top: 50px;
     flex-grow: 1; /* allow main content to take up remaining space */
-    width: 100%; /* ensure main content matches the width of the wrapper */
-    margin: 0 auto; /* center the content */
+    width: 100%; /* ensure main content matches width wrapper */
+    margin: 0 auto; /* center */
 }
 
 /* smooth text transition */
@@ -92,11 +92,11 @@ main {
 /* navigation styling */
 nav {
     display: flex;
-    justify-content: center; /* center the logo and navigation links */
+    justify-content: center; /* center logo and navigation links */
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    height: 100%; /* make sure the navigation takes the full height of the header */
+    height: 100%; /* make sure navigation takes full height of header */
 }
 
 .logo {
@@ -107,14 +107,14 @@ nav {
 }
 
 .logo-image {
-    height: 40px; /* adjust the height as needed */
+    height: 40px;
     width: auto;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center; /* center the navigation links */
+    justify-content: center; /* centered links */
     flex: 2;
 }
 
@@ -124,9 +124,9 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* white color for navigation links to contrast against the blue background */
+    color: #ffffff; /* white color for navigation links to contrast against blue background */
     font-size: 0.9rem; /* decreased font size slightly */
-    font-weight: 300; /* ensure light font weight for nav links */
+    font-weight: 300; /* ensure light font weight for nav links - error k */
     transition: color 0.3s ease;
 }
 
@@ -134,12 +134,12 @@ nav {
     color: rgb(169, 204, 227); /* light blue for hover effect */
 }
 
-/* hero section with adjusted height and full-screen background coverage */
+/* hero section - adjusted height / full-screen background coverage */
 .hero {
-    width: 100%; /* ensure the width covers the entire container */
-    height: 60vh; /* adjust the height to 60% of the viewport height */
-    background: url('/assets/images/background.png') no-repeat center center; /* center the background image */
-    background-size: cover; /* ensure the background image covers the entire area */
+    width: 100%; /* ensure width covers entire container */
+    height: 60vh; /* adjust height to 60% viewport height */
+    background: url('/assets/images/background.png') no-repeat center center; /* center background image */
+    background-size: cover; /* ensure background image covers entire area */
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -147,56 +147,56 @@ nav {
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 5% 20px; /* padding for both top and bottom */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: add subtle shadow around the hero section */
-    position: relative; /* ensure that child elements can be positioned absolutely */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* ensure that child elements can be positioned absolutely - error m */
 }
 
 .hero-headshot {
-    max-width: 300px; /* limit the width of the headshot image */
+    max-width: 300px; /* limit width of headshot image */
     border-radius: 15px; /* rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for the image */
-    margin-bottom: 20px; /* space between the image and the name */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* subtle shadow for image */
+    margin-bottom: 20px; /* space between image and name */
     object-fit: cover;
-    transform: translateY(20px); /* lower the headshot image without affecting the layout */
+    transform: translateY(20px); /* lower headshot image without affecting layout */
 }
 
 .hero-name {
     font-size: 1.8rem; /* decrease font size slightly */
-    margin: 0 0 10px 0; /* space below the name */
+    margin: 0 0 10px 0; /* space below name */
     font-weight: 300; /* light font weight */
 }
 
 .hero-academic-info .subtext {
-    font-size: 1.1rem; /* decrease the font size of the academic info */
+    font-size: 1.1rem; /* decrease font size of academic info */
     line-height: 1.1;
-    text-align: center; /* center the academic information */
+    text-align: center; /* center academic information */
 }
 
 .subtext .line {
     display: block; /* ensure each line is on a new line */
-    font-size: 1.1rem; /* decrease the font size slightly */
-    margin-bottom: 3px; /* reduce the space between lines further */
+    font-size: 1.1rem; /* decrease font size slightly */
+    margin-bottom: 3px; /* reduce space between lines further */
     line-height: 1.1; /* tighten line height to bring lines closer together */
 }
 
 .subtext .smaller-text {
-    font-size: 0.9rem; /* make the text slightly smaller */
-    font-weight: 300; /* keep the font weight light */
-    margin-bottom: 0; /* ensure no extra space below this line */
+    font-size: 0.9rem; /* make text slightly smaller */
+    font-weight: 300; /* keep font weight light */
+    margin-bottom: 0; /* ensure no extra space below line */
 }
 
 /* about section styles */
 .about-section {
-    padding: 20px 20px; /* padding around the about content */
-    text-align: center; /* center align the text */
+    padding: 20px 20px; /* padding around about content */
+    text-align: center; /* center align text */
     flex-grow: 1;
-    margin-bottom: 20px; /* ensure consistent spacing at the bottom of each section */
+    margin-bottom: 20px; /* ensure consistent spacing at bottom of each section */
 }
 
 .motto {
     color: rgb(100, 150, 200); /* lighter blue matching top bar */
     font-weight: 300; /* ensure light font weight, if needed */
-    font-size: 1.2rem; /* adjust font size to match the text next to it */
+    font-size: 1.2rem; /* adjust font size to match text next to it */
 }
 
 /* section divider */
@@ -204,61 +204,61 @@ nav {
 .contact-section hr.divider-top {
     border: none;
     border-top: 1px solid rgba(169, 169, 169, 0.3); /* light grey line for consistent dividers */
-    margin: 50px auto; /* space around the dividers */
+    margin: 50px auto; /* space around dividers */
     max-width: 800px; /* limit width for divider */
 }
 
 /* adjusted section divider for gap issue */
 .about-section hr.divider-bottom, 
 .contact-section hr.divider-bottom {
-    margin-bottom: 20px; /* decrease the bottom margin of the divider */
+    margin-bottom: 20px; /* decrease bottom margin of divider */
 }
 
 .about-section, 
 .contact-section {
     margin-bottom: 0; /* remove any bottom margin */
-    padding-bottom: 20px; /* adjust padding if needed */
+    padding-bottom: 20px;
 }
 
 /* blue header section styles */
 .section-title-blue,
 .section-title-light-blue {
-    font-family: 'Segoe UI Light', sans-serif; /* ensure the correct font is used */
+    font-family: 'Segoe UI Light', sans-serif; /* ensure correct font is used */
     font-weight: 300; /* light font weight */
     color: rgb(100, 150, 200); /* lighter blue matching top bar */
     text-transform: uppercase; /* transform text to uppercase */
     font-size: 1.8rem; /* unified font size for all blue headings */
-    margin-bottom: 20px; /* space below the title */
+    margin-bottom: 20px; /* space below title */
 }
 
 /* contact section styles */
 .contact-section {
-    padding: 50px 20px; /* padding around the contact content */
-    text-align: center; /* center align the text */
-    flex-grow: 1; /* ensure the contact section grows to fill available space */
-    margin-bottom: 40px; /* ensure consistent spacing at the bottom of each section */
+    padding: 50px 20px; /* padding around contact content */
+    text-align: center; /* center align text */
+    flex-grow: 1; /* ensure contact section grows to fill available space */
+    margin-bottom: 40px; /* ensure consistent spacing at bottom of each section */
 }
 
-/* fix spacing above the contact me heading */
+/* fix spacing above contact me heading */
 .contact-section h1 {
     margin-top: 0; /* remove any top margin */
     padding-top: 0; /* remove any top padding */
 }
 
-/* additional adjustment for the contact section if necessary */
+/* additional adjustment for contact section if necessary */
 .contact-section {
-    padding-top: 20px; /* adjust padding if needed to align with the top blue bar */
-    padding-bottom: 20px; /* ensure consistent padding at the bottom */
+    padding-top: 20px; /* adjust padding if needed to align with top blue bar */
+    padding-bottom: 20px; /* ensure consistent padding at bottom */
 }
 
-/* remove the gap below the divider */
+/* remove gap below divider */
 .contact-section hr.divider-top {
-    margin-bottom: 10px; /* reduce the bottom margin of the divider to minimize the gap */
+    margin-bottom: 10px; /* reduce bottom margin of divider to minimize gap */
 }
 
-/* ensure the main content starts directly below the fixed header */
+/* ensure main content starts directly below fixed header */
 main {
-    margin-top: 50px; /* adjust as necessary to match the height of the header */
+    margin-top: 50px; /* adjust as necessary to match height of header */
     flex-grow: 1; /* allow main content to take up remaining space */
 }
 
@@ -266,13 +266,13 @@ main {
 .contact-section p, 
 .contact-section ul {
     font-weight: 300; /* light font weight */
-    font-size: 1.2rem; /* increase the font size for paragraph text and list items */
+    font-size: 1.2rem; /* increase font size for paragraph text and list items */
     color: #dddddd; /* consistent light gray text color */
     margin-bottom: 20px; /* space between paragraphs and lists */
     max-width: 800px; /* set alignment width for readability */
     margin-left: auto; /* center align paragraphs */
     margin-right: auto; /* center align paragraphs */
-    text-align: center; /* center align text in the contact section */
+    text-align: center; /* center align text in contact section */
 }
 
 .contact-section ul {
@@ -302,7 +302,7 @@ main {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease; /* smooth transition on hover */
     width: 300px; /* consistent width for all buttons */
-    text-align: center; /* center align the text in buttons */
+    text-align: center; /* center align text in buttons */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
 }
 
@@ -378,15 +378,15 @@ main {
 }
 
 .contact-section p {
-    max-width: 600px; /* limit the width for better readability */
-    margin-left: auto; /* center align the paragraph */
-    margin-right: auto; /* center align the paragraph */
+    max-width: 600px; /* limit width for better readability */
+    margin-left: auto; /* center align paragraph */
+    margin-right: auto; /* center align paragraph */
 }
 
 /* ensure correct font and weight for strong tags */
 .contact-section p strong,
 .about-section p strong {
-    font-family: 'Segoe UI Light', sans-serif; /* apply the correct font */
+    font-family: 'Segoe UI Light', sans-serif; /* apply correct font */
     font-weight: 300; /* ensure light font weight */
 }
 
@@ -395,19 +395,19 @@ footer {
     display: flex;
     justify-content: center; /* center text horizontally */
     align-items: center; /* center text vertically */
-    width: 100%; /* full width of the viewport */
-    background-color: rgb(15, 17, 18); /* dark background for the footer */
-    font-size: 0.7rem; /* small font size for the footer text */
-    color: #ffffff; /* white text color for the footer */
-    padding: 10px 0; /* add padding for space around the text */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow at the top of the footer */
-    margin-top: 20px; /* space above the footer */
+    width: 100%; /* full width of viewport */
+    background-color: rgb(15, 17, 18); /* dark background for footer */
+    font-size: 0.7rem; /* small font size for footer text */
+    color: #ffffff; /* white text color for footer */
+    padding: 10px 0; /* add padding for space around text */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow at top of footer */
+    margin-top: 20px; /* space above footer */
     position: relative; /* ensure relative positioning to prevent overlap issues */
-    flex-shrink: 0; /* prevent the footer from shrinking */
+    flex-shrink: 0; /* prevent footer from shrinking */
 }
 
 /* remove any default margin from footer text */
 footer p {
-    margin: 0; /* remove any default margin from the paragraph */
-    line-height: 1; /* set line height to 1 to avoid extra space around the text */
+    margin: 0; /* remove any default margin from paragraph */
+    line-height: 1; /* set line height to 1 to avoid extra space around text */
 }
