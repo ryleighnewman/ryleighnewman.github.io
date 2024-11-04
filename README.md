@@ -4,7 +4,7 @@ Welcome to the GitHub repository for **Ryleigh Newman's** personal website.
 
 ## About This Project
 
-- **Website Purpose**: The website serves as my online résumé, providing detailed information about my background, experience, and interests. It also includes links to my social media profiles for easy connectivity.
+- **Website Purpose**: The website serves as an online résumé, providing detailed information about background, experience, and interests. It also includes links to social media profiles for easy connectivity.
 - **Design & Development**: This website was crafted by Ryleigh Newman, with coding assistance for learning and debugging from ChatGPT as well as various online resources.
 
 ## Visit the Website
