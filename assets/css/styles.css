@@ -219,6 +219,7 @@ nav {
 }
 
 .about-section {
+    padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
     margin-bottom: 20px;
@@ -234,7 +235,7 @@ nav {
 .contact-section hr.divider {
     border: none;
     border-top: 1px solid rgba(169, 169, 169, 0.3);
-    margin: 50px auto;
+    margin: auto;
     max-width: 800px;
 }
 
