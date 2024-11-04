@@ -45,9 +45,11 @@ p {
 }
 
 .bold-text {
-    font-family: 'Segoe UI Semilight', 'Segoe UI';
+    color: #333333;
+    text-decoration: bold;
     font-weight: normal;
 }
+
 
 .underline-text {
     text-decoration: underline;
