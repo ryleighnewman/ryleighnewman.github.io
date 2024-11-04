@@ -59,6 +59,7 @@ p {
 .italic-text {
     font-style: italic;
     font-weight: lighter;
+    font-size: 0.9em;
 }
 
 header {
