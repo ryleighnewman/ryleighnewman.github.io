@@ -163,7 +163,7 @@ nav {
 }
 
 .hero-2 {
-    width: 100%;
+    width: 100vw;
     height: 60vh;
     background: url('/assets/images/background_2.png') no-repeat center center;
     background-size: cover;
