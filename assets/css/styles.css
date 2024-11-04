@@ -45,7 +45,7 @@ p {
 }
 
 .bold-text {
-    color: #333333;
+    color: #555555;
     text-decoration: bold;
     font-weight: normal;
 }
@@ -53,7 +53,7 @@ p {
 
 .underline-text {
     text-decoration: underline;
-    font-weight: normal;
+    font-weight: lighter;
 }
 
 header {
