@@ -231,7 +231,13 @@ nav {
     font-size: 1.2rem;
 }
 
-
+.about-section hr.divider, 
+.contact-section hr.divider {
+    border: none;
+    border-top: 1px solid rgba(169, 169, 169, 0.3);
+    margin: 50px auto;
+    max-width: 800px;
+}
 
 .about-section, 
 .contact-section {
