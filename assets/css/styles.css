@@ -45,7 +45,13 @@ p {
 }
 
 .bold-text {
-    font-weight: bold;
+    font-family: 'Segoe UI Semilight', 'Segoe UI';
+    font-weight: normal;
+}
+
+.underline-text {
+    text-decoration: underline;
+    font-weight: normal;
 }
 
 header {
