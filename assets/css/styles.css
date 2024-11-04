@@ -7,18 +7,15 @@
 
 html, body {
     height: 100%;
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     min-height: 100%;
     width: 100%;
     overflow-x: hidden;
-    color: #dddddd;
-    background-color: rgb(18, 22, 24);
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.6;
 }
 
+/* wrapper to simulate phone borders */
 .wrapper {
     max-width: 414px;
     margin: 0 auto;
@@ -29,11 +26,17 @@ html, body {
     height: 100%;
 }
 
-.text-center {
-    text-align: center;
+/* ensure body doesn't exceed mobile width... error on chrome iphone 10 */
+body {
+    color: #dddddd;
+    background-color: rgb(18, 22, 24);
+    line-height: 1.6;
+    flex-grow: 1;
+    font-size: 1.2rem;
+    overflow-x: hidden;
 }
 
-p, .section-content {
+p {
     margin-bottom: 20px;
     color: #dddddd;
     max-width: 600px;
@@ -43,9 +46,10 @@ p, .section-content {
 
 .bold-text {
     color: #555555;
-    font-weight: normal;
     text-decoration: bold;
+    font-weight: normal;
 }
+
 
 .underline-text {
     text-decoration: underline;
@@ -58,52 +62,129 @@ p, .section-content {
     font-size: 0.7em;
 }
 
-header, footer {
-    background-color: rgb(15, 17, 18);
-    color: #ffffff;
-    padding: 10px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: fixed;
-    width: 100%;
-    left: 0;
-    z-index: 1000;
-    text-align: center;
-}
-
 header {
-    top: 0;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    background-color: rgb(30, 80, 150);
+    padding: 0 15px;
     height: 50px;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease; /* smooth transition ANIMATION TBD */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
-.footer {
-    bottom: 0;
-    font-size: 0.7rem;
+.header-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* height should be sufficient to cover area behind header ... for dynamic header implementation */
+    background-color: rgb(18, 22, 24);
+    z-index: 999; /* ensure it's below header but above content */
 }
 
-.hero, .hero-alt {
+/* adjusting main content to avoid gray background overlap error */
+main {
+    position: relative;
+    z-index: 2; /* ensure it is above top background */
+    margin-top: 50px;
+    flex-grow: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.transparent .nav-links a, 
+.header.scrolled .nav-links a {
+    transition: color 0.3s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 300;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(169, 204, 227);
+}
+
+.hero {
     width: 100%;
     height: 60vh;
+    background: url('/assets/images/background.png') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 5% 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-size: cover;
+    position: relative;
 }
 
-.hero {
-    background: url('/assets/images/background.png') no-repeat center center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero-alt {
+.hero-2 {
+    width: 100%;
+    height: 60vh;
     background: url('/assets/images/background_2.png') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-.hero-headshot, .hero-headshot-alt {
+.hero-headshot {
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    object-fit: cover;
+    transform: translateY(20px);
+}
+
+.hero-headshot-2 {
     max-width: 300px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -114,68 +195,130 @@ header {
 
 .hero-name {
     font-size: 1.8rem;
-    margin: 0 0 10px;
+    margin: 0 0 10px 0;
     font-weight: 300;
 }
 
-.subtext {
+.hero-academic-info .subtext {
     font-size: 1.1rem;
     line-height: 1.1;
     text-align: center;
 }
 
-.smaller-text {
-    font-size: 0.9rem;
-    font-weight: 300;
+.subtext .line {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 3px;
+    line-height: 1.1;
 }
 
-.section, .contact-section {
-    padding: 20px;
+.subtext .smaller-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.about-section {
+    padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
     margin-bottom: 20px;
 }
 
-.section-title {
-    font-weight: 300;
+.motto {
     color: rgb(100, 150, 200);
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    font-weight: 300;
+    font-size: 1.2rem;
 }
 
-.divider {
+.about-section hr.divider, 
+.contact-section hr.divider {
+    border: none;
     border-top: 1px solid rgba(169, 169, 169, 0.3);
     margin: 50px auto;
     max-width: 800px;
 }
 
-.nav-links, .social-buttons {
+.about-section, 
+.contact-section {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.section-title-blue,
+.section-title-light-blue {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+    color: rgb(100, 150, 200);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    text-align: center;
+    flex-grow: 1;
+    margin-bottom: 40px;
+}
+
+.contact-section h1 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.contact-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact-section hr.divider {
+    margin-bottom: 10px;
+}
+
+main {
+    margin-top: 50px;
+    flex-grow: 1;
+}
+
+.contact-section p, 
+.contact-section ul {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #dddddd;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.contact-section ul {
     list-style: none;
+    padding: 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.nav-links a, .btn {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: 300;
-    font-size: 0.9rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: rgb(169, 204, 227);
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
 .btn {
     display: inline-block;
     padding: 15px 20px;
-    border-radius: 15px;
+    font-size: 1.2rem;
+    color: #ffffff;
     background-color: rgba(100, 150, 200, 0.8);
+    border-radius: 15px;
+    text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 300px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -185,74 +328,98 @@ header {
     transform: translateY(-2px);
 }
 
-.contact-section {
-    padding: 50px 20px;
-    text-align: center;
-    flex-grow: 1;
-    margin-bottom: 40px;
-    font-size: 1.2rem;
-}
-
-.social-btn.email {
+.email-btn {
     background-color: rgba(212, 70, 56, 0.8);
 }
 
-.social-btn.email:hover {
+.email-btn:hover {
     background-color: rgba(179, 58, 47, 0.9);
 }
 
-.social-btn.instagram {
+.instagram-btn {
     background-color: rgba(225, 48, 108, 0.8);
 }
 
-.social-btn.instagram:hover {
+.instagram-btn:hover {
     background-color: rgba(193, 53, 132, 0.9);
 }
 
-.social-btn.github {
+.github-btn {
     background-color: rgba(36, 41, 46, 0.8);
 }
 
-.social-btn.github:hover {
+.github-btn:hover {
     background-color: rgba(26, 29, 33, 0.9);
 }
 
-.social-btn.twitter {
+.twitter-btn {
     background-color: rgba(29, 161, 242, 0.8);
 }
 
-.social-btn.twitter:hover {
+.twitter-btn:hover {
     background-color: rgba(10, 133, 217, 0.9);
 }
 
-.social-btn.linkedin {
+.linkedin-btn {
     background-color: rgba(0, 119, 181, 0.8);
 }
 
-.social-btn.linkedin:hover {
+.linkedin-btn:hover {
     background-color: rgba(0, 85, 130, 0.9);
 }
 
-.social-btn.facebook {
+.facebook-btn {
     background-color: rgba(66, 103, 178, 0.8);
 }
 
-.social-btn.facebook:hover {
+.facebook-btn:hover {
     background-color: rgba(54, 88, 153, 0.9);
 }
 
-.social-btn.tiktok {
+.tiktok-btn {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.social-btn.tiktok:hover {
+.tiktok-btn:hover {
     background-color: rgba(51, 51, 51, 0.9);
 }
 
-.social-btn.youtube {
+.youtube-btn {
     background-color: #ff0000;
 }
 
-.social-btn.youtube:hover {
+.youtube-btn:hover {
     background-color: #cc0000;
+}
+
+.contact-section p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-section p strong,
+.about-section p strong {
+    font-family: 'Segoe UI Light', sans-serif;
+    font-weight: 300;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(15, 17, 18);
+    font-size: 0.7rem;
+    color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+    line-height: 1;
 }
