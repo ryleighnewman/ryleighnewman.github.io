@@ -187,6 +187,15 @@ nav {
     transform: translateY(20px);
 }
 
+.hero-headshot-2 {
+    max-width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    object-fit: cover;
+    transform: translateY(20px);
+}
+
 .hero-name {
     font-size: 1.8rem;
     margin: 0 0 10px 0;
