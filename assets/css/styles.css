@@ -56,6 +56,11 @@ p {
     font-weight: lighter;
 }
 
+.italic-text {
+    font-style: italic;
+    font-weight: lighter;
+}
+
 header {
     background-color: rgb(30, 80, 150);
     padding: 0 15px;
