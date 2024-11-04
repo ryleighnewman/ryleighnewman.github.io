@@ -246,6 +246,7 @@ nav {
     color: rgb(100, 150, 200);
     text-transform: uppercase;
     font-size: 1.8rem;
+    margin-bottom: 10px;
 }
 
 .contact-section {
