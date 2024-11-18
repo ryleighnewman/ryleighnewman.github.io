@@ -190,7 +190,7 @@ nav {
 .hero-2 {
     width: 100vw;
     height: 60vh;
-    background: url('/assets/images/background_2.png') no-repeat center center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(15, 18, 19, 0) 50%), url('/assets/images/background_2.png') no-repeat center center;
     background-size: cover;
     color: #ffffff;
     display: flex;
