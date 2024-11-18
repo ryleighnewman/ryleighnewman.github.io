@@ -48,19 +48,33 @@ p {
     color: #818181;
     text-decoration: bold;
     font-weight: normal;
+    font-size: 1.3em;
+    margin-bottom: 5px;
 }
-
 
 .underline-text {
-    text-decoration: underline;
+    text-decoration: underline rgb(100, 150, 200);
+    text-underline-offset: 5px; /* Adjust this value as needed */
     font-weight: lighter;
+    margin-bottom: 5px;
 }
+
 
 .italic-text {
     font-style: italic;
     font-weight: lighter;
     font-size: 0.7em;
 }
+
+.list {
+    margin-bottom: 20px;
+    color: #dddddd;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9em;
+}
+
 
 header {
     background-color: rgb(30, 80, 150);
