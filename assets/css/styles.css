@@ -449,10 +449,9 @@ footer p {
     line-height: 1;
 }
 
-/* WebKit Browsers */
 ::-webkit-scrollbar {
     width: 12px;
-    height: 12px; /* To cover horizontal scrollbars as well */
+    height: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -469,9 +468,7 @@ footer p {
     background-color: #777;
 }
 
-/* Firefox */
-* {
+html {
     scrollbar-width: thin;
     scrollbar-color: #555 #0f1112;
 }
-
