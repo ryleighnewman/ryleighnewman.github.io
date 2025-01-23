@@ -1,23 +1,15 @@
 # Ryleigh Newman's Personal Website
 
-Welcome to the GitHub repository for **Ryleigh Newman's** personal website.
+Welcome to the repository for **Ryleigh Newman's** personal website.
 
 ## About This Project
 
-- **Website Purpose**: The website serves as an online résumé, providing detailed information about background, experience, and interests. It also includes links to social media profiles for easy connectivity.
-- **Design & Development**: This website was crafted by Ryleigh Newman, with coding assistance for learning and debugging from ChatGPT as well as various online resources.
+- **Website Purpose**: The website serves as an online résumé, to inform people about who I am.
+- **Design & Development**: This website was craft codeded by Ryleigh, with assistance from ChatGPT and other online resources.
 
-## Visit the Website
-
-You can visit by clicking the link below:
+## Visit
 
 🔗 [Ryleigh Newman's Website](https://ryleighnewman.github.io/)
-
-## Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **JavaScript**
 
 ## License
 
@@ -25,7 +17,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions or would like to get in touch, feel free to reach out through the social links provided on my website.
+If you have any questions or would like to get in touch, feel free to reach out through the social links provided on the site.
 
 ---
 
