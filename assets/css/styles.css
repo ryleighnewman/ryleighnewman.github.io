@@ -64,7 +64,7 @@ p {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -2px; /* Adjust this value to move the underline further down */
+    bottom: -1px; /* Adjust this value to move the underline further down */
     height: 2px;  /* Thickness of the underline */
     background-color: rgb(100, 150, 200); /* Same color as your underline */
 }
@@ -472,3 +472,37 @@ html {
     scrollbar-width: thin;
     scrollbar-color: #555 #0f1112;
 }
+
+/* Dropdown Toggle Styles */
+.activity-dropdown summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent; /* No background */
+    border: none;                /* No border */
+    margin: 0 auto 10px;
+    transition: color 0.3s ease;
+    color: inherit;
+  }
+  .activity-dropdown summary:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .activity-dropdown summary:hover {
+    color: #cccccc;  /* Optional: change text color on hover */
+  }
+  /* Remove the default disclosure marker in WebKit browsers */
+  .activity-dropdown summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  /* New Animation Using clip-path */
+  .activities-content {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    transition: clip-path 0.5s ease, opacity 0.5s ease;
+  }
+  .activity-dropdown[open] .activities-content {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
