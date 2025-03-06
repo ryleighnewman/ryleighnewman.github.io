@@ -53,26 +53,36 @@ p {
 }
 
 .underline-text {
-    display: inline-block; /* Needed to apply border properly */
-    position: relative;    /* Enables positioning of the pseudo-element */
+    display: inline-block;
+    position: relative;
     font-weight: lighter;
-    margin-bottom: 15px;
+    font-size: 0.8em; /* Adjust this value to decrease font size further if desired */
+    margin-bottom: 10px; /* Adjust margin if needed */
 }
 
 .underline-text::after {
-    content: ""; /* Creates a pseudo-element for the underline */
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -1px; /* Adjust this value to move the underline further down */
-    height: 2px;  /* Thickness of the underline */
-    background-color: rgb(100, 150, 200); /* Same color as your underline */
+    bottom: 1px; /* Move this closer to 0 or slightly positive to move underline up */
+    height: 1px; /* Slightly thinner underline for subtlety */
+    background-color: rgb(100, 150, 200);
 }
 
 .italic-text {
     font-style: italic;
     font-weight: lighter;
     font-size: 0.7em;
+    margin-bottom: 0; /* reduces bottom spacing */
+}
+
+.italic-text-date {
+    font-style: italic;
+    font-weight: lighter;
+    font-size: 0.7em;
+    margin-top: 0; /* reduces top spacing */
+    margin-bottom: 0; /* reduces top spacing */
 }
 
 .list {
@@ -81,7 +91,7 @@ p {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
 
 
@@ -233,7 +243,7 @@ nav {
 .subtext .line {
     display: block;
     font-size: 1.1rem;
-    margin-bottom: 3px;
+    margin-bottom: 3;
     line-height: 1.1;
 }
 
@@ -244,10 +254,8 @@ nav {
 }
 
 .about-section {
-    padding: 20px 20px;
     text-align: center;
     flex-grow: 1;
-    margin-bottom: 20px;
 }
 
 .motto {
@@ -260,14 +268,8 @@ nav {
 .contact-section hr.divider {
     border: none;
     border-top: 1px solid rgba(169, 169, 169, 0.3);
-    margin: 50px auto;
+    margin: 40px auto;
     max-width: 800px;
-}
-
-.about-section, 
-.contact-section {
-    margin-bottom: 0;
-    padding-bottom: 20px;
 }
 
 .section-title-blue,
@@ -281,20 +283,9 @@ nav {
 }
 
 .contact-section {
-    padding: 50px 20px;
     text-align: center;
     flex-grow: 1;
-    margin-bottom: 40px;
-}
-
-.contact-section h1 {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.contact-section {
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 .contact-section hr.divider {
@@ -439,7 +430,7 @@ footer {
     color: #ffffff;
     padding: 10px 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
+    margin-top: 10px;
     position: relative;
     flex-shrink: 0;
 }
@@ -503,6 +494,7 @@ html {
     margin-top: 0;
     height: 0;
     transition: opacity 0.3s ease-out, height 0.3s ease-out, margin-top 0.3s ease-out;
+    font-size: 0.8rem;
 }
 
 /* Default state (Closed) */
