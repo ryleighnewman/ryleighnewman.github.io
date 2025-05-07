@@ -1,10 +1,10 @@
 # Ryleigh Newman's Personal Website
 
-Welcome to the repository for **Ryleigh Newman's** personal website.
+Welcome to the repository for Ryleigh's personal website.
 
 ## About This Project
 
-- **Website Purpose**: The website serves as an online résumé, to inform people about who I am.
+- **Website Purpose**: The website serves as an online résumé.
 - **Design & Development**: This website was craft coded by Ryleigh, with assistance from ChatGPT and other online resources.
 
 ## Visit
