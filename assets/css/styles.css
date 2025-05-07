@@ -44,9 +44,10 @@
   
   .bold-text {
     color: #818181;
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 1.3em;
     margin-bottom: 5px;
+    text-shadow: 0 0 0.5px #818181;
   }
   
   .underline-text {
