@@ -194,7 +194,7 @@ nav {
 
 .hero {
     width: 100%;
-    height: 55vh;
+    min-height: 35vh;
     background:
         linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(15, 18, 19, 0) 50%),
         url('/assets/images/background.png') no-repeat center center;
@@ -205,9 +205,28 @@ nav {
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    padding: 5% 20px;
+    padding: clamp(2%, 5%, 8%) 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+}
+
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 1.4rem;
+  }
+
+  .hero-academic-info .subtext,
+  .subtext .line {
+    font-size: 1rem;
+  }
+
+  .subtext .smaller-text {
+    font-size: 0.8rem;
+  }
+
+  .hero-headshot {
+    max-width: 250px;
+  }
 }
 
 .hero-2 {
@@ -223,10 +242,16 @@ nav {
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: clamp(2%, 5%, 8%) 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    min-height: 35vh;
 }
 
 .hero-headshot {
+    width: 100%;
     max-width: 350px;
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 10);
     margin-bottom: 20px;
@@ -235,18 +260,21 @@ nav {
 }
 
 .hero-headshot-2 {
+    width: 100%;
     max-width: 350px;
+    height: auto;
     border-radius: 15px;
     box-shadow: 0 4px 25px rgba(0, 0, 0, 10);
     margin-bottom: 20px;
     object-fit: cover;
-    transform: translateY(px);
+    transform: translateY(20px);
 }
 
 .hero-name {
     font-size: 1.8rem;
     margin: 0 0 10px 0;
     font-weight: 300;
+    text-align: center;
 }
 
 .hero-academic-info .subtext {
@@ -640,32 +668,4 @@ details:not([open]) .activities-content {
 
 #page-loader.fade-out {
   opacity: 0;
-}
-
-@media (max-width: 480px) {
-  .hero {
-    height: 45vh;
-    padding: 5% 10px;
-  }
-
-  .hero-headshot {
-    max-width: 250px;
-    margin-bottom: 15px;
-  }
-
-  .hero-name {
-    font-size: 1.4rem;
-  }
-
-  .hero-academic-info .subtext {
-    font-size: 1rem;
-  }
-
-  .subtext .line {
-    font-size: 1rem;
-  }
-
-  .subtext .smaller-text {
-    font-size: 0.8rem;
-  }
 }
