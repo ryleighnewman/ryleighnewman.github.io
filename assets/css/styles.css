@@ -641,3 +641,31 @@ details:not([open]) .activities-content {
 #page-loader.fade-out {
   opacity: 0;
 }
+
+@media (max-width: 480px) {
+  .hero {
+    height: 45vh;
+    padding: 5% 10px;
+  }
+
+  .hero-headshot {
+    max-width: 250px;
+    margin-bottom: 15px;
+  }
+
+  .hero-name {
+    font-size: 1.4rem;
+  }
+
+  .hero-academic-info .subtext {
+    font-size: 1rem;
+  }
+
+  .subtext .line {
+    font-size: 1rem;
+  }
+
+  .subtext .smaller-text {
+    font-size: 0.8rem;
+  }
+}
