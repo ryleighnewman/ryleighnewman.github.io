@@ -20,6 +20,7 @@
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 </head>
 <body>
+    <div id="page-loader"></div>
     <header>
         <nav>
             <a href="index.html" class="logo">
@@ -42,18 +43,14 @@
                 <li><a href="https://www.instagram.com/ryleighnewman" target="_blank" class="btn instagram-btn">Instagram</a></li>
                 <li><a href="https://www.linkedin.com/in/ryleighnewman" target="_blank" class="btn linkedin-btn">LinkedIn</a></li>
                 <li><a href="https://github.com/ryleighnewman" target="_blank" class="btn github-btn">GitHub</a></li>
-                <!-- <li><a href="https://twitter.com/RyleighNewman7" target="_blank" class="btn twitter-btn">Twitter: @RyleighNewman7</a></li>
-                <li><a href="https://www.facebook.com/ryleighn/" target="_blank" class="btn facebook-btn">Facebook: @RyleighNewman</a></li>
-                <li><a href="https://www.tiktok.com/@ryleighnewman" target="_blank" class="btn tiktok-btn">TikTok: @ryleighnewman</a></li> 
-                <li><a href="https://www.youtube.com/channel/UCTafS-66HbAg2w2zrBVpeKQ" target="_blank" class="btn youtube-btn">YouTube: Ryleigh Newman</a></li> -->
             </ul>
+            <div class="sub-section-box">
+                <h2 class="bold-text">do you like funny cow jokes?</h2>
+                <a href="https://funnycowjokes.com" target="_blank" style="text-decoration: none; color: inherit;">
+                    <p>funnycowjokes.com</p>
+                </a>
+            </div>
             </section>
-            <hr class="divider">
-            <br>
-            <h2 class="bold-text">do you like funny cow jokes?</p>
-            <a href="https://funnycowjokes.com" target="_blank" style="text-decoration: none; color: inherit;">
-                <p>funnycowjokes.com</p>
-            </a>
         </section>
         <hr class="divider">
     </main>
@@ -62,5 +59,14 @@
             <p>&copy; 2025 Ryleigh Newman</p>
         </a>
     </footer>
+    <script>
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+          loader.classList.add('fade-out');
+          setTimeout(() => loader.remove(), 800);
+        }
+      });
+    </script>
 </body>
 </html>
