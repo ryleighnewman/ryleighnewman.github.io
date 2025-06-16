@@ -161,12 +161,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 1;
 }
 
 .logo-image {
     height: 40px;
     width: auto;
+    display: block;
+    margin: 0;
 }
 
 .nav-links {
@@ -227,11 +228,28 @@ nav {
   .hero-headshot {
     max-width: 250px;
   }
+
+  .hero-2 .hero-name {
+    font-size: 1.4rem;
+  }
+
+  .hero-2 .hero-academic-info .subtext,
+  .hero-2 .subtext .line {
+    font-size: 1rem;
+  }
+
+  .hero-2 .subtext .smaller-text {
+    font-size: 0.8rem;
+  }
+
+  .hero-headshot-2 {
+    max-width: 250px;
+  }
 }
 
 .hero-2 {
-    width: 100vw;
-    height: 55vh;
+    width: 100%;
+    min-height: 35vh;
     background: 
         linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(15, 18, 19, 0) 50%), 
         url('/assets/images/background_2.png') no-repeat center center;
@@ -241,11 +259,11 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: clamp(2%, 5%, 8%) 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    min-height: 35vh;
+    position: relative;
+    margin-top: -5px;
 }
 
 .hero-headshot {
@@ -267,7 +285,7 @@ nav {
     box-shadow: 0 4px 25px rgba(0, 0, 0, 10);
     margin-bottom: 20px;
     object-fit: cover;
-    transform: translateY(20px);
+    transform: translateY(10px);
 }
 
 .hero-name {
@@ -368,6 +386,8 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    max-width: 220px;
+    margin: 0 auto;
 }
 
 .btn {
@@ -379,9 +399,15 @@ main {
     border-radius: 15px;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 300px;
+    width: 100%;
+    max-width: 220px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 .btn:hover {
@@ -405,13 +431,6 @@ main {
     background-color: rgba(193, 53, 132, 0.9);
 }
 
-.github-btn {
-    background-color: rgba(36, 41, 46, 0.8);
-}
-
-.github-btn:hover {
-    background-color: rgba(26, 29, 33, 0.9);
-}
 
 .twitter-btn {
     background-color: rgba(29, 161, 242, 0.8);
@@ -419,6 +438,14 @@ main {
 
 .twitter-btn:hover {
     background-color: rgba(10, 133, 217, 0.9);
+}
+
+.github-btn {
+    background-color: rgba(36, 41, 46, 0.8);
+}
+
+.github-btn:hover {
+    background-color: rgba(26, 29, 33, 0.9);
 }
 
 .linkedin-btn {
