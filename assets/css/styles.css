@@ -541,8 +541,10 @@ footer {
     position: sticky;
     top: 100%;
     margin-top: auto;
+    margin-left: 1rem;
+    margin-right: 1rem;
     left: 0;
-    width: 100%;
+    width: calc(100% - 2rem);
     padding: 1px 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
