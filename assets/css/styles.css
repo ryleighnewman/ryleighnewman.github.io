@@ -24,11 +24,15 @@ html, body {
 }
 
 .wrapper {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     max-width: 414px;
     margin: 0 auto;
     border-left: 2px solid #dddddd;
     border-right: 2px solid #dddddd;
-    background-color: rgb(15, 17, 18);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     height: 100%;
 }
@@ -109,13 +113,12 @@ p {
 
 header {
     background-color: rgb(30, 80, 150);
-    padding: 0 15px;
     height: 50px;
     flex-shrink: 0;
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 40px;
+    width: calc(100% - 80px);
     z-index: 1000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -137,7 +140,6 @@ header {
 main {
     position: relative;
     z-index: 2;
-    margin-top: 50px;
     flex-grow: 1;
     width: 100%;
     margin: 0 auto;
@@ -150,7 +152,7 @@ main {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
@@ -174,7 +176,7 @@ nav {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex: 2;
+    margin-left: auto;
 }
 
 .nav-links li {
@@ -209,6 +211,7 @@ nav {
     padding: clamp(2%, 5%, 8%) 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    padding-top: 60px;
 }
 
 @media (max-width: 480px) {
@@ -261,6 +264,7 @@ nav {
     align-items: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: clamp(2%, 5%, 8%) 20px;
+    padding-top: 90px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     margin-top: -5px;
@@ -356,7 +360,6 @@ nav {
 }
 
 main {
-    margin-top: 50px;
     flex-grow: 1;
 }
 
@@ -416,6 +419,11 @@ main {
 }
 
 .email-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: rgba(212, 70, 56, 0.8);
 }
 
@@ -424,6 +432,11 @@ main {
 }
 
 .instagram-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: rgba(225, 48, 108, 0.8);
 }
 
@@ -433,6 +446,11 @@ main {
 
 
 .twitter-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: rgba(29, 161, 242, 0.8);
 }
 
@@ -441,6 +459,11 @@ main {
 }
 
 .github-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: rgba(36, 41, 46, 0.8);
 }
 
@@ -449,6 +472,11 @@ main {
 }
 
 .linkedin-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: rgba(0, 119, 181, 0.8);
 }
 
@@ -457,6 +485,11 @@ main {
 }
 
 .facebook-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: rgba(66, 103, 178, 0.8);
 }
 
@@ -465,6 +498,11 @@ main {
 }
 
 .tiktok-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -473,6 +511,11 @@ main {
 }
 
 .youtube-btn {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     background-color: #ff0000;
 }
 
@@ -646,8 +689,11 @@ details:not([open]) .activities-content {
 }
 
 .section-box {
-    background-color: rgba(60, 90, 140, 0.15);
-    border-radius: 15px;
+    background-color: rgba(20, 30, 40, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     padding: 25px;
     margin: 40px auto;
     max-width: 800px;
@@ -658,12 +704,15 @@ details:not([open]) .activities-content {
 }
 
 .section-box:hover {
-    background-color: rgba(80, 110, 160, 0.2);
+    background-color: rgba(30, 45, 60, 0.6);
 }
 
 .sub-section-box {
-    background-color: #3A434F;
-    border-radius: 10px;
+    background-color: rgba(15, 18, 22, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
     padding: 15px;
     margin-top: 15px;
     max-width: 800px;
@@ -674,25 +723,35 @@ details:not([open]) .activities-content {
 }
 
 .sub-section-box:hover {
-    background-color: #495361;
-}
-.sub-section-box:hover {
-    background-color: #495361;
+    background-color: rgba(25, 30, 36, 0.6);
 }
 
-#page-loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(18, 22, 24);
-  z-index: 9999;
-  opacity: 1;
-  transition: opacity 0.6s ease;
-  pointer-events: none;
-}
+ .page-loader {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgb(18, 22, 24);
+     z-index: 9999;
+     opacity: 1;
+     visibility: visible;
+     transition: opacity 0.8s ease, visibility 0.8s ease;
+     pointer-events: none;
+ }
 
-#page-loader.fade-out {
-  opacity: 0;
+ .page-loader.fade-out {
+     opacity: 0;
+     visibility: hidden;
+ }
+/* Glass look (glassmorphism) utility */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    display: inline-block;
+    padding: 1rem;
+    margin: 0.5rem 0;
 }
