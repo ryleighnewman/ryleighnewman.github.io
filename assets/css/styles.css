@@ -157,6 +157,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     height: 100%;
+    transform: translateY(-2px);
 }
 
 .logo {
