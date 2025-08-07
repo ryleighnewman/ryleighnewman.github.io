@@ -133,8 +133,12 @@ header {
     left: 0;
     width: 100%;
     height: 100px;
-    background-color: rgb(18, 22, 24);
+    background: linear-gradient(180deg,
+      rgb(18 22 24 / 0.95) 0%,
+      rgb(18 22 24 / 0.60) 60%,
+      rgb(18 22 24 / 0.00) 100%);
     z-index: 999;
+    pointer-events: none;
 }
 
 main {
@@ -776,4 +780,197 @@ details:not([open]) .activities-content {
     display: inline-block;
     padding: 1rem;
     margin: 0.5rem 0;
+}
+
+/* =========================================================
+   LIQUID GLASS HEADER — polished v2 (scoped to header.glass)
+   ========================================================= */
+:root {
+  --lg-accent-h: 210;    /* bluish accent hue */
+  --lg-accent-s: 80%;
+  --lg-accent-l: 60%;
+  --lg-accent: var(--lg-accent-h) var(--lg-accent-s) var(--lg-accent-l);
+
+  --lg-radius: 18px;
+  --lg-blur: clamp(12px, 2.6vw, 22px);
+  --lg-saturation: 1.35;
+  --lg-brightness: 1.06;
+  --lg-shadow: 0.42;
+  --lg-top-sheen: 0.60;
+  --lg-border: 0.75px;
+  --lg-bg: 215 30% 7%;
+}
+
+/* Liquid Glass material for the header */
+header.glass {
+  border-radius: var(--lg-radius);
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(120% 100% at 50% -40%, hsl(0 0% 100%/0) 0%, hsl(0 0% 100%/0) 60%),
+    linear-gradient(180deg, hsl(0 0% 100%/0) 0%, hsl(0 0% 100%/0) 45%, hsl(0 0% 0%/0) 100%),
+    linear-gradient(90deg, hsl(var(--lg-accent)/0), hsl(var(--lg-accent)/0));
+  backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturation)) brightness(var(--lg-brightness));
+  -webkit-backdrop-filter: blur(var(--lg-blur)) saturate(var(--lg-saturation)) brightness(var(--lg-brightness));
+  filter: url(#liquid-refraction);
+  /* border removed to avoid doubling the edge */
+  box-shadow:
+    0 12px 32px hsl(0 0% 0%/var(--lg-shadow)),
+    inset 0 1px 0 hsl(0 0% 100%/0.45),
+    inset 0 -1px 0 hsl(0 0% 0%/0.35),
+    inset 0 0 0 0.25px hsl(0 0% 100%/0.06);
+  transition: background .35s ease, box-shadow .35s ease, transform .35s ease;
+  background-blend-mode: screen, soft-light;
+}
+
+/* Optical gradient stroke */
+header.glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: var(--lg-border);
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    hsl(0 0% 100% / 0.9),
+    hsl(0 0% 100% / 0.2) 25%,
+    hsl(0 0% 0% / 0.15) 75%,
+    hsl(0 0% 0% / 0.4)
+  );
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  filter: url(#liquid-refraction) blur(0.35px) brightness(1.05) contrast(1.03);
+  mix-blend-mode: screen;
+  opacity: 0.6;
+  box-shadow:
+    inset 0 1px 0 hsl(0 0% 100% / 0.55),
+    inset 0 -1px 0 hsl(0 0% 0% / 0.22),
+    inset 0 0 4px rgba(0, 0, 0, 0.18);
+}
+
+/* Inner light shaping */
+header.glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(120% 70% at 50% -22%, hsl(0 0% 100%/0.20) 0%, transparent 60%),
+    linear-gradient(180deg, transparent 63%, hsl(0 0% 0%/0.10));
+  pointer-events: none;
+  filter: url(#liquid-refraction);
+  opacity: 0.2;
+}
+
+/* Ensure nav content stays above the optics */
+header.glass nav,
+header.glass .responsive-nav {
+  position: relative;
+  z-index: 2;
+  color: inherit;
+  background: none !important;
+  background-image: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  background-clip: border-box;
+  isolation: auto;
+}
+
+/* Link legibility */
+header.glass .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  text-shadow: 0 1px 1px rgba(0,0,0,.35), 0 0 8px hsl(var(--lg-accent)/.25);
+}
+header.glass .nav-links a:hover, header.glass .nav-links a:focus-visible {
+  color: rgb(169, 204, 227);
+  text-shadow: 0 1px 1px rgba(0,0,0,.35), 0 0 10px hsl(var(--lg-accent)/.55);
+}
+
+/* Scrolled variant (toggle .scrolled on <header class="glass">) */
+header.glass.scrolled {
+  backdrop-filter: blur(calc(var(--lg-blur) + 6px)) saturate(calc(var(--lg-saturation) + 0.05)) brightness(1.04);
+  -webkit-backdrop-filter: blur(calc(var(--lg-blur) + 6px)) saturate(calc(var(--lg-saturation) + 0.05)) brightness(1.04);
+  background:
+    radial-gradient(120% 100% at 50% -40%, hsl(0 0% 100%/.5) 0%, hsl(0 0% 100%/0) 60%),
+    linear-gradient(180deg, hsl(0 0% 100%/.34) 0%, hsl(0 0% 100%/.08) 45%, hsl(0 0% 0%/.28) 100%),
+    linear-gradient(90deg, hsl(var(--lg-accent)/.28), hsl(var(--lg-accent)/.18));
+  box-shadow:
+    0 14px 36px hsl(0 0% 0%/.46),
+    inset 0 1px 0 hsl(0 0% 100%/.55),
+    inset 0 -1px 0 hsl(0 0% 0%/.40),
+    inset 0 0 0 0.5px hsl(0 0% 100%/.10);
+}
+
+/* Backdrop support fallback */
+@supports not (backdrop-filter: blur(1px)) {
+  header.glass {
+    background: linear-gradient(180deg,
+      hsl(0 0% 100%/0.10) 0%,
+      hsl(0 0% 100%/0.06) 35%,
+      hsl(0 0% 0%/0.30) 100%),
+      hsl(var(--lg-bg)/0.92);
+    box-shadow:
+      0 12px 32px rgba(0,0,0,.42),
+      inset 0 1px 0 rgba(255,255,255,.45),
+      inset 0 -1px 0 rgba(0,0,0,.35);
+  }
+}
+
+/* High contrast users: increase separation */
+@media (prefers-contrast: more) {
+  header.glass {
+    backdrop-filter: blur(calc(var(--lg-blur) + 4px)) saturate(1.2) brightness(1.0);
+    -webkit-backdrop-filter: blur(calc(var(--lg-blur) + 4px)) saturate(1.2) brightness(1.0);
+    background:
+      linear-gradient(180deg, hsl(0 0% 100%/.42) 0%, hsl(0 0% 100%/.10) 45%, hsl(0 0% 0%/.32) 100%),
+      linear-gradient(90deg, hsl(var(--lg-accent)/.30), hsl(var(--lg-accent)/.20));
+  }
+}
+
+/* =========================================================
+   Dynamic Liquid Glass optics — caustics, sheen, breathing
+   ========================================================= */
+
+/* Subtle breathing effect */
+header.glass {
+  animation: lg-breathe 16s ease-in-out infinite;
+  will-change: filter;
+}
+
+/* Animated caustics and ripples */
+header.glass .responsive-nav::before,
+header.glass .responsive-nav::after {
+  display: none !important;
+}
+
+@keyframes lg-caustics {
+  0%   { background-position: 0% 0%,   0% 0%,    0% 0%; }
+  50%  { background-position: 100% 0%, 0% 100%, -100% 0%; }
+  100% { background-position: 200% 0%, 0% 200%, -200% 0%; }
+}
+
+@keyframes lg-sheen {
+  0%   { opacity: .15; transform: translateX(-5%); }
+  100% { opacity: .35; transform: translateX(5%); }
+}
+
+@keyframes lg-breathe {
+  0%, 100% { filter: saturate(1) brightness(1); }
+  50% { filter: saturate(1.05) brightness(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header.glass { animation: none; }
+  header.glass .responsive-nav::before,
+  header.glass .responsive-nav::after { animation: none; }
 }
