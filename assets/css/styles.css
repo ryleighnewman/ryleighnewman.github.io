@@ -546,33 +546,36 @@ main {
 
 footer {
     font-family: 'Segoe UI';
-    position: sticky;
-    top: 100%;
-    margin-top: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2px 0; /* slightly smaller vertical padding */
     margin-left: 1rem;
     margin-right: 1rem;
-    left: 0;
-    width: calc(100% - 2rem);
-    padding: 1px 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.45); /* subtle adjustment */
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+    border-right: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px 12px 0 0;
     display: flex;
-    align-items: center;
+    align-items: center; /* keeps text vertically centered */
     justify-content: center;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.2rem;
+    color: #dddddd;
+    font-size: 0.8rem;
     z-index: 1000;
+    line-height: 1.2;
+    min-height: 24px; /* slightly smaller height but keeps balance */
 }
 
 footer p {
     font-family: 'Segoe UI';
     font-size: 0.8rem;
     margin: 0;
-    line-height: 1;
+    color: #dddddd;
 }
 
 footer a {
@@ -580,6 +583,7 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #dddddd;
 }
 
 ::-webkit-scrollbar {
