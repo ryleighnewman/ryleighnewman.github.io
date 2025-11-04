@@ -1,11 +1,6 @@
 # Ryleigh Newman's Personal Website
 
-Welcome to the repository for Ryleigh's personal website.
-
-## About This Project
-
-- **Website Purpose**: The website serves as an online résumé.
-- **Design & Development**: This website was craft coded by Ryleigh, with assistance from ChatGPT and other online resources.
+Welcome to the repository for Ryleigh's personal website. The website serves as an online résumé and biography.
 
 ## Visit
 
@@ -17,8 +12,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions or would like to get in touch, feel free to reach out through the social links provided on the site.
+If you would like to get in touch, please feel free to reach out through the social links provided on the site.
 
 ---
 
-&copy; 2024 Ryleigh Newman
+&copy; 2025 Ryleigh Newman
