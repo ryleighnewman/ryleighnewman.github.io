@@ -544,31 +544,41 @@ main {
     font-weight: 300;
 }
 
-footer {
-    font-family: 'Segoe UI';
+/* Wrapper controls full width and centering */
+.footer-wrapper {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2px 0; /* slightly smaller vertical padding */
-    margin-left: 1rem;
-    margin-right: 1rem;
+    display: flex;
+    justify-content: center;    /* centers horizontally */
+    pointer-events: none;
+    z-index: 1000;
+}
+
+/* Actual footer element */
+footer {
+    font-family: 'Segoe UI';
+    width: 100%;
+    max-width: calc(100% - 2.4rem); /* inset visually on both sides */
+    margin: 0 auto;                 /* horizontal centering */
+    padding: 2px 0;
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.45); /* subtle adjustment */
+    box-shadow: 0 -3px 14px rgba(0, 0, 0, 0.45);
     border-top: 1px solid rgba(255, 255, 255, 0.18);
     border-left: 1px solid rgba(255, 255, 255, 0.12);
     border-right: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 12px 12px 0 0;
     display: flex;
-    align-items: center; /* keeps text vertically centered */
+    align-items: center;
     justify-content: center;
     color: #dddddd;
     font-size: 0.8rem;
-    z-index: 1000;
     line-height: 1.2;
-    min-height: 24px; /* slightly smaller height but keeps balance */
+    min-height: 24px;
+    pointer-events: all;
 }
 
 footer p {
