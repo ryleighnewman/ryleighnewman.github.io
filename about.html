@@ -1,66 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="rgb(30, 80, 150)" />
-  <meta name="description" content="Ryleigh Newman is an undergraduate student majoring in Biochemistry and Data Science at FAU. Learn more about his goals, experiences, and personal story." />
-  <meta name="keywords" content="Ryleigh Newman, Ryleigh, Biochemistry, Data Science, Harriet L. Wilkes Honors College, FAU, Ryleigh, Newman, Wilkes Honors College" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="About Me - Ryleigh Newman" />
-  <meta property="og:description" content="Get to know Ryleigh Newman, his life story, interests, and more." />
-  <meta property="og:image" content="https://ryleighnewman.com/assets/images/background.png" />
-  <meta property="og:url" content="https://ryleighnewman.com/about.html" />
-  <meta property="og:type" content="website" />
-  <title>About Me - Ryleigh Newman</title>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="icon" href="https://ryleighnewman.com/assets/images/favicon.png" type="image/x-icon" />
-  <link rel="canonical" href="https://ryleighnewman.com/about.html" />
-  <link rel="icon" href="/assets/images/favicon.png" type="image/png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>About Me - Ryleigh Newman</title>
+
+    <meta name="theme-color" content="rgb(30, 80, 150)" />
+    
+    <meta name="description" content="Ryleigh Newman is an undergraduate student majoring in Biochemistry and Data Science at FAU. Learn more about his goals, experiences, and personal story." />
+    <meta name="keywords" content="Ryleigh Newman, Ryleigh, Biochemistry, Data Science, Harriet L. Wilkes Honors College, FAU, Newman, Wilkes Honors College" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Ryleigh Newman">
+
+    <link rel="canonical" href="https://ryleighnewman.com/about.html" />
+
+    <meta property="og:title" content="About Me - Ryleigh Newman" />
+    <meta property="og:description" content="Get to know Ryleigh Newman, his life story, interests, and more." />
+    <meta property="og:image" content="https://ryleighnewman.com/assets/images/background.png" />
+    <meta property="og:url" content="https://ryleighnewman.com/about.html" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
+
 <body>
   <div class="page-loader"></div>
+  <div class="header-background" aria-hidden="true"></div>
+
   <header class="glass">
-    <nav class="responsive-nav">
-      <a href="index.html" class="logo">
-        <img src="/assets/images/logo.png" alt="Ryleigh Newman Logo" class="logo-image" />
+    <nav>
+      <a href="/" class="logo">
+        <img src="/assets/images/logo.png" alt="Ryleigh Newman Logo" class="logo-image">
       </a>
-      <div class="nav-menu">
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+
+      <ul class="nav-links desktop-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
+  <input type="checkbox" id="menu-check" class="menu-check">
+
+  <label for="menu-check" class="menu-toggle" aria-label="Toggle navigation">
+    <svg class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+      <rect width="100" height="15" rx="8"></rect>
+      <rect y="30" width="100" height="15" rx="8"></rect>
+      <rect y="60" width="100" height="15" rx="8"></rect>
+    </svg>
+  </label>
+
+  <div class="menu-items-wrapper">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </div>
+
   <main id="about">
+    <nav aria-label="Breadcrumb" class="breadcrumb">
+      <a href="/">Home</a> › About
+    </nav>
+
     <section class="hero-2">
-      <img src="/assets/images/ryleigh_newman_wheelchair.png" alt="Ryleigh Newman Wheelchair" class="hero-headshot-2" />
+      <img src="/assets/images/about/ryleigh_newman_wheelchair.png"
+           alt="Ryleigh Newman seated in a wheelchair"
+           class="hero-headshot-2" />
     </section>
 
     <section class="about-section">
+
       <hr class="divider" />
       <section class="section-box">
-        <h2 class="section-title-blue">my life story</h2>
+        <h2 class="section-title-blue">My Life Story</h2>
         <p>I was diagnosed with bilateral hearing loss shortly after birth. The loss is mild/moderate in my left ear, and severe/profound in my right ear.</p>
-        <p>At seven years old, I was diagnosed with a genetically unknown neuromuscular disease that resembles Charcot-Marie-Tooth disease (CMT). This disease causes slow deterioration of the myelin sheath in my limbs, permanently damaging nerves.</p>
+        <p>At seven years old, I was diagnosed with a genetically unknown neuromuscular disease that resembles **Charcot-Marie-Tooth disease (CMT)**. This disease causes slow deterioration of the myelin sheath in my limbs, permanently damaging nerves.</p>
         <p>To deal with these two conditions, I wear hearing aids in both ears, and use mobility devices. I used a walker and leg braces for a decade, until I became wheelchair-bound winter of 2023.</p>
       </section>
 
       <hr class="divider" />
       <section class="section-box">
-        <h2 class="section-title-blue">Work experience</h2>
+        <h2 class="section-title-blue"><i class="fas fa-flask" aria-hidden="true" style="color: rgb(169, 204, 227);"></i> Work Experience</h2>
         <div class="sub-section-box">
-          <p class="bold-text">Research Intern</p>
-          <p class="italic-text-date">(November 2024 - Present)</p>
-          <p class="institution-text">The Herbert Wertheim UF Scripps Institute for Biomedical Innovation & Technology</p>
+
+          <div class="institution-logo-wrap">
+            <img
+              src="/assets/images/about/the-herbert-wertheim-uf-scripps-institute-for-biomedical-innovation-and-technology-logo.png"
+              alt="The Herbert Wertheim UF Scripps Institute for Biomedical Innovation and Technology logo"
+              class="institution-logo">
+          </div>
+          
+          <div class="content-box-grey">
+            <p class="bold-text">Research Intern</p>
+            <p class="italic-text-date">November 2024 – Present</p>
+            <p class="institution-text">
+              The Herbert Wertheim UF Scripps Institute for Biomedical Innovation & Technology
+            </p>
+          </div>
+
           <details class="activity-dropdown">
-            <summary class="underline-text">Click for details</summary>
-            <div class="activities-content">
+            <summary class="underline-text">Click for details <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></summary>
+            <div class="activities-content" style="margin-left: 10px;">
               <p>Contributing to cutting edge research in the Disney Lab.</p>
-              <p><a href="https://disney.scripps.ufl.edu" target="_blank" style="text-decoration: none; color: inherit;">disney.scripps.ufl.edu</a></p>
+              <p>
+                <a href="https://disney.scripps.ufl.edu" target="_blank" style="text-decoration:none;color:rgb(169, 204, 227);font-weight: 300;">
+                  <i class="fas fa-external-link-alt" aria-hidden="true"></i> disney.scripps.ufl.edu
+                </a>
+              </p>
             </div>
           </details>
         </div>
@@ -68,35 +124,61 @@
 
       <hr class="divider" />
       <section class="section-box">
-        <h2 class="section-title-blue">Education experience</h2>
+        <h2 class="section-title-blue"><i class="fas fa-graduation-cap" aria-hidden="true" style="color: rgb(169, 204, 227);"></i> Education Experience</h2>
+
         <div class="sub-section-box">
-          <p class="bold-text">B.S., Honors Biochemistry and Data Science</p>
-          <p class="italic-text-date">(August 2022 – Expected May 2026)</p>
-          <p class="institution-text">Harriet L. Wilkes Honors College, Florida Atlantic University</p>
+          <div class="institution-logo-wrap">
+            <img
+              src="/assets/images/about/harriet-l-wilkes-honors-college-of-florida-atlantic-university-logo.png"
+              alt="Harriet L. Wilkes Honors College of Florida Atlantic University logo"
+              class="institution-logo">
+          </div>
+
+          <div class="content-box-grey">
+            <p class="bold-text">B.S., Honors Biochemistry and Data Science</p>
+            <p class="italic-text-date">August 2022 – Expected May 2026</p>
+            <p class="institution-text">
+              Harriet L. Wilkes Honors College, Florida Atlantic University
+            </p>
+          </div>
+
           <details class="activity-dropdown">
-            <summary class="underline-text">Click to view activities</summary>
-            <div class="activities-content">
-              <p>Delegate, National Model United Nations (NMUN)</p>
-              <p>Member, Honors College Judicial Board Council</p>
-              <p>Volunteer, Student Accessibility Services (SAS)</p>
-              <p>Member, Leon Charney Diplomacy Program</p>
-              <p>Officer, Disabled Student Union (DSU)</p>
-              <p>Officer, Math Club</p>
+            <summary class="underline-text">Click to view activities <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></summary>
+            <div class="activities-content" style="margin-left: 10px;">
+              <p><i class="fas fa-scroll" style="color: rgb(169, 204, 227);"></i> Delegate, National Model United Nations (NMUN)</p>
+              <p><i class="fas fa-balance-scale" style="color: rgb(169, 204, 227);"></i> Member, Honors College Judicial Board Council</p>
+              <p><i class="fas fa-hands-helping" style="color: rgb(169, 204, 227);"></i> Volunteer, Student Accessibility Services (SAS)</p>
+              <p><i class="fas fa-handshake" style="color: rgb(169, 204, 227);"></i> Member, Leon Charney Diplomacy Program</p>
+              <p><i class="fas fa-users" style="color: rgb(169, 204, 227);"></i> Officer, Disabled Student Union (DSU)</p>
+              <p><i class="fas fa-calculator" style="color: rgb(169, 204, 227);"></i> Officer, Math Club</p>
             </div>
           </details>
         </div>
 
         <br />
+
         <div class="sub-section-box">
-          <p class="bold-text">High School Diploma</p>
-          <p class="italic-text-date">(August 2018 – May 2022)</p>
-          <p class="institution-text">Bartram Trail High School</p>
+          <div class="institution-logo-wrap">
+            <img
+              src="/assets/images/about/bartram-trail-hs-logo.png"
+              alt="bartram trail high school logo"
+              class="institution-logo">
+          </div>
+
+          <div class="content-box-grey">
+            <p class="bold-text">High School Diploma</p>
+            <p class="italic-text-date">August 2018 – May 2022</p>
+            <p class="institution-text">
+              Bartram Trail High School
+            </p>
+          </div>
+
           <details class="activity-dropdown">
-            <summary class="underline-text">Click to view activities</summary>
-            <div class="activities-content">
-              <p>President, Quill and Scroll Honor Society</p>
-              <p>President, Technology Club</p>
-              <p>AP Scholar</p>
+            <summary class="underline-text">Click to view activities <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></summary>
+            <div class="activities-content" style="margin-left: 10px;">
+              <p><i class="fas fa-feather-alt" style="color: rgb(169, 204, 227);"></i> President, Quill and Scroll Honor Society</p>
+              <p><i class="fas fa-laptop-code" style="color: rgb(169, 204, 227);"></i> President, Technology Club</p>
+              <p><i class="fas fa-star" style="color: rgb(169, 204, 227);"></i> AP Scholar</p>
             </div>
           </details>
         </div>
@@ -104,30 +186,52 @@
 
       <hr class="divider" />
       <section class="section-box">
-        <h2 class="section-title-blue">volunteer experience</h2>
+        <h2 class="section-title-blue"><i class="fas fa-hand-holding-heart" aria-hidden="true" style="color: rgb(169, 204, 227);"></i> Volunteer Experience</h2>
+
         <div class="sub-section-box">
-          <p class="bold-text">State Ambassador of Florida</p>
-          <p class="italic-text-date">(2017 – 2019)</p>
-          <p class="institution-text">Muscular Dystrophy Association (Jacksonville, Florida)</p>
+          <div class="institution-logo-wrap">
+            <img
+              src="/assets/images/about/muscular-dystrophy-association-logo.png"
+              alt="Muscular Dystrophy Association logo"
+              class="institution-logo">
+          </div>
+          
+          <div class="content-box-grey">
+            <p class="bold-text">State Ambassador of Florida</p>
+            <p class="italic-text-date">2017 – 2019</p>
+            <p class="institution-text">
+              Muscular Dystrophy Association (Jacksonville, Florida)
+            </p>
+          </div>
+
           <details class="activity-dropdown">
-            <summary class="underline-text">Click for details</summary>
-            <div class="activities-content">
+            <summary class="underline-text">Click for details <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></summary>
+            <div class="activities-content" style="margin-left: 10px;">
               <p>I volunteered many hours into raising money for neuromuscular disease research and patient care.</p>
               <p>I did this by giving speeches at events and being involved with my local community to share my story and spread awareness.</p>
-              <p>I'm so grateful to say that I raised over $120,000 for the MDA!</p>
+              <p class="bold-text" style="font-size: 1em;">I'm so grateful to say that I raised over $120,000 for the MDA!</p>
             </div>
           </details>
         </div>
 
+        <br />
+
         <div class="sub-section-box">
-          <p class="bold-text">Fundraising Volunteer</p>
-          <p class="italic-text-date">(2013 – 2022)</p>
-          <p class="institution-text">Muscular Dystrophy Association (United States)</p>
+          <div class="institution-logo-wrap"></div>
+          
+          <div class="content-box-grey">
+            <p class="bold-text">Fundraising Volunteer</p>
+            <p class="italic-text-date">2013 – 2022</p>
+            <p class="institution-text">
+              Muscular Dystrophy Association (United States)
+            </p>
+          </div>
+
           <details class="activity-dropdown">
-            <summary class="underline-text">Click for details</summary>
-            <div class="activities-content">
+            <summary class="underline-text">Click for details <i class="fas fa-chevron-down" style="font-size: 0.8em; margin-left: 5px;"></i></summary>
+            <div class="activities-content" style="margin-left: 10px;">
               <p>Supported and ran MDA Gala, Muscle Walk, Boot Drive, and more private/public events, as well as my own fundraising teams.</p>
-              <p>Raised roughly $300,000 over seven years to support my disabled peers.</p>
+              <p class="bold-text" style="font-size: 1em;">Raised roughly $300,000 over seven years to support my disabled peers.</p>
               <p>Unfortunately, the pandemic forced these events to pause. I hope to be involved again soon.</p>
             </div>
           </details>
@@ -136,35 +240,60 @@
 
       <hr class="divider" />
       <section class="section-box">
-        <h2 class="section-title-blue">some personal fun facts</h2>
-        <div class="sub-section-box">
-          <p>I'm a blackbelt in Tae Kwon Do.</p>
-          <p>I was born on July 2, 2004, so I am twenty years old.</p>
-          <p>I have lived in thirteen different houses during my lifetime.</p>
-          <p>I love researching new technology and making my own prototypes/solutions.</p>
-          <p>I have been wearing leg braces since I was eight years old and am now in a wheelchair.</p>
-          <p>My family has three Australian Shepherd dogs, five goats, five horses, four cats, and a bird!</p>
-          <p>I saved my mom’s life when I was four years old by spotting skin cancer patterns on her back, which helped ignite my love towards helping others.</p>
-          <p>During the fall of 2023, I took care of my grandmother for six months until she passed away. This exposed me to clinical environments including hospital, rehabilitation, and emergency settings.</p>
+        <h2 class="section-title-blue">Some Personal Fun Facts</h2>
+        <div class="sub-section-box list" style="padding-left: 20px;">
+          <ul style="list-style-type: none; margin-left: 0; padding-left: 0;">
+            <li style="margin-bottom: 10px;"><i class="fas fa-fist-raised" style="color: rgb(169, 204, 227);"></i> I'm a blackbelt in Tae Kwon Do.</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-birthday-cake" style="color: rgb(169, 204, 227);"></i> I was born on July 2, 2004, so I am 21 years old.</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-home" style="color: rgb(169, 204, 227);"></i> I have lived in thirteen different houses during my lifetime.</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-bolt" style="color: rgb(169, 204, 227);"></i> I love researching new technology and making my own prototypes/solutions.</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-chair" style="color: rgb(169, 204, 227);"></i> I have been wearing leg braces since I was eight years old and am now in a wheelchair.</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-paw" style="color: rgb(169, 204, 227);"></i> My family has three Australian Shepherd dogs, five goats, five horses, four cats, and a bird!</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-heart" style="color: rgb(169, 204, 227);"></i> I saved my mom’s life when I was four years old by spotting skin cancer patterns on her back, which helped ignite my love towards helping others.</li>
+            <li style="margin-bottom: 10px;"><i class="fas fa-hospital-alt" style="color: rgb(169, 204, 227);"></i> During the fall of 2023, I took care of my grandmother for six months until she passed away. This exposed me to clinical environments including hospital, rehabilitation, and emergency settings.</li>
+          </ul>
         </div>
       </section>
+
       <hr class="divider" />
     </section>
   </main>
 
-  <footer>
-    <a href="https://github.com/ryleighnewman/ryleighnewman.github.io" target="_blank" style="text-decoration: none; color: inherit;">
-      <p>&copy; 2025 Ryleigh Newman</p>
-    </a>
-  </footer>
+  <div class="footer-wrapper">
+    <footer>
+      <a href="https://github.com/ryleighnewman/ryleighnewman.github.io"
+         target="_blank"
+         class="footer-link">
+        <p>&copy; 2025 Ryleigh Newman</p>
+      </a>
+    </footer>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const loader = document.querySelector('.page-loader');
+      if (loader) {
+        loader.classList.add('fade-out');
+        setTimeout(() => loader.remove(), 800);
+      }
+    });
+
+    document.addEventListener('click', function(event) {
+      const menuCheck = document.getElementById('menu-check');
+      const menuToggle = document.querySelector('.menu-toggle');
+      const menuItemsWrapper = document.querySelector('.menu-items-wrapper');
+      const target = event.target;
+
+      if (!menuCheck) return;
+
+      if (target.id === 'menu-check' || menuToggle.contains(target)) return;
+
+      if (menuCheck.checked) {
+        if (target.matches('.nav-links a') || !menuItemsWrapper.contains(target)) {
+          menuCheck.checked = false;
+        }
+      }
+    });
+  </script>
 </body>
-<script>
-  window.addEventListener('load', () => {
-    const loader = document.querySelector('.page-loader');
-    if (loader) {
-      loader.classList.add('fade-out');
-      setTimeout(() => loader.remove(), 800);
-    }
-  });
-</script>
 </html>

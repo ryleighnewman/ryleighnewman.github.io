@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog – Ryleigh Newman</title>
+
+    <meta name="theme-color" content="rgb(30, 80, 150)">
+
+    <meta name="description" content="Personal blog posts by Ryleigh Newman exploring life experiences, accessibility, adaptive technology, innovation, and problem-solving.">
+    <meta name="keywords" content="Ryleigh Newman, blog, accessibility, adaptive technology, innovation, personal writing, problem solving">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ryleigh Newman">
+
+    <link rel="canonical" href="https://ryleighnewman.com/blog.html">
+
+    <meta property="og:title" content="Blog – Ryleigh Newman">
+    <meta property="og:description" content="Personal reflections, innovative ideas, and real-world observations on accessibility, technology, and problem-solving.">
+    <meta property="og:image" content="https://ryleighnewman.com/assets/images/background.png">
+    <meta property="og:url" content="https://ryleighnewman.com/blog.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="/assets/images/favicon.ico">
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-loader"></div>
+
+    <div class="header-background" aria-hidden="true"></div>
+    
+    <header class="glass">
+        <nav>
+            <a href="/" class="logo">
+                <img src="/assets/images/logo.png" alt="Ryleigh Newman Logo" class="logo-image">
+            </a>
+
+            <ul class="nav-links desktop-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <input type="checkbox" id="menu-check" class="menu-check">
+            
+    <label for="menu-check" class="menu-toggle" aria-label="Toggle navigation">
+        <svg class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+          <rect width="100" height="15" rx="8"></rect>
+          <rect y="30" width="100" height="15" rx="8"></rect>
+          <rect y="60" width="100" height="15" rx="8"></rect>
+        </svg>
+    </label>
+    
+    <div class="menu-items-wrapper">
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <main id="blog">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+            <a href="/">Home</a> › Blog
+        </nav>
+
+        <section class="about-section">
+            <h1 class="section-title-blue blog-main-heading">Ryleigh's Blog</h1>
+            <p class="blog-sub-heading">
+                Writing about life experiences, ideas, and practical solutions that come from noticing problems and thinking differently.
+            </p>
+
+            <hr class="divider" />
+            
+            <section class="section-box article-section-wrapper">
+                <h2 class="section-title-blue article-list-heading">Featured Post</h2>
+                    
+                <ul class="article-list">
+                    <li>
+                        <a href="/blog/accessible-air-travel-solutions.html" class="article-card section-box">
+                            
+                            <div class="article-image-container-blog">
+                                <img src="/assets/images/blog/accessible-air-travel-solutions/ryleigh-newman-wheelchair-at-us-capitol-dc.png" alt="A power wheelchair joystick snapped and taped back together after air travel damage.">
+                            </div>
+                            
+                            <div class="article-content">
+                                <div>
+                                    <h3 class="bold-text">Broken on Board: Inaccessible Air Travel in Practice</h3>
+                                    <p>
+                                        Flying to Washington, D.C. ended with my wheelchair joystick snapped in half and a terminal repair job.
+                                        This post breaks down why damage happens, what it costs airlines, and the simple fixes that could prevent it.
+                                    </p>
+                                </div>
+                                <div class="article-meta">
+                                    <i class="far fa-calendar-alt"></i> November 2025 | 
+                                    <i class="fas fa-tag"></i> Personal Experience, Accessibility, Innovation
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+            <hr class="divider" />
+            
+            <section class="section-box article-section-wrapper">
+                <h2 class="section-title-blue article-list-heading">All Articles</h2>
+
+                <ul class="article-list"></ul>
+                <p class="archive-note">More posts coming soon.</p>
+            </section>
+            
+            <hr class="divider" />
+
+            <div class="footer-wrapper">
+                <footer>
+                    <a href="https://github.com/ryleighnewman/ryleighnewman.github.io" target="_blank" class="footer-link">
+                        <p>&copy; 2025 Ryleigh Newman</p>
+                    </a>
+                </footer>
+            </div>
+        </section>
+    </main>
+
+    <script>
+      window.addEventListener('load', () => {
+        const loader = document.querySelector('.page-loader');
+        if (loader) {
+          loader.classList.add('fade-out');
+          setTimeout(() => loader.remove(), 800);
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+          const menuCheck = document.getElementById('menu-check');
+          
+          if (menuCheck) {
+              const menuToggle = document.querySelector('.menu-toggle');
+              const menuItemsWrapper = document.querySelector('.menu-items-wrapper');
+              const target = event.target;
+              
+              if (target.id === 'menu-check' || menuToggle.contains(target)) {
+                  return; 
+              }
+
+              if (menuCheck.checked) {
+                  if (target.matches('.nav-links a')) {
+                      menuCheck.checked = false;
+                      return; 
+                  }
+
+                  if (!menuItemsWrapper.contains(target)) {
+                      menuCheck.checked = false;
+                  }
+              }
+          }
+      });
+    </script>
+</body>
+</html>
