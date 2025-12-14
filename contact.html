@@ -1,79 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact – Ryleigh Newman</title>
+
     <meta name="theme-color" content="rgb(30, 80, 150)">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="msapplication-navbutton-color" content="rgb(30, 80, 150)">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="rgb(30, 80, 150)">
-    <meta name="description" content="Get in touch with Ryleigh Newman via email or connect on social media platforms like Instagram, Twitter, LinkedIn, and more.">
-    <meta name="keywords" content="Ryleigh Newman, contact, email, social media, Instagram, GitHub, Twitter, LinkedIn, Facebook, TikTok, YouTube">
+
+    <meta name="description" content="Get in touch with Ryleigh Newman via email or connect through social platforms including LinkedIn, GitHub, and more.">
+    <meta name="keywords" content="Ryleigh Newman, contact, email, social media, LinkedIn, GitHub, Instagram">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Contact - Ryleigh Newman">
-    <meta property="og:description" content="Reach out to Ryleigh Newman via email or connect on various social media platforms.">
+    <meta name="author" content="Ryleigh Newman">
+
+    <link rel="canonical" href="https://ryleighnewman.com/contact.html">
+
+    <meta property="og:title" content="Contact – Ryleigh Newman">
+    <meta property="og:description" content="Reach out to Ryleigh Newman via email or connect on social media platforms.">
     <meta property="og:image" content="https://ryleighnewman.com/assets/images/background.png">
     <meta property="og:url" content="https://ryleighnewman.com/contact.html">
     <meta property="og:type" content="website">
-    <title>Contact - Ryleigh Newman</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <link rel="icon" href="https://ryleighnewman.com/assets/images/favicon.png" type="image/x-icon">
-    <link rel="canonical" href="https://ryleighnewman.com/contact.html">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <link rel="icon" href="/assets/images/favicon.ico">
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        .contact-section-adjusted {
+            padding-top: 65px;
+        }
+        .contact-section .social-buttons {
+            margin-top: 20px;
+        }
+        .social-buttons .btn {
+            line-height: 1.2;
+        }
+    </style>
 </head>
+
 <body>
     <div class="page-loader"></div>
+
+    <div class="header-background" aria-hidden="true"></div>
+    
     <header class="glass">
-        <nav class="responsive-nav">
-            <a href="index.html" class="logo">
+        <nav>
+            <a href="/" class="logo">
                 <img src="/assets/images/logo.png" alt="Ryleigh Newman Logo" class="logo-image">
             </a>
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
+
+            <ul class="nav-links desktop-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
-    <main id="contact" class="contact-section" style="padding-top: 65px;">
-        <section>
-            <section class="section-box">
-            <h2 class="section-title-blue">Contact Me</h2>
+
+    <input type="checkbox" id="menu-check" class="menu-check">
+            
+    <label for="menu-check" class="menu-toggle" aria-label="Toggle navigation">
+        <svg class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+          <rect width="100" height="15" rx="8"></rect>
+          <rect y="30" width="100" height="15" rx="8"></rect>
+          <rect y="60" width="100" height="15" rx="8"></rect>
+        </svg>
+    </label>
+    
+    <div class="menu-items-wrapper">
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main id="contact" class="contact-section contact-section-adjusted">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <a href="/">Home</a> › Contact
+        </nav>
+        
+        <section class="section-box">
+            <h1 class="section-title-blue">Contact Me</h1>
             <p>Feel free to reach out via email, or add me on social media:</p>
-            <div class="social-buttons" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 20px;">
+            
+            <div class="social-buttons">
                 <a href="mailto:ryleighn@gmail.com" class="btn email-btn"><i class="fas fa-envelope"></i><br>ryleighn@gmail.com</a>
                 <a href="https://www.instagram.com/ryleighnewman" target="_blank" class="btn instagram-btn"><i class="fab fa-instagram"></i><br>@ryleighnewman</a>
                 <a href="https://www.linkedin.com/in/ryleighnewman" target="_blank" class="btn linkedin-btn"><i class="fab fa-linkedin"></i></a>
                 <a href="https://www.facebook.com/ryleighn" target="_blank" class="btn facebook-btn"><i class="fab fa-facebook"></i></a>
                 <a href="https://github.com/ryleighnewman" target="_blank" class="btn github-btn"><i class="fab fa-github"></i></a>
             </div>
+            
             <div class="sub-section-box" style="margin-top: 40px;">
                 <h2 class="bold-text">do you like funny cow jokes?</h2>
-                <a href="https://funnycowjokes.com" target="_blank" style="text-decoration: none; color: inherit;">
-                    <p>funnycowjokes.com</p>
-                </a>
+                
+                <div style="width: fit-content; margin: 0 auto;"> 
+                    <a href="https://funnycowjokes.com" 
+                       target="_blank" 
+                       style="text-decoration:none; 
+                              color:rgb(169, 204, 227); /* Custom light blue */
+                              font-weight: 300; 
+                              display: block;
+                              margin: 0; padding: 0;">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> funnycowjokes.com
+                    </a>
+                </div>
             </div>
-            </section>
+            
         </section>
         <hr class="divider">
     </main>
-    <footer>
-        <a href="https://github.com/ryleighnewman/ryleighnewman.github.io" target="_blank" style="text-decoration: none; color: inherit;">
-            <p>&copy; 2025 Ryleigh Newman</p>
-        </a>
-    </footer>
+
+    <div class="footer-wrapper">
+        <footer>
+            <a href="https://github.com/ryleighnewman/ryleighnewman.github.io" 
+               target="_blank" 
+               class="footer-link"> <p>&copy; 2025 Ryleigh Newman</p>
+            </a>
+        </footer>
+    </div>
     <script>
-      window.addEventListener('load', () => {
-        const loader = document.querySelector('.page-loader');
-        if (loader) {
-          loader.classList.add('fade-out');
-          setTimeout(() => loader.remove(), 800);
-        }
-      });
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.page-loader');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => loader.remove(), 800);
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const menuCheck = document.getElementById('menu-check');
+            
+            if (menuCheck) {
+                
+                const menuToggle = document.querySelector('.menu-toggle');
+                const menuItemsWrapper = document.querySelector('.menu-items-wrapper');
+                const target = event.target;
+                
+                if (target.id === 'menu-check' || menuToggle.contains(target)) {
+                    return; 
+                }
+
+                if (menuCheck.checked) {
+                    
+                    if (target.matches('.nav-links a')) {
+                        menuCheck.checked = false;
+                        return; 
+                    }
+
+                    if (!menuItemsWrapper.contains(target)) {
+                        menuCheck.checked = false;
+                    }
+                }
+            }
+        });
     </script>
 </body>
 </html>

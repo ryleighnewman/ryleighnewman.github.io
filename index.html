@@ -1,78 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="rgb(30, 80, 150)">
-    <meta name="google-site-verification" content="EkJhLlzjEclVDDVtJ2g7Ee7bONCVJhS4Fuvvn-Lyy2k" />
-    <meta name="description" content="Ryleigh Newman is an undergraduate student majoring in Biochemistry and Data Science at FAU. Learn more about his goals, experiences, and personal story.">
-    <meta name="keywords" content="Ryleigh Newman, Biochemistry, Data Science, Harriet L. Wilkes Honors College, FAU, Ryleigh, Newman, Wilkes Honors College">
-    <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Ryleigh Newman">
-    <meta property="og:description" content="Learn about Ryleigh Newman's life and academic journey.">
-    <meta property="og:image" content="https://ryleighnewman.com/assets/images/background.png">
-    <meta property="og:url" content="https://ryleighnewman.com/index.html">
-    <meta property="og:type" content="website">
-    <title>Ryleigh Newman</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <style>
-.page-loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #121212;
-  z-index: 9999;
-  opacity: 1;
-  visibility: visible;
-  transition: opacity 0.8s ease, visibility 0.8s ease;
-  pointer-events: none;
-}
 
-.page-loader.fade-out {
-  opacity: 0;
-  visibility: hidden;
-}
-    </style>
-    <link rel="icon" href="https://ryleighnewman.com/assets/images/favicon.png" type="image/x-icon">
+    <title>Ryleigh Newman</title>
+
+    <meta name="theme-color" content="rgb(30, 80, 150)">
+
+    <meta name="description" content="Ryleigh Newman is an undergraduate student in Honors Biochemistry and Data Science at the Harriet L. Wilkes Honors College of Florida Atlantic University, with interests in research, accessibility, and inclusive technology.">
+    <meta name="keywords" content="Ryleigh Newman, Biochemistry, Data Science, Florida Atlantic University, FAU, Harriet L. Wilkes Honors College, undergraduate research, accessibility, adaptive technology">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Ryleigh Newman">
+
     <link rel="canonical" href="https://ryleighnewman.com/">
-    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
+
+    <meta name="google-site-verification" content="EkJhLlzjEclVDDVtJ2g7Ee7bONCVJhS4Fuvvn-Lyy2k">
+
+    <meta property="og:title" content="Ryleigh Newman">
+    <meta property="og:description" content="Undergraduate student in Honors Biochemistry and Data Science at FAU. Learn about Ryleigh Newman’s academic path, goals, and work.">
+    <meta property="og:image" content="https://ryleighnewman.com/assets/images/background.png">
+    <meta property="og:url" content="https://ryleighnewman.com/">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="/assets/images/favicon.ico">
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
-    <link rel="appl-touch-icon" href="/assets/images/apple-touch-icon.png"> <!-- for ios devices -->
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="page-loader"></div>
-  <div class="header-background" aria-hidden="true"></div>
-        <header class="glass">
-            <nav class="responsive-nav">
-                <a href="index.html" class="logo">
-                    <img src="/assets/images/logo.png" alt="Ryleigh Newman Logo" class="logo-image">
-                </a>
-                <div class="nav-menu">
-                    <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+    <div class="page-loader"></div>
+
+    <div class="header-background" aria-hidden="true"></div>
+    
+    <header class="glass">
+        <nav>
+            <a href="/" class="logo">
+                <img src="/assets/images/logo.png" alt="Ryleigh Newman Logo" class="logo-image">
+            </a>
+
+            <ul class="nav-links desktop-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <input type="checkbox" id="menu-check" class="menu-check">
+            
+    <label for="menu-check" class="menu-toggle" aria-label="Toggle navigation">
+        <svg class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+          <rect width="100" height="15" rx="8"></rect>
+          <rect y="30" width="100" height="15" rx="8"></rect>
+          <rect y="60" width="100" height="15" rx="8"></rect>
+        </svg>
+    </label>
+    
+    <div class="menu-items-wrapper">
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
     <main id="home">
         <section class="hero">
-            <img src="/assets/images/ryleigh_newman_headshot.png" alt="Ryleigh Newman Headshot" class="hero-headshot">
-            <p class="hero-name name-style">Ryleigh Newman</p>
+            <img 
+                src="/assets/images/index/ryleigh_newman_headshot.png" 
+                alt="Ryleigh Newman Headshot" 
+                class="hero-headshot"
+            >
+            <h1 class="hero-name name-style">Ryleigh Newman</h1>
             <div class="academic-info hero-academic-info">
                 <p class="subtext">
                     <span class="line">Undergraduate Student</span><br>
-                                        <strong class="line smaller-text">Harriet L. Wilkes Honors College, FAU</strong><br>
+                    <strong class="line smaller-text">Harriet L. Wilkes Honors College, FAU</strong><br>
                     <span class="line">B.S., Honors Biochemistry & Data Science</span>
                 </p>
             </div>
         </section>
+
         <section class="about-section">
             <hr class="divider">
-            <section class="section-box">
+            <div class="section-box">
                 <h2 class="section-title-blue">ABOUT ME AND MY GOALS</h2>
                 <p>I’m a senior at the Harriet L. Wilkes Honors College, majoring in Honors Biochemistry and Data Science & Analytics.</p>
                 <p>My life’s mission is to transform challenges into opportunities, drawing from my personal experiences with disabilities.</p>
@@ -81,23 +98,59 @@
                 <p>These experiences challenge me, but fuel my passion for helping others, experimenting with adaptive technology, and working to improve the lives of those with disabilities.</p>
                 <p>I aspire to use my knowledge and creativity to push the boundaries of technology, making a smarter and more inclusive world.</p>
                 <p>Despite the roadblocks, I am turning my hardships around to inspire others and innovate. <strong class="motto">My personal motto is to “Be Awesome.”</strong></p>
-            </section>
+            </div>
             <hr class="divider">
         </section>
+        
     </main>
-    <footer>
-        <a href="https://github.com/ryleighnewman/ryleighnewman.github.io" target="_blank" style="text-decoration: none; color: inherit;">
-            <p>&copy; 2025 Ryleigh Newman</p>
-        </a>
-    </footer>
-<script>
-  window.addEventListener('load', () => {
-    const loader = document.querySelector('.page-loader');
-    if (loader) {
-      loader.classList.add('fade-out');
-      setTimeout(() => loader.remove(), 800);
-    }
-  });
-</script>
+
+    <div class="footer-wrapper">
+        <footer>
+            <a 
+                href="https://github.com/ryleighnewman/ryleighnewman.github.io" 
+                target="_blank" 
+                style="text-decoration: none; color: inherit;"
+            >
+                <p>&copy; 2025 Ryleigh Newman</p>
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const loader = document.querySelector('.page-loader');
+            if (loader) {
+                loader.classList.add('fade-out');
+                setTimeout(() => loader.remove(), 800);
+            }
+        });
+
+        document.addEventListener('click', function(event) {
+            const menuCheck = document.getElementById('menu-check');
+            
+            if (menuCheck) {
+                
+                const menuToggle = document.querySelector('.menu-toggle');
+                const menuItemsWrapper = document.querySelector('.menu-items-wrapper');
+                const target = event.target;
+                
+                if (target.id === 'menu-check' || menuToggle.contains(target)) {
+                    return; 
+                }
+
+                if (menuCheck.checked) {
+                    
+                    if (target.matches('.nav-links a')) {
+                        menuCheck.checked = false;
+                        return; 
+                    }
+
+                    if (!menuItemsWrapper.contains(target)) {
+                        menuCheck.checked = false;
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
