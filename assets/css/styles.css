@@ -150,14 +150,14 @@ header {
     flex-shrink: 0;
     position: fixed;
     top: 0;
-    left: 50%; 
-    transform: translateX(-51%); 
-    width: calc(100% - 80px); 
-    max-width: 1000px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 80px);
+    max-width: 1000px;
     z-index: 1000;
     transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden; 
+    overflow: hidden;
 }
 header.glass {
   border: none !important;
@@ -277,6 +277,7 @@ nav {
     transform: translateX(-50%);
     width: calc(100% - 80px);
     max-width: 1000px;
+    margin: 0 auto;
     height: auto;
     max-height: 0;
     opacity: 0;
@@ -382,8 +383,8 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; /* Centers children horizontally */
-    text-align: center;    /* Centers text lines */
+    align-items: center;
+    text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 80px 20px 40px 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -402,8 +403,6 @@ nav {
         url('/assets/images/about/about-background.png') no-repeat center center;
     background-size: cover;
 }
-
-/* Removed translateX and translateY which cause off-center appearance */
 .hero-headshot, .hero-headshot-2 {
     width: 100%;
     max-width: clamp(300px, 30vw, 500px);
@@ -412,8 +411,8 @@ nav {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     object-fit: cover;
     display: block;
-    margin: 0 auto 20px auto; /* Centers the image itself */
-    transform: none; /* Removed translation to fix centering */
+    margin: 0 auto 20px auto;
+    transform: none;
 }
 .hero-name {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
