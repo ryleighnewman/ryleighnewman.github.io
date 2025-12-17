@@ -155,9 +155,53 @@ header {
     width: calc(100% - 80px);
     max-width: 1000px;
     z-index: 1000;
-    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, transform 0s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+}
+.menu-items-wrapper {
+    position: fixed;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 80px);
+    max-width: 1000px;
+    height: auto;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    border-left: 1px solid rgba(255, 255, 255, 0.18);
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+    border-top: none;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(20, 26, 32, 0.65),
+            rgba(20, 26, 32, 0.72)
+        ),
+        radial-gradient(
+            120% 100% at 50% -40%,
+            rgba(255, 255, 255, 0.10) 0%,
+            rgba(255, 255, 255, 0.0) 60%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(100, 150, 200, 0.14),
+            rgba(100, 150, 200, 0.0)
+        );
+    backdrop-filter: blur(calc(var(--lg-blur) * 0.9)) saturate(1.1) brightness(1);
+    -webkit-backdrop-filter: blur(calc(var(--lg-blur) * 0.9)) saturate(1.1) brightness(1);
+    background-clip: padding-box;
+    background-blend-mode: screen, soft-light;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+    border-radius: 0 0 var(--lg-radius) var(--lg-radius);
+    z-index: 995;
+    transition:
+        max-height 0.3s ease-out,
+        opacity 0.3s ease-out,
+        visibility 0s 0.3s,
+        margin-left 0s;
 }
 header.glass {
   border: none !important;
@@ -269,57 +313,6 @@ nav {
     width: 30px;
     height: 30px;
     fill: #ffffff; 
-}
-.menu-items-wrapper {
-    position: fixed;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 80px);
-    max-width: 1000px;
-    margin: 0 auto;
-    height: auto;
-    max-height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-
-    border-left: 1px solid rgba(255, 255, 255, 0.18);
-    border-right: 1px solid rgba(255, 255, 255, 0.18);
-    border-top: none;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(20, 26, 32, 0.65),
-            rgba(20, 26, 32, 0.72)
-        ),
-        radial-gradient(
-            120% 100% at 50% -40%,
-            rgba(255, 255, 255, 0.10) 0%,
-            rgba(255, 255, 255, 0.0) 60%
-        ),
-        linear-gradient(
-            90deg,
-            rgba(100, 150, 200, 0.14),
-            rgba(100, 150, 200, 0.0)
-        );
-
-    backdrop-filter: blur(calc(var(--lg-blur) * 0.9)) saturate(1.1) brightness(1);
-    -webkit-backdrop-filter: blur(calc(var(--lg-blur) * 0.9)) saturate(1.1) brightness(1);
-
-    background-clip: padding-box;
-    background-blend-mode: screen, soft-light;
-
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-    border-radius: 0 0 var(--lg-radius) var(--lg-radius);
-
-    z-index: 995;
-
-    transition:
-        max-height 0.3s ease-out,
-        opacity 0.3s ease-out,
-        visibility 0s 0.3s;
 }
 
 .menu-check:checked ~ .menu-toggle + .menu-items-wrapper {
