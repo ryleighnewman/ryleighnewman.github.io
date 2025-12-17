@@ -160,7 +160,21 @@
                     }
                 }
             }
-        });
+        }); function centerHeader() {
+            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+            const finalWidth = scrollbarWidth || 15;
+            const shift = finalWidth / 2;
+            
+            const header = document.querySelector('header');
+            const menu = document.querySelector('.menu-items-wrapper');
+            
+            if (header) header.style.left = `calc(50% - ${shift}px)`;
+            if (menu) menu.style.left = `calc(50% - ${shift}px)`;
+        }
+
+        centerHeader();
+        window.addEventListener('load', centerHeader);
+        window.addEventListener('resize', centerHeader);
     </script>
 </body>
 </html>
