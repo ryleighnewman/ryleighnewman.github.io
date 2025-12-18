@@ -164,9 +164,28 @@
                   }
               }
           }
-      }); function centerHeader() {
-            const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-            const finalWidth = scrollbarWidth || 15;
+      });     
+      
+      function centerHeader() {
+            const outer = document.createElement('div');
+            outer.style.visibility = 'hidden';
+            outer.style.position = 'absolute';
+            outer.style.width = '100px';
+            outer.style.overflow = 'scroll';
+            document.body.appendChild(outer);
+            
+            const widthWithScroll = outer.offsetWidth;
+            
+            const inner = document.createElement('div');
+            inner.style.width = '100%';
+            outer.appendChild(inner);
+            
+            const widthWithoutScroll = inner.offsetWidth;
+            document.body.removeChild(outer);
+            
+            const scrollbarWidth = widthWithScroll - widthWithoutScroll;
+            const hasScrollbar = document.documentElement.scrollHeight > window.innerHeight;
+            const finalWidth = scrollbarWidth > 0 ? scrollbarWidth : (hasScrollbar ? scrollbarWidth || 12 : 0);
             const shift = finalWidth / 2;
             
             const header = document.querySelector('header');
