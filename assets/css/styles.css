@@ -69,6 +69,37 @@ html {
 }
 
 /* 3. Global Layout and Utilities */
+
+/* Skip-to-content link — hidden until focused (WCAG 2.4.1) */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgb(30, 80, 150);
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 0 0 var(--lg-radius) var(--lg-radius);
+    z-index: 10001;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: top 0.15s ease;
+    white-space: nowrap;
+}
+.skip-link:focus {
+    top: 0;
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Global focus indicator (WCAG 2.4.7) */
+:focus-visible {
+    outline: 2px solid rgb(100, 150, 200);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
 .page-loader {
     position: fixed;
     top: 0;
@@ -603,9 +634,10 @@ p {
     transition: color 0.3s ease;
     color: inherit;
 }
-.activity-dropdown summary:focus {
-    outline: none;
-    box-shadow: none;
+.activity-dropdown summary:focus-visible {
+    outline: 2px solid rgb(100, 150, 200);
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 .activity-dropdown summary:hover {
     color: #cccccc;
@@ -967,7 +999,20 @@ footer p {
         height: 50px; 
     }
     .desktop-nav a {
-        font-size: 0.95rem; 
-        padding: 0; 
+        font-size: 0.95rem;
+        padding: 0;
+    }
+}
+
+/* 11. Reduced Motion (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .page-loader {
+        display: none;
     }
 }
