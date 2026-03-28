@@ -2,6 +2,14 @@
 <html lang="en">
     
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4ZMNXYDWEZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-4ZMNXYDWEZ');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -31,6 +39,7 @@
     <meta name="twitter:image" content="https://ryleighnewman.com/assets/images/blog/accessible-air-travel-solutions/ryleigh-newman-wheelchair-at-us-capitol-dc.png">
 
     <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <link rel="stylesheet" href="/assets/css/styles.css">
@@ -87,18 +96,20 @@
 </head>
 
 <body>
+    <a href="#blog-article" class="skip-link">Skip to main content</a>
+
     <div class="page-loader"></div>
     <div class="header-background" aria-hidden="true"></div>
 
     <header class="glass">
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="/" class="logo">
                 <img src="/assets/images/logo.png" alt="Ryleigh Newman Logo" class="logo-image">
             </a>
-            <ul class="nav-links desktop-nav">
+            <ul class="nav-links desktop-nav" role="list">
                 <li><a href="/">Home</a></li>
                 <li><a href="/about.html">About</a></li>
-                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/blog.html" aria-current="page">Blog</a></li>
                 <li><a href="/contact.html">Contact</a></li>
             </ul>
         </nav>
@@ -106,7 +117,7 @@
 
     <input type="checkbox" id="menu-check" class="menu-check">
     <label for="menu-check" class="menu-toggle" aria-label="Toggle navigation">
-        <svg class="menu-icon" viewBox="0 0 100 80" width="40" height="40">
+        <svg class="menu-icon" viewBox="0 0 100 80" width="40" height="40" aria-hidden="true">
             <rect width="100" height="15" rx="8"></rect>
             <rect y="30" width="100" height="15" rx="8"></rect>
             <rect y="60" width="100" height="15" rx="8"></rect>
@@ -114,15 +125,15 @@
     </label>
 
     <div class="menu-items-wrapper">
-        <ul class="nav-links">
+        <ul class="nav-links" role="list">
             <li><a href="/">Home</a></li>
             <li><a href="/about.html">About</a></li>
-            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/blog.html" aria-current="page">Blog</a></li>
             <li><a href="/contact.html">Contact</a></li>
         </ul>
     </div>
 
-    <main id="blog-article">
+    <main id="blog-article" tabindex="-1">
 
         <section
             class="hero hero-2"
@@ -303,7 +314,7 @@
 
     <div class="footer-wrapper">
         <footer>
-            <a href="https://github.com/ryleighnewman/ryleighnewman.github.io" target="_blank" class="footer-link">
+            <a href="https://github.com/ryleighnewman/ryleighnewman.github.io" target="_blank" rel="noopener noreferrer" aria-label="View site source on GitHub" class="footer-link">
                 <p>&copy; 2026 Ryleigh Newman</p>
             </a>
         </footer>
