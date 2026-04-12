@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Listen</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" href="/assets/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: rgb(18, 22, 24);
+            color: #dddddd;
+            padding: 20px;
+        }
+
+        .player-wrapper {
+            width: 100%;
+            max-width: 420px;
+            background-color: rgba(20, 30, 40, 0.6);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: var(--lg-radius);
+            padding: 40px 30px 30px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        .track-title {
+            font-family: 'Segoe UI';
+            font-weight: 300;
+            font-size: 1.4rem;
+            color: rgb(100, 150, 200);
+            margin-bottom: 8px;
+        }
+
+        .track-subtitle {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 30px;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: rgb(100, 150, 200);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+            pointer-events: none;
+        }
+
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #777;
+            margin-bottom: 24px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .control-btn:hover {
+            opacity: 0.8;
+            transform: scale(1.08);
+        }
+
+        .control-btn svg {
+            fill: #dddddd;
+        }
+
+        .play-btn svg {
+            width: 52px;
+            height: 52px;
+            fill: rgb(100, 150, 200);
+        }
+
+        .skip-btn svg {
+            width: 22px;
+            height: 22px;
+        }
+
+        .resumed-notice {
+            font-size: 0.75rem;
+            color: #555;
+            margin-top: 20px;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .resumed-notice.visible {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="player-wrapper">
+        <div class="track-title" id="trackTitle">Track Title</div>
+        <div class="track-subtitle" id="trackSubtitle"></div>
+
+        <div class="progress-bar-container" id="progressContainer">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="time-display">
+            <span id="currentTime">0:00</span>
+            <span id="duration">0:00</span>
+        </div>
+
+        <div class="controls">
+            <button class="control-btn skip-btn" id="rewindBtn" aria-label="Rewind 15 seconds">
+                <svg viewBox="0 0 24 24"><path d="M12.5 3C7.81 3 4.01 6.54 3.58 11H1l3.5 4 3.5-4H5.59c.42-3.35 3.33-6 6.91-6 3.87 0 7 3.13 7 7s-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C7.88 20.1 10.05 21 12.5 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-.5 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/></svg>
+            </button>
+
+            <button class="control-btn play-btn" id="playBtn" aria-label="Play">
+                <svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+
+            <button class="control-btn skip-btn" id="forwardBtn" aria-label="Forward 15 seconds">
+                <svg viewBox="0 0 24 24"><path d="M11.5 3c4.69 0 8.49 3.54 8.92 8H23l-3.5 4-3.5-4h2.41c-.42-3.35-3.33-6-6.91-6-3.87 0-7 3.13-7 7s3.13 7 7 7c1.93 0 3.68-.79 4.94-2.06l1.42 1.42C16.12 20.1 13.95 21 11.5 21c-4.97 0-9-4.03-9-9s4.03-9 9-9zm.5 5v5l-4.28 2.54-.72-1.21 3.5-2.08V8h1.5z"/></svg>
+            </button>
+        </div>
+
+        <div class="resumed-notice" id="resumedNotice">Resumed where you left off</div>
+    </div>
+
+    <!-- AUDIO SOURCE: Place your audio file at /assets/audio/track.mp3 -->
+    <audio id="audio" preload="metadata">
+        <source src="/assets/audio/track.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        const STORAGE_KEY = 'listen_player_state';
+        const audio = document.getElementById('audio');
+        const playBtn = document.getElementById('playBtn');
+        const playIcon = document.getElementById('playIcon');
+        const rewindBtn = document.getElementById('rewindBtn');
+        const forwardBtn = document.getElementById('forwardBtn');
+        const progressContainer = document.getElementById('progressContainer');
+        const progressBar = document.getElementById('progressBar');
+        const currentTimeEl = document.getElementById('currentTime');
+        const durationEl = document.getElementById('duration');
+        const resumedNotice = document.getElementById('resumedNotice');
+
+        const pauseIconPath = 'M6 19h4V5H6v14zm8-14v14h4V5h-4z';
+        const playIconPath = 'M8 5v14l11-7z';
+
+        function formatTime(s) {
+            if (isNaN(s) || !isFinite(s)) return '0:00';
+            const m = Math.floor(s / 60);
+            const sec = Math.floor(s % 60);
+            return m + ':' + (sec < 10 ? '0' : '') + sec;
+        }
+
+        function saveState() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                time: audio.currentTime,
+                ts: Date.now()
+            }));
+        }
+
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY);
+                if (!raw) return null;
+                return JSON.parse(raw);
+            } catch { return null; }
+        }
+
+        // Restore position
+        audio.addEventListener('loadedmetadata', () => {
+            durationEl.textContent = formatTime(audio.duration);
+            const saved = loadState();
+            if (saved && saved.time > 1 && saved.time < audio.duration - 1) {
+                audio.currentTime = saved.time;
+                resumedNotice.classList.add('visible');
+                setTimeout(() => resumedNotice.classList.remove('visible'), 3000);
+            }
+        });
+
+        // Play / Pause
+        playBtn.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        });
+
+        audio.addEventListener('play', () => {
+            playIcon.innerHTML = '<path d="' + pauseIconPath + '"/>';
+            playBtn.setAttribute('aria-label', 'Pause');
+        });
+
+        audio.addEventListener('pause', () => {
+            playIcon.innerHTML = '<path d="' + playIconPath + '"/>';
+            playBtn.setAttribute('aria-label', 'Play');
+            saveState();
+        });
+
+        // Progress
+        audio.addEventListener('timeupdate', () => {
+            if (audio.duration) {
+                const pct = (audio.currentTime / audio.duration) * 100;
+                progressBar.style.width = pct + '%';
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+            }
+        });
+
+        // Seek
+        progressContainer.addEventListener('click', (e) => {
+            const rect = progressContainer.getBoundingClientRect();
+            const pct = (e.clientX - rect.left) / rect.width;
+            audio.currentTime = pct * audio.duration;
+        });
+
+        // Skip buttons
+        rewindBtn.addEventListener('click', () => {
+            audio.currentTime = Math.max(0, audio.currentTime - 15);
+        });
+        forwardBtn.addEventListener('click', () => {
+            audio.currentTime = Math.min(audio.duration, audio.currentTime + 15);
+        });
+
+        // Save periodically and on unload
+        setInterval(saveState, 5000);
+        window.addEventListener('beforeunload', saveState);
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'hidden') saveState();
+        });
+    </script>
+</body>
+</html>
