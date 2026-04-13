@@ -188,12 +188,13 @@
     <div class="player-wrapper">
         <div class="chapter-select-wrapper">
             <select class="chapter-select" id="chapterSelect">
-                <option value="0">Chapter 1 &mdash; Introduction</option>
-                <option value="1">Chapter 2 &mdash; Background</option>
-                <option value="2">Chapter 3 &mdash; Clinical Framework</option>
-                <option value="3">Chapter 4 &mdash; Data Analysis</option>
-                <option value="4">Chapter 5 &mdash; Discussion</option>
-                <option value="5">Chapter 6 &mdash; Conclusions</option>
+                <option value="0">Preliminary</option>
+                <option value="1">Chapter 1 &mdash; Introduction</option>
+                <option value="2">Chapter 2 &mdash; Background</option>
+                <option value="3">Chapter 3 &mdash; Clinical Framework</option>
+                <option value="4">Chapter 4 &mdash; Data Analysis</option>
+                <option value="5">Chapter 5 &mdash; Discussion</option>
+                <option value="6">Chapter 6 &mdash; Conclusions</option>
             </select>
         </div>
 
@@ -234,6 +235,7 @@
         const STORAGE_KEY = 'listen_player_state';
 
         const chapters = [
+            { file: '/assets/audio/thesis/0 - Preliminary.mp3', title: 'Preliminary', label: 'Preliminary' },
             { file: '/assets/audio/thesis/1 - Introduction.mp3', title: 'Introduction', label: 'Chapter 1' },
             { file: '/assets/audio/thesis/2 - Background.mp3', title: 'Background', label: 'Chapter 2' },
             { file: '/assets/audio/thesis/3 - Clinical Framework.mp3', title: 'Clinical Framework', label: 'Chapter 3' },
