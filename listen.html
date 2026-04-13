@@ -37,6 +37,40 @@
             text-align: center;
         }
 
+        .chapter-select-wrapper {
+            margin-bottom: 24px;
+        }
+
+        .chapter-select {
+            width: 100%;
+            padding: 10px 14px;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            color: #dddddd;
+            font-family: 'Segoe UI';
+            font-weight: 300;
+            font-size: 1rem;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23888' d='M1.41 0L6 4.58 10.59 0 12 1.41l-6 6-6-6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            transition: border-color 0.2s ease;
+        }
+
+        .chapter-select:hover,
+        .chapter-select:focus {
+            border-color: rgba(100, 150, 200, 0.5);
+            outline: none;
+        }
+
+        .chapter-select option {
+            background-color: rgb(24, 30, 36);
+            color: #dddddd;
+        }
+
         .track-title {
             font-family: 'Segoe UI';
             font-weight: 300;
@@ -117,7 +151,26 @@
             height: 22px;
         }
 
-        .resumed-notice {
+        .speed-btn {
+            font-family: 'Segoe UI';
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: #888;
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 3px 8px;
+            cursor: pointer;
+            transition: color 0.2s ease, border-color 0.2s ease;
+            min-width: 42px;
+        }
+
+        .speed-btn:hover {
+            color: rgb(100, 150, 200);
+            border-color: rgba(100, 150, 200, 0.4);
+        }
+
+        .status-notice {
             font-size: 0.75rem;
             color: #555;
             margin-top: 20px;
@@ -125,7 +178,7 @@
             transition: opacity 0.5s ease;
         }
 
-        .resumed-notice.visible {
+        .status-notice.visible {
             opacity: 1;
         }
     </style>
@@ -133,8 +186,19 @@
 
 <body>
     <div class="player-wrapper">
-        <div class="track-title" id="trackTitle">Track Title</div>
-        <div class="track-subtitle" id="trackSubtitle"></div>
+        <div class="chapter-select-wrapper">
+            <select class="chapter-select" id="chapterSelect">
+                <option value="0">Chapter 1 &mdash; Introduction</option>
+                <option value="1">Chapter 2 &mdash; Background</option>
+                <option value="2">Chapter 3 &mdash; Clinical Framework</option>
+                <option value="3">Chapter 4 &mdash; Data Analysis</option>
+                <option value="4">Chapter 5 &mdash; Discussion</option>
+                <option value="5">Chapter 6 &mdash; Conclusions</option>
+            </select>
+        </div>
+
+        <div class="track-title" id="trackTitle">Introduction</div>
+        <div class="track-subtitle" id="trackSubtitle">Chapter 1</div>
 
         <div class="progress-bar-container" id="progressContainer">
             <div class="progress-bar" id="progressBar"></div>
@@ -157,18 +221,29 @@
             <button class="control-btn skip-btn" id="forwardBtn" aria-label="Forward 15 seconds">
                 <svg viewBox="0 0 24 24"><path d="M11.5 3c4.69 0 8.49 3.54 8.92 8H23l-3.5 4-3.5-4h2.41c-.42-3.35-3.33-6-6.91-6-3.87 0-7 3.13-7 7s3.13 7 7 7c1.93 0 3.68-.79 4.94-2.06l1.42 1.42C16.12 20.1 13.95 21 11.5 21c-4.97 0-9-4.03-9-9s4.03-9 9-9zm.5 5v5l-4.28 2.54-.72-1.21 3.5-2.08V8h1.5z"/></svg>
             </button>
+
+            <button class="speed-btn" id="speedBtn" aria-label="Playback speed">1x</button>
         </div>
 
-        <div class="resumed-notice" id="resumedNotice">Resumed where you left off</div>
+        <div class="status-notice" id="statusNotice"></div>
     </div>
 
-    <!-- AUDIO SOURCE: Place your audio file at /assets/audio/track.mp3 -->
-    <audio id="audio" preload="metadata">
-        <source src="/assets/audio/track.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="audio" preload="metadata"></audio>
 
     <script>
         const STORAGE_KEY = 'listen_player_state';
+
+        const chapters = [
+            { file: '/assets/audio/thesis/1 - Introduction.mp3', title: 'Introduction', label: 'Chapter 1' },
+            { file: '/assets/audio/thesis/2 - Background.mp3', title: 'Background', label: 'Chapter 2' },
+            { file: '/assets/audio/thesis/3 - Clinical Framework.mp3', title: 'Clinical Framework', label: 'Chapter 3' },
+            { file: '/assets/audio/thesis/4 - Data Analysis.mp3', title: 'Data Analysis', label: 'Chapter 4' },
+            { file: '/assets/audio/thesis/5 - Discussion.mp3', title: 'Discussion', label: 'Chapter 5' },
+            { file: '/assets/audio/thesis/6 - Conclusions.mp3', title: 'Conclusions', label: 'Chapter 6' },
+        ];
+
+        const speeds = [0.75, 1, 1.25, 1.5, 1.75, 2];
+
         const audio = document.getElementById('audio');
         const playBtn = document.getElementById('playBtn');
         const playIcon = document.getElementById('playIcon');
@@ -178,41 +253,87 @@
         const progressBar = document.getElementById('progressBar');
         const currentTimeEl = document.getElementById('currentTime');
         const durationEl = document.getElementById('duration');
-        const resumedNotice = document.getElementById('resumedNotice');
+        const statusNotice = document.getElementById('statusNotice');
+        const chapterSelect = document.getElementById('chapterSelect');
+        const trackTitle = document.getElementById('trackTitle');
+        const trackSubtitle = document.getElementById('trackSubtitle');
+        const speedBtn = document.getElementById('speedBtn');
 
         const pauseIconPath = 'M6 19h4V5H6v14zm8-14v14h4V5h-4z';
         const playIconPath = 'M8 5v14l11-7z';
 
+        let currentChapter = 0;
+        let speedIndex = 1;
+
         function formatTime(s) {
             if (isNaN(s) || !isFinite(s)) return '0:00';
-            const m = Math.floor(s / 60);
+            const h = Math.floor(s / 3600);
+            const m = Math.floor((s % 3600) / 60);
             const sec = Math.floor(s % 60);
+            if (h > 0) return h + ':' + (m < 10 ? '0' : '') + m + ':' + (sec < 10 ? '0' : '') + sec;
             return m + ':' + (sec < 10 ? '0' : '') + sec;
         }
 
-        function saveState() {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify({
-                time: audio.currentTime,
-                ts: Date.now()
-            }));
-        }
-
-        function loadState() {
+        function getState() {
             try {
-                const raw = localStorage.getItem(STORAGE_KEY);
-                if (!raw) return null;
-                return JSON.parse(raw);
-            } catch { return null; }
+                return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
+            } catch { return {}; }
         }
 
-        // Restore position
-        audio.addEventListener('loadedmetadata', () => {
-            durationEl.textContent = formatTime(audio.duration);
-            const saved = loadState();
-            if (saved && saved.time > 1 && saved.time < audio.duration - 1) {
-                audio.currentTime = saved.time;
-                resumedNotice.classList.add('visible');
-                setTimeout(() => resumedNotice.classList.remove('visible'), 3000);
+        function saveState() {
+            const state = getState();
+            state.chapter = currentChapter;
+            state.speed = speeds[speedIndex];
+            if (!state.positions) state.positions = {};
+            state.positions[currentChapter] = audio.currentTime;
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+        }
+
+        function showNotice(msg) {
+            statusNotice.textContent = msg;
+            statusNotice.classList.add('visible');
+            setTimeout(() => statusNotice.classList.remove('visible'), 3000);
+        }
+
+        function loadChapter(index, restorePosition) {
+            currentChapter = index;
+            const ch = chapters[index];
+
+            audio.src = ch.file;
+            trackTitle.textContent = ch.title;
+            trackSubtitle.textContent = ch.label;
+            chapterSelect.value = index;
+            progressBar.style.width = '0%';
+            currentTimeEl.textContent = '0:00';
+            durationEl.textContent = '0:00';
+
+            audio.addEventListener('loadedmetadata', function onMeta() {
+                audio.removeEventListener('loadedmetadata', onMeta);
+                durationEl.textContent = formatTime(audio.duration);
+
+                if (restorePosition) {
+                    const state = getState();
+                    const saved = state.positions && state.positions[index];
+                    if (saved && saved > 1 && saved < audio.duration - 1) {
+                        audio.currentTime = saved;
+                        showNotice('Resumed where you left off');
+                    }
+                }
+            });
+
+            audio.load();
+        }
+
+        // Chapter select
+        chapterSelect.addEventListener('change', () => {
+            saveState();
+            const wasPlaying = !audio.paused;
+            loadChapter(parseInt(chapterSelect.value), true);
+            if (wasPlaying) {
+                audio.addEventListener('canplay', function onCan() {
+                    audio.removeEventListener('canplay', onCan);
+                    audio.play();
+                });
             }
         });
 
@@ -236,11 +357,23 @@
             saveState();
         });
 
+        // Auto-advance to next chapter
+        audio.addEventListener('ended', () => {
+            saveState();
+            if (currentChapter < chapters.length - 1) {
+                loadChapter(currentChapter + 1, false);
+                audio.addEventListener('canplay', function onCan() {
+                    audio.removeEventListener('canplay', onCan);
+                    audio.play();
+                });
+                showNotice('Playing next chapter');
+            }
+        });
+
         // Progress
         audio.addEventListener('timeupdate', () => {
             if (audio.duration) {
-                const pct = (audio.currentTime / audio.duration) * 100;
-                progressBar.style.width = pct + '%';
+                progressBar.style.width = (audio.currentTime / audio.duration) * 100 + '%';
                 currentTimeEl.textContent = formatTime(audio.currentTime);
             }
         });
@@ -248,8 +381,7 @@
         // Seek
         progressContainer.addEventListener('click', (e) => {
             const rect = progressContainer.getBoundingClientRect();
-            const pct = (e.clientX - rect.left) / rect.width;
-            audio.currentTime = pct * audio.duration;
+            audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
         });
 
         // Skip buttons
@@ -260,12 +392,52 @@
             audio.currentTime = Math.min(audio.duration, audio.currentTime + 15);
         });
 
+        // Playback speed
+        speedBtn.addEventListener('click', () => {
+            speedIndex = (speedIndex + 1) % speeds.length;
+            audio.playbackRate = speeds[speedIndex];
+            speedBtn.textContent = speeds[speedIndex] + 'x';
+            saveState();
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'SELECT') return;
+            switch (e.code) {
+                case 'Space':
+                    e.preventDefault();
+                    playBtn.click();
+                    break;
+                case 'ArrowLeft':
+                    audio.currentTime = Math.max(0, audio.currentTime - 15);
+                    break;
+                case 'ArrowRight':
+                    audio.currentTime = Math.min(audio.duration, audio.currentTime + 15);
+                    break;
+            }
+        });
+
         // Save periodically and on unload
         setInterval(saveState, 5000);
         window.addEventListener('beforeunload', saveState);
         document.addEventListener('visibilitychange', () => {
             if (document.visibilityState === 'hidden') saveState();
         });
+
+        // Init: restore last session
+        (function init() {
+            const state = getState();
+            if (state.speed) {
+                const si = speeds.indexOf(state.speed);
+                if (si !== -1) {
+                    speedIndex = si;
+                    audio.playbackRate = speeds[speedIndex];
+                    speedBtn.textContent = speeds[speedIndex] + 'x';
+                }
+            }
+            const startChapter = (state.chapter != null && state.chapter >= 0 && state.chapter < chapters.length) ? state.chapter : 0;
+            loadChapter(startChapter, true);
+        })();
     </script>
 </body>
 </html>
