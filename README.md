@@ -4,7 +4,7 @@ Welcome to the repository for Ryleigh's website. The website serves as an online
 
 ## Visit
 
-🔗 [Ryleigh Newman's Website](https://ryleighnewman.com/)
+[Ryleigh Newman's Website](https://ryleighnewman.com/)
 
 ## License
 
