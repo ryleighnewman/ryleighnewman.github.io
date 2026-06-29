@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /listen.html
 
 Sitemap: https://ryleighnewman.com/sitemap.xml
